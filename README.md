@@ -9,36 +9,41 @@ Table of Contents
     - Features
     - Sites
 - 3. Javascript: To add
-
-- Package Managers
+- 4. Git: To add
+- 5. Web Security: To Add
+- 6. Package Managers
     - npm
     - yarn
 
-- Preprocessor
+
+- 7. CSS Archticture: To add
+
+
+- 8. Preprocessor
     - sass
     - less
 
-- Build Tools
-    - Task Runners
-        - npm scripts 
-        - gulp
-    - Module Bundle
-        - Webpack
-        - parcel.js
 
+- 9. Build Tools
+        - Task Runners
+            - npm scripts 
+            - gulp
+        - Module Bundle
+            - Webpack
+            - parcel.js
 
-
-- CSS Frameworks
+- 10. Frameworks
+    - Angular JS
+    - ReactJs
+    - Vue JS
+- 11. Modern CSS: TODO
+- 12. CSS Frameworks
     - Bootstrap 3.3
     - Bootstrap 4
     - Materalize 
     - Semantic
-- Frameworks
-    - Angular JS
-    - ReactJs
-    - Vue JS
 
-- Testing
+- 13. Testing
     - Jasmine
     - Jest
     - Mocha
