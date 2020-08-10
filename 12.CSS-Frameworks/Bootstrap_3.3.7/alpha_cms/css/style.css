@@ -2,15 +2,33 @@
     border-radius: 0;
 }
 
-body#login {
+
+body.login {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #1f87c2;
     color: #fff;
 }
 
-body#login h2 {
+body.login h2 {
     color: #fff;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh
+
+
+}
+
+section {
+    padding-bottom: 7.5rem;
+}
+
+
+
+.list-group-item i {
+ padding:  0 0.5rem 0 0;
 }
 
 .form-signin {
@@ -55,19 +73,33 @@ body#login h2 {
 }
 
 footer {
-    margin-top: 30px;
-    padding-top: 20px;
-    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6.5rem;           
+    padding-top: 2rem;
     text-align: center;
     background-color: #1f87c2;
     color: #fff;
 }
 
 .actions {
-    float: right;
-    margin-top: 20px;
+    position: static;
+    margin: 1rem 0 2rem 0;
 }
 
 .tablesorter th {
     cursor: pointer;
+}
+
+
+@media (min-width: 992px) { 
+    .actions {
+        float: right;
+        position: relative;
+        top: 40px;
+    
+    }
+
+
 }
