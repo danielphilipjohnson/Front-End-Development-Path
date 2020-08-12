@@ -51,9 +51,7 @@ else {
                 console.log(this.db);
                 progress.innerHTML += '<h2>Object store created.</h2>';
 
-                //this.add();
                 this.displayData();
-                //this.deletecustomerByID("319-94-XXXX");
 
 
             }).bind(this),
@@ -69,6 +67,7 @@ else {
                 objectStore.createIndex("id", "id", { unique: true });
                 objectStore.createIndex("customerName", "customerName", { unique: false });
                 objectStore.createIndex("email", "email", { unique: true });
+                objectStore.createIndex("companyName", "companyName", { unique: false });
                 objectStore.createIndex("phone", "phone", { unique: false });
                 objectStore.createIndex("item", "item", { unique: false });
                 objectStore.createIndex("purchaseNumber", "purchaseNumber", { unique: true });
@@ -84,6 +83,7 @@ else {
                 }
             }).bind(this);
         },
+
         /**
         * @param {string} store_name
         * @param {string} mode either "readonly" or "readwrite"
@@ -93,58 +93,49 @@ else {
             return tx.objectStore(store_name);
         },
 
-        // name change
-        // pass in custom function
-        iterateCursor: function (purchasesObjectStore, displayDataFunc) {
 
-            purchasesObjectStore.openCursor().onsuccess = (function (e) {
+        iterateCursor: function (objectStore, displayDataFunc) {
+
+            objectStore.openCursor().onsuccess = (function (e) {
 
                 let cursor = e.target.result;
                
                 if (cursor) {
-               
-                    displayDataFunc(cursor.value);
-/*
-                    this.addCustomerToTable(
-                        cursor.value.id,
-                        cursor.value.customerName,
-                        cursor.value.companyName,
-                        cursor.value.email,
-                        cursor.value.phone,
-                        cursor.value.item,
-                        cursor.value.purchaseNumber
-                    )
-                */
+                    
+                    if (typeof displayDataFunc === "function"){
+                        displayDataFunc(cursor.value);
+                    }
+                    
+
                     // call notification
                     // continue on to the next item in the cursor
                     cursor.continue();
                 }
 
             }).bind(this);
-
-
         },
 
         displayData: function () {
-            let purchasesObjectStore = this.getObjectStore("purchases", "readwrite");
 
-            this.iterateCursor(purchasesObjectStore, this.addCustomerToTable1);
+            let objectStore = this.getObjectStore("purchases", "readwrite");
+
+            this.iterateCursor(objectStore, this.addCustomerToTable);
         },
 
         /* Button event */
         populateCustomers: function () {
-            let purchasesObjectStore = this.getObjectStore(this.DB_STORE_NAME, "readwrite");
+            let objectStore = this.getObjectStore(this.DB_STORE_NAME, "readwrite");
 
             // populate lots of data
             this.customerData.forEach(function (customer) {
-                purchasesObjectStore.add(customer);
+                objectStore.add(customer);
             });
-            this.iterateCursor(purchasesObjectStore, this.addCustomerToTable1);
+            this.iterateCursor(objectStore, this.addCustomerToTable);
         },
 
          /* Updates DOM */
-         addCustomerToTable1: function (data) {
-             console.log(data)
+         addCustomerToTable: function (data) {
+            console.log(data)
 
             var tr = document.createElement("tr");
 
@@ -180,43 +171,7 @@ else {
             purchasesTable.appendChild(tr);
 
         },
-        /* Updates DOM */
-        addCustomerToTable: function (id, name, company, email, phone, item, purchaseNumber) {
-
-            var tr = document.createElement("tr");
-
-            var idRow = document.createElement("td");
-            idRow.innerHTML = id;
-            tr.appendChild(idRow)
-
-            var nameRow = document.createElement("td");
-            nameRow.innerHTML = name;
-            tr.appendChild(nameRow)
-
-            var companyRow = document.createElement("td");
-            companyRow.innerHTML = company;
-            tr.appendChild(companyRow)
-
-            var emailRow = document.createElement("td");
-            emailRow.innerHTML = email;
-            tr.appendChild(emailRow)
-
-            var phoneRow = document.createElement("td");
-            phoneRow.innerHTML = phone;
-            tr.appendChild(phoneRow)
-
-            var itemRow = document.createElement("td");
-            itemRow.innerHTML = item;
-            tr.appendChild(itemRow)
-
-            var itemIdRow = document.createElement("td");
-            itemIdRow.innerHTML = purchaseNumber;
-            tr.appendChild(itemIdRow)
-
-            var purchasesTable = document.getElementById("purchases");
-            purchasesTable.appendChild(tr);
-
-        },
+     
         /* Button event */
         deleteAllCustomersFromTable: function () {
             var parent = document.getElementById("purchases");
@@ -224,6 +179,27 @@ else {
                 parent.firstChild.remove();
             }
 
+        },
+        
+        clearObjectStore: function (removefromDomFunc) {
+            var store = this.getObjectStore(this.DB_STORE_NAME, 'readwrite');
+            var req = store.clear();
+            req.onsuccess = (function (evt) {
+                progress.innerHTML += '<h2>Store cleared</h2>';
+                if (typeof removefromDomFunc === "function"){
+                removefromDomFunc()
+                }
+                else {
+                    console.log(removefromDomFunc)
+                    console.error("didnt pass a fun");
+                }
+               
+            }).bind(this);
+
+            req.onerror = function (evt) {
+                console.error("clearObjectStore:", evt.target.errorCode);
+                progress.innerHTML += '<h2>Store didnt clear there was an error</h2>';
+            };
         },
 
         add: function () {
@@ -253,21 +229,8 @@ else {
         },
 
 
-        clearObjectStore: function () {
-            var store = this.getObjectStore(this.DB_STORE_NAME, 'readwrite');
-            var req = store.clear();
-            req.onsuccess = (function (evt) {
-                progress.innerHTML += '<h2>Store cleared</h2>';
-                // remove html
-                // render the form
+       
 
-            }).bind(this);
-
-            req.onerror = function (evt) {
-                console.error("clearObjectStore:", evt.target.errorCode);
-                progress.innerHTML += '<h2>Store didnt clear there was an error</h2>';
-            };
-        },
         /**
          * @param {string} biblioid
          * make param key 
@@ -288,76 +251,116 @@ else {
                 console.error("deletecustomerByID:", evt.target.errorCode);
             };
         },
+        // put in object of correct fields
+        deletecustomerByColumn: function (column, customerid) {
+         
+            var store = this.getObjectStore(this.DB_STORE_NAME, 'readwrite');
+            var req;
+
+            switch (column){
+                case "id":
+                case "customerName":
+                case "companyName":
+                case "email":
+                case "phone":
+                case "item":
+                case "purchaseNumber":
+                    req = store.index(column);
+                    // stack them for existing 
+                default: null
+            }
+ 
+            if(req != null){
+                req.get(customerid).onsuccess = (function (evt) {
+                    if (typeof evt.target.result == 'undefined') {
+                        progress.innerHTML += '<h2>No matching record found</h2>';
+                        return;
+                    }
+                    this.deleteCustomer(evt.target.result.id, store);
+                }).bind(this);
+                req.onerror = function (evt) {
+                    console.error("deletecustomerByID:", evt.target.errorCode);
+                };
+            }
+            else {
+                console.error("IndexDB does not have this column");
+            }
+            
+        },
 
     /**
      * @param {number} key
      * @param {IDBObjectStore=} store
      */
      deleteCustomer: function(key, store) {
-        console.log("deletePublication:", arguments);
     
         if (typeof store == 'undefined')
           store = this.getObjectStore(this.DB_STORE_NAME, 'readwrite');
-    
-        // As per spec http://www.w3.org/TR/IndexedDB/#object-store-deletion-operation
-        // the result of the Object Store Deletion Operation algorithm is
-        // undefined, so it's not possible to know if some records were actually
-        // deleted by looking at the request result.
+
         var req = store.get(key);
+
         req.onsuccess = function(evt) {
+
           var record = evt.target.result;
           console.log("record:", record);
+
           if (typeof record == 'undefined') {
             progress.innerHTML += '<h2>No matching record found</h2>';
-            displayActionFailure("No matching record found");
             return;
           }
           // Warning: The exact same key used for creation needs to be passed for
           // the deletion. If the key was a Number for creation, then it needs to
           // be a Number for deletion.
+          
           req = store.delete(key);
+
           req.onsuccess = function(evt) {
+
             console.log("evt:", evt);
             console.log("evt.target:", evt.target);
             console.log("evt.target.result:", evt.target.result);
             console.log("delete successful");
             progress.innerHTML += '<h2>Deletion successful</h2>';
+
             // make notification
             //displayActionSuccess("Deletion successful");
             // redraw table
             //displayPubList(store);
           };
+
           req.onerror = function (evt) {
             console.error("deletePublication:", evt.target.errorCode);
           };
         };
+
         req.onerror = function (evt) {
           console.error("deletePublication:", evt.target.errorCode);
         };
-      }
-
-
-
+    }
 
     }
 
 
-
-
-    //var db = new createDB();
-    //console.log(db.openDB())
     createD.openDB();
+
+
+
     var populateButton = document.getElementById("populate");
+
     populateButton.addEventListener("click", function () {
         console.log("clicking ");
         createD.populateCustomers()
+        //createD.deletecustomerByColumn("x", "348124b3-24e4-4b50-8dad-fe92a74adc1c");
+        //createD.deletecustomerByID("319-94-XXXX");
     })
 
     var clearButton = document.getElementById("clear");
+
     clearButton.addEventListener("click", function () {
         console.log("clicking ");
-        createD.clearObjectStore()
-        createD.deleteAllCustomersFromTable()
+        
+        createD.clearObjectStore(createD.deleteAllCustomersFromTable)
+
     })
 
 
