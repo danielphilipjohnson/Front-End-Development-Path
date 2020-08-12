@@ -1,10 +1,7 @@
 var formModule = (function () {
     'use strict';
 
-    // make an array
-    var BtnSubmitBtnEmailSubmit = document.getElementById("emailSubmit");
-    // makje an object
-    var submits = [
+    var submitDetails = [
         { "buttonId": "idSubmit", "inputId": "deleteByEmailKey", "columnLookup": "id" },
         { "buttonId": "customerNameSubmit", "inputId": "deleteByCustomerName", "columnLookup": "customerName" },
         { "buttonId": "companyNameSubmit", "inputId": "deleteByCompanyName", "columnLookup": "companyName" },
@@ -27,15 +24,15 @@ var formModule = (function () {
         }
 
     }
-    // pass in event handler
-    function CreateEvents(func) {
-        // for the ids
-        // create element 
-        // then add submit Button events
-        for (var item in submits) {
+
+
+    function CreateEvents() {
+
+        for (var item in submitDetails) {
   
-            var BtnSubmit = document.getElementById(submits[item].buttonId);
-            var submitItem = submits[item];
+            var BtnSubmit = document.getElementById(submitDetails[item].buttonId);
+            
+            var submitItem = submitDetails[item];
 
             (function(submitItem){
                 BtnSubmit.addEventListener("click", function () {
@@ -44,26 +41,7 @@ var formModule = (function () {
                     _submitButtonEvents(submitItem.inputId, submitItem.columnLookup)
                 });
               })(submitItem)
-
-              /*
-            BtnSubmit.addEventListener("click", function () {
-                console.log("clicked: ",submits[item].inputId)
-                // change
-                _submitButtonEvents(submits[item].inputId, submits[item].columnLookup)
-            });
-            */
         }
-        /*
-        for (var i = 0; i < submitIds.length; i++) {
-            var BtnSubmit = document.getElementById(submitIds[i]);
-
-            BtnSubmit.addEventListener("click", function () {
-                // change
-                _submitButtonEvents("deleteByEmailKey", "email")
-            });
-        }
-*/
-
     }
 
     return {
