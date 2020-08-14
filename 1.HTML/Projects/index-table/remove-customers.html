@@ -4,45 +4,98 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IndexDB</title>
         <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
-                <a class="navbar-brand" href="#">
-                    <img src="https://dummyimage.com/50x50/400540/fff" width="30"
+            <nav class="navbar navbar-expand-lg fixed-top bg-primary
+                navbar-dark">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="https://dummyimage.com/50x50/400540/fff"
+                        width="30"
                         height="30" class="d-inline-block align-top" alt="">
                     Customer Dashboard
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarText" aria-controls="navbarText"
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
                     aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <nav class="navbar navbar-expand-lg bg-primary
+                navbar-dark">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active"
+                            href="./index.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"
+                            href="./add-customer.html">Add Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./search.html">Search
+                            Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"
+                            href="./remove-customers.html">Remove Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" id="populate"
+                            href="#">Populate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white clear-customer" id="clear"  href="#">Clear
+                            Customers</a>
+                    </li>
+                </ul>
+                </nav>
+               
+            </div>
         </header>
-      
         <main class="container-fluid">
             <section class="row">
-                <aside class="col bg-secondary">
+                <aside class="bg-secondary col-lg-2">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link"href="./index.html">Customers</a>
+                            <a class="nav-link text-white active"
+                                href="./index.html">Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Add Customer</a>
+                            <a class="nav-link text-white"
+                                href="./add-customer.html">Add Customer</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active"
+                            <a class="nav-link text-white" href="./search.html">Search
+                                Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
                                 href="./remove-customers.html">Remove Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white populate-customers" id="populate"
+                            href="#">Populate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white clear-customer" id="clear"  href="#">Clear
+                                Customers </a>
                         </li>
                     </ul>
                 </aside>
-                <section class="col-10">
+                <section class="col-sm-12 col-lg-10 customers">
+            
                     <header>
                         <h2>Remove Customers</h2>
                     </header>
 
-                    <section>
-                        <form>
+                    <section class="row">
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByEmailKey">Delete Customer
                                     via Email address</label>
@@ -57,10 +110,7 @@
                             <button id="emailSubmit" type="submit" class="btn
                                 btn-primary">Submit</button>
                         </form>
-                    </section>
-
-                    <section>
-                        <form>
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByID">Delete Customer via ID</label>
                                 <input type="text" class="form-control"
@@ -77,8 +127,10 @@
                         </form>
                     </section>
 
-                    <section>
-                        <form>
+   
+
+                    <section class="row">
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByCustomerName">Delete
                                     Customer via Name</label>
@@ -94,12 +146,7 @@
                             <button id="customerNameSubmit" type="submit"
                                 class="btn btn-primary">Submit</button>
                         </form>
-                    </section>
-
-
-
-                    <section>
-                        <form>
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByCompanyName">Delete Customer
                                     via Company Name</label>
@@ -117,8 +164,9 @@
                         </form>
                     </section>
 
-                    <section>
-                        <form>
+
+                    <section class="row">
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByPhone">Delete Customer via
                                     phone number</label>
@@ -134,10 +182,7 @@
                             <button id="phoneSubmit" type="submit" class="btn
                                 btn-primary">Submit</button>
                         </form>
-                    </section>
-
-                    <section>
-                        <form>
+                        <form class="col">
                             <div class="form-group">
                                 <label for="deleteByItem">Delete Customer via
                                     item number</label>
@@ -153,6 +198,10 @@
                             <button id="itemSubmit" type="submit" class="btn
                                 btn-primary">Submit</button>
                         </form>
+                    </section>
+
+                    <section>
+                       
                     </section>
 
                     <section>
@@ -174,32 +223,30 @@
                     </section>
 
 
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Company Name</th>
+                                    <th>Email Address</th>
+                                    <th>Phone</th>
+                                    <th>Item Purchases</th>
+                                    <th>Purchase #</th>
+                                </tr>
+                            </thead>
+                            <tbody id="purchases">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
                     <div id="progress">
 
 
                     </div>
-                    <table class="table table-striped">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th>#ID</th>
-                                <th>Customer Name</th>
-                                <th>Company Name</th>
-                                <th>Email Address</th>
-                                <th>Phone</th>
-                                <th>Item Purchases</th>
-                                <th>Purchase #</th>
-                            </tr>
-                        </thead>
-                        <tbody id="purchases">
-
-                        </tbody>
-                    </table>
-                    <button id="populate" type="button" class="btn btn-success">Populate
-                        Table</button>
-
-                    <button id="clear" type="button" class="btn btn-danger">Clear
-                        Table</button>
-
+                    
                 </section>
 
             </section>

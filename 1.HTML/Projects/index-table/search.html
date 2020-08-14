@@ -1,25 +1,8 @@
 <html lang="en">
     <head>
-
-        <meta name="msapplication-TileColor" content="#da532c">
-        <meta name="theme-color" content="#ffffff">
         <meta charset="UTF-8">
-        <meta name="keywords" content="HTML, CSS, JavaScript, IndexedDB,
-            push-notifications">
-        <meta name="description" content="Customer table website utilizing
-            IndexedDB and push-notifications">
-        <meta name="author" content="Daniel Philip Johnson">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IndexDB</title>
-        <link rel="apple-touch-icon" sizes="120x120"
-            href="./icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="./icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="./icons/favicon-16x16.png">
-        <link rel="manifest" href="./icons/site.webmanifest">
-        <link rel="mask-icon" href="./icons/safari-pinned-tab.svg"
-            color="#5bbad5">
         <link rel="stylesheet" href="./css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
@@ -100,15 +83,40 @@
                             href="#">Populate</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white clear-customer" id="clear"  href="#">Clear
-                                Customers </a>
+                            <a class="nav-link text-white clear-customer" id="clear" href="#">Clear
+                                Customers</a>
                         </li>
                     </ul>
                 </aside>
                 <section class="col-sm-12 col-lg-10 customers">
                     <header>
-                        <h1>Customers</h1>
+                        <h2>Search Customer</h2>
                     </header>
+                    <section>
+                        <section>
+                            <form>
+                                <div class="form-group">
+                                    <label for="searchByID">Search Customer via ID</label>
+                                    <input type="text" class="form-control"
+                                        id="searchByID"
+                                        aria-describedby="searchByID" placeholder=""
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid customer id
+                                    </div>
+    
+                                </div>
+                                <button id="idSearchSubmit" type="submit" class="btn
+                                    btn-primary">Submit</button>
+                            </form>
+                        </section>
+                    </section>
+                    <hr>
+                    <div id="progress">
+
+
+                    </div>
+
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead class="thead-dark">
@@ -122,13 +130,20 @@
                                     <th>Purchase #</th>
                                 </tr>
                             </thead>
-                            <tbody id="purchases">
+                            <!-- change to search -->
+                            <tbody id="search-result">
                                 
                             </tbody>
                         </table>
                     </div>
+
+
+
                 </section>
             </section>
+
+
+
         </main>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -143,6 +158,6 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
         <script src="./js/index.js"></script>
-
+        <script src="./js/formValidation.js"></script>
     </body>
 </html>
