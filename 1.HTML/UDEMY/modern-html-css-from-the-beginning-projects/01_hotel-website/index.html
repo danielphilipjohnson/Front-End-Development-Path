@@ -3,28 +3,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- This is what is shown in the google results description. Users will see it-->
-    <meta name="description" content="Welcome to the seaside hotel situated in Cornwall">
+    <meta name="description" content="Welcome to the seaside hotel situated in
+      Cornwall">
     <!-- 8 and 12 words doesnt hold a lot of weight -->
     <meta name="keywords" content="hotel, rooms, seaside, food">
     <!-- Keywords in title as this is what's displayed in google search results -->
     <title>Hotel BT | Cornwall Hotel</title>
+    <link rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet">
+
   </head>
   <body>
     <header>
       <nav id="navbar">
         <div class="container">
-          <h1 class="logo"><a href="#">HBT</a></h1>
+          <h1 class="logo"><a href="./index.html">HBT</a></h1>
           <ul>
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-
-        </div>
-       
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </div>
         </ul>
       </nav>
+      <div id="showcase">
+        <div class="container">
+          <div class="showcase-content">
+            <h1><span class="primary">Enjoy</span> Your Stay</h1>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Voluptate, doloremque.</p>
+            <a class="btn" href="#">About Our Hotel</a>
+          </div>
+        </div>
+      </div>
     </header>
-
+    <main>
+      <section id="home-info">
+        <div class="info-img"></div>
+        <div class="info-content">
+          <h2><span class="primary">The History</span> Of Our Hotel</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas,
+            debitis. Tempora laborum a saepe aut maxime ab, perferendis ad
+            obcaecati error non natus autem et repudiandae odio officiis,
+            sapiente excepturi? Quia distinctio porro, odio incidunt ipsam hic
+            vitae? Provident, dignissimos numquam veniam tenetur fugit tempore
+            autem earum cumque deserunt ipsam labore inventore iure sit
+            consectetur, facilis quod hic dolores? Quasi architecto voluptatum,
+            illum debitis officia suscipit quis soluta, quae velit perspiciatis
+            distinctio unde dolore sed?</p>
+          <a class="btn bg-light" href="#">Read More</a>
+        </div>
+      </section>
+      <section id="features">
+        <div class="box bg-light">
+          <i class="fas fa-hotel fa-3x"></i>
+          <h3>Great Location</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur sunt consequatur qui excepturi eum optio.</p>
+        </div>
+        <div class="box bg-primary">
+          <i class="fas fa-utensils fa-3x"></i>
+          <h3>Free Meals</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur sunt consequatur qui excepturi eum optio.</p>
+        </div>
+        <div class="box bg-light">
+          <i class="fas fa-dumbbell fa-3x"></i>
+          <h3>Fitness Room</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur sunt consequatur qui excepturi eum optio.</p>
+        </div>
+      </section>
+    </main>
+    <footer id="main-footer">
+      <p>Hotel BT © 2019, All RIghts Reserved</p>
+    </footer>
   </body>
 </html>
