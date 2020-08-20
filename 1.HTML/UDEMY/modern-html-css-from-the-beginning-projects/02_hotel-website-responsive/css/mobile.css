@@ -1,0 +1,121 @@
+#navbar {
+    position: static;
+}
+#navbar .logo {
+    float: none;
+    text-align: center;
+}
+
+
+#navbar ul {
+    float: none;
+    margin-bottom: 5px;
+}
+
+
+#navbar ul li {
+    float: none;
+    border-bottom: #444 dotted 1px;
+}
+
+#navbar ul li a {
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+
+#showcase .showcase-content {
+    padding: 80px 0;
+}
+
+#home-info {
+    height: 100%;
+}
+
+
+#home-info .left,
+#location-info .left {
+    float: none;
+    width: 100%;
+
+}
+.meal-img,
+.location-img {
+    background: none;
+}
+
+.info-content {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #333;
+}
+.info-content p {
+    padding: 0;
+}
+.info-content.right {
+    background-color: #f4f4f4;
+    color: #333;
+    border-bottom: #444 dotted 1px;
+
+}
+
+.info-content i {
+    margin-top: 20px;
+}
+
+#home-info,
+#location-info {
+    height: auto;
+}
+
+
+#home-info .info-content .bg-light {
+    background-color: #4c4c4c;
+    color: #f4f4f4;
+}
+.location-img.right {
+    float: none;
+    width: 100%;
+
+}
+
+#features .box {
+    float: none;
+    width: 100%;
+}
+
+
+/* About */
+
+.info-left,
+.info-right {
+    float: none;
+    width: 100%;
+
+}
+
+.info-right img {
+    margin-top: 20px;
+    border-radius: 0;
+    border: 5px solid #000;
+}
+
+
+#contact-info .box {
+    float: none;
+    width: 100%;
+    border-bottom: #444 dotted 3px;
+}
+
+
+.container {
+
+    padding: 0 10px;
+
+}
+.form-card {
+    margin: 1.5rem auto;
+    border-radius: 0;
+    padding: 1.2rem;
+
+}
