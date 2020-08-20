@@ -1,0 +1,64 @@
+@media only screen and (min-width: 779px){
+
+  .navbar { 
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 1rem;
+  }
+
+  #about .flex-container {
+    flex-direction: row;
+  }
+  #about .flex-container .offer{
+    flex: 1;
+    padding: 0 1.5rem;
+  }
+
+  .box {
+    border: none;
+  }
+
+
+
+  .solutions .col {
+    flex: 50%;
+  }
+  .cases .col {
+    flex: 50%;
+  }
+  .col-image img {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  /* blog */
+ .blog .col {
+   flex: 1;
+ }
+
+ .team .flex-items {
+  flex-direction: row;
+
+ }
+ .team  .member {
+   padding: 1rem;
+ }
+
+
+ /* contact */
+ .contact .col {
+
+  flex: 1;
+ }
+
+}
+
+
+@media only screen and (min-width: 900px){
+  .cases .col {
+    flex: 25%;
+  }
+
+
+}
