@@ -11,11 +11,14 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">    <link rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" />
+    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="crossorigin="anonymous">
   </head>
-  <body>
+  <body  id="home">
     <header class="hero">
       <nav id="navbar" class="navbar top">
         <h1 class="logo">
@@ -132,11 +135,20 @@
         </header>
         <div class="row">
           <div class="col">
-
-            <img class="img-responsive case" src="./img/cases/cases1.jpg"
-              alt="">
+            <a href="./img/cases/cases1.jpg" data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Fugiat,
+              dolore!">
+              <img class="img-responsive case" src="./img/cases/cases1.jpg"
+                alt="">
+            </a>
+            <a href="./img/cases/cases2.jpg" data-lightbox="cases"
+              data-title="Lorem ipsum dolor sit, amet consectetur adipisicing
+              elit. Fugiat,
+              dolore!">
             <img class="img-responsive case" src="./img/cases/cases2.jpg"
               alt="">
+              </a>
           </div>
           <div class="col">
             <a href="./img/cases/cases3.jpg" data-lightbox="cases"
@@ -253,17 +265,21 @@
               <form action="" class="callback-form">
                 <div class="form-control">
                   <label for="name"></label>
-                  <input type="text" name="name" id="name" placeholder="Enter name">
+                  <input type="text" name="name" id="name" placeholder="Enter
+                    name">
                 </div>
                 <div class="form-control">
                   <label for="email"></label>
-                  <input type="email" name="email" id="email" placeholder="Enter email">
+                  <input type="email" name="email" id="email" placeholder="Enter
+                    email">
                 </div>
                 <div class="form-control">
                   <label for="phone"></label>
-                  <input type="text" name="phone" id="phone" placeholder="Enter phone">
+                  <input type="text" name="phone" id="phone" placeholder="Enter
+                    phone">
                 </div>
-                <input type="submit" value="Send" id="submit" class="btn btn-primary">
+                <input type="submit" value="Send" id="submit" class="btn
+                  btn-primary">
               </form>
             </div>
           </div>
@@ -284,6 +300,7 @@
     <script
       src="https://code.jquery.com/jquery-3.5.0.min.js"
       integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous"></script>
     <script src="./js/index.js">
    
   </script>
