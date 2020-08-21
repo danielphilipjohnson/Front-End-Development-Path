@@ -1,3 +1,9 @@
+:root {
+    --nav-bg: #fff;
+    --logo-bg: rgb(44, 160, 28);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +12,7 @@
 
 body {
     background-color: #fff;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.6;
 }
 
@@ -16,43 +22,84 @@ p {
 
 
 .navbar {
-    background-color: black;
-    color: #fff;
+    
+    color: #000;
     position: fixed;
+    display: flex;font-family: 'Open Sans', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 120px; */
+    width: 100%;
+    /*padding: 0.6rem 1rem;*/
+    z-index: 9999;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
+
+    
+}
+
+.navbar.top {
+   /* background: transparent; */
+   background-color: var(--nav-bg);
+  
+   
+}
+
+.navbar .logo {
+    text-align: center;
+
+    line-height: 1.2;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    width: 100%;
+    padding-bottom: 0.4rem;
+    margin-top: 0.6rem;
+}
+.navbar .logo span {
+    color: rgb(44, 160, 28);
+}
+.navbar .logo i {
+   background-color: var(--logo-bg);
+   color: #fff;
+   padding: 7px;
+   font-size: 1rem;
+   border-radius: 50%;
+   margin: 0.4rem 0;
+}
+
+.navbar .links {
+    border-top: rgba(236,238,241,0.5) 2px solid;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+
+
+.navbar .links li {
+    padding: 15px 10px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.navbar .links li a {
+    text-decoration: none;
+    color: rgb(57, 58, 61);
+    padding-bottom: 0.2rem;
+}
+.navbar .links li:hover {
+    border-bottom:  var(--logo-bg) 4px solid;
+    margin-bottom: -4px;
+}
+
+.link.item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 120px;
-    width: 100%;
-    padding: 0.6rem 1rem;
-    z-index: 9999;
 }
-.navbar .logo {
-    line-height: 1.2;
-    font-weight: 400;
-    font-size: 2rem;
-    padding-bottom: 0.4rem;
-}
-.navbar .links {
-  
-    list-style: none;
-    display: flex;
 
-}
-.navbar .links li {
-    padding: 9px;
-    justify-content: center;
 
-}
-.navbar .links li a {
-    text-decoration: none;
-    color: #fff;
-    padding-bottom: 0.8rem;
-}
-.navbar .links li a:hover {
-    border-bottom: green 4px solid;
-}
 
 
 .hero {
@@ -60,9 +107,7 @@ p {
     height: 100vh;
     position: relative;
 }
-.hero * {
-    z-index: 1000;
-}
+
 .hero::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
@@ -83,14 +128,20 @@ p {
 }
 
 .content h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 400;
+    line-height: 1.2;
     color: #fff;
-    margin-top: rem;
+    margin-top: 1rem;
+    z-index: 1000;
 }
 .content p {
     font-size: 1.3rem;
     color: #fff;
+    z-index: 1000;
+}
+.content .btn {
+    z-index: 1000;
 }
 
 
@@ -110,27 +161,25 @@ p {
 
 
 
-
-
-
-
-
 .offer {
     padding-bottom: 1.5rem;
 }
 
 .offer .box h3 {
     font-weight: bold;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
 }
 .offer .box p {
-    font-size: 1.3rem;
+    font-size: 1rem;
+    margin: 0;
 }
 
 .box {
-    border-bottom: rgba(70, 65, 70, 0.8) 2px dotted;
+    border-bottom:rgba(236,238,241,0.8) 3px solid;
+    margin-top: 0.8rem;
     padding-bottom: 2rem;
+    
 }
 
 .col-left {
@@ -154,7 +203,7 @@ p {
     margin-bottom: 0.8rem;
 }
 .col-text h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.2;
 }
@@ -186,7 +235,10 @@ img.case {
 
 
 #team .member h4 {
-    margin-top: 1.2rem;
+    margin-top: 0.8rem;
+}
+#team .member p {
+    margin: 0.5rem  0 1rem 0;
 }
 
 

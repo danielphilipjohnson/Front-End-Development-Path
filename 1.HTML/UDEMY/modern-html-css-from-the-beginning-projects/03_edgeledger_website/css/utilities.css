@@ -8,6 +8,9 @@
     padding: 10px 25px;
     background-color: #000;
 }
+.btn.btn-primary {
+    background-color: rgb(44, 160, 28);
+}
 .btn-outline {
     background: transparent;
     border: #fff 1px solid;
@@ -21,12 +24,16 @@
 
 /* Color themes */
 .bg-primary {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
 }
 .bg-secondary {
     background: #f4f4f4;
     color: #000;
+}
+.bg-dark {
+    background: #000;
+    color: #fff;
 }
 
 /* structure */
@@ -76,7 +83,7 @@
 
 
 i.icon {
-    background-color: #000;
+    background-color:  var(--logo-bg);
     color: #fff;
     border-radius: 50%;
     padding: 15px;

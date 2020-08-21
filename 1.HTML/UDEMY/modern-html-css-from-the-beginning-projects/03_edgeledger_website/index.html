@@ -11,37 +11,62 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/media.css">
-    <link rel="stylesheet"
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">    <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="crossorigin="anonymous">
   </head>
   <body>
     <header class="hero">
-      <nav class="navbar">
+      <nav id="navbar" class="navbar top">
         <h1 class="logo">
           <span>
             <i class="fas fa-book-open"></i>
-            Edge
-          </span>
-          Ledger
+            Edge</span>Ledger
         </h1>
         <ul class="links">
-          <li><a href="http://">Home</a></li>
-          <li><a href="http://">About</a></li>
-          <li><a href="http://">Cases</a></li>
-          <li><a href="http://">Blog</a></li>
-          <li><a href="http://">Contact</a></li>
+          <li>
+            <div class="link item">
+              <i class="fas fa-home"></i>
+              <a href="#home">Home</a>
+            </div>
+
+          </li>
+          <li>
+            <div class="link item">
+              <i class="fas fa-address-card"></i>
+              <a href="#about">About</a>
+            </div>
+          </li>
+          <li>
+            <div class="link item">
+              <i class="fas fa-suitcase"></i>
+              <a href="#cases">Cases</a>
+            </div>
+          </li>
+          <li>
+            <div class="link item">
+              <i class="fas fa-blog"></i>
+              <a href="#blog">Blog</a>
+            </div>
+          </li>
+          <li>
+            <div class="link item">
+              <i class="fas fa-id-card"></i>
+              <a href="#contact">Contact</a>
+            </div>
+          </li>
         </ul>
       </nav>
       <div class="content">
         <h1>The Sky is the limit</h1>
         <p>We provide world class financial assistance</p>
-        <a href="#about" class="btn">
+        <a href="#about" class="btn btn-primary">
           <i class="fas fa-chevron-right"></i>
           Read More
         </a>
       </div>
     </header>
+
     <main>
       <section id="about" class="icons bg-light">
         <div class="flex-container center">
@@ -57,32 +82,29 @@
             <i class="icon fas fa-book-reader fa-2x"></i>
             <div class="box">
               <h3>Portfolio Manager</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                laborum necessitatibus explicabo non accusamus voluptatem dicta
-                corrupti autem aut eligendi?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempore, iusto!</p>
             </div>
           </div>
           <div class="offer">
             <i class="icon fas fa-pencil-alt fa-2x"></i>
             <div class="box">
               <h3>Tax & Custodial</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A
-                laborum necessitatibus explicabo non accusamus voluptatem dicta
-                corrupti autem aut eligendi?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempore, iusto!</p>
             </div>
           </div>
         </div>
       </section>
-
-      <section class="solutions flex-columns bg-primary">
+      <section class="solutions flex-columns bg-secondary">
         <div class="row">
           <div class="col">
-            <div class="col-image "><img
+            <div class="col-image"><img
                 src="./img/home/people.jpg"
                 alt=""></div>
           </div>
           <div class="col">
-            <div class="col-text bg-primary">
+            <div class="col-text">
               <h4>What you are looking for</h4>
               <h2>We provide bespoke solutions</h2>
               <p>
@@ -91,7 +113,7 @@
                 iusto cupiditate odio maxime adipisci cumque eligendi nemo
                 dolore id itaque?
               </p>
-              <a href="#" class="btn btn-outline">
+              <a href="#" class="btn btn-outline-secondary">
                 <i class="fas fa-chevron"></i>
                 Read More
               </a>
@@ -99,8 +121,6 @@
           </div>
         </div>
       </section>
-
-
       <section id="cases" class="cases center-content flex-grid">
         <header class="section-header">
           <h4>This is what we do</h4>
@@ -162,14 +182,12 @@
               data-title="Lorem ipsum dolor sit, amet consectetur adipisicing
               elit. Fugiat,
               dolore!">
-              <img class="img-responsive case" src="./img/cases/cases8.jpg" alt="">
+              <img class="img-responsive case" src="./img/cases/cases8.jpg"
+                alt="">
             </a>
           </div>
         </div>
       </section>
-
-
-
       <section id="blog" class="blog flex-columns">
         <div class="row">
           <div class="col">
@@ -195,9 +213,6 @@
           </div>
         </div>
       </section>
-
-
-
       <section id="team" class="team bg-primary">
         <header class="section-header">
           <h4>Who we are</h4>
@@ -225,7 +240,6 @@
           </div>
         </div>
       </section>
-
       <section id="contact" class="contact flex-columns bg-secondary">
         <div class="row">
           <div class="col">
@@ -249,22 +263,29 @@
                   <label for="phone"></label>
                   <input type="text" name="phone" id="phone" placeholder="Enter phone">
                 </div>
-                <input type="submit" value="Send" id="submit" class="btn">
+                <input type="submit" value="Send" id="submit" class="btn btn-primary">
               </form>
             </div>
           </div>
         </div>
       </section>
-
-      <footer class="footer bg-primary">
-        <div class="social">
-          <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
-        </div>
-        <p>Copyright © 2020 - EdgeLedger</p>
-      </footer>
     </main>
+
+    <footer class="footer bg-dark">
+      <div class="social">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+      <p>Copyright © 2020 - EdgeLedger</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
+    <script src="./js/index.js">
+   
+  </script>
   </body>
 </html>
