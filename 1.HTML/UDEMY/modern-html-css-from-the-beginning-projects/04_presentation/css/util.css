@@ -19,7 +19,7 @@
   background: linear-gradient(to bottom left, #0000a3, #40b1df);
 }
 
-
+/* Social background colors */
 .bg-linkedin {
   background-color: var(--linkedin-color);
 }
@@ -34,9 +34,13 @@
   background-color: var(--accent-color);
 }
 
+
+
 .accent-text {
   color: var(--accent-color);
 }
+
+
 
 #project .photo.top img {
   width: 1600px;

@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" experience-outline="width=device-width,
+      initial-scale=1.0">
+    <title>Presentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+      integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="crossorigin="anonymous"
+      />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/logos.css">
+    <link rel="stylesheet" href="../css/util.css">
+
+  </head>
+  <body id="powerpoint">
+    <!-- title page-->
+    <section class="bg-primary progress right">
+      <div class="title center">
+        <div class="about">
+          <h1>Daniel Johnson</h1>
+          <p class="side-text">{ React Developer }</p>
+          <div class="contactme">
+            <img src="../img/social/codepen.png" alt="">
+            <img src="../img/social/dev.webp" alt="" srcset="">
+            <img src="../img/social/instagram.jpg" alt="">
+            <img src="../img/social/linkedin.png" alt="">
+            <img src="../img/social/twitter.png" alt="">
+          </div>
+        </div>
+        <a href="#experience" class="btn slide">
+          <i class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+
+
+
+    
+
+ 
+
+
+
+
+
+
+
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  
+    <script>
+      // Smooth Scrolling
+      $('.btn').on('click', function(event) {
+          if (this.hash !== '') {
+            event.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate(
+              {
+                scrollTop: $(hash).offset().top
+              },
+              800
+            );
+          }
+        });
+      </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
+      integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="crossorigin="anonymous"></script>
+  </body>
+</html>
