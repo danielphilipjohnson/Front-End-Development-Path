@@ -1,6 +1,5 @@
 .bg-primary {
-  /* background-color: var(--primary-color); */
-  /* background: url(../img/new-bg.png);
+  /* background-color: var(--primary-color);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center; */
@@ -14,12 +13,13 @@
 }
 
 .bg-secondary {
-  /* background-color: var(--secondary-color); */
   background: #0000a3;
   background: -webkit-linear-gradient(top right, #0000a3, #40b1df);
   background: -moz-linear-gradient(top right, #0000a3, #40b1df);
   background: linear-gradient(to bottom left, #0000a3, #40b1df);
 }
+
+
 .bg-linkedin {
   background-color: var(--linkedin-color);
 }
