@@ -1,10 +1,11 @@
-.items, .social-items {
+.items,
+.social-items {
   display: flex;
   justify-content: flex-start;
 }
 
 .items {
-  /* maybe factor out*/ 
+  /* maybe factor out*/
   width: 50%;
   height: 100%;
   align-items: center;
@@ -16,34 +17,31 @@
   align-items: center;
 }
 
-
-.items ul, .social-items ul  {
+.items ul,
+.social-items ul {
   list-style: none;
   color: #fff;
 }
 .items ul {
   padding: 2rem;
-
 }
 .social-items ul {
   padding: 0rem;
-
 }
 
 .items .icon-item {
   padding: 1rem;
 }
 
-.items .icon-item, 
+.items .icon-item,
 .social-items .social-icon-item {
   display: flex;
   align-items: center;
 }
 
-
 .social-items .social-icon-item {
   margin: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 .items .icon-item i,
@@ -81,16 +79,13 @@
   font-size: 3rem;
 }
 
-
-
-
 .social-items .social-icon-item i {
   padding: 1rem;
   font-size: 3rem;
   background-color: var(--github-color);
 }
 
-.logos  {
+.logos {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -104,34 +99,37 @@
   margin: 1rem;
   padding: 1rem;
   border-radius: 10px;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
- .logos .node,  .logos .yarn {
+.logos .node,
+.logos .yarn {
   width: 250px;
   height: 150px;
- }
- .logos .redux {
-   width: 200px;
- }
+}
+.logos .redux {
+  width: 200px;
+}
+
+.contactme {
+  padding-top: 2rem;
+}
 
 
 
- .contactme  {
-   padding-top: 2rem;
- }
- .contactme img {
-   width: 100px;
-   background-color: #fff;
-   padding: 0.55rem;
-   margin-right: 0.5rem;
-   text-align: center;
-   border-radius: 10px;
-   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+.contactme img {
+  width: 100px;
+  background-color: #fff;
+  padding: 0.55rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  animation: var(--fade-in);
+}
 
- }
-
- .experience-outline .small-icon {
-   width: 175px;
-   height: 34px;
- }
-
+.experience-outline .small-icon {
+  width: 175px;
+  height: 34px;
+}

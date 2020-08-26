@@ -4,12 +4,14 @@
     <meta name="viewport" experience-outline="width=device-width,
       initial-scale=1.0">
     <title>Presentation</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet">
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
       integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="crossorigin="anonymous"
       />
+
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
       integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="crossorigin="anonymous">
@@ -34,14 +36,13 @@
             <img src="./img/social/twitter.png" alt="">
           </div>
         </div>
-        <a href="#experience" class="btn slide">
-          <i class="fas fa-arrow-down"></i>
-        </a>
       </div>
+
+
     </section>
 
     <!-- experience outline page-->
-    <section id="experience" class="bg-secondary progress left">
+    <section class="bg-secondary progress left">
       <div class="title left">
         <div class="about">
           <h2>Daniel Johnson</h2>
@@ -50,6 +51,12 @@
       </div>
 
       <div class="extra">
+        <div class="box left">
+          <span></span>
+          <p>00</p>
+        </div>
+        <!-- need to make a name for this section-->
+
         <div class="experience-outline">
           <div class="left">
             <div class="inner">
@@ -68,6 +75,7 @@
                 <img class="small-icon"
                   src="https://img.shields.io/badge/KDE-v0.0.0-green?logo=kde&color=1D99F3&style=for-the-badge"
                   alt="KDE">
+
               </p>
               <h2>Coding Editors</h2>
               <p>
@@ -79,9 +87,8 @@
                   src="https://img.shields.io/badge/Vim-v8.2-green?logo=vim&color=019733&style=for-the-badge"
                   alt="Vim">
               </p>
-             
             </div>
-            
+
             <div class="txt">
               <h2>
                 Brief Description
@@ -100,6 +107,9 @@
                 camp; I started to build a portfolio on Github demonstrating my
                 skills and adaptability.
               </p>
+
+
+
               <h2>Frontend Skills</h2>
               <p>
                 <img class="small-icon"
@@ -112,6 +122,7 @@
                   src="https://img.shields.io/badge/Sass-v0.0.0-green?logo=sass&color=CC6699&style=for-the-badge"
                   alt="">
               </p>
+
               <h2> CSS frameworks</h2>
               <p>
                 <img class="small-icon"
@@ -124,6 +135,7 @@
                   src="https://img.shields.io/badge/Tailwind%20CSS-v0.0.0-green?logo=Tailwind-CSS&color=38B2AC&style=for-the-badge"
                   alt="">
               </p>
+
               <h2>Testing</h2>
               <p>
                 <img class="small-icon"
@@ -136,6 +148,7 @@
                   src="https://img.shields.io/badge/Mocha-v0.0.0-green?logo=mocha&color=8D6748&style=for-the-badge"
                   alt="">
               </p>
+
               <h2>Backend</h2>
               <p>
                 <img class="small-icon"
@@ -148,6 +161,7 @@
                   src="https://img.shields.io/badge/NodeJS-v0.0.0-green?logo=node.js&color=84CE24&style=for-the-badge"
                   alt="">
               </p>
+
               <h2>Storage</h2>
               <p>
                 <img class="small-icon"
@@ -162,6 +176,7 @@
                   alt="">
 
               </p>
+
               <h2>Languages</h2>
               <p>
                 <img class="small-icon"
@@ -172,6 +187,8 @@
                   alt="Javascript">
 
               </p>
+
+
             </div>
 
           </div>
@@ -181,7 +198,8 @@
               <img class="" src="./logos/react-router.png" alt="">
               <img class="" src="./logos/nextjs (1).png" alt="">
               <img class="" src="./logos/yarn1.png" alt="">
-
+              <!-- <img class="node" src="./logos/node.png" alt="">
+              <img class="node" src="./logos/cypress.png" alt=""> -->
             </div>
             <div class="logos">
               <img src="./logos/js.png" alt="">
@@ -190,12 +208,12 @@
               <img src="./logos/gatsby.png" alt="">
               <img src="./logos/apollo.png" alt="">
             </div>
+
+
           </div>
         </div>
       </div>
-      <a href="#education" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-      </a>
+
     </section>
 
     <!-- education -->
@@ -258,9 +276,6 @@
           </ul>
         </div>
       </div>
-      <a href="#work-experience" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-      </a>
     </section>
 
     <!-- work-experience -->
@@ -269,10 +284,10 @@
         <div class="header">
           <h1>Personal Projects</h1>
           <div class="progress">
+            <span class="bar"></span>
             <div class="bottom">
-              <a href="#skills" class="btn slide">
-                <i class="fas fa-arrow-down"></i>
-              </a>
+              <p>00</p>
+              <p class="accent-text">React Developer</p>
             </div>
           </div>
         </div>
@@ -314,13 +329,13 @@
               recusandae impedit hic? Magnam voluptatem voluptas dicta. </p>
           </div>
         </div>
-       
       </div>
     </section>
 
     <!-- Skills and abilites -->
     <section id="skills" class="bg-primary progress right">
       <div class="container">
+
         <div class="items">
           <ul>
             <li class="icon-item">
@@ -345,17 +360,22 @@
         </div>
         <div class="header">
           <h1>Skills and abilities</h1>
-         
+          <div class="progress right">
+            <span class="bar right"></span>
+            <div class="bottom">
+
+              <p class="accent-text">React Developer</p>
+              <p>00</p>
+            </div>
+          </div>
         </div>
-      </div> <a href="#project-1" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-      </a>
+      </div>
     </section>
 
 
 
     <!-- Project 1 -->
-    <section id="project-1" class="bg-secondary progress right">
+    <section id="project" class="bg-secondary progress right">
       <div class="container">
 
         <div class="header">
@@ -412,6 +432,7 @@
             </span>
           </div>
         </div>
+
         <div class="photo left">
           <div class="card">
             <div class="window bar">
@@ -446,13 +467,10 @@
           </div>
         </div>
       </div>
-      <a href="#project-2" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-       </a>
     </section>
 
     <!-- Project 2 -->
-    <section id="project-2" class="bg-primary progress right">
+    <section id="project" class="bg-primary progress right">
       <div class="container">
 
         <div class="photo left">
@@ -484,6 +502,7 @@
               <img src="https://source.unsplash.com/user/erondu/400x400" alt="">
             </a> </div>
         </div>
+
         <div class="header">
           <h1>Project 2</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -547,17 +566,12 @@
               <img src="./logos/js.png" alt="">
             </span>
           </div>
-         
         </div>
-       
       </div>
-      <a href="#project-3" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-      </a>
     </section>
 
     <!-- Project 3 -->
-    <section id="project-3" class="bg-secondary progress right">
+    <section id="project" class="bg-secondary progress right">
       <div class="container">
         <div class="header">
           <h1 class="">Project 3</h1>
@@ -622,7 +636,6 @@
               <img src="./logos/js.png" alt="">
             </span>
           </div>
-         
         </div>
         <div class="photo left">
           <div class="card">
@@ -659,13 +672,10 @@
           </div>
         </div>
       </div>
-      <a href="#project-4" class="btn slide mid">
-        <i class="fas fa-arrow-down"></i>
-      </a>
     </section>
 
     <!-- Project 4 -->
-    <section id="project-4" class="">
+    <section id="project" class="">
       <div class="container bg">
 
         <div class="images">
@@ -783,15 +793,12 @@
             <button class="btn css">CSS</button>
             <button class="btn js">JS</button>
           </div>
-          <a href="#project-5" class="btn slide">
-            <i class="fas fa-arrow-down"></i>
-          </a>
         </div>
       </div>
     </section>
 
     <!-- Project 5 -->
-    <section id="project-5" class="">
+    <section id="project" class="">
       <div class="container bg">
         <div class="header bg">
           <h1 class="">Project 5</h1>
@@ -850,9 +857,6 @@
             <button class="btn css">CSS</button>
             <button class="btn js">JS</button>
           </div>
-          <a href="#contact" class="btn slide">
-            <i class="fas fa-arrow-down"></i>
-          </a>
         </div>
         <div class="images">
           <div class="image">
@@ -864,6 +868,7 @@
               <img src="https://source.unsplash.com/user/erondu/1600x900?nature"
                 alt="">
             </a>
+
             <span class="bottom-container img-1"><i class="fab fa-github"></i>
               <i class="fab fa-codepen"></i></span>
           </div>
@@ -878,8 +883,10 @@
                 src="https://source.unsplash.com/user/erondu/1600x900?technology"
                 alt="">
             </a>
+
             <span class="bottom-container img-2"><i class="fab fa-github"></i>
               <i class="fab fa-codepen"></i></span>
+
           </div>
           <div class="image">
             <a
@@ -914,7 +921,7 @@
     </section>
 
     <!-- Skills and abilites -->
-    <section id="contact" class="bg-primary progress right">
+    <section id="skills" class="bg-primary progress right">
       <div class="container">
         <div class="card contact">
           <div class="window bar">
@@ -999,8 +1006,9 @@
         <div class="header">
           <h1>Let's work together</h1>
           <div class="progress">
-           
+            <span class="bar"></span>
             <div class="bottom">
+              <p>00</p>
               <p class="accent-text">React Developer</p>
             </div>
           </div>
@@ -1009,27 +1017,47 @@
     </section>
 
     <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  
-    <script>
-      // Smooth Scrolling
-      $('.btn').on('click', function(event) {
-          if (this.hash !== '') {
-            event.preventDefault();
-            const hash = this.hash;
-            $('html, body').animate(
-              {
-                scrollTop: $(hash).offset().top
-              },
-              800
-            );
-          }
-        });
-      </script>
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"
       integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ=="crossorigin="anonymous"></script>
-  </body>
+  <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 </html>

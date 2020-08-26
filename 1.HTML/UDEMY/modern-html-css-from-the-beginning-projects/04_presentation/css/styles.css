@@ -10,6 +10,8 @@
   --linkedin-color: #0077b7;
   --github-color: #161414;
   --twitter-color: #50abf1;
+
+  --fade-in: fade-in 2s ease-in;
 }
 
 * {
@@ -18,6 +20,10 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+
+
+
+
 
 section {
   height: 100vh;
@@ -64,6 +70,8 @@ section.progress.right {
   color: #fff;
   font-size: 10rem;
   margin: 0;
+  animation: var(--fade-in);
+
 }
 .title .about h2 {
   font-size: 6rem;
@@ -75,7 +83,10 @@ section .box {
   display: flex;
   flex-direction: column;
 }
+#experience .extra {
+  height: 72%;
 
+}
 .extra {
   display: flex;
   height: 80%;
@@ -117,7 +128,7 @@ section .box {
   padding: 0 0 0 2rem;
 }
 .experience-outline .right {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: flex-end;
 }
@@ -197,9 +208,6 @@ section .box {
 }
 /* WORK EXPERIENCE*/
 
-#work-experience {
-  /* padding: 2rem 0; */
-}
 
 #work-experience .container {
   display: flex;
@@ -295,7 +303,7 @@ section .box {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 100%;
+  height: 90%;
 }
 
 #skills .container .header {
@@ -307,26 +315,31 @@ section .box {
 }
 
 
-#project .container {
+.container {
   display: flex;
 
   justify-content: space-between;
   width: 100%;
+  height: 90%;
+}
+#project-4 .container, #project-5 .container {
   height: 100%;
 }
-#project .container .header h1 {
+
+
+ .container .header h1 {
   align-items: flex-start;
   height: 20%;
 }
 
-#project .header {
+ .header {
   width: 50%;
 }
 
-#project .photo {
+ .photo {
   display: flex;
 }
-#project .photo img {
+ .photo img {
   width: 100%;
   height: 400px;
 }
