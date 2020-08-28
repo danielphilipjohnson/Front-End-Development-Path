@@ -1,0 +1,45 @@
+/* make html element header */
+@import "./variables";
+
+#education > .title {
+  padding-bottom: 10rem;
+}
+
+.container-education {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 5rem;
+
+}
+
+.education-item {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  .title {
+    color: $accent-color;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+
+  .course-list {
+    color: #fff;
+    list-style: none;
+
+    .course-item {
+
+      h3 {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #000;
+        padding-bottom: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

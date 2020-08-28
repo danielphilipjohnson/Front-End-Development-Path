@@ -1,0 +1,310 @@
+@import "variables";
+@import "buttons/btn-slide";
+@import "buttons/btn-programming";
+@import "badges/contact.scss";
+@import "badges/badges.scss";
+
+@import "cards/contact.scss";
+@import "cards/stats.scss";
+@import "./utils/flex.scss";
+@import "./utils/bg-colors.scss";
+@import "./utils/docker.scss";
+@import "logos/logos.scss";
+
+@import "./images/project-images.scss";
+
+@import "experience";
+@import "education";
+@import "work-experience";
+@import "./skills";
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-primary {
+
+  background: $primary-color;
+  background: $primary-gradient-color;
+}
+.bg-secondary {
+  background: $secondary-color;
+  background: -webkit-linear-gradient(top right, #0000a3, #40b1df);
+  background: -moz-linear-gradient(top right, #0000a3, #40b1df);
+  background: $secondary-gradient-color;
+}
+
+
+section {
+  height: 100vh;
+  .progress-right {
+    padding-right: 3rem;
+  }
+}
+
+section.progress.left {
+  padding-left: 3rem;
+}
+
+section > .title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+}
+.title.center {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.title.title-alt {
+  flex-direction: row;
+}
+
+.title.left {
+  justify-content: center;
+  align-items: flex-start;
+}
+.title.right {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+
+.about {
+  @include col-center;
+  text-align: center;
+  width: 100%;
+  h1 {
+    color: #fff;
+    font-size: 10rem;
+    margin: 0;
+    animation: var(--fade-in);
+  
+  }
+  h2 {
+    font-size: 6rem;
+    padding-top: 4rem;
+    color: #fff;
+  }
+}
+
+
+
+
+/* own component */
+
+.side-text {
+  border-bottom: var(--accent-color) 2px solid;
+  position: relative;
+  top: -60px;
+  left: -800px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: $accent-color;
+  margin: 2rem 0 0;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+  animation: fade-in 3s ease-in;
+}
+.side-text.left {
+  border-bottom: $accent-color 2px solid;
+  position: relative;
+  top: 300px;
+  left: -930px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: $accent-color;
+  margin: 2rem 0 0;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+}
+
+
+/* end of side text */
+
+
+/* need to compress  this and work experience scss */
+
+.container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #fff;
+  padding: 2rem;
+}
+.container .header h1 {
+  height: 50%;
+  font-size: 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .header .progress {
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .header .progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.container .header .progress.right {
+  align-items: flex-end;
+}
+
+.header .progress .bar {
+  border-left: var(--accent-color) 2px solid;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+
+}
+.header .progress .bar.right {
+  margin-right: 1rem;
+}
+.container .header .progress p {
+  font-size: 2rem;
+}
+
+.progress .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.container {
+  display: flex;
+
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+}
+#project-4 .container,
+#project-5 .container {
+  height: 100%;
+}
+
+.container .header h1 {
+  align-items: flex-start;
+  height: 20%;
+}
+
+.header {
+  width: 50%;
+}
+
+
+.container.bg {
+  background: url("https://source.unsplash.com/user/erondu/1600x900") center no-repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* maybe old */
+#project .photo.top img {
+  width: 1600px;
+}
+
+
+.photo {
+  display: flex;
+}
+.photo img {
+  width: 100%;
+  height: 400px;
+}
+
+
+.photo.left {
+  width: 60%;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: 8rem;
+}
+
+/* prohject 4 bottom */
+span.bottom-container {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 49.5%;
+  padding: 1rem;
+  position: absolute;
+}
+span.bottom-container * {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+span.img-1 {
+  bottom: 459px;
+  left: 2px;
+}
+span.img-2 {
+  bottom: 459px;
+  left: 479px;
+}
+span.img-3 {
+  bottom: 2px;
+  left: 2px;
+}
+span.img-4 {
+  bottom: 2px;
+  left: 479px;
+}
+
+
+.header.bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: var(--accent-color) 2px solid;
+}
+
+
+section .box {
+  display: flex;
+  flex-direction: column;
+}
+// #experience .extra {
+//   height: 72%;
+
+// }
+// .extra {
+//   display: flex;
+//   height: 80%;
+// }
+
+.box.left {
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.box.right {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.box span {
+  border-right: var(--accent-color) 4px solid;
+  padding: 2rem 0;
+  margin: 1rem;
+}
+.box p {
+  margin: 0 0.4rem;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+
+@import "./media.scss";

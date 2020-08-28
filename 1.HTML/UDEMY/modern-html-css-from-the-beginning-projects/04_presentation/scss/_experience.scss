@@ -1,0 +1,41 @@
+/* EXPERIENCE SECTION */
+@import "./variables";
+
+.container-experience {
+  display: flex;
+  height: 100%;
+
+  .left {
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 0 0 0 2rem;
+
+    .about-description {
+
+      padding: 1rem;
+      width: 70%;
+
+     
+
+    }
+  }
+
+  .right {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+/* might need to make own style */
+
+h2 {
+  color: $accent-color;
+  margin: 0.55rem 0;
+}
+p {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}

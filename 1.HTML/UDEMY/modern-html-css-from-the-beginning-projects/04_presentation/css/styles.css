@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --primary-color: #0000a3;
   --secondary-color: #0067b3;
   --highlight-color: #40b0df;
@@ -12,20 +12,13 @@
   --twitter-color: #50abf1;
 
   --fade-in: fade-in 2s ease-in;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Roboto", sans-serif;
-}
+} */
 
 
 
 
 
-section {
+/* section {
   height: 100vh;
 }
 section.progress.left {
@@ -62,7 +55,6 @@ section.progress.right {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 5rem 0 0 0; */
   width: 100%
 }
 
@@ -77,49 +69,21 @@ section.progress.right {
   font-size: 6rem;
   padding-top: 4rem;
   color: #fff;
-}
-
-section .box {
-  display: flex;
-  flex-direction: column;
-}
-#experience .extra {
-  height: 72%;
-
-}
-.extra {
-  display: flex;
-  height: 80%;
-}
-
-.box.left {
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-.box.right {
-  align-items: flex-end;
-  justify-content: flex-end;
-}
-
-.box span {
-  border-right: var(--accent-color) 4px solid;
-  padding: 2rem 0;
-  margin: 1rem;
-}
-.box p {
-  margin: 0 0.4rem;
-  color: #fff;
-  font-weight: bolder;
-  font-size: 1.2rem;
-}
+} */
 
 
-/* EXPERIENCE SECTION */
+
+
+
+
+
+
+
+/* EXPERIENCE SECTION
 .experience-outline {
   display: flex;
   height: 100%;
 }
-/* experiencer containers */
 .experience-outline .left {
   width: 70%;
   display: flex;
@@ -148,7 +112,6 @@ section .box {
   border-bottom-right-radius: 10px;
   width: 300px;
 }
-/* inner content */
 
 .experience-outline .left .txt {
   padding: 1rem;
@@ -162,12 +125,12 @@ section .box {
 .experience-outline .left p {
   color: #fff;
   margin-bottom: .75rem;
-}
+} */
 /* End of EXPERIENCE SECTION */
 
 
 
-#education .title {
+/* #education .title {
   padding-bottom: 10rem;
 }
 
@@ -205,17 +168,19 @@ section .box {
   color: #000;
   padding-bottom: 1rem;
   text-transform: uppercase;
-}
+} */
+
+
 /* WORK EXPERIENCE*/
 
 
-#work-experience .container {
+/* #work-experience .container {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
-}
-
+} */
+/* 
 .container .header {
   display: flex;
   flex-direction: column;
@@ -265,10 +230,10 @@ section .box {
   display: flex;
   justify-content: space-between;
   width: 80%;
-}
+} */
 
 /* WORK EXPERIENCE */
-#work-experience .items {
+/* #work-experience .items {
   width: 70%;
   padding: 4rem 3rem;
   flex-direction: column;
@@ -297,9 +262,9 @@ section .box {
 .items p, .social-items p {
   font-size: 1.5rem;
   color: #fff;
-}
+} */
 
-#skills .container {
+/* #skills .container {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -312,34 +277,11 @@ section .box {
 #skills .container .header h1 {
   align-items: flex-start;
   padding: 1rem;
-}
+} */
 
 
-.container {
-  display: flex;
-
-  justify-content: space-between;
-  width: 100%;
-  height: 90%;
-}
-#project-4 .container, #project-5 .container {
-  height: 100%;
-}
 
 
- .container .header h1 {
-  align-items: flex-start;
-  height: 20%;
-}
 
- .header {
-  width: 50%;
-}
 
- .photo {
-  display: flex;
-}
- .photo img {
-  width: 100%;
-  height: 400px;
-}
+

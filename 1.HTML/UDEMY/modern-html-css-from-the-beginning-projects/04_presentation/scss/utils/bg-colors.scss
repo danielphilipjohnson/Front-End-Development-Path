@@ -1,0 +1,20 @@
+/* Social background colors */
+@import "../variables";
+
+.bg-linkedin {
+  background-color: $linkedin-color;
+}
+.bg-github {
+  background-color: $github-color;
+}
+.bg-twitter {
+  background-color: $twitter-color;
+}
+
+.bg-email {
+  background-color: $accent-color;
+}
+
+.accent-text {
+  color: $accent-color;
+}
