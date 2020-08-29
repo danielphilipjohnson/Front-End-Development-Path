@@ -8,16 +8,58 @@
     background-size: cover;
 
   }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   
+    color: #fff;
+    padding: 2rem;
+  }
 }
 
-.header  {
-  width: 50%;
 
+
+.header {
+  width: 50%;
+  &.bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: $accent-color 2px solid;
+  }
   h2 {
 
     font-size: 6rem;
     margin-bottom: 1rem;
   }
- 
+  .progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 40%;
+    
+    .bar {
+      border-left: $accent-color 2px solid;
+      padding-top: 4rem;
+      display: flex;
+      justify-content: center;
+      .right {
+        margin-right: 1rem;
+      }
+    }
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+    }
+
+    &.right {
+      align-items: flex-end;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
 }
+
