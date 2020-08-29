@@ -1,7 +1,8 @@
-$mobile: 575.98px;
-$tablet: 700px;
+$mobile: 592px;
 
-@media only screen and(max-width: $tablet) {
+// $tablet: 700px;
+$tablet: 593px;
+@media only screen and(max-width: $mobile) {
 
 
   .side-text {
@@ -52,7 +53,8 @@ $tablet: 700px;
       padding: 0;
       flex-wrap: wrap;
       .stats {
-        padding: 1rem; display: flex;
+        padding: 1rem;
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
 
@@ -69,7 +71,8 @@ $tablet: 700px;
       }
       .about-description {
         width: 100%;
-        h2, p {
+        h2,
+        p {
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
@@ -83,7 +86,9 @@ $tablet: 700px;
     .right {
       width: 100%;
       justify-content: center;
+      flex-wrap: wrap;
       .logos-container {
+        align-items: center;
         .logo {
           width: 50px;
           height: 50px;
@@ -107,6 +112,7 @@ $tablet: 700px;
         flex-direction: column;
         .education-item {
           padding: 1rem 1rem 0;
+          width: 100%;
         }
       }
     }
@@ -148,45 +154,45 @@ $tablet: 700px;
 
 
     &#skills {
-      .container-skills {
-        height: unset;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        .header {
-          width: 100%;
-
-        }
-        .skill-items {
-          width: 100%;
-          ul {
-            padding: 0;
-            .icon-item {
-              padding: 0 0 0 1rem;
-              display: flex;
-              align-items: flex-start;
-              i.fa-lightbulb {
-                font-size: 1.5rem;
-                padding: 1rem 1.25rem;
-
-              }
-              i.fa-project-diagram {
-                font-size: 1.25rem;
-                padding: 1.15rem 1rem;
-              }
-              i.fas.fa-chart-line {
-                font-size: 1.5rem;
-                padding: 1rem;
-              }
-              i.fas.fa-cogs {
-                font-size: 1.25rem;
-                padding: 1.15rem 1rem;
-              }
-              p {
-                font-size: 2.5rem;
+      .container {
+        &.skills {
+          height: unset;
+          flex-wrap: wrap;
+          flex-direction: column-reverse;
+          .header {
+            width: 100%;
+          }
+          .skill-items {
+            width: 100%;
+            justify-content: center;
+            ul {
+              padding: 0;
+              .icon-item {
+                padding: 0 0 1rem 1rem;
+                display: flex;
+                align-items: flex-start;
+                i.fa-lightbulb {
+                  font-size: 1.5rem;
+                  padding: 1rem 1.25rem;
+                }
+                i.fa-project-diagram {
+                  font-size: 1.25rem;
+                  padding: 1.15rem 1rem;
+                }
+                i.fas.fa-chart-line {
+                  font-size: 1.5rem;
+                  padding: 1rem;
+                }
+                i.fas.fa-cogs {
+                  font-size: 1.25rem;
+                  padding: 1.15rem 1rem;
+                }
+                p {
+                  font-size: 2.5rem;
+                }
               }
             }
           }
-
         }
       }
     }
@@ -357,3 +363,368 @@ $tablet: 700px;
 
 
 }
+
+
+// 592 all goes wrong
+
+// @media only screen and(min-width: $tablet) {
+
+//   .bg-primary {
+//     background: red;
+//   }
+//   .side-text {
+//     display: none;
+//   }
+
+//   .badge-contact-md img {
+//     width: 75px;
+//   }
+
+
+//   /* title page */
+//   .about {
+//     h1 {
+//       font-size: 4.5rem;
+//     }
+//     h2 {
+//       font-size: 3.25rem;
+//       padding: 0;
+//     }
+
+//   }
+
+
+//   /* experience page */
+//   section.progress.left {
+//     padding: 0;
+//   }
+
+
+//   section#experience {
+//     height: unset;
+
+//   }
+
+//   /* check other titles */
+//   section > .title {
+//     height: unset;
+//   }
+
+
+//   /* experience page container */
+//   .container-experience {
+//     height: unset;
+//     flex-wrap: wrap;
+//     .left {
+//       width: 100%;
+//       padding: 0;
+//       flex-wrap: wrap;
+//       .stats {
+//         padding: 1rem;
+//         display: flex;
+//         justify-content: center;
+//         flex-wrap: wrap;
+
+//         h2,
+//         p {
+//           padding: 1rem;
+//           display: flex;
+//           justify-content: center;
+//           flex-wrap: wrap;
+//         }
+//         .small-icon {
+//           margin-bottom: 0.5rem;
+//         }
+//       }
+//       .about-description {
+//         width: 100%;
+//         h2,
+//         p {
+//           display: flex;
+//           justify-content: center;
+//           flex-wrap: wrap;
+//         }
+//         /* refactor */
+//         .small-icon {
+//           margin-bottom: 0.5rem;
+//         }
+//       }
+//     }
+//     .right {
+//       width: 100%;
+//       justify-content: center;
+//       .logos-container {
+//         .logo {
+//           width: 50px;
+//           height: 50px;
+//           padding: 0.25rem;
+//         }
+
+//       }
+
+
+//     }
+//   }
+
+//   section {
+//     &#education {
+//       height: unset;
+//       > .title {
+//         padding: 0;
+//       }
+//       .container-education {
+//         padding: 0;
+//         flex-direction: column;
+//         .education-item {
+//           padding: 1rem 1rem 0;
+//           width: 100%;
+//         }
+//       }
+//     }
+
+//     &#work-experience {
+//       height: unset;
+//       .container {
+//         height: unset;
+//         flex-direction: column;
+//         .header {
+//           height: unset;
+//           width: 100%;
+//           h1 {
+//             text-align: center;
+//             font-size: 2.75rem;
+//           }
+//         }
+//         .work-items {
+//           width: 100%;
+//           padding: 1rem;
+//           .item {
+//             padding: 0 0 0 0.5rem;
+//             margin-bottom: 2rem;
+//             h2 {
+//               margin: 0 0 1rem;
+//               font-size: 2.5rem;
+//               .circle {
+//                 display: none;
+//               }
+//             }
+//             p {
+//               font-size: 1rem;
+//             }
+
+//           }
+//         }
+//       }
+//     }
+
+
+//     &#skills {
+//       .container-skills {
+//         height: unset;
+//         flex-wrap: wrap;
+//         flex-direction: column-reverse;
+//         .header {
+//           width: 100%;
+
+//         }
+//         .skill-items {
+//           width: 100%;
+//           ul {
+//             padding: 0;
+//             .icon-item {
+//               padding: 0 0 0 1rem;
+//               display: flex;
+//               align-items: flex-start;
+//               i.fa-lightbulb {
+//                 font-size: 1.5rem;
+//                 padding: 1rem 1.25rem;
+
+//               }
+//               i.fa-project-diagram {
+//                 font-size: 1.25rem;
+//                 padding: 1.15rem 1rem;
+//               }
+//               i.fas.fa-chart-line {
+//                 font-size: 1.5rem;
+//                 padding: 1rem;
+//               }
+//               i.fas.fa-cogs {
+//                 font-size: 1.25rem;
+//                 padding: 1.15rem 1rem;
+//               }
+//               p {
+//                 font-size: 2.5rem;
+//               }
+//             }
+//           }
+
+//         }
+//       }
+//     }
+
+//     &#project-1,
+//     &#project-2,
+//     &#project-3 {
+//       height: unset;
+
+//       .container {
+//         height: unset;
+//         flex-wrap: wrap;
+//         .header {
+//           width: 100%;
+//           padding: 1.65rem;
+
+//           h1 {
+//             height: unset;
+//             margin-bottom: 1.5rem;
+//           }
+//           .badges {
+//             flex-wrap: wrap;
+//             justify-content: center;
+//             .logo {
+//               padding: 0;
+//               margin: 0;
+//             }
+
+//           }
+//         }
+
+//         .photo {
+//           flex-wrap: wrap;
+//           flex-direction: column;
+//           justify-content: center;
+//           align-content: center;
+
+//           width: 100%;
+
+//           &.left {
+//             width: 100%;
+//             margin-top: 0;
+//           }
+//           .card {
+//             padding: 1rem;
+//           }
+
+//         }
+//       }
+//     }
+//     &#project-2 {
+//       .container {
+//         flex-direction: column-reverse;
+//       }
+//     }
+
+
+//     &#project-4,
+//     &#project-5 {
+//       height: unset;
+//       .container {
+//         height: unset;
+//         flex-wrap: wrap;
+//         .project-images {
+//           width: 100%;
+//           background-color: red;
+//           .image {
+//             width: 100%;
+
+//             span.bottom-container {
+//               width: 98.5%;
+//             }
+//             .img-1,
+//             .img-2,
+//             .img-3,
+//             .img-4 {
+//               display: none;
+//             }
+//           }
+//         }
+//         .header {
+//           width: 100%;
+//           height: unset;
+//           padding: 1rem;
+//           h1 {
+//             font-size: 3.5rem;
+//             margin-bottom: 0.5rem;
+//           }
+//         }
+//       }
+//     }
+
+//     &#contact {
+//       height: unset;
+//       .container {
+//         flex-wrap: wrap;
+//         flex-direction: column-reverse;
+//         height: unset;
+//         .card {
+//           &.contact {
+//             height: unset;
+//             margin: 0;
+
+//             .card.inner {
+//               width: 94%;
+//               margin: 0 auto 1rem;
+
+//               .social-items {
+//                 padding: 0.5rem;
+//                 ul {
+
+//                   width: 100%;
+//                   p {
+//                     font-size: 1.25rem;
+//                   }
+//                 }
+
+//               }
+//             }
+//             .docker {
+//               width: 95%;
+//               height: 11.65%;
+//               .item {
+//                 &:first-child {
+//                   display: none;
+//                 }
+//                 &:last-child {
+//                   display: none;
+//                 }
+//                 &:nth-child(even) {
+//                   display: none;
+//                 }
+//               }
+//             }
+//           }
+
+//         }
+//         .header {
+//           width: 100%;
+//           h1 {
+//             height: 100%;
+//             font-size: 3rem;
+//             margin-bottom: 0.5rem;
+
+//           }
+//           .progress {
+//             .bottom {
+//               width: 100%;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   };
+
+
+//   // #experience,
+//   // #education,
+//   // #work-experience,
+//   // #skills,
+//   // #project-1,
+//   // #project-2,
+//   // #project-3,
+//   // #project-4,
+//   // #project-5 {
+//   // display: none;
+//   // }
+
+
+// }

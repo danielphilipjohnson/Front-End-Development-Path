@@ -1,0 +1,23 @@
+@import "./container.scss";
+
+.container  {
+  @include basic-container;
+  &.bg {
+    background: url("https://source.unsplash.com/user/erondu/1600x900") center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  
+}
+
+.header  {
+  width: 50%;
+
+  h2 {
+
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+ 
+}

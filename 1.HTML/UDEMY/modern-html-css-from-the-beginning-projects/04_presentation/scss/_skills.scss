@@ -1,18 +1,21 @@
-.container-skills {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 90%;
+@import "./containers/container.scss";
 
-  .header {
-    justify-content: start;
 
-    h1 {
-      align-items: flex-start;
-      padding: 1rem;
+.container {
+  @include basic-container;
+
+  &.skills {
+    .header {
+      justify-content: start;
+  
+      h1 {
+        align-items: flex-start;
+        padding: 1rem;
+      }
     }
   }
 }
+
 
 
 @mixin baseItem {
