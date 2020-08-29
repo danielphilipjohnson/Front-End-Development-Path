@@ -67,22 +67,26 @@ section.progress.left {
 
   }
   h2 {
-    font-size: 8rem;
-    padding-top: 5rem;
+    font-size: 4rem;
+    padding-top: 3rem;
     margin: 0;
     color: #fff;
   }
 }
 
+#title {
+  .btn-slide {
+    top: 23%;
+  }
+}
 
-/* need to compress  this and work experience scss */
-
-
-
-
-
-
-
+#project-4, #project-5 {
+    .btn-slide {
+      top:-55px;
+      left: 49%;
+      z-index: 100;
+    }
+}
 
 #project-4 .container,
 #project-5 .container {
@@ -93,10 +97,10 @@ section.progress.left {
 /* elements  */
 .header h1,
 h2 {
-  font-size: 2.75rem;
+  font-size: 2.25rem;
 }
 p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 
@@ -123,21 +127,29 @@ span.bottom-container * {
   padding: 0.5rem;
 }
 span.img-1 {
-  bottom: 118px;
-  left: 2px;
+  bottom: 112px;
+  left: 0;
 }
 span.img-2 {
-  bottom: 118px;
-  left: 2px;
+  bottom: 112px;
+  left: 0;
 }
 span.img-3 {
-  bottom: 118px;
-  left: 2px;
+  bottom: 112px;
+  left: 0;
 }
 span.img-4 {
-  bottom: 118px;
-  left: 2px;
+  bottom: 112px;
+  left: 0;
 }
 
+
+.list-tools {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 50%;
+  }
+}
 
 @import "./media.scss";

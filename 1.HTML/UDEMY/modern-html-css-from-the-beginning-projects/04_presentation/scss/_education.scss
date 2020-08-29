@@ -1,15 +1,12 @@
 /* make html element header */
 @import "./variables";
 
-#education > .title {
-  padding-bottom: 10rem;
-}
 
 .container-education {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding-top: 5rem;
+  padding-top: 2rem;
 
 }
 

@@ -18,6 +18,9 @@
   position: relative;
   margin: 0 auto;
   padding: 0; }
+  .btn-slide.mid {
+    left: 49%;
+    top: 35px; }
   .btn-slide i {
     background-color: rgba(0, 0, 0, 0); }
   .btn-slide .mid {
@@ -94,16 +97,13 @@
 
 .badges {
   display: flex; }
-  .badges .logo {
-    margin: 0.6rem 0.6rem 0.6rem 0;
-    padding: 10px 25px 10px 0; }
-    .badges .logo img {
-      width: 100px;
-      padding: 0.5rem;
-      background-color: #fff; }
-      .badges .logo img.css {
-        width: 76.5px;
-        padding: 0.5rem; }
+  .badges .logo img {
+    width: 100px;
+    padding: 0.5rem;
+    background-color: #fff; }
+    .badges .logo img.css {
+      width: 76.5px;
+      padding: 0.5rem; }
 
 .card {
   width: 100%;
@@ -238,19 +238,23 @@
   padding-top: 1rem;
   padding-left: 1rem; }
 
-.stats .profile {
-  width: 300px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 0.5rem;
-  background-color: #fff;
-  position: relative;
-  top: 3px; }
-
-.stats img.github-stats {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  width: 300px; }
+.stats .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0; }
+  .stats .card .profile {
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 0.5rem;
+    background-color: #fff;
+    position: relative;
+    top: 3px; }
+  .stats .card img.github-stats {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 300px; }
 
 /* Social background colors */
 .bg-linkedin {
@@ -300,7 +304,8 @@
     width: 60%;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-top: 8rem; }
+    margin-top: 8rem;
+    margin-left: 0.5rem; }
   .portfolio img {
     width: 100%;
     height: auto; }
@@ -325,8 +330,7 @@
 .title {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 20%; }
+  width: 100%; }
   .title.left {
     justify-content: center;
     align-items: flex-start; }
@@ -347,7 +351,7 @@
   width: 30%; }
   .logos-container .logo {
     width: 100px;
-    height: auto;
+    height: 100px;
     background-color: #fff;
     margin: 1rem;
     padding: 1rem;
@@ -373,11 +377,7 @@
     background-repeat: no-repeat;
     background-size: cover; }
   .container .header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    padding: 2rem; }
+    color: #fff; }
 
 .header {
   width: 50%; }
@@ -429,8 +429,7 @@
 
 /* EXPERIENCE SECTION */
 .container-experience {
-  display: flex;
-  height: 100%; }
+  display: flex; }
   .container-experience .left {
     width: 70%;
     display: flex;
@@ -438,15 +437,15 @@
     justify-content: flex-start;
     padding: 0 0 0 2rem; }
     .container-experience .left .about-description {
-      padding: 1rem;
       width: 70%; }
   .container-experience .right {
     width: 20%;
     display: flex;
     justify-content: flex-end; }
   .container-experience .small-icon {
-    width: 216px;
-    height: auto; }
+    width: 145px;
+    height: auto;
+    margin-bottom: 0.5rem; }
 
 /* might need to make own style */
 h2 {
@@ -458,14 +457,11 @@ p {
   margin-bottom: 0.75rem; }
 
 /* make html element header */
-#education > .title {
-  padding-bottom: 10rem; }
-
 .container-education {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding-top: 5rem; }
+  padding-top: 2rem; }
 
 .education-item {
   flex: 1;
@@ -493,6 +489,9 @@ p {
   flex-direction: row;
   width: 100%;
   height: 100%; }
+  #work-experience .container .btn-slide {
+    left: -48.75%;
+    top: 94%; }
 
 .work-items {
   width: 70%;
@@ -635,12 +634,19 @@ section.progress.left {
     margin: 0;
     animation: fade-in 2s ease-in; }
   .about h2 {
-    font-size: 8rem;
-    padding-top: 5rem;
+    font-size: 4rem;
+    padding-top: 3rem;
     margin: 0;
     color: #fff; }
 
-/* need to compress  this and work experience scss */
+#title .btn-slide {
+  top: 23%; }
+
+#project-4 .btn-slide, #project-5 .btn-slide {
+  top: -55px;
+  left: 49%;
+  z-index: 100; }
+
 #project-4 .container,
 #project-5 .container {
   height: 100%; }
@@ -648,10 +654,10 @@ section.progress.left {
 /* elements  */
 .header h1,
 h2 {
-  font-size: 2.75rem; }
+  font-size: 2.25rem; }
 
 p {
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 /* prohject 4 bottom */
 span.bottom-container {
@@ -670,251 +676,37 @@ span.bottom-container * {
   padding: 0.5rem; }
 
 span.img-1 {
-  bottom: 118px;
-  left: 2px; }
+  bottom: 112px;
+  left: 0; }
 
 span.img-2 {
-  bottom: 118px;
-  left: 2px; }
+  bottom: 112px;
+  left: 0; }
 
 span.img-3 {
-  bottom: 118px;
-  left: 2px; }
+  bottom: 112px;
+  left: 0; }
 
 span.img-4 {
-  bottom: 118px;
-  left: 2px; }
+  bottom: 112px;
+  left: 0; }
 
-@media only screen and (max-width: 644px) {
+.list-tools {
+  display: flex;
+  flex-wrap: wrap; }
+  .list-tools .item {
+    width: 50%; }
+
+/*
+  Styles that apply both to a tablet at 900px and an iphone 5 320px.
+
+*/
+@media only screen and (max-width: 1200px) and (min-width: 319px) {
   p {
     font-size: 1rem; }
   .side-text {
     display: none; }
-  .badge-contact-md img {
-    width: 50px; }
-  .header h2 {
-    font-size: 3.75rem; }
-  .skills .header h2 {
-    font-size: 2.75rem; }
-  /* title page */
-  .about h1 {
-    font-size: 3.5rem; }
-  .about h2 {
-    font-size: 3.25rem;
-    padding: 0; }
-  /* experience page */
-  section.progress.left {
-    padding: 0; }
-  section#experience {
-    height: unset; }
-  /* check other titles */
-  section > .title {
-    height: unset; }
-  /* education section */
-  .education-item .course-list .course-item h3 {
-    font-size: 1.75rem; }
-  .education-item .course-list .course-item p {
-    font-size: 1.25rem; }
-  .education-item .title {
-    font-size: 2.5rem; }
-  section#experience {
-    /* experience page container */ }
-    section#experience .container-experience {
-      height: unset;
-      flex-wrap: wrap; }
-      section#experience .container-experience .left {
-        width: 100%;
-        padding: 0;
-        flex-wrap: wrap; }
-        section#experience .container-experience .left .stats {
-          padding: 2rem;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap; }
-          section#experience .container-experience .left .stats h2,
-          section#experience .container-experience .left .stats p {
-            padding: 1rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; }
-          section#experience .container-experience .left .stats .small-icon {
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem; }
-        section#experience .container-experience .left .about-description {
-          width: 100%;
-          /* refactor */ }
-          section#experience .container-experience .left .about-description h2,
-          section#experience .container-experience .left .about-description p {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap; }
-          section#experience .container-experience .left .about-description .small-icon {
-            margin-bottom: 0.5rem;
-            margin-right: 0.5rem; }
-      section#experience .container-experience .right {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap; }
-        section#experience .container-experience .right .logos-container {
-          align-items: center; }
-          section#experience .container-experience .right .logos-container .logo {
-            width: 75px;
-            padding: 0.25rem; }
-  section#education {
-    height: unset; }
-    section#education > .title {
-      padding: 0; }
-    section#education .container-education {
-      padding: 0;
-      flex-direction: column; }
-      section#education .container-education .education-item {
-        padding: 1rem 1rem 0;
-        width: 100%; }
-  section#work-experience {
-    height: unset; }
-    section#work-experience .container {
-      height: unset;
-      flex-direction: column; }
-      section#work-experience .container .header {
-        height: unset;
-        width: 100%; }
-        section#work-experience .container .header h1 {
-          text-align: center;
-          font-size: 2.75rem; }
-      section#work-experience .container .work-items {
-        width: 100%;
-        padding: 1rem; }
-        section#work-experience .container .work-items .item {
-          padding: 0 0 0 0.5rem;
-          margin-bottom: 2rem; }
-          section#work-experience .container .work-items .item h2 {
-            margin: 0 0 1rem;
-            font-size: 2.5rem; }
-            section#work-experience .container .work-items .item h2 .circle {
-              display: none; }
-          section#work-experience .container .work-items .item p {
-            font-size: 1rem; }
-  section#skills .container.skills {
-    height: unset;
-    flex-wrap: wrap;
-    flex-direction: column-reverse; }
-    section#skills .container.skills .header {
-      width: 100%; }
-    section#skills .container.skills .skill-items {
-      width: 100%;
-      justify-content: center; }
-      section#skills .container.skills .skill-items ul {
-        padding: 0; }
-        section#skills .container.skills .skill-items ul .icon-item {
-          padding: 0 0 1rem 1rem;
-          display: flex;
-          align-items: flex-start; }
-          section#skills .container.skills .skill-items ul .icon-item i.fa-lightbulb {
-            font-size: 1.5rem;
-            padding: 1rem 1.25rem; }
-          section#skills .container.skills .skill-items ul .icon-item i.fa-project-diagram {
-            font-size: 1.25rem;
-            padding: 1.15rem 1rem; }
-          section#skills .container.skills .skill-items ul .icon-item i.fas.fa-chart-line {
-            font-size: 1.5rem;
-            padding: 1rem; }
-          section#skills .container.skills .skill-items ul .icon-item i.fas.fa-cogs {
-            font-size: 1.25rem;
-            padding: 1.15rem 1rem; }
-          section#skills .container.skills .skill-items ul .icon-item p {
-            font-size: 2.5rem; }
-  section#project-1, section#project-2, section#project-3 {
-    height: unset; }
-    section#project-1 .container, section#project-2 .container, section#project-3 .container {
-      height: unset;
-      flex-wrap: wrap; }
-      section#project-1 .container .header, section#project-2 .container .header, section#project-3 .container .header {
-        width: 100%;
-        padding: 1.65rem; }
-        section#project-1 .container .header h1, section#project-2 .container .header h1, section#project-3 .container .header h1 {
-          height: unset;
-          margin-bottom: 1.5rem; }
-        section#project-1 .container .header .badges, section#project-2 .container .header .badges, section#project-3 .container .header .badges {
-          flex-wrap: wrap;
-          justify-content: center; }
-          section#project-1 .container .header .badges .logo, section#project-2 .container .header .badges .logo, section#project-3 .container .header .badges .logo {
-            padding: 0;
-            margin: 0; }
-      section#project-1 .container .portfolio, section#project-2 .container .portfolio, section#project-3 .container .portfolio {
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        width: 100%; }
-        section#project-1 .container .portfolio.left, section#project-2 .container .portfolio.left, section#project-3 .container .portfolio.left {
-          width: 100%;
-          margin-top: 0; }
-        section#project-1 .container .portfolio .card, section#project-2 .container .portfolio .card, section#project-3 .container .portfolio .card {
-          padding: 1rem; }
-  section#project-2 .container {
-    flex-direction: column-reverse; }
-  section#project-4, section#project-5 {
-    height: unset; }
-    section#project-4 .container, section#project-5 .container {
-      height: unset;
-      flex-wrap: wrap; }
-      section#project-4 .container .project-images, section#project-5 .container .project-images {
-        width: 100%;
-        background-color: red; }
-        section#project-4 .container .project-images .image, section#project-5 .container .project-images .image {
-          width: 100%; }
-          section#project-4 .container .project-images .image span.img-1, section#project-4 .container .project-images .image span.img-2, section#project-4 .container .project-images .image span.img-3, section#project-4 .container .project-images .image span.img-4, section#project-5 .container .project-images .image span.img-1, section#project-5 .container .project-images .image span.img-2, section#project-5 .container .project-images .image span.img-3, section#project-5 .container .project-images .image span.img-4 {
-            left: 0;
-            bottom: 116px; }
-      section#project-4 .container .header, section#project-5 .container .header {
-        width: 100%;
-        height: unset;
-        padding: 1rem;
-        text-align: center;
-        align-items: center; }
-        section#project-4 .container .header h1, section#project-5 .container .header h1 {
-          font-size: 3.5rem;
-          margin-bottom: 0.5rem; }
-  section#contact {
-    height: unset; }
-    section#contact .container {
-      flex-wrap: wrap;
-      flex-direction: column-reverse;
-      height: unset; }
-      section#contact .container .card.contact {
-        height: unset;
-        margin: 0; }
-        section#contact .container .card.contact .card.inner {
-          width: 94%;
-          margin: 0 auto 1rem; }
-          section#contact .container .card.contact .card.inner .social-items {
-            padding: 0.5rem; }
-            section#contact .container .card.contact .card.inner .social-items ul {
-              width: 100%; }
-              section#contact .container .card.contact .card.inner .social-items ul p {
-                font-size: 1.25rem; }
-        section#contact .container .card.contact .docker {
-          width: 95%;
-          height: 11.65%; }
-          section#contact .container .card.contact .docker .item:first-child {
-            display: none; }
-          section#contact .container .card.contact .docker .item:last-child {
-            display: none; }
-          section#contact .container .card.contact .docker .item:nth-child(even) {
-            display: none; }
-      section#contact .container .header {
-        width: 100%; }
-        section#contact .container .header h1 {
-          height: 100%;
-          font-size: 3rem;
-          margin-bottom: 0.5rem; }
-        section#contact .container .header .progress .bottom {
-          width: 100%; } }
-
-@media only screen and (max-width: 900px) and (min-width: 645px) {
-  p {
-    font-size: 1rem; }
-  .side-text {
+  .fas.fa-arrow-down {
     display: none; }
   .badge-contact-md img {
     width: 75px; }
@@ -948,14 +740,16 @@ span.img-4 {
     section#experience .container-experience {
       height: unset;
       flex-wrap: wrap; }
+      section#experience .container-experience .list-tools .item {
+        width: 100%; }
       section#experience .container-experience .left {
         width: 100%;
         padding: 0;
         flex-wrap: wrap; }
         section#experience .container-experience .left .stats {
-          padding: 2rem;
+          width: 100%;
           display: flex;
-          justify-content: center;
+          flex-direction: column;
           flex-wrap: wrap; }
           section#experience .container-experience .left .stats h2,
           section#experience .container-experience .left .stats p {
@@ -965,7 +759,9 @@ span.img-4 {
             flex-wrap: wrap; }
           section#experience .container-experience .left .stats .small-icon {
             margin-bottom: 0.5rem;
-            margin-right: 0.5rem; }
+            margin-right: 0.5rem;
+            width: 216px;
+            height: auto; }
         section#experience .container-experience .left .about-description {
           width: 100%;
           /* refactor */ }
@@ -1019,13 +815,14 @@ span.img-4 {
             section#work-experience .container .work-items .item h2 .circle {
               display: none; }
           section#work-experience .container .work-items .item p {
-            font-size: 1rem; }
+            font-size: 1.25rem; }
   section#skills .container.skills {
     height: unset;
     flex-wrap: wrap;
     flex-direction: column-reverse; }
     section#skills .container.skills .header {
-      width: 100%; }
+      width: 100%;
+      text-align: center; }
     section#skills .container.skills .skill-items {
       width: 100%;
       justify-content: center; }
@@ -1079,14 +876,15 @@ span.img-4 {
           padding: 1rem; }
   section#project-2 .container {
     flex-direction: column-reverse; }
+  section#project-4 .container {
+    flex-direction: column-reverse; }
   section#project-4, section#project-5 {
     height: unset; }
     section#project-4 .container, section#project-5 .container {
       height: unset;
       flex-wrap: wrap; }
       section#project-4 .container .project-images, section#project-5 .container .project-images {
-        width: 100%;
-        background-color: red; }
+        width: 100%; }
         section#project-4 .container .project-images .image, section#project-5 .container .project-images .image {
           width: 100%; }
           section#project-4 .container .project-images .image span.img-1, section#project-4 .container .project-images .image span.img-2, section#project-4 .container .project-images .image span.img-3, section#project-4 .container .project-images .image span.img-4, section#project-5 .container .project-images .image span.img-1, section#project-5 .container .project-images .image span.img-2, section#project-5 .container .project-images .image span.img-3, section#project-5 .container .project-images .image span.img-4 {
@@ -1098,7 +896,7 @@ span.img-4 {
         padding: 1rem;
         text-align: center;
         align-items: center; }
-        section#project-4 .container .header h1, section#project-5 .container .header h1 {
+        section#project-4 .container .header h2, section#project-5 .container .header h2 {
           font-size: 3.5rem;
           margin-bottom: 0.5rem; }
   section#contact {
@@ -1111,8 +909,8 @@ span.img-4 {
         height: unset;
         margin: 0; }
         section#contact .container .card.contact .card.inner {
-          width: 94%;
-          margin: 0 auto 1rem; }
+          width: 85%;
+          margin: 0.5rem auto 1rem; }
           section#contact .container .card.contact .card.inner .social-items {
             padding: 0.5rem; }
             section#contact .container .card.contact .card.inner .social-items ul {
@@ -1120,19 +918,130 @@ span.img-4 {
               section#contact .container .card.contact .card.inner .social-items ul p {
                 font-size: 1.25rem; }
         section#contact .container .card.contact .docker {
-          width: 95%;
+          width: 80%;
           height: 11.65%; }
-          section#contact .container .card.contact .docker .item:first-child {
-            display: none; }
-          section#contact .container .card.contact .docker .item:last-child {
-            display: none; }
           section#contact .container .card.contact .docker .item:nth-child(even) {
             display: none; }
       section#contact .container .header {
         width: 100%; }
-        section#contact .container .header h1 {
+        section#contact .container .header h2 {
           height: 100%;
           font-size: 3rem;
-          margin-bottom: 0.5rem; }
+          margin-bottom: 0.5rem;
+          color: #fff; }
         section#contact .container .header .progress .bottom {
-          width: 100%; } }
+          width: 100%; }
+  .container-experience .small-icon {
+    width: 216px; } }
+
+/* 
+  if less than 526px and mobile requires 
+  some more improvements than tablet 
+  add here.
+*/
+@media only screen and (max-width: 526px) {
+  .badge-contact-md img {
+    width: 50px; }
+  /* title page */
+  .about h1 {
+    font-size: 3.5rem; }
+  /* experience page */
+  section.progress.left {
+    padding: 0; }
+  /* education section */
+  .education-item .course-list .course-item h3 {
+    font-size: 1.75rem; }
+  .education-item .course-list .course-item p {
+    font-size: 1.25rem; }
+  .education-item .title {
+    font-size: 2.5rem; }
+  section#experience .container-experience .left .stats {
+    padding: 0; }
+  section#experience .container-experience .right .logos-container {
+    width: unset; }
+  section#work-experience .container .work-items .item p {
+    font-size: 1rem; }
+  section#contact .container .card.contact .card.inner {
+    width: 94%;
+    margin: 0 auto 1rem; }
+  section#contact .container .card.contact .docker {
+    width: 95%; }
+    section#contact .container .card.contact .docker .item:first-child {
+      display: none; }
+    section#contact .container .card.contact .docker .item:last-child {
+      display: none; } }
+
+@media only screen and (max-width: 1200px) and (min-width: 725px) {
+  section#project-1 .container .portfolio,
+  section#project-2 .container .portfolio,
+  section#project-3 .container .portfolio {
+    flex-direction: row;
+    flex-wrap: nowrap; }
+    section#project-1 .container .portfolio .card,
+    section#project-2 .container .portfolio .card,
+    section#project-3 .container .portfolio .card {
+      width: 50%;
+      margin: 0.5rem;
+      padding: 0; }
+  section#experience .container-experience .right {
+    align-items: baseline; }
+  section#experience .container-experience .right .logos-container {
+    flex-direction: row; }
+  /* project 4 */
+  section#project-4 .container .project-images .image,
+  section#project-5 .container .project-images .image {
+    width: 50%; } }
+
+@media only screen and (max-width: 1600px) and (min-width: 1200px) {
+  /* check other titles */
+  section > .title {
+    height: unset;
+    padding: 1rem 0; }
+  .header, .portfolio.left {
+    width: 50%; }
+  .header h2 {
+    font-size: 4rem; }
+  p {
+    font-size: 1rem; }
+  #experience .title {
+    padding: 0; }
+    #experience .title .about h2 {
+      padding: 0; }
+  #experience .container-experience .left {
+    padding: 0;
+    width: 80%; }
+    #experience .container-experience .left .about-description {
+      padding: 0; }
+  #experience .container-experience .right {
+    width: unset; }
+  #experience .list-tools .item h2 {
+    font-size: 1.75rem; }
+  #experience .logos-container .logo {
+    width: 75px;
+    height: 75px; }
+  #education > .title {
+    padding: 0; }
+  #education .about {
+    margin: 1rem 0; }
+    #education .about h2 {
+      padding: 0px; }
+  .container-education {
+    padding: 0; }
+    .container-education .education-item {
+      padding: 0 1rem; }
+      .container-education .education-item .title {
+        font-size: 3rem; }
+      .container-education .education-item .course-list .course-item h3 {
+        font-size: 1.7rem; }
+      .container-education .education-item .course-list .course-item p {
+        font-size: 1rem; }
+  .work-items {
+    width: 100%;
+    padding: 0 2rem; }
+    .work-items .item {
+      padding: 0 0 0rem 3rem; }
+      .work-items .item p {
+        font-size: 1.25rem; }
+  #work-experience .container {
+    flex-direction: column;
+    align-items: center; } }

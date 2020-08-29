@@ -1,407 +1,23 @@
-$mobile: 644px;
+$mobile: 526px;
+$iphone-5: 319px;
 
 
-// $tablet: 593px;
-@media only screen and(max-width: $mobile) {
+/*
+  Styles that apply both to a tablet at 900px and an iphone 5 320px.
 
-  p {
-    font-size: 1rem;
-  }
-  .side-text {
-    display: none;
-  }
-
-  .badge-contact-md img {
-    width: 50px;
-  }
-
-  .header h2 {
-    font-size: 3.75rem;
-  }
-  .skills {
-    .header h2 {
-      font-size: 2.75rem;
-    }
-  }
-
-  /* title page */
-  .about {
-    h1 {
-      font-size: 3.5rem;
-    }
-    h2 {
-      font-size: 3.25rem;
-      padding: 0;
-    }
-
-  }
-
-
-  /* experience page */
-  section.progress.left {
-    padding: 0;
-  }
-
-
-  section#experience {
-    height: unset;
-
-  }
-
-  /* check other titles */
-  section > .title {
-    height: unset;
-  }
-
-
-  /* education section */
-  .education-item {
-    .course-list .course-item {
-      h3 {
-        font-size: 1.75rem;
-      }
-      p {
-        font-size: 1.25rem;
-      }
-    }
-
-    .title {
-      font-size: 2.5rem;
-    }
-  }
-
-
-  section {
-    &#experience {
-      /* experience page container */
-      .container-experience {
-        height: unset;
-        flex-wrap: wrap;
-        .left {
-          width: 100%;
-          padding: 0;
-          flex-wrap: wrap;
-          .stats {
-            padding: 2rem;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            h2,
-            p {
-              padding: 1rem;
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-            }
-            .small-icon {
-              margin-bottom: 0.5rem;
-              margin-right: 0.5rem;
-            }
-          }
-          .about-description {
-            width: 100%;
-            h2,
-            p {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-            }
-            /* refactor */
-            .small-icon {
-              margin-bottom: 0.5rem;
-              margin-right: 0.5rem;
-            }
-          }
-        }
-        .right {
-          width: 100%;
-          justify-content: center;
-          flex-wrap: wrap;
-          .logos-container {
-            align-items: center;
-            .logo {
-              width: 75px;
-              padding: 0.25rem;
-            }
-          }
-        }
-      }
-    }
-    &#education {
-      height: unset;
-      > .title {
-        padding: 0;
-      }
-      .container-education {
-        padding: 0;
-        flex-direction: column;
-        .education-item {
-          padding: 1rem 1rem 0;
-          width: 100%;
-        }
-      }
-    }
-    &#work-experience {
-      height: unset;
-      .container {
-        height: unset;
-        flex-direction: column;
-        .header {
-          height: unset;
-          width: 100%;
-          h1 {
-            text-align: center;
-            font-size: 2.75rem;
-          }
-        }
-        .work-items {
-          width: 100%;
-          padding: 1rem;
-          .item {
-            padding: 0 0 0 0.5rem;
-            margin-bottom: 2rem;
-            h2 {
-              margin: 0 0 1rem;
-              font-size: 2.5rem;
-              .circle {
-                display: none;
-              }
-            }
-            p {
-              font-size: 1rem;
-            }
-
-          }
-        }
-      }
-    }
-    &#skills {
-      .container {
-        &.skills {
-          height: unset;
-          flex-wrap: wrap;
-          flex-direction: column-reverse;
-          .header {
-            width: 100%;
-          }
-          .skill-items {
-            width: 100%;
-            justify-content: center;
-            ul {
-              padding: 0;
-              .icon-item {
-                padding: 0 0 1rem 1rem;
-                display: flex;
-                align-items: flex-start;
-                i.fa-lightbulb {
-                  font-size: 1.5rem;
-                  padding: 1rem 1.25rem;
-                }
-                i.fa-project-diagram {
-                  font-size: 1.25rem;
-                  padding: 1.15rem 1rem;
-                }
-                i.fas.fa-chart-line {
-                  font-size: 1.5rem;
-                  padding: 1rem;
-                }
-                i.fas.fa-cogs {
-                  font-size: 1.25rem;
-                  padding: 1.15rem 1rem;
-                }
-                p {
-                  font-size: 2.5rem;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-    &#project-1,
-    &#project-2,
-    &#project-3 {
-      height: unset;
-
-      .container {
-        height: unset;
-        flex-wrap: wrap;
-        .header {
-          width: 100%;
-          padding: 1.65rem;
-
-          h1 {
-            height: unset;
-            margin-bottom: 1.5rem;
-          }
-          .badges {
-            flex-wrap: wrap;
-            justify-content: center;
-            .logo {
-              padding: 0;
-              margin: 0;
-            }
-
-          }
-        }
-
-        .portfolio {
-          flex-wrap: wrap;
-          flex-direction: column;
-          justify-content: center;
-          align-content: center;
-
-          width: 100%;
-
-          &.left {
-            width: 100%;
-            margin-top: 0;
-          }
-          .card {
-            padding: 1rem;
-          }
-
-        }
-      }
-    }
-    &#project-2 {
-      .container {
-        flex-direction: column-reverse;
-      }
-    }
-
-
-    &#project-4,
-    &#project-5 {
-      height: unset;
-      .container {
-        height: unset;
-        flex-wrap: wrap;
-        .project-images {
-          width: 100%;
-          background-color: red;
-          .image {
-            width: 100%;
-            span {
-              &.img-1,
-              &.img-2,
-              &.img-3,
-              &.img-4 {
-                left: 0;
-                bottom: 116px;
-              }
-
-            }
-
-
-          }
-        }
-        .header {
-          width: 100%;
-          height: unset;
-          padding: 1rem;
-          text-align: center;
-          align-items: center;
-          h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-          }
-        }
-      }
-    }
-
-    &#contact {
-      height: unset;
-      .container {
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        height: unset;
-        .card {
-          &.contact {
-            height: unset;
-            margin: 0;
-
-            .card.inner {
-              width: 94%;
-              margin: 0 auto 1rem;
-
-              .social-items {
-                padding: 0.5rem;
-                ul {
-
-                  width: 100%;
-                  p {
-                    font-size: 1.25rem;
-                  }
-                }
-
-              }
-            }
-            .docker {
-              width: 95%;
-              height: 11.65%;
-              .item {
-                &:first-child {
-                  display: none;
-                }
-                &:last-child {
-                  display: none;
-                }
-                &:nth-child(even) {
-                  display: none;
-                }
-              }
-            }
-          }
-
-        }
-        .header {
-          width: 100%;
-          h1 {
-            height: 100%;
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-
-          }
-          .progress {
-            .bottom {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-  };
-
-
-  // #title,
-  // #experience,
-  // #education,
-  // #work-experience,
-  // #skills,
-  // // #project-1,
-  // // #project-2,
-  // // #project-3,
-  // // #project-4,
-  // // #project-5
-  // {
-  // display: none;
-  // }
-}
-
-
-
-
-@media only screen and(max-width: 900px) and (min-width: 645px){
+*/
+@media only screen and(max-width: 1200px) and(min-width: $iphone-5) {
 
   p {
     font-size: 1rem;
   }
+
   .side-text {
     display: none;
   }
-
+  .fas.fa-arrow-down {
+    display: none;
+  }
   .badge-contact-md img {
     width: 75px;
   }
@@ -470,16 +86,18 @@ $mobile: 644px;
       .container-experience {
         height: unset;
         flex-wrap: wrap;
+        .list-tools .item {
+          width: 100%;
+        }
         .left {
           width: 100%;
           padding: 0;
           flex-wrap: wrap;
           .stats {
-            padding: 2rem;
+            width: 100%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             flex-wrap: wrap;
-
             h2,
             p {
               padding: 1rem;
@@ -490,7 +108,10 @@ $mobile: 644px;
             .small-icon {
               margin-bottom: 0.5rem;
               margin-right: 0.5rem;
+              width: 216px;
+              height: auto;
             }
+           
           }
           .about-description {
             width: 100%;
@@ -562,7 +183,7 @@ $mobile: 644px;
               }
             }
             p {
-              font-size: 1rem;
+              font-size: 1.25rem;
             }
 
           }
@@ -577,6 +198,7 @@ $mobile: 644px;
           flex-direction: column-reverse;
           .header {
             width: 100%;
+            text-align: center;
           }
           .skill-items {
             width: 100%;
@@ -664,7 +286,11 @@ $mobile: 644px;
       }
     }
 
-
+    &#project-4 {
+      .container {
+        flex-direction: column-reverse;
+      }
+    }
     &#project-4,
     &#project-5 {
       height: unset;
@@ -673,7 +299,6 @@ $mobile: 644px;
         flex-wrap: wrap;
         .project-images {
           width: 100%;
-          background-color: red;
           .image {
             width: 100%;
             span {
@@ -684,10 +309,7 @@ $mobile: 644px;
                 left: 0;
                 bottom: 116px;
               }
-
             }
-
-
           }
         }
         .header {
@@ -696,7 +318,7 @@ $mobile: 644px;
           padding: 1rem;
           text-align: center;
           align-items: center;
-          h1 {
+          h2 {
             font-size: 3.5rem;
             margin-bottom: 0.5rem;
           }
@@ -716,8 +338,8 @@ $mobile: 644px;
             margin: 0;
 
             .card.inner {
-              width: 94%;
-              margin: 0 auto 1rem;
+              width: 85%;
+              margin: 0.5rem auto 1rem;
 
               .social-items {
                 padding: 0.5rem;
@@ -732,15 +354,9 @@ $mobile: 644px;
               }
             }
             .docker {
-              width: 95%;
+              width: 80%;
               height: 11.65%;
               .item {
-                &:first-child {
-                  display: none;
-                }
-                &:last-child {
-                  display: none;
-                }
                 &:nth-child(even) {
                   display: none;
                 }
@@ -751,10 +367,11 @@ $mobile: 644px;
         }
         .header {
           width: 100%;
-          h1 {
+          h2 {
             height: 100%;
             font-size: 3rem;
             margin-bottom: 0.5rem;
+            color: #fff;
 
           }
           .progress {
@@ -766,7 +383,9 @@ $mobile: 644px;
       }
     }
   };
-
+  .container-experience .small-icon {
+    width: 216px;
+  };
 
   // #title,
   // #experience,
@@ -784,3 +403,251 @@ $mobile: 644px;
 }
 
 
+/* 
+  if less than 526px and mobile requires 
+  some more improvements than tablet 
+  add here.
+*/
+@media only screen and(max-width: $mobile) {
+
+
+  .badge-contact-md img {
+    width: 50px;
+  }
+
+  /* title page */
+  .about {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+
+  /* experience page */
+  section.progress.left {
+    padding: 0;
+  }
+
+  /* education section */
+  .education-item {
+    .course-list .course-item {
+      h3 {
+        font-size: 1.75rem;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+    }
+
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+
+  section {
+    &#experience {
+      .container-experience {
+        .left {
+          .stats {
+            padding: 0;
+          }
+        }
+        .right {
+          .logos-container {
+            width: unset;
+            
+          }
+        }
+      }
+    }
+
+    &#work-experience {
+      .container {
+        .work-items {
+          .item {
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    &#contact {
+      .container {
+        .card {
+          &.contact {
+            .card.inner {
+              width: 94%;
+              margin: 0 auto 1rem;
+            }
+            .docker {
+              width: 95%;
+              .item {
+                &:first-child {
+                  display: none;
+                }
+                &:last-child {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+}
+
+
+@media only screen and(max-width: 1200px) and(min-width: 725px) {
+  section#project-1 .container .portfolio,
+  section#project-2 .container .portfolio,
+  section#project-3 .container .portfolio {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .card {
+      width: 50%;
+      margin: 0.5rem;
+      padding: 0;
+    }
+  }
+  section#experience .container-experience .right {
+    align-items: baseline;
+  }
+  section#experience .container-experience .right .logos-container {
+    flex-direction: row;
+  }
+  /* project 4 */
+  section#project-4 .container .project-images .image,
+  section#project-5 .container .project-images .image {
+    width: 50%;
+  }
+
+}
+
+
+@media only screen and(max-width: 1600px) and(min-width: 1200px) {
+
+  /* check other titles */
+  section > .title {
+    height: unset;
+    padding: 1rem 0;
+  }
+
+
+  .header, .portfolio.left {
+    width: 50%;
+  }
+  .header h2 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+
+#experience {
+  .title {
+    padding: 0;
+    .about {
+      h2 {
+        padding: 0;
+      }
+    }
+  }
+  .container-experience  {
+    .left {
+      padding: 0;
+      width: 80%;
+      .about-description {
+        padding: 0;
+      }
+    }
+    .right {
+      width: unset;
+    }
+  
+
+
+
+  }
+  .list-tools {
+    .item {
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+
+  .logos-container {
+    .logo {
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
+
+
+
+
+  #education > .title {
+    padding: 0;
+  }
+  #education {
+    .about  {
+      margin: 1rem 0;
+      h2 {
+        padding: 0px;
+      }
+    }
+  }
+  .container-education {
+
+    padding: 0;
+    .education-item {
+      padding: 0 1rem;
+      .title {
+        font-size: 3rem;
+      }
+      .course-list {
+        .course-item {
+          h3 {
+            font-size: 1.7rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  .work-items {
+    width: 100%;
+    padding: 0 2rem;
+    .item {
+      padding: 0 0 0rem 3rem;
+      p {
+        font-size: 1.25rem;
+      }
+  
+
+    } 
+  }
+
+  #work-experience .container {
+    // column
+    flex-direction: column;
+    align-items: center;
+
+
+    // project 1
+
+    
+  }
+}
