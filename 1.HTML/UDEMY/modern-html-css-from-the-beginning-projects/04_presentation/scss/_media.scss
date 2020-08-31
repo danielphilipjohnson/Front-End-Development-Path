@@ -1,13 +1,11 @@
 $mobile: 526px;
-$iphone-5: 319px;
-
+$iphone-5: 300px;
 
 /*
   Styles that apply both to a tablet at 900px and an iphone 5 320px.
 
 */
-@media only screen and(max-width: 1200px) and(min-width: $iphone-5) {
-
+@media only screen and(max-width: 1280px) and(min-width: $iphone-5) {
   p {
     font-size: 1rem;
   }
@@ -23,14 +21,8 @@ $iphone-5: 319px;
   }
 
   .header h2 {
-    font-size: 3.75rem;
-  }
-
-
-  .skills {
-    .header h2 {
-      font-size: 2.75rem;
-    }
+    font-size: 3.25rem;
+    text-align: center;
   }
 
   /* title page */
@@ -42,26 +34,22 @@ $iphone-5: 319px;
       font-size: 4.25rem;
       padding: 0;
     }
-
   }
-
 
   /* experience page */
   section.progress.left {
     padding: 0;
   }
 
-
-  section#experience {
+  section#experience,
+  section#skills {
     height: unset;
-
   }
 
   /* check other titles */
   section > .title {
     height: unset;
   }
-
 
   /* education section */
   .education-item {
@@ -78,7 +66,6 @@ $iphone-5: 319px;
       font-size: 2.5rem;
     }
   }
-
 
   section {
     &#experience {
@@ -104,6 +91,7 @@ $iphone-5: 319px;
               display: flex;
               justify-content: center;
               flex-wrap: wrap;
+              text-align: center;
             }
             .small-icon {
               margin-bottom: 0.5rem;
@@ -111,7 +99,6 @@ $iphone-5: 319px;
               width: 216px;
               height: auto;
             }
-           
           }
           .about-description {
             width: 100%;
@@ -134,6 +121,8 @@ $iphone-5: 319px;
           flex-wrap: wrap;
           .logos-container {
             align-items: center;
+            justify-content: flex-start;
+            width: 50%;
             .logo {
               width: 100px;
               padding: 0.25rem;
@@ -185,7 +174,6 @@ $iphone-5: 319px;
             p {
               font-size: 1.25rem;
             }
-
           }
         }
       }
@@ -238,32 +226,36 @@ $iphone-5: 319px;
     &#project-2,
     &#project-3 {
       height: unset;
+      overflow-y: hidden;
 
       .container {
         height: unset;
         flex-wrap: wrap;
-        .header {
+        .project-info {
           width: 100%;
-          padding: 1.65rem;
 
-          h1 {
-            height: unset;
-            margin-bottom: 1.5rem;
-          }
-          .badges {
-            flex-wrap: wrap;
-            justify-content: center;
-            .logo {
-              padding: 0;
-              margin: 0;
+          .header {
+            width: unset;
+            padding: 1.65rem;
+
+            h1 {
+              height: unset;
+              margin-bottom: 1.5rem;
             }
-
+            .badges {
+              flex-wrap: wrap;
+              justify-content: center;
+              .logo {
+                padding: 0;
+                margin: 0;
+              }
+            }
           }
         }
 
         .portfolio {
           flex-wrap: wrap;
-          flex-direction: column;
+          // flex-direction: column;
           justify-content: center;
           align-content: center;
 
@@ -276,7 +268,6 @@ $iphone-5: 319px;
           .card {
             padding: 1rem;
           }
-
         }
       }
     }
@@ -312,15 +303,19 @@ $iphone-5: 319px;
             }
           }
         }
-        .header {
+
+        .project-info {
           width: 100%;
-          height: unset;
-          padding: 1rem;
-          text-align: center;
-          align-items: center;
-          h2 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
+          .header {
+            width: 100%;
+            height: unset;
+            padding: 1rem;
+            text-align: center;
+            align-items: center;
+            h2 {
+              font-size: 3.5rem;
+              margin-bottom: 0.5rem;
+            }
           }
         }
       }
@@ -332,6 +327,7 @@ $iphone-5: 319px;
         flex-wrap: wrap;
         flex-direction: column-reverse;
         height: unset;
+        padding-bottom: 1rem;
         .card {
           &.contact {
             height: unset;
@@ -344,13 +340,11 @@ $iphone-5: 319px;
               .social-items {
                 padding: 0.5rem;
                 ul {
-
                   width: 100%;
                   p {
-                    font-size: 1.25rem;
+                    font-size: 1rem;
                   }
                 }
-
               }
             }
             .docker {
@@ -363,7 +357,6 @@ $iphone-5: 319px;
               }
             }
           }
-
         }
         .header {
           width: 100%;
@@ -372,7 +365,6 @@ $iphone-5: 319px;
             font-size: 3rem;
             margin-bottom: 0.5rem;
             color: #fff;
-
           }
           .progress {
             .bottom {
@@ -382,26 +374,11 @@ $iphone-5: 319px;
         }
       }
     }
-  };
+  }
   .container-experience .small-icon {
     width: 216px;
-  };
-
-  // #title,
-  // #experience,
-  // #education,
-  // #work-experience,
-  // #skills,
-  // // #project-1,
-  // // #project-2,
-  // // #project-3,
-  // // #project-4,
-  // // #project-5
-  // {
-  // display: none;
-  // }
+  }
 }
-
 
 /* 
   if less than 526px and mobile requires 
@@ -409,8 +386,6 @@ $iphone-5: 319px;
   add here.
 */
 @media only screen and(max-width: $mobile) {
-
-
   .badge-contact-md img {
     width: 50px;
   }
@@ -454,7 +429,6 @@ $iphone-5: 319px;
         .right {
           .logos-container {
             width: unset;
-            
           }
         }
       }
@@ -495,11 +469,27 @@ $iphone-5: 319px;
         }
       }
     }
-  };
+  }
 }
 
+@media only screen and(max-width: 1280px) and(min-width: 725px) {
+  section#experience .container-experience .right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
 
-@media only screen and(max-width: 1200px) and(min-width: 725px) {
+    .logos-container {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      .logo {
+        width: 100px;
+        padding: 0.25rem;
+      } // justify-content: center;
+    }
+  }
+
   section#project-1 .container .portfolio,
   section#project-2 .container .portfolio,
   section#project-3 .container .portfolio {
@@ -518,27 +508,30 @@ $iphone-5: 319px;
   section#experience .container-experience .right .logos-container {
     flex-direction: row;
   }
+
   /* project 4 */
   section#project-4 .container .project-images .image,
   section#project-5 .container .project-images .image {
     width: 50%;
   }
 
+  section#contact .container {
+    padding-bottom: 4rem;
+    .card.contact {
+      width: 95%;
+      margin: 0 1rem;
+    }
+  }
 }
 
 
-@media only screen and(max-width: 1600px) and(min-width: 1200px) {
-
-  /* check other titles */
+//  Large tablets
+@media only screen and(max-width: 1600px) and(min-width: 1280px) {
   section > .title {
     height: unset;
     padding: 1rem 0;
   }
 
-
-  .header, .portfolio.left {
-    width: 50%;
-  }
   .header h2 {
     font-size: 4rem;
   }
@@ -546,57 +539,62 @@ $iphone-5: 319px;
     font-size: 1rem;
   }
 
-
-#experience {
-  .title {
-    padding: 0;
-    .about {
-      h2 {
-        padding: 0;
-      }
-    }
-  }
-  .container-experience  {
-    .left {
+  #experience {
+    .title {
       padding: 0;
-      width: 80%;
-      .about-description {
+      .about {
+        h2 {
+          padding: 0;
+        }
+      }
+    }
+
+    .container-experience {
+      .left {
         padding: 0;
+        width: 90%;
+        .about-description {
+          padding: 0;
+          width: 80%;
+        }
+      }
+      .right {
+        width: unset;
       }
     }
-    .right {
-      width: unset;
+    .list-tools {
+      justify-content: center;
+      .item {
+        width: 33%;
+        h2 {
+          font-size: 1.25rem;
+        }
+      }
     }
-  
 
+    .about-description {
+      .list-tools {
+        padding: 0 2rem;
+      }
+    }
 
-
-  }
-  .list-tools {
-    .item {
-      h2 {
-        font-size: 1.75rem;
+    .logos-container {
+      .logo {
+        width: 75px;
+        height: 75px;
       }
     }
   }
-
 
   .logos-container {
-    .logo {
-      width: 75px;
-      height: 75px;
-    }
+    width: unset;
   }
-}
-
-
-
 
   #education > .title {
     padding: 0;
   }
   #education {
-    .about  {
+    .about {
       margin: 1rem 0;
       h2 {
         padding: 0px;
@@ -604,7 +602,6 @@ $iphone-5: 319px;
     }
   }
   .container-education {
-
     padding: 0;
     .education-item {
       padding: 0 1rem;
@@ -616,16 +613,13 @@ $iphone-5: 319px;
           h3 {
             font-size: 1.7rem;
           }
-          p{
+          p {
             font-size: 1rem;
           }
         }
       }
     }
   }
-
-
-
 
   .work-items {
     width: 100%;
@@ -635,19 +629,17 @@ $iphone-5: 319px;
       p {
         font-size: 1.25rem;
       }
-  
-
-    } 
+    }
   }
 
   #work-experience .container {
-    // column
     flex-direction: column;
     align-items: center;
+  }
 
+  .docker {
+    width: 99%;
+    height: 7.47%;
 
-    // project 1
-
-    
   }
 }

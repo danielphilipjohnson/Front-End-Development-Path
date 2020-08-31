@@ -6,28 +6,33 @@
     background: url("https://source.unsplash.com/user/erondu/1600x900") center no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-
-  }
-  .header {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-  
-    color: #fff;
-    // padding: 2rem 2rem 0 2rem;
   }
 }
 
+.project-info {
+  width: 50%;
 
+  &.bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: $accent-color 2px solid;
+  }
+
+  h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+}
 
 .header {
-  width: 50%;
+  width: 100%;
+  padding: 1rem 2rem;
+  
   &.bg {
     background-color: rgba(0, 0, 0, 0.8);
     border: $accent-color 2px solid;
   }
   h2 {
-
     font-size: 6rem;
     margin-bottom: 1rem;
   }

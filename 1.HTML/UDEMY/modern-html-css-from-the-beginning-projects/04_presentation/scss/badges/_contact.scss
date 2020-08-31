@@ -1,4 +1,3 @@
-// make a mixin
 @import "../variables";
 
 @mixin badge-contact($bg-color, $width) {
@@ -20,10 +19,11 @@
 .badge-contact-sm {
   @include badge-contact(#fff, 50px)
 }
+
 .badge-contact-md {
   @include badge-contact(#fff, 100px)
 }
+
 .badge-contact-lg {
   @include badge-contact(#fff, 200px)
 }
-

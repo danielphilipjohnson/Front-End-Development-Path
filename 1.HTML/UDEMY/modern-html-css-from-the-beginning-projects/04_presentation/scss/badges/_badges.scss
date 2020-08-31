@@ -1,8 +1,9 @@
 .badges {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   .logo {
-    // margin: 0.6rem 0.6rem 0.6rem 0;
-    // padding: 10px 25px 10px 0;
+
     img {
       width: 100px;
       padding: 0.5rem;
@@ -12,5 +13,6 @@
         padding: 0.5rem;
       }
     }
+    
   }
 }

@@ -4,6 +4,7 @@
 .btn {
   
   &-slide {
+    
     @include btn-basis;
     background-color: initial;
     border-radius: 50%;

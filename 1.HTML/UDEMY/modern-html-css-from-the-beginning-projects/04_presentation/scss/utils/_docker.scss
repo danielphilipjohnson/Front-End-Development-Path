@@ -3,34 +3,41 @@
 .docker {
   width: 90%;
   background-color: rgba(209, 189, 189, 0.74);
-  height: 8.25%;
+  height: 8.05%;
   margin: 0 auto;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 
   ul {
+
     list-style: none;
     display: flex;
     justify-content: center;
+
     li.item {
       padding: 0.5rem 1rem;
+
       &:hover {
         cursor: pointer;
       }
+
       img {
         height: 50px;
         width: 50px;
       }
+
       .social-logo  {
         padding: 0.9rem;
         border-radius: 10px;
         color: #fff;
         font-size: 1.5rem;
       }
+
       .linkedin.social-logo {
         background-color: $linkedin-color;
        
       }
+      
     }
   }
 

@@ -96,7 +96,9 @@
     animation: fade-in 2s ease-in; }
 
 .badges {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
   .badges .logo img {
     width: 100px;
     padding: 0.5rem;
@@ -118,15 +120,14 @@
   position: relative;
   height: 90%;
   margin: 1rem;
-  background: url(https://source.unsplash.com/user/erondu/1600x900); }
+  background: url(https://source.unsplash.com/user/erondu/1600x900);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
 
 .card.contact img {
   width: 100%;
   height: 99%; }
-
-.card.contact .items {
-  /* position: absolute;
-  top: 0; */ }
 
 .card .bar {
   position: relative;
@@ -193,7 +194,7 @@
 
 .card.inner {
   position: relative;
-  height: 84.1%;
+  height: 86%;
   width: 60%;
   margin: 1rem auto;
   background-color: ivory; }
@@ -275,7 +276,7 @@
 .docker {
   width: 90%;
   background-color: rgba(209, 189, 189, 0.74);
-  height: 8.25%;
+  height: 8.05%;
   margin: 0 auto;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px; }
@@ -342,6 +343,27 @@
     justify-content: center;
     align-items: flex-end; }
 
+.header {
+  display: flex;
+  flex-direction: column; }
+  .header.left {
+    justify-content: center;
+    align-items: flex-start; }
+  .header.center {
+    justify-content: center;
+    align-items: center; }
+  .header.right {
+    justify-content: center;
+    align-items: flex-end; }
+
+h2 {
+  color: #ffd53d;
+  margin: 0.55rem 0; }
+
+p {
+  color: #fff;
+  margin-bottom: 0.75rem; }
+
 /* where is big */
 .logos-container {
   display: flex;
@@ -376,11 +398,20 @@
     background: url("https://source.unsplash.com/user/erondu/1600x900") center no-repeat;
     background-repeat: no-repeat;
     background-size: cover; }
-  .container .header {
+
+.project-info {
+  width: 50%; }
+  .project-info.bg {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: #ffd53d 2px solid; }
+  .project-info h2 {
+    font-size: 6rem;
+    margin-bottom: 1rem;
     color: #fff; }
 
 .header {
-  width: 50%; }
+  width: 100%;
+  padding: 1rem 2rem; }
   .header.bg {
     background-color: rgba(0, 0, 0, 0.8);
     border: #ffd53d 2px solid; }
@@ -408,6 +439,24 @@
       align-items: flex-end; }
     .header .progress p {
       font-size: 2rem; }
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; }
+  .about h1 {
+    color: #fff;
+    font-size: 10rem;
+    margin: 0;
+    animation: fade-in 2s ease-in; }
+  .about h2 {
+    font-size: 4rem;
+    padding-top: 3rem;
+    margin: 0;
+    color: #fff; }
 
 .project-images {
   background-color: rgba(0, 0, 0, 0.6);
@@ -448,14 +497,6 @@
     margin-bottom: 0.5rem; }
 
 /* might need to make own style */
-h2 {
-  color: #ffd53d;
-  margin: 0.55rem 0; }
-
-p {
-  color: #fff;
-  margin-bottom: 0.75rem; }
-
 /* make html element header */
 .container-education {
   display: flex;
@@ -621,24 +662,6 @@ section {
 section.progress.left {
   padding-left: 3rem; }
 
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%; }
-  .about h1 {
-    color: #fff;
-    font-size: 10rem;
-    margin: 0;
-    animation: fade-in 2s ease-in; }
-  .about h2 {
-    font-size: 4rem;
-    padding-top: 3rem;
-    margin: 0;
-    color: #fff; }
-
 #title .btn-slide {
   top: 23%; }
 
@@ -676,19 +699,19 @@ span.bottom-container * {
   padding: 0.5rem; }
 
 span.img-1 {
-  bottom: 112px;
+  bottom: 118px;
   left: 0; }
 
 span.img-2 {
-  bottom: 112px;
+  bottom: 118px;
   left: 0; }
 
 span.img-3 {
-  bottom: 112px;
+  bottom: 118px;
   left: 0; }
 
 span.img-4 {
-  bottom: 112px;
+  bottom: 118px;
   left: 0; }
 
 .list-tools {
@@ -701,7 +724,7 @@ span.img-4 {
   Styles that apply both to a tablet at 900px and an iphone 5 320px.
 
 */
-@media only screen and (max-width: 1200px) and (min-width: 319px) {
+@media only screen and (max-width: 1280px) and (min-width: 300px) {
   p {
     font-size: 1rem; }
   .side-text {
@@ -711,9 +734,8 @@ span.img-4 {
   .badge-contact-md img {
     width: 75px; }
   .header h2 {
-    font-size: 3.75rem; }
-  .skills .header h2 {
-    font-size: 2.75rem; }
+    font-size: 3.25rem;
+    text-align: center; }
   /* title page */
   .about h1 {
     font-size: 4.5rem; }
@@ -723,7 +745,8 @@ span.img-4 {
   /* experience page */
   section.progress.left {
     padding: 0; }
-  section#experience {
+  section#experience,
+  section#skills {
     height: unset; }
   /* check other titles */
   section > .title {
@@ -756,7 +779,8 @@ span.img-4 {
             padding: 1rem;
             display: flex;
             justify-content: center;
-            flex-wrap: wrap; }
+            flex-wrap: wrap;
+            text-align: center; }
           section#experience .container-experience .left .stats .small-icon {
             margin-bottom: 0.5rem;
             margin-right: 0.5rem;
@@ -778,7 +802,9 @@ span.img-4 {
         justify-content: center;
         flex-wrap: wrap; }
         section#experience .container-experience .right .logos-container {
-          align-items: center; }
+          align-items: center;
+          justify-content: flex-start;
+          width: 50%; }
           section#experience .container-experience .right .logos-container .logo {
             width: 100px;
             padding: 0.25rem; }
@@ -847,25 +873,27 @@ span.img-4 {
           section#skills .container.skills .skill-items ul .icon-item p {
             font-size: 2.5rem; }
   section#project-1, section#project-2, section#project-3 {
-    height: unset; }
+    height: unset;
+    overflow-y: hidden; }
     section#project-1 .container, section#project-2 .container, section#project-3 .container {
       height: unset;
       flex-wrap: wrap; }
-      section#project-1 .container .header, section#project-2 .container .header, section#project-3 .container .header {
-        width: 100%;
-        padding: 1.65rem; }
-        section#project-1 .container .header h1, section#project-2 .container .header h1, section#project-3 .container .header h1 {
-          height: unset;
-          margin-bottom: 1.5rem; }
-        section#project-1 .container .header .badges, section#project-2 .container .header .badges, section#project-3 .container .header .badges {
-          flex-wrap: wrap;
-          justify-content: center; }
-          section#project-1 .container .header .badges .logo, section#project-2 .container .header .badges .logo, section#project-3 .container .header .badges .logo {
-            padding: 0;
-            margin: 0; }
+      section#project-1 .container .project-info, section#project-2 .container .project-info, section#project-3 .container .project-info {
+        width: 100%; }
+        section#project-1 .container .project-info .header, section#project-2 .container .project-info .header, section#project-3 .container .project-info .header {
+          width: unset;
+          padding: 1.65rem; }
+          section#project-1 .container .project-info .header h1, section#project-2 .container .project-info .header h1, section#project-3 .container .project-info .header h1 {
+            height: unset;
+            margin-bottom: 1.5rem; }
+          section#project-1 .container .project-info .header .badges, section#project-2 .container .project-info .header .badges, section#project-3 .container .project-info .header .badges {
+            flex-wrap: wrap;
+            justify-content: center; }
+            section#project-1 .container .project-info .header .badges .logo, section#project-2 .container .project-info .header .badges .logo, section#project-3 .container .project-info .header .badges .logo {
+              padding: 0;
+              margin: 0; }
       section#project-1 .container .portfolio, section#project-2 .container .portfolio, section#project-3 .container .portfolio {
         flex-wrap: wrap;
-        flex-direction: column;
         justify-content: center;
         align-content: center;
         width: 100%; }
@@ -890,21 +918,24 @@ span.img-4 {
           section#project-4 .container .project-images .image span.img-1, section#project-4 .container .project-images .image span.img-2, section#project-4 .container .project-images .image span.img-3, section#project-4 .container .project-images .image span.img-4, section#project-5 .container .project-images .image span.img-1, section#project-5 .container .project-images .image span.img-2, section#project-5 .container .project-images .image span.img-3, section#project-5 .container .project-images .image span.img-4 {
             left: 0;
             bottom: 116px; }
-      section#project-4 .container .header, section#project-5 .container .header {
-        width: 100%;
-        height: unset;
-        padding: 1rem;
-        text-align: center;
-        align-items: center; }
-        section#project-4 .container .header h2, section#project-5 .container .header h2 {
-          font-size: 3.5rem;
-          margin-bottom: 0.5rem; }
+      section#project-4 .container .project-info, section#project-5 .container .project-info {
+        width: 100%; }
+        section#project-4 .container .project-info .header, section#project-5 .container .project-info .header {
+          width: 100%;
+          height: unset;
+          padding: 1rem;
+          text-align: center;
+          align-items: center; }
+          section#project-4 .container .project-info .header h2, section#project-5 .container .project-info .header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem; }
   section#contact {
     height: unset; }
     section#contact .container {
       flex-wrap: wrap;
       flex-direction: column-reverse;
-      height: unset; }
+      height: unset;
+      padding-bottom: 1rem; }
       section#contact .container .card.contact {
         height: unset;
         margin: 0; }
@@ -916,7 +947,7 @@ span.img-4 {
             section#contact .container .card.contact .card.inner .social-items ul {
               width: 100%; }
               section#contact .container .card.contact .card.inner .social-items ul p {
-                font-size: 1.25rem; }
+                font-size: 1rem; }
         section#contact .container .card.contact .docker {
           width: 80%;
           height: 11.65%; }
@@ -971,7 +1002,18 @@ span.img-4 {
     section#contact .container .card.contact .docker .item:last-child {
       display: none; } }
 
-@media only screen and (max-width: 1200px) and (min-width: 725px) {
+@media only screen and (max-width: 1280px) and (min-width: 725px) {
+  section#experience .container-experience .right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; }
+    section#experience .container-experience .right .logos-container {
+      align-items: center;
+      justify-content: center;
+      width: 100%; }
+      section#experience .container-experience .right .logos-container .logo {
+        width: 100px;
+        padding: 0.25rem; }
   section#project-1 .container .portfolio,
   section#project-2 .container .portfolio,
   section#project-3 .container .portfolio {
@@ -990,15 +1032,17 @@ span.img-4 {
   /* project 4 */
   section#project-4 .container .project-images .image,
   section#project-5 .container .project-images .image {
-    width: 50%; } }
+    width: 50%; }
+  section#contact .container {
+    padding-bottom: 4rem; }
+    section#contact .container .card.contact {
+      width: 95%;
+      margin: 0 1rem; } }
 
-@media only screen and (max-width: 1600px) and (min-width: 1200px) {
-  /* check other titles */
+@media only screen and (max-width: 1600px) and (min-width: 1280px) {
   section > .title {
     height: unset;
     padding: 1rem 0; }
-  .header, .portfolio.left {
-    width: 50%; }
   .header h2 {
     font-size: 4rem; }
   p {
@@ -1009,16 +1053,25 @@ span.img-4 {
       padding: 0; }
   #experience .container-experience .left {
     padding: 0;
-    width: 80%; }
+    width: 90%; }
     #experience .container-experience .left .about-description {
-      padding: 0; }
+      padding: 0;
+      width: 80%; }
   #experience .container-experience .right {
     width: unset; }
-  #experience .list-tools .item h2 {
-    font-size: 1.75rem; }
+  #experience .list-tools {
+    justify-content: center; }
+    #experience .list-tools .item {
+      width: 33%; }
+      #experience .list-tools .item h2 {
+        font-size: 1.25rem; }
+  #experience .about-description .list-tools {
+    padding: 0 2rem; }
   #experience .logos-container .logo {
     width: 75px;
     height: 75px; }
+  .logos-container {
+    width: unset; }
   #education > .title {
     padding: 0; }
   #education .about {
@@ -1044,4 +1097,7 @@ span.img-4 {
         font-size: 1.25rem; }
   #work-experience .container {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+  .docker {
+    width: 99%;
+    height: 7.47%; } }
