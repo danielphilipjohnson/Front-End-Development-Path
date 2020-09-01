@@ -1,0 +1,10 @@
+@import "../mixins/util.scss";
+
+.list-latest {
+  @include nobullets;
+  padding: 0 1rem 2rem 1rem;
+  li {
+    padding: 0.5rem 1rem 1rem 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+}

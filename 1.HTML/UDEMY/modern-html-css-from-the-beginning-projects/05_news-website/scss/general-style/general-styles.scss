@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Russo One", sans-serif;
+  
+  font-family: 'Oswald', sans-serif;
 }
 
 /* elements */
@@ -68,6 +69,15 @@ footer {
       grid-area: nav;
       padding: 1.5rem 0;
     }
+    .sub-footer {
+      // background-color: #181818;
+      border-top: solid rgba(255, 255, 255, 0.15) 2px; 
+      color: #fff;
+      padding: 2rem 0 0 0;
+      text-align: center;
+      width: 100%;
+    }
+    
   }
 }
 
@@ -82,13 +92,4 @@ footer {
       }
     }
   }
-}
-
-.sub-footer {
-  // background-color: #181818;
-  border-top: solid rgba(255, 255, 255, 0.15) 2px; 
-  color: #fff;
-  padding: 2rem 0 0 0;
-  text-align: center;
-  width: 100%;
 }

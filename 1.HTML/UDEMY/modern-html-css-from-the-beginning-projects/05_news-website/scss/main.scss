@@ -1,16 +1,14 @@
 @import "./variables";
 @import "./general-style/general-styles.scss";
 @import "./utilities/util";
-@import "./nav/nav";;
-
+@import "./nav/nav";
+@import "./card/card";
+@import "./lists/lists";
 .advert {
   position: fixed;
   z-index: -1000;
   width: 100%;
 }
-
-
-
 
 .container {
   width: 100%;
@@ -20,6 +18,25 @@
   max-width: 1140px;
 }
 
+.top-news {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  .middle {
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      padding: 1rem;
+    }
+  }
+}
+
+@media only screen and(min-width: 600px) {
+  .top-news {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    
+  }
+}
 
 /*
 
