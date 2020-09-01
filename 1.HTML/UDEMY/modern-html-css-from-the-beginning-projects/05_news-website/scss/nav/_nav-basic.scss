@@ -1,0 +1,48 @@
+@import "../mixins/util.scss";
+
+@mixin nav-basic($item) {
+  @include nobullets;
+  display: grid;
+
+  grid-template-columns: repeat($item, auto);
+  grid-row-gap: 2rem;
+  align-items: center;
+
+  &.light {
+    color: #fff;
+  }
+}
+
+.nav-basic {
+  @include nav-basic(1);
+ 
+}
+
+
+
+
+.nav-sub {
+  
+  @include nav-basic(5);
+  display: none;
+  padding: 1rem;
+  justify-content: center; 
+  li {
+    padding: 1rem;
+    a {
+      padding-bottom: 0.5rem;
+      text-decoration: none;
+      color: $dark-text;
+      &:hover {
+        border-bottom: $logo-color solid 4px;
+      }
+    }
+  }
+}
+
+
+@media only screen and(min-width: 600px) {
+  .nav-sub  {
+    display: grid;
+  }
+}
