@@ -1,0 +1,17 @@
+.section-header {
+  display: flex;
+ 
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 2rem auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem;
+  
+  .title {
+    // width: 90%;
+    text-align: center;
+  }
+  
+}

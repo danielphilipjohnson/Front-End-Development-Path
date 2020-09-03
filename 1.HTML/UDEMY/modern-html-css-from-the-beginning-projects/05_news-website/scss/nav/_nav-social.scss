@@ -1,3 +1,5 @@
+/* rename a new one*/
+
 .social-icons {
   display: flex;
   justify-content: flex-start;
@@ -13,6 +15,7 @@
     height: 40px;
     text-align: center;
     font-size: 1.1rem;
+
     &.facebook:hover {
       background-color: $facebook-color;
     }
@@ -37,5 +40,6 @@
     &.email:hover {
       background-color: $email-color;
     }
+    
   }
 }

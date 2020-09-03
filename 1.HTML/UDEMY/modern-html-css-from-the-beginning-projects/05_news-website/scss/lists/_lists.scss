@@ -2,9 +2,10 @@
 
 .list-latest {
   @include nobullets;
-  padding: 0 1rem 2rem 1rem;
+  // padding: 0 0rem 2rem 0rem;
   li {
     padding: 0.5rem 1rem 1rem 1rem;
     border-bottom: 1px solid #ddd;
   }
 }
+
