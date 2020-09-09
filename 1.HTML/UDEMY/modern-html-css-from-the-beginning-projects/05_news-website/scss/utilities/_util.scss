@@ -48,10 +48,34 @@
   flex-wrap: wrap;
   width: 100%;
 }
+
+
 .col {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   flex: 100%;
   max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px;
+}
+
+
+.advert {
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
+}
+
+.advertisment {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }

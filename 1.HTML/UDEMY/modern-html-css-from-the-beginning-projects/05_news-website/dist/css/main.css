@@ -111,11 +111,29 @@ footer {
   flex: 100%;
   max-width: 100%; }
 
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px; }
+
+.advert {
+  position: fixed;
+  z-index: -1000;
+  width: 100%; }
+
+.advertisment {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; }
+
 .badge-header {
   margin-bottom: 3rem;
   border-bottom: 2px solid black;
   width: 100%;
-  padding: 2rem 1rem 0;
+  padding: 0 1rem 0;
   background-color: #fff; }
   .badge-header .badge {
     position: relative;
@@ -129,6 +147,8 @@ footer {
     background-color: #000;
     text-align: center;
     color: #fff; }
+    .badge-header .badge i {
+      margin-right: 0.5rem; }
 
 .badge-title {
   position: absolute;
@@ -305,9 +325,9 @@ footer {
     padding-top: 32rem; } }
 
 .card {
-  margin-right: 0.5rem;
   display: flex;
-  margin: 1rem; }
+  margin: 1rem 0;
+  padding-right: 1rem; }
   .card.trending {
     border-top: solid grey 1px; }
   .card .card-image {
@@ -319,7 +339,7 @@ footer {
       height: 100%; }
     .card .card-image .text-mute {
       color: #5e5e5e;
-      font-size: .75rem;
+      font-size: 0.75rem;
       position: absolute;
       bottom: 0;
       background-color: #2aead3;
@@ -341,9 +361,9 @@ footer {
 
 /* need to remove redundancies */
 .card-w-badge {
-  margin-right: 0.5rem;
   display: flex;
-  margin: 1rem;
+  margin: 1rem 0;
+  padding-right: 1rem;
   flex-direction: column; }
   .card-w-badge .card-image {
     position: relative; }
@@ -359,13 +379,46 @@ footer {
     .card-w-badge .body p {
       font-weight: 300; }
 
+.card-sub {
+  display: flex;
+  margin: 1rem 0 0 0;
+  padding-right: 1rem;
+  flex-direction: column; }
+  .card-sub .card-image {
+    position: relative; }
+    .card-sub .card-image img {
+      width: 100%;
+      height: 100%; }
+    .card-sub .card-image .badge-text {
+      position: absolute;
+      top: 0;
+      padding: 0.5rem; }
+  .card-sub .body {
+    padding: 0.5rem 0 0 0; }
+    .card-sub .body p {
+      font-weight: 300; }
+
+.card-main p {
+  padding: 0.5rem 0 1rem 0;
+  border-bottom: 1px solid #ddd;
+  font-weight: 300; }
+
+.cards {
+  padding-left: 1rem;
+  padding-right: 1rem; }
+
 .list-latest {
   list-style: none;
   margin: 0;
   padding: 0; }
   .list-latest li {
-    padding: 0.5rem 1rem 1rem 1rem;
-    border-bottom: 1px solid #ddd; }
+    padding: 0.5rem 1rem 1rem 0rem;
+    border-bottom: 1px solid #ddd;
+    margin-right: 1rem;
+    font-weight: 300;
+    transition: color 1s; }
+    .list-latest li:hover {
+      color: red; }
 
 .section-header {
   display: flex;
@@ -389,24 +442,26 @@ footer {
       font-size: 2.2rem;
       padding: 1rem; }
 
-@media only screen and (max-width: 1500px) and (min-width: 750px) {
+@media only screen and (max-width: 1000px) and (min-width: 750px) {
   .top-news {
     display: grid;
     grid-template-columns: auto 1fr 1fr;
     grid-column-gap: 0; }
     .top-news .trending {
       grid-row-start: 2;
-      grid-column-start: 1; }
+      grid-column-start: 1;
+      grid-column-end: 4; }
       .top-news .trending .card {
         flex-direction: column; }
     .top-news .middle {
       grid-column: 1 / span 3;
       grid-row-start: 1; }
     .top-news .latest {
-      grid-row-start: 2;
-      grid-column: 2 / span 2; } }
+      grid-row-start: 3;
+      grid-column-start: 1;
+      grid-column-end: 4; } }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1400px) {
   .top-news {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -414,6 +469,107 @@ footer {
     .top-news .middle {
       grid-column-start: auto;
       grid-row-start: auto; } }
+
+.sub-middle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.entertainment {
+  display: grid;
+  grid-template-columns: 1fr; }
+
+@media only screen and (min-width: 750px) {
+  .entertainment {
+    display: grid;
+    grid-template-columns: 2fr 1fr; } }
+
+@media only screen and (max-width: 750px) {
+  #entertainment .section-header .title {
+    font-size: 1.4rem; } }
+
+.more-news {
+  display: grid;
+  grid-template-columns: 3fr 1fr; }
+
+@media only screen and (min-width: 750px) and (max-width: 1300px) {
+  .more-news {
+    grid-template-columns: 3fr 2fr; } }
+
+@media only screen and (max-width: 750px) {
+  .more-news {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); } }
+
+.technology, .fashion, .sports {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 1rem; }
+
+@media only screen and (min-width: 750px) {
+  .technology,
+  .fashion, .sports {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(2, auto); }
+    .technology .left,
+    .fashion .left, .sports .left {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    .technology .right,
+    .fashion .right, .sports .right {
+      grid-column-start: 3;
+      grid-column-end: 5; } }
+
+@media only screen and (max-width: 750px) {
+  .card.left,
+  .card.right {
+    justify-content: center; }
+  .technology .card .card-image img, .fashion .card .card-image img, .sports .card .card-image img {
+    height: 250px;
+    object-fit: cover; }
+  .technology .badge-title, .fashion .badge-title, .sports .badge-title {
+    bottom: 5px; }
+  .advertisment {
+    width: 100%; }
+  .sub-middle {
+    grid-template-columns: repeat(1, 1fr); } }
+
+@media only screen and (min-width: 750px) and (max-width: 1300px) {
+  .technology .left,
+  .fashion .left, .sports .left {
+    grid-column-start: 1;
+    grid-column-end: 2; }
+  .technology .right,
+  .fashion .right, .sports .right {
+    grid-column-start: 2;
+    grid-column-end: 3; }
+  .fashion, .technology, .sports {
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: auto; } }
+
+.videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 1rem; }
+
+@media only screen and (min-width: 750px) {
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(4, auto); }
+    .videos .card.main {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    .videos .left {
+      grid-column-start: 1;
+      grid-column-end: 3; }
+    .videos .right {
+      grid-column-start: 3;
+      grid-column-end: 5; } }
 
 .btn {
   text-decoration: none;
@@ -484,74 +640,6 @@ footer {
   .btn.btn-podcast i {
     margin-right: 0.5rem; }
 
-.advert {
-  position: fixed;
-  z-index: -1000;
-  width: 100%; }
-
-.container {
-  width: 100%;
-  margin: 0 auto; }
-
-.entertainment {
-  display: grid;
-  grid-template-columns: 1fr; }
-
-@media only screen and (min-width: 750px) {
-  .entertainment {
-    display: grid;
-    grid-template-columns: 2fr 1fr; } }
-
-.advertisment {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center; }
-
-.technology {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 1rem; }
-
-.videos {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 1rem; }
-
-@media only screen and (min-width: 750px) {
-  .videos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    grid-template-rows: repeat(4, auto); }
-    .videos .card.main {
-      grid-column-start: 1;
-      grid-column-end: 3; }
-    .videos .left {
-      grid-column-start: 1;
-      grid-column-end: 3; }
-    .videos .right {
-      grid-column-start: 3;
-      grid-column-end: 5; } }
-
-@media only screen and (min-width: 750px) {
-  .technology {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    grid-template-rows: repeat(2, auto); }
-    .technology .left {
-      grid-column-start: 1;
-      grid-column-end: 3; }
-    .technology .right {
-      grid-column-start: 3;
-      grid-column-end: 5; } }
-
-.more-news {
-  display: grid;
-  grid-template-columns: 3fr 1fr; }
-
 .subscribe-bar {
   margin: 1rem;
   padding: 1rem;
@@ -575,22 +663,3 @@ input.subscribe {
   padding: 0.5rem 0;
   border-bottom: 1px solid #ddd;
   width: 100%; }
-
-/*
-
-Position and Layout
-
-Display and Visibility
-
-Clipping
-
-Animation
-
-Box Model (from outside in)
-
-Background
-
-Typography
-
-Pseudo-classes & pseudo-elements (nested rules)
-*/

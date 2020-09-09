@@ -7,131 +7,26 @@
 @import "./lists/lists";
 
 @import "./headers/section-header";
+
 @import "./layouts/top-news";
+@import "./layouts/entertainment";
+@import "./layouts/more-news";
+@import "./layouts/technology";
+@import "./layouts/videos";
+
+
+
+
+
+
 @import "./buttons/btn";
 
-.advert {
-  position: fixed;
-  z-index: -1000;
-  width: 100%;
-}
-
-.container {
-  width: 100%;
-  // padding-right: 15px;
-  // padding-left: 15px;
-  margin: 0 auto;
-  // max-width: 1140px;
-}
-
-
-.entertainment {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-
-@media only screen and(min-width: 750px) {
-
-
-  .entertainment {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-  }
-
-
-}
-
-.advertisment {
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-// .technology .top {
-// display: grid;
-// grid-template-columns:1fr 1fr;
-// // grid-template-rows: repeat(2, auto);
-
-// }
-
-
-.technology {
-  display: grid;
-  grid-template-columns: 1fr;
-  // grid-auto-rows: auto;
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 1rem;
-  // .left {
-  // grid-column-start: 1;
-  // grid-column-end: 3;
-  // }
-  // .right {
-  // grid-column-start: 3;
-  // grid-column-end: 5;
-  // }
-
-}
-
-.videos {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, auto);
-  grid-row-gap: 1rem;
-}
-
-
-@media only screen and(min-width: 750px) {
-  .videos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    grid-template-rows: repeat(4, auto);
-    .card {
-      
-      &.main  {
-        grid-column-start: 1;
-        grid-column-end: 3;
-      }
-    }
-    .left {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    .right {
-      grid-column-start: 3;
-      grid-column-end: 5;
-    }
-  }
-}
 
 
 
 
 
-@media only screen and(min-width: 750px) {
-  .technology {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    grid-template-rows: repeat(2, auto);
-    .left {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-    .right {
-      grid-column-start: 3;
-      grid-column-end: 5;
-    }
-  }
-}
 
-
-
-.more-news {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-}
 
 
 
@@ -148,7 +43,7 @@
   }
   p {
     color: rgb(136, 130, 130);
-  };
+  }
   .sub-title {
     color: #000;
     font-size: 1.8rem;
@@ -158,32 +53,15 @@
   }
 }
 
-
 input.subscribe {
   border: none;
   background-color: #fff;
   margin: 1rem 0;
-  padding: 0.5rem 0 ;
+  padding: 0.5rem 0;
   border-bottom: 1px solid #ddd;
   width: 100%;
 }
 
 
-/*
 
-Position and Layout
 
-Display and Visibility
-
-Clipping
-
-Animation
-
-Box Model (from outside in)
-
-Background
-
-Typography
-
-Pseudo-classes & pseudo-elements (nested rules)
-*/
