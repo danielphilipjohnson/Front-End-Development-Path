@@ -1,0 +1,61 @@
+/* TODO
+
+make different types how i make my own npm package
+
+*/
+
+$socialmedia-colors: (
+  "facebook": #4267B2,
+  "twitter": #1DA1F2,
+  "youtube": #FF0000,
+  "instagram": #C13584,
+  "linkedin": #2867b2,
+  "github": #000,
+  "pinterest": #E60023,
+  "google": #F4B400,
+  "rss": #E58738,
+  "email": #2DA112,
+  // "logo": #2aead3,
+  "snapchat": #FFFC00,
+  "podcast": #8F35CB
+);
+
+@each $social, $color in $socialmedia-colors {
+
+  &.#{$social}:hover {
+    background-color: #{$color};
+  }
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+
+  .nav-item {
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.75;
+    transition: background-color .75s;
+    a {
+      color: #fff;
+    }
+
+    @each $social, $color in $socialmedia-colors {
+
+      &.#{$social}:hover {
+        background-color: #{$color};
+        
+      }
+    }
+  }
+}

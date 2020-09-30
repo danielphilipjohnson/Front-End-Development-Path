@@ -1,0 +1,62 @@
+@import 'config';
+@import 'default';
+@import 'utilities';
+@import 'site_wide';
+@import 'item_grid';
+@import 'social-icons';
+@import 'badges';
+@import './pages/about';
+@import './pages/contact';
+@import './pages/home';
+@import 'mixins';
+
+
+// Header
+#welcome {
+  // Header Home
+  //welcome-section
+  &-section {
+    background: $bg-image no-repeat center right / cover;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+
+    // Header Content
+    .header-content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      & > * {
+        z-index: 9999;
+      }
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+    }
+    &::before {
+      content: '';
+      /* hides the text*/
+      background-color: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  // Header Inner
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+
+// Import Media Queries
+@import 'media';
