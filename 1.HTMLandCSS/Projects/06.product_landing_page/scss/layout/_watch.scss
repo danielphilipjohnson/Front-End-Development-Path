@@ -1,0 +1,37 @@
+.watch {
+  background-color: $alt-bg;
+  h2 {
+    padding: 2rem;
+    margin-bottom: 0;
+    &.title {
+      padding: 0 0 0.5rem 0;
+    }
+  }
+  .more-link {
+    font-size: 1.25rem;
+  }
+  iframe {
+    margin-top: 2rem;
+    border: 2px solid black;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .watch {
+    .container {
+      padding: 0;
+    }
+    header {
+      padding: 0 1rem;
+      h2 {
+        padding: 0 0 1rem 0;
+        &.title {
+          font-size: 2rem;
+        }
+      }
+    }
+    iframe {
+      border: none;
+    }
+  }
+}

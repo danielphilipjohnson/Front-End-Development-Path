@@ -1,0 +1,40 @@
+.badge {
+  border-radius: 15px;
+  padding: 1rem 1.25rem;
+  margin: 1rem;
+  display: inline-block;
+
+  &.app {
+    background: #000000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #434343,
+      #000000
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+  }
+  &.pear {
+    padding: 1.5rem 2.15rem;
+    background: #ed213a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #93291e,
+      #ed213a
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #93291e,
+      #ed213a
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  &.outline {
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding: 0.5rem 1.25rem;
+  }
+}

@@ -1,0 +1,71 @@
+/* CSS Variables */
+
+$font: 'PT Sans',
+sans-serif;
+$background-color:rgb(255, 255, 255);
+$alt-bg: #fafafa;
+
+$hightlight-color: #eb142d;
+
+$footer-border: 1px solid #86868b;
+
+
+*:root {
+    --primary-color: #b90415;
+    --primary-color-hover: #d3071b;
+    --secondary-color: #06c;
+    --secondary-color-hover: #143f85;
+    --light-color: rgb(251, 251, 253);
+    --dark-bg: rgb(245, 245, 247);
+    --footer-bg: #86868b;
+}
+
+body {
+    font-family: $font;
+    background-color: $background-color;
+    margin: 0;
+    color: #fff;
+    line-height: 1.2;
+}
+
+li {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+h2, h3, p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #ccc;
+}
+
+
+
+#video {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+
+
+section {
+    padding: 3rem;
+    text-align: center;
+}
+@media screen and (max-width: 780px) {
+
+    section {
+        padding: 1rem 0;
+    }
+
+}
+

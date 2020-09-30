@@ -1,0 +1,40 @@
+.trial {
+  .title {
+      font-size: 4rem;
+  }
+  
+  h4 {
+      margin-bottom: 5rem;
+  }
+
+  .row {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      align-content: center;
+  }
+
+  .button {
+      font-size: 1.2rem;
+      background-color: $hightlight-color;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+
+  .trial {
+      padding: 2rem 0;
+      .title {
+          font-size: 3rem;
+      }
+      h4 {
+          margin-bottom: 5rem;
+      }
+      .row {
+          grid-template-columns: repeat(1,1fr);
+          .col {
+              margin-bottom: 2rem;
+          }
+      }
+  }
+}
