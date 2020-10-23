@@ -5,7 +5,7 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/hero.jpg);
+    url(../img/hero1.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -16,6 +16,13 @@
     position: absolute;
     top: 4rem;
     left: 4rem;
+  }
+
+  &__logo-top {
+    margin-bottom: 2rem;
+    .header__logo {
+      height: 9rem;
+    }
   }
 
   &__logo {

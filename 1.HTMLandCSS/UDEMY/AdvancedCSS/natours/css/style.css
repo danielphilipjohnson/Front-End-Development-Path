@@ -43,8 +43,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #fff;
@@ -54,8 +53,8 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 2.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -63,7 +62,7 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
+    letter-spacing: .75rem;
     animation: moveInRight 1s ease-out; }
 
 .heading-secondary {
@@ -71,7 +70,7 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
-  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: linear-gradient(to right, #b5bdb4, #1a1b1b);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -212,7 +211,7 @@ body {
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
-        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+        background-image: linear-gradient(to right bottom, #b5bdb4, #1a1b1b); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
@@ -230,7 +229,7 @@ body {
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
     .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+      background-image: linear-gradient(to right bottom, #b5bdb4, #1a1b1b), url(../img/nat-6.jpg); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
   .card__heading {
@@ -250,7 +249,7 @@ body {
     .card__heading-span--1 {
       background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
     .card__heading-span--2 {
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+      background-image: linear-gradient(to right bottom, rgba(181, 189, 180, 0.85), rgba(26, 27, 27, 0.85)); }
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
@@ -322,7 +321,7 @@ body {
     display: inline-block;
     font-size: 6rem;
     margin-bottom: .5rem;
-    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    background-image: linear-gradient(to right, #b5bdb4, #1a1b1b);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent; }
@@ -404,6 +403,36 @@ body {
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
   opacity: 1; }
+
+.place__box {
+  position: relative;
+  width: 20rem;
+  height: 100%; }
+  .place__box--image {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s; }
+  .place__box--text {
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .place__box:hover .place__box--text {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .place__box:hover .place__box--image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
 
 .popup {
   height: 100vh;
@@ -547,7 +576,7 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-image: linear-gradient(to right bottom, rgba(181, 189, 180, 0.8), rgba(26, 27, 27, 0.8)), url(../img/hero1.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
@@ -557,6 +586,10 @@ body {
     position: absolute;
     top: 4rem;
     left: 4rem; }
+  .header__logo-top {
+    margin-bottom: 2rem; }
+    .header__logo-top .header__logo {
+      height: 9rem; }
   .header__logo {
     height: 3.5rem; }
   .header__text-box {
@@ -589,7 +622,7 @@ body {
   position: fixed;
   top: 6.5rem;
   right: 6.5rem;
-  background-image: radial-gradient(#7ed56f, #28b485);
+  background-image: radial-gradient(#b5bdb4, #1a1b1b);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
 
@@ -720,9 +753,14 @@ body {
   padding: 25rem 0;
   margin-top: -20vh; }
 
+.section-county {
+  padding: 10rem 0  30rem 0; }
+  .section-county .box i {
+    display: block; }
+
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(181, 189, 180, 0.8), rgba(26, 27, 27, 0.8)), url(../img/feature.jpg);
   background-size: cover;
   transform: skewY(-7deg);
   margin-top: -12rem; }
@@ -740,7 +778,7 @@ body {
 
 .section-book {
   padding: 15rem 0;
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  background-image: linear-gradient(to right bottom, #b5bdb4, #1a1b1b); }
 
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
