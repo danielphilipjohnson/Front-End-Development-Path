@@ -21,6 +21,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out;
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-family: 5rem;
+  }
   }
   &--sub {
     display: block;
