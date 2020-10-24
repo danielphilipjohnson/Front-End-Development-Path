@@ -6,7 +6,6 @@
       text-decoration: none;
       padding: 1.5rem 4rem;
       display: inline-block;
-      border-radius: 10rem;
       transition: all .2s;
       position: relative;
       font-size: $default-font-size;
@@ -19,7 +18,8 @@
   &:hover {
       transform: translateY(-3px);
       box-shadow: 0 1rem 2rem rgba($color-black,.2);
-
+      background-color: $color-primary;
+      color: $color-white;
       &::after {
           transform: scaleX(1.4) scaleY(1.6);
           opacity: 0;
@@ -56,7 +56,6 @@
       display: inline-block;
       height: 100%;
       width: 100%;
-      border-radius: 10rem;
       position: absolute;
       top: 0;
       left: 0;
