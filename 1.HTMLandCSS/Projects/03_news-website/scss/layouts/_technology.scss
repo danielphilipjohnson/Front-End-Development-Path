@@ -1,0 +1,73 @@
+.technology, .fashion, .sports {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-row-gap: 1rem;
+}
+
+@media only screen and(min-width: 750px) {
+  .technology,
+  .fashion, .sports {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    grid-template-rows: repeat(2, auto);
+    .left {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+    .right {
+      grid-column-start: 3;
+      grid-column-end: 5;
+    }
+  }
+}
+
+
+
+
+@media only screen and(max-width: 750px) {
+  .card.left,
+  .card.right {
+    justify-content: center;
+  }
+ 
+  .technology, .fashion, .sports  {
+    .card .card-image img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .badge-title {
+      bottom: 5px;
+    }
+  }
+  .advertisment {
+    width: 100%;
+  }
+  .sub-middle {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+@media only screen and(min-width: 750px) and(max-width: 1300px) {
+  .technology .left,
+  .fashion .left,  .sports .left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .technology .right,
+  .fashion .right, .sports .right {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .fashion, .technology, .sports {
+    grid-template-columns: repeat(2, auto);
+    grid-auto-rows: auto;
+  }
+  
+}

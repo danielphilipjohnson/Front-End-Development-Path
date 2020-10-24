@@ -1,0 +1,19 @@
+.more-news {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+
+@media only screen and(min-width: 750px) and(max-width: 1300px) {
+  .more-news {
+    grid-template-columns: 3fr 2fr;
+  }
+}
+
+
+@media only screen and(max-width: 750px) {
+  .more-news {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

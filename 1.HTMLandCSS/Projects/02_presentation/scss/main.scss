@@ -1,0 +1,140 @@
+@import "variables";
+@import "buttons/btn-slide";
+@import "buttons/btn-programming";
+@import "badges/contact.scss";
+@import "badges/badges.scss";
+
+@import "cards/contact.scss";
+@import "cards/stats.scss";
+@import "./utils/flex.scss";
+@import "./utils/bg-colors.scss";
+@import "./utils/docker.scss";
+@import "./utils/portfolio.scss";
+@import "./utils/side-text.scss";
+@import "./utils/title.scss";
+@import "./elements.scss";
+@import "logos/logos.scss";
+@import "./containers/basic-container.scss";
+@import "./containers/about.scss";
+@import "./images/project-images.scss";
+
+@import "experience";
+@import "education";
+@import "work-experience";
+@import "./skills";
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-primary {
+  background: $primary-color;
+  background: $primary-gradient-color;
+}
+.bg-secondary {
+  background: $secondary-color;
+  background: -webkit-linear-gradient(top right, #0000a3, #40b1df);
+  background: -moz-linear-gradient(top right, #0000a3, #40b1df);
+  background: $secondary-gradient-color;
+}
+
+
+section {
+  height: 100vh;
+  .progress-right {
+    padding-right: 3rem;
+  }
+}
+
+section.progress.left {
+  padding-left: 3rem;
+}
+
+
+
+
+
+
+#title {
+  .btn-slide {
+    top: 23%;
+  }
+}
+
+#project-4, #project-5 {
+    .btn-slide {
+      top:-55px;
+      left: 49%;
+      z-index: 100;
+    }
+}
+
+#project-4 .container,
+#project-5 .container {
+  height: 100%;
+}
+
+
+/* elements  */
+.header h1,
+h2 {
+  font-size: 2.25rem;
+}
+p {
+  font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+
+/* prohject 4 bottom */
+span.bottom-container {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+  display: inline-block;
+}
+span.bottom-container * {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+span.img-1 {
+  bottom: 118px;
+  left: 0;
+}
+span.img-2 {
+  bottom: 118px;
+  left: 0;
+}
+span.img-3 {
+  bottom: 118px;
+  left: 0;
+}
+span.img-4 {
+  bottom: 118px;
+  left: 0;
+}
+
+
+.list-tools {
+  display: flex;
+  flex-wrap: wrap;
+  .item {
+    width: 50%;
+  }
+}
+
+@import "./media.scss";

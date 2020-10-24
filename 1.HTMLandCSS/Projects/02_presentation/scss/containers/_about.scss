@@ -1,0 +1,22 @@
+.about {
+
+  @include col-center;
+  text-align: center;
+  width: 100%;
+
+  h1 {
+    color: #fff;
+    font-size: 10rem;
+    margin: 0;
+    animation: $fade-in;
+
+  }
+
+  h2 {
+    font-size: 4rem;
+    padding-top: 3rem;
+    margin: 0;
+    color: #fff;
+  }
+  
+}

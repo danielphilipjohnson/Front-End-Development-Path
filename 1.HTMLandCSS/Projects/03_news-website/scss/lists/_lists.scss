@@ -1,0 +1,17 @@
+@import "../mixins/util.scss";
+
+.list-latest {
+  @include nobullets;
+  // padding: 0 0rem 2rem 0rem;
+  li {
+    padding: 0.5rem 1rem 1rem 0rem;
+    border-bottom: 1px solid #ddd;
+    margin-right: 1rem;
+    font-weight: 300;
+    transition: color 1s;
+    &:hover {
+      color: red;
+    }
+  }
+}
+

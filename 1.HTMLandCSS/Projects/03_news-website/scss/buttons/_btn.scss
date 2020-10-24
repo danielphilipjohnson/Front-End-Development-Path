@@ -1,0 +1,27 @@
+@import "./mixins/btn-basics";
+@import "../mixins/util.scss";
+
+.btn {
+  @include btn-basis ;
+}
+
+
+.social-btns {
+  @include nobullets;
+}
+
+
+
+// $badge-
+@each $socialmedia, $colors in $socialmedia-colors {
+  .btn.btn-#{$socialmedia} {
+    background-color: #{$colors};
+    @if $socialmedia == "snapchat" {
+      color: #000;
+    }
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+/* .btn {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.6rem 0.6rem 0.6rem 0;
+  border-radius: 5px;
+  padding: 10px 25px;
+  background-color: var(--accent-color);
+  border: none;
+}
+.btn.slide {
+  background-color: initial;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+ 
+  margin: 0 auto;
+  padding: 0;
+}
+.btn.slide i {
+  background-color: rgba(0, 0, 0, 0);
+
+}
+.btn.slide.mid {
+   left:50%; 
+}
+
+EXPERIENCE SECTION
+.btn.html {
+  background-color: var(--html-color);
+}
+.btn.css {
+  background-color: var(--css-color);
+}
+.btn.js {
+  background-color: var(--js-color);
+}
+
+.btn.btn-primary {
+  background-color: rgb(44, 160, 28);
+} */
+
+
+
+/* .side-text {
+  border-bottom: var(--accent-color) 2px solid;
+  position: relative;
+  top: -60px;
+  left: -800px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin: 2rem 0 0 0;
+  text-transform: uppercase;
+  transform: rotate(270deg); <!-- <section class="bg-primary progress-right">
+  animation: fade-in 3s ease-in;
+}
+.side-text.left {
+  border-bottom: var(--accent-color) 2px solid;
+  position: relative;
+  top: 300px;
+  left: -930px;
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin: 2rem 0 0 0;
+  text-transform: uppercase;
+  transform: rotate(270deg);
+} */
+/* section .about p {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin: 2rem 0 0 0;
+  text-transform: uppercase;
+} */
+
+/* .card {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+} */
+
+
+
+

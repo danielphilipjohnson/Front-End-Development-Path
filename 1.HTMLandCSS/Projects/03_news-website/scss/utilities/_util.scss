@@ -1,0 +1,81 @@
+.sm-hidden {
+  display: none;
+}
+.md-hidden {
+  display: block;
+}
+
+.logo {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  color: #2aead3;
+  font-family: "Russo One", sans-serif;
+}
+
+
+.logo-text {
+  font-size: 1.9rem;
+  color: $primary-text;
+}
+
+
+.bg-dark {
+  background-color: black;
+  color: #fff;
+}
+
+.bg-light {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.text-primary {
+  color: $primary-text;
+}
+
+
+.text-mute {
+  color:  #5e5e5e;
+  font-size: 0.75rem;
+}
+
+
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 100%;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1400px;
+}
+
+
+.advert {
+  position: fixed;
+  z-index: -1000;
+  width: 100%;
+}
+
+.advertisment {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}

@@ -1,0 +1,108 @@
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+}
+.social-icons .nav-item {
+  padding: 7px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0.5rem;
+  border-radius: 50%;
+  width: 56px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.75;
+  transition: background-color 0.75s;
+}
+.social-icons .nav-item a {
+  color: #fff;
+}
+.social-icons .nav-item.facebook:hover {
+  background-color: #4267b2;
+}
+.social-icons .nav-item.twitter:hover {
+  background-color: #1da1f2;
+}
+.social-icons .nav-item.youtube:hover {
+  background-color: #ff0000;
+}
+.social-icons .nav-item.instagram:hover {
+  background-color: #c13584;
+}
+.social-icons .nav-item.linkedin:hover {
+  background-color: #2867b2;
+}
+.social-icons .nav-item.github:hover {
+  background-color: #000;
+}
+.social-icons .nav-item.pinterest:hover {
+  background-color: #e60023;
+}
+.social-icons .nav-item.google:hover {
+  background-color: #f4b400;
+}
+.social-icons .nav-item.rss:hover {
+  background-color: #e58738;
+}
+.social-icons .nav-item.email:hover {
+  background-color: #2da112;
+}
+.social-icons .nav-item.snapchat:hover {
+  background-color: #fffc00;
+}
+.social-icons .nav-item.podcast:hover {
+  background-color: #8f35cb;
+}
+
+
+
+.facebook:hover {
+  background-color: #4267b2;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+}
+
+.instagram:hover {
+  background-color: #c13584;
+}
+
+.linkedin:hover {
+  background-color: #2867b2;
+}
+
+.github:hover {
+  background-color: #000;
+}
+
+.pinterest:hover {
+  background-color: #e60023;
+}
+
+.google:hover {
+  background-color: #f4b400;
+}
+
+.rss:hover {
+  background-color: #e58738;
+}
+
+.email:hover {
+  background-color: #2da112;
+}
+
+.snapchat:hover {
+  background-color: #fffc00;
+}
+
+.podcast:hover {
+  background-color: #8f35cb;
+}

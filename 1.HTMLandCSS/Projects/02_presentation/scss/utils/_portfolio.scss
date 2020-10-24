@@ -1,0 +1,14 @@
+.portfolio {
+  display: flex;
+  &.left {
+    width: 60%;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-top: 8rem;
+    margin-left: 0.5rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

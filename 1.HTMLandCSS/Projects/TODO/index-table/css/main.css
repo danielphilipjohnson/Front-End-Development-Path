@@ -1,0 +1,29 @@
+aside {
+height: 100vh;
+  
+  padding: 3.5rem 0;
+}
+aside a.nav-link {
+  padding: 0.5rem 0.7rem;
+}
+
+table {
+  margin: 0 1rem;
+}
+
+.customers {
+  padding: 4rem 1rem;
+}
+
+
+@media (max-width: 991px) { 
+  
+  aside {
+    display: none;
+  }
+
+ }
+
+
+
+ 

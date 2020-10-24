@@ -1,0 +1,47 @@
+/* rename a new one*/
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+  .nav-item {
+    padding: 7px !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+
+    &.facebook:hover {
+      background-color: $facebook-color;
+    }
+    &.twitter:hover {
+      background-color: $twitter-color;
+    }
+    &.youtube:hover {
+      background-color: $youtube-color;
+    }
+    &.instagram:hover {
+      background-color: $instagram-color;
+    }
+    &.pinterest:hover {
+      background-color: $pinterest-color;
+    }
+    &.google:hover {
+      background-color: $google-color;
+    }
+    &.rss:hover {
+      background-color: $rss-color;
+    }
+    &.email:hover {
+      background-color: $email-color;
+    }
+    
+  }
+}

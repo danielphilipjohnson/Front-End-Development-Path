@@ -1,0 +1,15 @@
+/* badge colors */
+$topic-colors: (
+  "entertainment": #9c27b0,
+  "fashion": #87CEEB,
+  "sports": #ff5722,
+  "technology": #4CAF50,
+  "videos": #009688
+);
+
+// $badge-
+@each $topic, $colors in $topic-colors {
+  .badge-#{$topic} {
+   background-color: #{$colors};
+  }
+}

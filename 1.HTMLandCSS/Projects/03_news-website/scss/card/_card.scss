@@ -1,0 +1,123 @@
+@mixin card {
+  display: flex;
+  margin: 1rem 0;
+  padding-right: 1rem;
+}
+.card {
+  @include card;
+
+  &.trending {
+    border-top: solid grey 1px;
+    // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    // 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-image {
+    position: relative;
+    &.with-text {
+      img {
+        opacity: 0.5;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .text-mute {
+      color: #5e5e5e;
+      font-size: 0.75rem;
+      position: absolute;
+      bottom: 0;
+      background-color: #2aead3;
+      padding: 0.5rem;
+      color: #fff;
+      width: 100%;
+    }
+
+    .title {
+      position: absolute;
+      top: 0;
+      padding: 0.5rem;
+    }
+  }
+
+  .body {
+    padding: 0.5rem;
+
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}
+
+/* need to remove redundancies */
+.card-w-badge {
+  @include card;
+  flex-direction: column;
+  .card-image {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .badge-text {
+      position: absolute;
+      top: 0;
+
+      padding: 0.5rem;
+    }
+  }
+  .body {
+    padding: 0.5rem 0;
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.card-sub {
+  display: flex;
+  // margin: 1rem;
+  margin: 1rem 0 0 0;
+  padding-right: 1rem;
+  flex-direction: column;
+  .card-image {
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .badge-text {
+      position: absolute;
+      top: 0;
+      padding: 0.5rem;
+    }
+  }
+  .body {
+    padding: 0.5rem 0 0 0;
+    p {
+      font-weight: 300;
+    }
+  }
+}
+.card-main {
+  p {
+    padding: 0.5rem 0 1rem 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: 300;
+  }
+}
+
+
+.cards {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

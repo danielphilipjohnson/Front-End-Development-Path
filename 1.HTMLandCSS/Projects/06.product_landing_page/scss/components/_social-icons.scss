@@ -1,0 +1,96 @@
+
+$socialmedia-colors: (
+  "facebook": #4267B2,
+  "twitter": #1DA1F2,
+  "youtube": #FF0000,
+  "instagram": #C13584,
+  "linkedin": #2867b2,
+  "github": #000,
+  "pinterest": #E60023,
+  "google": #F4B400,
+  "rss": #E58738,
+  "email": #2DA112,
+  "snapchat": #FFFC00,
+  "podcast": #8F35CB
+);
+
+
+.socials  {
+  .content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .socials  {
+    .content {
+      flex-direction: column-reverse;
+      .left {
+        width: 100%;
+        .social-icons {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
+        }
+      }
+      .right {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+
+  .nav-item {
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem;
+    border-radius: 15px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 2.9rem;
+    line-height: 1.6;
+    transition: background-color .75s;
+    
+    a {
+      color: #fff;
+    }
+    
+    @each $social, $color in $socialmedia-colors {
+      &.#{$social}{
+        background-color: #{$color};
+        
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .social-icons {
+    .nav-item {
+      height: 70px;
+      width: 70px;
+      font-size: 2.2rem;
+    }
+  }
+}

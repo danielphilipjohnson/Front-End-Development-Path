@@ -1,0 +1,56 @@
+.place__box {
+    position: relative;
+    width: 20rem;
+    height: 100%;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      width: 95%;
+      overflow: hidden;
+    }
+   
+  &--image {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    transform: translateX(-4rem) scale(1.4);
+    backface-visibility: hidden;
+    transition: all 0.5s;
+
+  }
+
+  &--text {
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden;
+
+    @include respond(tab-port) {
+      left: 50%;
+    }
+
+  }
+
+  &:hover &--text {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &--image  {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+  @include respond(tab-port) {
+    &:hover &--image  {
+      transform: scale(1);
+      
+    }
+  }
+}

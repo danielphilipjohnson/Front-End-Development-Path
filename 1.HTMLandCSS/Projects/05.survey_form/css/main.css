@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.2;
+  background: #2193b0;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6dd5ed, #2193b0);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.labels {
+  margin-bottom: 0.55rem; }
+  .labels label {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    width: 100%; }
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.col {
+  flex-grow: 1;
+  margin-right: 1rem; }
+
+input {
+  box-sizing: border-box; }
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%; }
+
+textarea {
+  width: 90%; }
+
+.heart {
+  color: red;
+  display: inline-block;
+  padding: 0 0.25rem;
+  font-size: 1.3rem;
+  transition: transform 0.5s; }
+  .heart:hover {
+    transform: scale(2); }
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto; }
+
+@media (max-width: 575px) {
+  .container {
+    max-width: unset; } }
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px; } }
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px; } }
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px; } }
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1240px; } }
+
+.form-container {
+  background-color: #fff;
+  padding: 1rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+  .form-container p {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 2rem; }
+  .form-container form {
+    width: 100%; }
+  .form-container input,
+  .form-container textarea {
+    background: #f7f7f7;
+    padding: 0.75rem 1.15rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #aaa;
+    border-radius: 10px; }
+
+@media (min-width: 1000px) {
+  .form-container {
+    background-color: #fff;
+    padding: 3rem; } }
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: blue;
+  position: relative;
+  padding: 1rem 2rem;
+  background: url(https://source.unsplash.com/1600x900/?gradient) no-repeat;
+  background-size: cover;
+  color: #fff; }
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
+  .image-container header,
+  .image-container p {
+    z-index: 100; }
+  .image-container header {
+    text-align: center;
+    margin-bottom: 1rem; }
+    .image-container header h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem; }
+    .image-container header h1 {
+      font-size: 2.25rem; }
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0; }
+  .footer-bottom a {
+    color: #fff;
+    transition: color 0.5s; }
+    .footer-bottom a:hover {
+      color: #3ba6b7; }
+
+@media (min-width: 1000px) {
+  .image-container {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; }
+    .image-container::before {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px; } }
+
+.btn-basic {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background-color: #2193b0;
+  color: #fff;
+  width: 250px;
+  font-weight: bolder; }
+
+.form-card {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); }
+
+@media (min-width: 1000px) {
+  .form-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem auto; }
+    .form-card .image-container header {
+      text-align: left; }
+    .form-card .footer-bottom {
+      text-align: left; } }
+
+.dropdown {
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 100%;
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"), linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%; }
+  .dropdown::-ms-expand {
+    display: none; }
+  .dropdown:hover {
+    border-color: #888; }
+  .dropdown:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none; }
+  .dropdown option {
+    font-weight: normal; }
+
+.radios,
+.preferences {
+  list-style: none;
+  margin-bottom: 1rem; }
+
+.preferences {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap; }
+  .preferences .checkbox {
+    min-width: 250px; }

@@ -1,0 +1,67 @@
+@import "./variables";
+@import "./general-style/general-styles.scss";
+@import "./utilities/util";
+@import "./badges/badges";
+@import "./nav/nav";
+@import "./card/card";
+@import "./lists/lists";
+
+@import "./headers/section-header";
+
+@import "./layouts/top-news";
+@import "./layouts/entertainment";
+@import "./layouts/more-news";
+@import "./layouts/technology";
+@import "./layouts/videos";
+
+
+
+
+
+
+@import "./buttons/btn";
+
+
+
+
+
+
+
+
+
+
+
+.subscribe-bar {
+  // background-color: aqua;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-top: 10px solid $logo-color;
+  h2 {
+    font-size: 1.9rem;
+    font-weight: bolder;
+  }
+  p {
+    color: rgb(136, 130, 130);
+  }
+  .sub-title {
+    color: #000;
+    font-size: 1.8rem;
+  }
+  &::before {
+    border-top: 2px solid black;
+  }
+}
+
+input.subscribe {
+  border: none;
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+
+
+

@@ -1,0 +1,108 @@
+/* Utility Classes */
+$border: 1px solid #E4E4E4;
+$text-primary: #000;
+$alt-bg:#f5f5f7;
+$highlight-color: #eb142d;
+
+.lead {
+    font-size: 1.15rem;
+}
+
+.bg-dark {
+    background-color: #000;
+    color: #f5f5f7;
+}
+
+
+/* Text colors */
+
+
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.text-light {
+    color: var(--light-color);
+}
+
+
+
+/* background */
+
+.bg-light {
+    background: #fff;
+    color: #333;
+}
+
+.bg-dark {
+    background-color: #000;
+    color: #f5f5f7;
+}
+
+.bg-alt {
+    background: $alt-bg;
+    color: #333;
+}
+
+
+
+.logo {
+
+    margin-bottom: 0;
+    width: 22px;
+    display: inline-block;
+
+}
+
+.left {
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+
+.hightlighted-text {
+
+    color:$highlight-color;
+}
+
+section.break, .trial {
+    padding: 7rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+
+
+
+
+section.break {
+    .statement {
+        color: #333;
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+
+    section.break  {
+        padding: 5rem 3rem;
+        font-size: 1.5rem;
+        .statement {
+            font-size: 2rem;
+
+        }
+    }
+}
+
+.fa-chevron-right {
+    font-size: 0.7rem;
+}

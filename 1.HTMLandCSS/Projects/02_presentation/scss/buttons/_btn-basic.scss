@@ -1,0 +1,15 @@
+@import "../variables";
+
+@mixin btn-basis  {
+  text-decoration: none;
+  color: #fff;
+  margin: 0.6rem 0.6rem 0.6rem 0;
+  border-radius: 5px;
+  padding: 10px 25px;
+  background-color: $accent-color;
+  border: none;
+}
+
+.btn.btn-primary {
+  background-color: rgb(44, 160, 28);
+}

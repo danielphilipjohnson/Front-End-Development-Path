@@ -1,0 +1,38 @@
+.gift-cards{
+  padding: 2rem 0;
+  border-top: $border;
+  border-bottom: $border;
+}
+
+.gift-card {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+  color: $text-primary;
+
+  .gift-cards__info {
+    h2 {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gift-card {
+    grid-template-columns: repeat(1, 1fr);
+    .gift-cards__info {
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .gift-cards {
+    grid-template-columns: 1fr;
+  }
+}

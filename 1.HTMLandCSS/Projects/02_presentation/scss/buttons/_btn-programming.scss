@@ -1,0 +1,20 @@
+@import "btn-basic";
+@import "../variables";
+
+.btn {
+  
+  &-html{
+    @include btn-basis;
+    background-color:  $html-color;
+  }
+
+  &-css {
+    @include btn-basis;
+    background-color: $css-color;
+  }
+
+  &-js {
+    @include btn-basis;
+    background-color:  $js-color;
+  }
+}

@@ -1,0 +1,21 @@
+@mixin button($bg-color) {
+  background-color: $bg-color;
+  color: #FFF;
+  border-radius: 17px;
+  padding: 0.6rem 1.55rem;
+  text-align: center;
+  display: inline-block;
+
+}
+.button {
+  @include button(#0071e3);
+  
+  margin-bottom: 1rem;
+
+}
+
+
+.button-try {
+  @include button(#eb142d);
+
+}

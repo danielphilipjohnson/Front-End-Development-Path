@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    padding-bottom: 20px;
+}
+p {
+    margin: 10px 0;
+}
+
+/* Utility */
+.btn {
+    background-color: #4c4c4c;
+    display: inline-block;
+    font-size: 18px;
+    padding: 13px 18px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+.bg-light {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.bg-dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+.bg-primary {
+    background-color: rgb(226, 126, 26);
+}
+
+.primary {
+    color: rgb(226, 126, 26);
+}
+.container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+.clr {
+    clear: both;
+}
+.lead {
+    padding: 12px;
+    line-height: 1.7rem;
+    font-size: 20px;
+}
+.lg-heading {
+    font-size: 3rem;
+}
+.py-4 {
+    padding: 40px 0;
+}
+
+/* Navbar */
+#navbar {
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    -webkit-box-shadow: 10px 19px 41px -8px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 10px 19px 41px -8px rgba(0, 0, 0, 0.67);
+    box-shadow: 10px 19px 41px -8px rgba(0, 0, 0, 0.67);
+}
+
+#navbar .logo {
+    float: left;
+    padding-top: 20px;
+
+}
+#navbar .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+#navbar .logo a:hover {
+    color: orange;
+
+}
+#navbar ul {
+    list-style: none;
+    float: right;
+}
+
+#navbar ul li {
+    float: left;
+}
+
+#navbar ul li a {
+    display: block;
+    text-align: center;
+    padding: 25px;
+}
+#navbar ul li a:hover {
+    background-color: #4c4c4c;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+li a.active {
+    background-color: #4c4c4c;
+    color: orange;
+
+}
+
+header {
+    background-image: url('../img/showcase.jpg');
+    background-size: cover;
+
+}
+
+
+/* Showcase */
+#showcase {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 600px;
+
+}
+#showcase .showcase-content {
+    padding: 170px 0 0;
+    text-align: center;
+    color: #fff;
+}
+#showcase .showcase-content h1 {
+    font-size: 3.9rem;
+    letter-spacing: 3.2px;
+}
+
+#showcase .showcase-content p {
+    padding-bottom: 2.2rem;
+}
+
+
+/*Home info */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+
+}
+#home-info,
+#location-info {
+    height: 600px;
+    background-color: #4c4c4c;
+    color: #fff;
+}
+.info-img,
+.location-img,
+.meal-img {
+
+    width: 60%;
+    min-height: 100%;
+}
+.info-img {
+    background-image: url('../img/photo-1.jpg');
+
+}
+.location-img {
+    background-image: url('../img/photo-3.jpg');
+
+}
+.meal-img {
+    background-image: url('../img/photo-4.jpg');
+}
+.info-content {
+    margin: auto;
+    width: 40%;
+
+    text-align: center;
+    padding: 50px 30px;
+    font-size: 1.3rem;
+}
+.info-content i {
+    margin-bottom: 10px;
+}
+.info-content p {
+    padding-bottom: 30px;
+}
+
+#features {
+    clear: both;
+}
+.box {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    padding-bottom: 1.2rem;
+}
+
+
+#main-footer {
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    clear: both;
+}
+
+
+/* about page */
+.info-left {
+    float: left;
+    width: 50%;
+}
+.info-right {
+    float: right;
+    width: 50%;
+}
+.info-right img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    border-radius: 50%;
+}
+
+#testimonials {
+
+    background: url('../img/test-bg.jpg') no-repeat center center/cover;
+    padding-top: 100px;
+}
+
+#testimonials h2 {
+    color: #fff;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#testimonials .testimonal {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    opacity: 0.9;
+    line-height: 1.7em;
+}
+.testimonal .left {
+    float: left;
+}
+.testimonal .right {
+    float: right;
+}
+.testimonal img {
+
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+/* contact page */
+#contact-form {
+    background-image: url('../img/about-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-origin: border-box;
+}
+#contact-form textarea {
+    height: 200px;
+}
+
+.form-card {
+    background-color: rgb(209, 207, 207);
+    margin: 3rem auto;
+    border-radius: 10px;
+    padding: 2.2rem;
+
+}
+.form-card p {
+    margin-bottom: 15px;
+}
+.form-group {
+    margin-bottom: 30px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+}

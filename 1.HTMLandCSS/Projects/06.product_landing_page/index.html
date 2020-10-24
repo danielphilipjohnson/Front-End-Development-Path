@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Daniel Philip Johnson React
+            Developers">
+        <meta name="keywords" content="Portfolio, React Developer, Web
+            Development,
+            Web Applications, Mobile Apps">
+        <meta name="author" content="Daniel Philip Johnson">
+
+        <!-- Facebook tags -->
+        <meta property="og:title" content="Freecodecamp project: Build a Product
+            Landing Page">
+        <meta property="og:description" content="Build a Product Landing Page
+            using sass and
+            html">
+        <meta property="og:image"
+            content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+        <meta property="og:url"
+            content="https://danielphilipjohnson.github.io/ffc/">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!--  Non-Essential, But Recommended -->
+
+        <meta property="og:site_name" content="Freecodecamp project: Build a
+            Product Landing Page">
+        <meta name="twitter:image:alt" content="Profile of React Developer
+            Daniel
+            Philip Johnson">
+
+        <!-- Twitter Tags -->
+        <meta name="twitter:title" content="Freecodecamp project: Build a
+            Product Landing Page">
+        <meta name="twitter:description" content="FFreecodecamp project: Build a
+            Product Landing Page form using sass and html">
+        <meta name="twitter:image"
+            content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+        <meta name="twitter:card" content="Twitter Profile">
+
+
+
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/main.css">
+        <title>Welcome to myTunes</title>
+    </head>
+
+    <body>
+        <header id="header">
+            <nav id="nav-bar" class="navbar main">
+                <a href="javascript:void(0);" class="icon"
+                    onclick="hamburgerButton()">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <ul id="nav-items" class="nav-items">
+                    <li class="nav-item">
+                        <a href="#showcase" class="nav-link">
+                            <img
+                                src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/logo.png"
+                                class="header-img" alt="logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#showcase' class="nav-link">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#music' class="nav-link">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#watch' class="nav-link">Watch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#gift-cards' class="nav-link">Gift Cards</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="nav-sub" class="navbar nav-sub">
+                <form class="form-search" action="">
+                    <input type="text" name="" id="" class="nav-search"
+                        placeholder="Search pear.com">
+                </form>
+                <ul class="nav-items">
+                    <li class="nav-logo" class="nav-item">
+                        <a href="#showcase" class="nav-link">
+                            <img
+                                src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/logo.png"
+                                class="header-img" alt="logo">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#showcase' class="nav-link">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#music' class="nav-link">Music</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#watch' class="nav-link">Watch</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href='#gift-cards' class="nav-link">Gift Cards</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="navbar-sticky" class="navbar-sticky top">
+                <div class="container">
+                    <div class="navbar-sticky-items">
+                        <h3>Pear Music</h3>
+                        <ul class="links">
+                            <li class="hide-sm">
+                                <div class="link item">
+                                    <a href="#about">Overview</a>
+                                </div>
+                            </li>
+                            <li class="hide-sm">
+                                <div class="link item">
+                                    <a href="#cases">Features</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="link item">
+                                    <a href="#blog" class="button-try">Try it
+                                        free*</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Showcase & Nav -->
+        <section id="showcase" class="bg-alt showcase">
+            <div class="section-main container">
+                <section class="section-main__content">
+                    <div class="left">
+                        <header class="call-of-action">
+                            <h1><span class="badge pear"><i class="fab
+                                        fa-apple"></i></span></h1>
+                        </header>
+                        <h2>Your music, films and TV programmes take centre
+                            stage.
+                        </h2>
+                        <a class="button-try" href="#">Try it free
+                        </a>
+                    </div>
+                    <div class="right">
+                        <img
+                            src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/mac.png"
+                            alt="mac">
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Music Section  -->
+        <section id="music" class="music bg-light">
+            <div class="container">
+                <div class="content">
+                    <div class="left">
+                        <img
+                            src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/mac.png"
+                            alt="tablet">
+                    </div>
+                    <div class="right">
+                        <header>
+                            <h2 class="section-head">
+                                <i class="fab fa-apple"></i> Music
+                            </h2>
+                            <h3>45 million songs. Zero ads.</h3>
+                        </header>
+
+                        <p class="lead">Stream over 45 million songs, ad-free.
+                            Or
+                            download albums and tracks to listen to offline.
+                            All the music in your personal myTunes library — no
+                            matter
+                            where it came from — lives right alongside
+                            the Pear Music catalog. Start your free three-month
+                            trial with no commitment, and cancel anytime.</p>
+                        <a href="#" class="button">Start Your Trial Now</a>
+
+                        <p class="text-light">Pear Music is available in
+                            myTunes,
+                            and
+                            for iOS and Android devices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="watch" class="bg-alt watch">
+            <div class="container">
+                <header>
+                    <h2><span class="badge app"><i class="fas fa-tv"></i></span></h2>
+                    <h3>The movie and TV app</h3>
+                    <h2 class="title">All your TV. All in one app.</h2>
+                </header>
+
+
+                <a href="#" class="text-secondary more-link">
+                    <span>Learn more</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+
+                <iframe id="video" width="560" height="560"
+                    src="https://www.youtube.com/embed/egHjkeiqjrA"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope;
+                    picture-in-picture"
+                    allowfullscreen></iframe>
+
+            </div>
+        </section>
+
+        <section class="section break">
+            <div class="container">
+                <p class="statement">
+                    Stream million of songs ad‑free.
+                    <span class="hightlighted-text"></span>
+                </p>
+
+                <p class="statement">
+                    <span class="hightlighted-text">Download</span>
+                    your favourite tracks. Play them
+                    <span class="hightlighted-text">offline.</span>
+                </p>
+
+                <p class="statement">
+                    Get exclusive
+                    <span class="hightlighted-text">playlists</span>
+                    and
+                    <span class="hightlighted-text">live radio.</span>
+                </p>
+
+                <p class="statement">
+                    Listen across
+                    <span class="hightlighted-text">all your devices.</span>
+                </p>
+
+                <a href="#" class="button">Try it free</a>
+            </div>
+        </section>
+
+        <section class="bg-alt section break">
+            <h2>Get more out of your Music App</h2>
+        </section>
+
+        <section class="bg-light trial">
+            <div class="container">
+                <header>
+                    <h2><span class="badge app"><i class="fas fa-music"></i></span></h2>
+                    <h3 class="title">Start your free trial.</h3>
+                    <h4>No commitment. Cancel anytime.</h4>
+                </header>
+                <div class="row">
+                    <div class="col">
+                        <p>Student2 £4.99/mo.</p>
+                        <a href="#" class="button">Try it free</a>
+                    </div>
+                    <div class="col">
+                        <p>Individual £9.99/mo.</p>
+                        <a href="#" class="button">Try it free</a>
+                    </div>
+                    <div class="col">
+                        <p>Family £14.99/mo.</p>
+                        <a href="#" class="button">Try it free</a>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Socials Section -->
+        <section id="socials" class="socials bg-alt">
+            <div class="container">
+                <div class="content">
+                    <div class="left">
+                        <ul class="social-icons">
+                            <li class="nav-item twitter">
+                                <a href="https://twitter.com/danielp_johnson">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item facebook">
+                                <a
+                                    href="https://www.facebook.com/DanielPhilipJohnson">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item github">
+                                <a
+                                    href="https://github.com/danielphilipjohnson/">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item linkedin">
+                                <a
+                                    href="https://www.linkedin.com/in/daniel-philip-johnson/">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <span class="badge outline">
+                            Coming this winter
+                        </span>
+                        <h2 class="section-head">
+                            <i class="fab fa-apple"></i> Social
+                        </h2>
+                        <h3>Checkout our social medias</h3>
+                        <a href="#" class="text-secondary more-link">
+                            <span>Learn more</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light full-bg">
+            <h2>Welcome to support</h2>
+            <input type="text" name="support" id="support">
+        </section>
+
+        <section id="support" class="bg-light support">
+            <div class="container">
+                <div class="left">
+                    <img
+                        src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/tech.jpg"
+                        alt="" srcset="">
+                </div>
+                <div class="right">
+                    <h2>Welcome to support</h2>
+                    <p>Ask us any questions and we will happily answer</p>
+                    <a href="#" class="text-secondary more-link">
+                        <span>Get Support</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Card Section -->
+        <section id="gift-cards" class="gift-cards">
+            <div class="container">
+                <div class="gift-card">
+                    <div>
+                        <img
+                            src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/3.Product-Landing-Page/img/cards.png"
+                            alt="card">
+                    </div>
+                    <div class="gift-cards__info">
+                        <h2>Be aware of gift card scams</h2>
+
+                        <a href="#" class="text-secondary">
+                            <span>Learn more</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-cols">
+                    <nav class="list">
+                        <ul class="list__items">
+                            <h3 class="list__title">
+                                Shop & Learn
+                            </h3>
+
+                            <li class="list__item">
+                                <a href="#">Music</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Movies</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Shows</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Apps</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Gift Cards</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="list">
+                        <ul class="list__items">
+                            <h3 class="list__title">Pear
+                                Store</h3>
+                            <li class="list__item">
+                                <a href="#">Find a Store</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Today at Pear</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Pear Camp</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Financing</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Order Status</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="list">
+                        <ul class="list__items">
+                            <h3 class="list__title">For Education
+                            </h3>
+                            <li class="list__item">
+                                <a href="#">Pear & Education</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Shop For College</a>
+                            </li>
+                            <h3 class="list__title">For Business </h3>
+
+                            <li class="list__item">
+                                <a href="#">Pear & Business</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Shop For Business</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Jobs</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav class="list">
+                        <ul class="list__items">
+                            <h3 class="list__title">About
+                                Pear</h3>
+                            <li class="list__item">
+                                <a href="#">Newsroom</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Pear Leadership</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Investors</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Events</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#">Contact Pear</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>
+                    Copyright&copy; 2020 myTunes inc. All rights reserved.
+                </p>
+                <ul>
+                    <li>Privacy Policy</li>
+                    <li>Use of Cookies</li>
+                    <li>Terms of Use</li>
+                    <li>Sales and Refunds</li>
+                    <li>Legal</li>
+                    <li>Site Map</li>
+                </ul>
+                <p class="location">UK</p>
+        </footer>
+            <script src="./js/main.js"></script>
+        </body>
+
+    </html>

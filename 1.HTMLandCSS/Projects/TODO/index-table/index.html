@@ -1,0 +1,148 @@
+<html lang="en">
+    <head>
+
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript, IndexedDB,
+            push-notifications">
+        <meta name="description" content="Customer table website utilizing
+            IndexedDB and push-notifications">
+        <meta name="author" content="Daniel Philip Johnson">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IndexDB</title>
+        <link rel="apple-touch-icon" sizes="120x120"
+            href="./icons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="./icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="./icons/favicon-16x16.png">
+        <link rel="manifest" href="./icons/site.webmanifest">
+        <link rel="mask-icon" href="./icons/safari-pinned-tab.svg"
+            color="#5bbad5">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg fixed-top bg-primary
+                navbar-dark">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="https://dummyimage.com/50x50/400540/fff"
+                        width="30"
+                        height="30" class="d-inline-block align-top" alt="">
+                    Customer Dashboard
+                </a>
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <nav class="navbar navbar-expand-lg bg-primary
+                navbar-dark">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active"
+                            href="./index.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"
+                            href="./add-customer.html">Add Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="./search.html">Search
+                            Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white"
+                            href="./remove-customers.html">Remove Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white populate-customers" id="populate"
+                            href="#">Populate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white clear-customer" id="clear"  href="#">Clear
+                            Customers</a>
+                    </li>
+                </ul>
+                </nav>
+               
+            </div>
+        </header>
+
+        <main class="container-fluid">
+            <section class="row">
+                <aside class="bg-secondary col-lg-2">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active"
+                                href="./index.html">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="./add-customer.html">Add Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./search.html">Search
+                                Customer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white"
+                                href="./remove-customers.html">Remove Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white populate-customers" id="populate"
+                            href="#">Populate</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white clear-customer" id="clear"  href="#">Clear
+                                Customers </a>
+                        </li>
+                    </ul>
+                </aside>
+                <section class="col-sm-12 col-lg-10 customers">
+                    <header>
+                        <h1>Customers</h1>
+                    </header>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>#ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Company Name</th>
+                                    <th>Email Address</th>
+                                    <th>Phone</th>
+                                    <th>Item Purchases</th>
+                                    <th>Purchase #</th>
+                                </tr>
+                            </thead>
+                            <tbody id="purchases">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+
+    </body>
+</html>

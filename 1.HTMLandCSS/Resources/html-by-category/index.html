@@ -1,0 +1,355 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic HTML</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <h1>Basic HTML</h1>
+            <section>
+                <h2>List of Basic HTML tags</h2>
+                <ul>
+                    <li> &lt;!DOCTYPE&gt; Defines the document type</li>
+                    <li> &lt;html&gt; Defines an HTML document</li>
+                    <li> &lt;head&gt; Contains metadata/information for the
+                        document</li>
+                    <li> &lt;title&gt; Defines a title for the document</li>
+                    <li> &lt;body&gt; Defines the document's body</li>
+                    <li> &lt;h1&gt; to &lt;h6&gt; Defines HTML headings</li>
+                    <li> &lt;p&gt; Defines a paragraph</li>
+                    <li> &lt;br&gt; Inserts a single line break</li>
+                    <li> &lt;hr&gt; Defines a thematic change in the content</li>
+                    <li> &lt!--...--&gt; Defines a comment</li>
+                </ul>
+            </section>
+            <article>
+                <section>
+                    <h2>Why we use &lt;!DOCTYPE&gt;</h2>
+                    <p> It tells the browser what document to expect
+                        the web browser sniffs the doctype and runs its HTML
+                        layout engine
+                    </p>
+                    <h3>How to use it</h3>
+                    <p>This is all you need to put in HTML5</p>
+                    <p> &lt;!DOCTYPE html&gt;</p>
+                    <h4>Side note</h4>
+                    <p>There is other older formats you might come across due to
+                        legacy websites. But hopefully
+                        people have designed to transition! I hope (:
+                    </p>
+                    <h4>Extra Reading</h4>
+                    <p>
+                        <a
+                            href="https://en.wikipedia.org/wiki/Document_type_declaration">&lt;!DOCTYPE&gt;
+                        </a>
+                    </p>
+
+                </section>
+            </article>
+            <hr>
+            <article>
+                <section>
+                    <h2>Why we use &lt;html&gt;</h2>
+                    <p>Because &lt;html&gt; represents the root(top-level
+                        element) of an HTML document and it is the
+                        container for all the other HTML elements(descendants of
+                        this element) we are going to learn from here
+                        on</p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+                    <code>&lt;html lang="en"&gt;</code>
+                    <p>It is important to include the attribute lang inside the
+                        html tag
+                        as it assist search engines and browsers. Also assists
+                        with reading technology being able to determine what
+                        language to read the page!
+                    </p>
+                </section>
+            </article>
+            <hr>
+            <article>
+                <section>
+                    <h2>Why we use &lt;head&gt;</h2>
+                    <p>This element contains machine-readable information
+                        (metadata) about the document, like its title, scripts,
+                        and style sheets.</p>
+                    <p>In english? This is the container where we put the title
+                        of the page and scripts to make the page interactive and
+                        to make the website look nice.</p>
+                    <p>You will learn these things later (scripts and styling).</p>
+                    <ul>
+                        <li> &lt;title&gt; (required in every HTML document)</li>
+                        <li> &lt;style&gt; &lt;/style></li>
+                        <li> &lt;base&gt;</li>
+                        <li> &lt;link&gt;</li>
+                        <li> &lt;meta&gt;</li>
+                        <li> &lt;script&gt; &lt;/script></li>
+                        <li> &lt;noscript&gt; &lt;/noscript></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>How to use it</h3>
+                    <section id="title-tag">
+                        <h4>Adding a title to webpage</h4>
+                        <code> &lt;head&gt;
+                            <br>
+                            &lt;title&gt;This is my title&lt;/title&gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+                    </section>
+                    <section id="style-tag">
+                        <h4>Adding a style tag</h4>
+                        <code> &lt;head&gt;
+                            <br>
+                            &lt;style&gt;p {text-align: center}&lt;/style&gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+
+                        <p>It is best to avoid littering your html file with css
+                            syntax. It is best to include in a stylesheet.
+                            There are some edgecases such as a CSS rule that is
+                            complex and takes a while to run so putting it in
+                            html might speed up the rendering.
+                        </p>
+                    </section>
+                    <section id="base-tag">
+                        <h4>Adding a base tag</h4>
+                        <code> &lt;head&gt;
+                            <br>
+                            &lt;base href="https://www.example.com/" &gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+                        <p>This specifies the base URL and/or target for all
+                            relative URLs in a document.
+                            In this example if you set your base html link to
+                            https://www.example.com/
+                            when you set a link to another page coolcats it will
+                            go to https://www.example.com/coolcats
+                        </p>
+                    </section>
+                    <section id="link-stylesheet">
+                        <h4>Adding a stylesheet</h4>
+                        <code> &lt;head&gt;
+                            <br>
+                            &lt;link rel="stylesheet" href="style.css"&gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+
+                    </section>
+                    <section id="meta-tag">
+                        <h5>Adding meta tags</h5>
+                        <p>The meta tag content is never displayed on the page
+                            but instead it is read by the browser(on hints on
+                            how to display content or to reload the page)
+                            and search engines for keywords.
+                            There is various attribute tags that can be used,
+                            some are self explanatory for instance author and
+                            the description of your website.
+                            Please do not go to crazy with the description keep
+                            it to about 160 characters otherwise search engines
+                            might punish your website.
+                            Keywords will be words that describe your site you
+                            could consider this to be the hashtags you use when
+                            posting on instagram
+                            content="Tech, Blog, Techblog". Just like instagram
+                            do not go to crazy with keywords.
+                            Viewport is important for making your site look good
+                            on every device. It isnt magic and will not make
+                            make website reponsive for that
+                            you will need CSS. However, the viewport helps with
+                            how the webpage is layed out across devices
+                            initial-scale=1.0 refers to fill 100% of screen.
+                            It prevents scrolling to zoom on mobiles or tablets
+                        </p>
+
+                        <h6>Adding a meta tags to webpage</h6>
+                        <code>
+                            &lt;head&gt;
+                            <br>
+                            &lt;meta charset="UTF-8"&gt;
+                            <br>
+                            &lt;meta name="description" content="Free Web
+                            tutorials"&gt;
+                            <br>
+                            &lt;meta name="keywords" content="HTML, CSS,
+                            JavaScript"&gt;
+                            <br>
+                            &lt;meta name="author" content="John Doe"&gt;
+                            <br>
+                            &lt;meta name="viewport"
+                            content="width=device-width, initial-scale=1.0"&gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+                    </section>
+                    <section id="script">
+                        <h4>Adding a script</h4>
+                        <code> &lt;head&gt;</code>
+                        <br>
+                        <code> &lt;script src="index.js"&gt;&lt;/script&gt;;</code>
+                        <br>
+                        <code> &lt;/head&gt;</code>
+                    </section>
+                    <section id="no-script">
+                        <p>Adding a no script</p>
+                        <p>Defines a section of HTML to be inserted if a script
+                            type on the page is unsupported or if scripting is
+                            currently turned off in the browser.</p>
+                        <code> &lt;head&gt;
+                            <br>
+                            &lt;noscript&gt; Your browser does not support
+                            JavaScript! &lt;/noscript&gt;
+                            <br>
+                            &lt;/head&gt;
+                        </code>
+                    </section>
+                    <h4>Sidenote</h4>
+                    <p>Later you will learn how to add scripts and
+                        stylsheets
+                        from various locations</p>
+                    next script and no script
+                </section>
+            </article>
+            <hr>
+            <article>
+                <section>
+                    <h2>Why we use &lt;body&gt;</h2>
+                    <p>Defines the document's body. This is where we put our
+                        content. Element represents the content of an HTML
+                        document. There can be only one &lt;body&gt; element in
+                        a
+                        document.
+                    </p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+                    <section>
+                        <code> &lt;body&gt;
+                            &lt;p&gt; I am a paragraph&lt;/p&gt;
+                            <br>
+                            &lt;/body&gt;
+                        </code>
+                    </section>
+                </section>
+            </article>
+            <hr>
+            <article>
+                <section>
+                    <h2>Why we use &lt;h1&gt; to &lt;h6&gt;</h2>
+                    <p>We use these to create headings. Typically you will only
+                        use h1 once in a document. Think of this as your book
+                        title!
+                        It is best to use &lt;h1&gt; to h6 as section headings.
+                        Do not avoid skipping heading levels:
+                        always start from &lt;h1&gt;, next use &lt;h2&gt; and so
+                        on.
+                    </p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+
+                    <section>
+                        <code>&lt;h1&gt; Book title &lt;/h1&gt;</code>
+                        <code>&lt;h2&gt; Chapter &lt;/h2&gt;</code>
+                        <code>&lt;h3&gt; Sub topic &lt;/h3&gt;</code>
+                    </section>
+                </section>
+            </article>
+            <hr>
+
+            <article>
+                <section>
+                    <h2>Why we use &lt;p&gt; </h2>
+                    <p>Defines a paragraph</p>
+                    <p> Paragraphs are usually represented in visual media as
+                        blocks of text separated from adjacent blocks by blank
+                        lines and/or first-line indentation, but HTML paragraphs
+                        can be any structural grouping of related content, such
+                        as images or form fields.</p>
+                    <p> Browsers automatically add a single blank line before
+                        and after each <p> element.</p>
+                    </section>
+                    <section>
+                        <h3>How to use it</h3>
+                        <section>
+                            <code>&lt;p&gt; Paragraph text &lt;/p&gt;</code>
+                        </section>
+                    </section>
+            </article>
+            <hr>
+
+
+            <article>
+                <section>
+                    <h2>Why we use &lt;br&gt; </h2>
+                    <p>Inserts a single line break</p>
+                    <p> It is useful for writing a poem or an address, where
+                        the division of lines is significant.</p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+                    <section>
+                        <code>&lt;p&gt; Paragraph <br>&lt;br&gt; text <br>&lt;/p&gt;</code>
+                    </section>
+                </section>
+            </article>
+            <hr>
+
+            <article>
+                <section>
+                    <h2>Why we use &lt;hr&gt; </h2>
+                    <p>Defines a thematic change in the content</p>
+                    <p> It is useful for writing a poem or an address, where
+                        the division of lines is significant.</p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+                    <section>
+                        <code>
+                            &lt;p&gt; This is the first paragraph of
+                            text.&lt;/p&gt;
+                            &lt;hr&gt;
+                            &lt;p&gt; This is the second paragraph of
+                            text.&lt;/p&gt;
+                        </code>
+                    </section>
+                </section>
+            </article>
+            <hr>
+            <article>
+                <section>
+                    <h2>Why we use &lt;!--...--&gt; </h2>
+                    <p> Defines a comment</p>
+                    <p>Comments are not displayed in the browsers.They are
+                        useful to document </p>
+                </section>
+                <section>
+                    <h3>How to use it</h3>
+                    <section>
+                        <code>
+                            &lt;!--Blog article--&gt;
+                            <br>
+                            &lt;p&gt; This is my blog description
+                            text.&lt;/p&gt;
+
+                        </code>
+                    </section>
+                </section>
+            </article>
+
+            <!-- Next i need to show example using all these tags-->
+            </main>
+            <footer></footer>
+
+
+
+        </body>
+    </html>

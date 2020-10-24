@@ -1,0 +1,287 @@
+/* :root {
+  --primary-color: #0000a3;
+  --secondary-color: #0067b3;
+  --highlight-color: #40b0df;
+  --accent-color: #ffd53d;
+  --html-color: #e96228;
+  --css-color: #2760e8;
+  --js-color: #f6d636;
+  --email-color: #e34d42;
+  --linkedin-color: #0077b7;
+  --github-color: #161414;
+  --twitter-color: #50abf1;
+
+  --fade-in: fade-in 2s ease-in;
+} */
+
+
+
+
+
+/* section {
+  height: 100vh;
+}
+section.progress.left {
+  padding-left: 3rem;
+}
+section.progress.right {
+  padding-right: 3rem;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20%;
+}
+.title.center {
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.title.title-alt {
+  flex-direction: row;
+}
+
+.title.left {
+  justify-content: center;
+  align-items: flex-start;
+}
+.title.right {
+  justify-content: center;
+  align-items: flex-end;
+}
+.title .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%
+}
+
+.title .about h1 {
+  color: #fff;
+  font-size: 10rem;
+  margin: 0;
+  animation: var(--fade-in);
+
+}
+.title .about h2 {
+  font-size: 6rem;
+  padding-top: 4rem;
+  color: #fff;
+} */
+
+
+
+
+
+
+
+
+
+/* EXPERIENCE SECTION
+.experience-outline {
+  display: flex;
+  height: 100%;
+}
+.experience-outline .left {
+  width: 70%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  padding: 0 0 0 2rem;
+}
+.experience-outline .right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.experience-outline .inner > .profile {
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 0.5rem;
+  background-color: #fff;
+  position: relative;
+  top: 3px;
+
+}
+.experience-outline .inner > img.github-stats {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 300px;
+}
+
+.experience-outline .left .txt {
+  padding: 1rem;
+  width: 70%;
+}
+.experience-outline .left h2 {
+  color: var(--accent-color);
+  margin: .55rem 0;
+}
+
+.experience-outline .left p {
+  color: #fff;
+  margin-bottom: .75rem;
+} */
+/* End of EXPERIENCE SECTION */
+
+
+
+/* #education .title {
+  padding-bottom: 10rem;
+}
+
+.education-outline {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-top: 5rem;
+
+}
+.education-outline .item {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.education-outline .item h2 {
+  color: var(--accent-color);
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.education-outline .item .course-list {
+  color: #fff;
+
+  list-style: none;
+}
+.education-outline .item .course-list h3 {
+  font-size: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.education-outline .item .course-list p {
+  font-size: 1.2rem;
+  color: #000;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+} */
+
+
+/* WORK EXPERIENCE*/
+
+
+/* #work-experience .container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+} */
+/* 
+.container .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #fff;
+  padding: 2rem;
+}
+.container .header h1 {
+  height: 50%;
+  font-size: 4rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .header .progress {
+  height: 40%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.container .header .progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.container .header .progress.right {
+  align-items: flex-end;
+}
+
+.header .progress .bar {
+  border-left: var(--accent-color) 2px solid;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: center;
+  
+}
+.header .progress .bar.right {
+  margin-right: 1rem;
+}
+.container .header .progress p {
+  font-size: 2rem;
+}
+
+.progress .bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+} */
+
+/* WORK EXPERIENCE */
+/* #work-experience .items {
+  width: 70%;
+  padding: 4rem 3rem;
+  flex-direction: column;
+}
+.items .item {
+  padding: 0 0 2rem 3rem;
+  border-left: #40b0df 4px solid;
+}
+.items h2 .circle {
+  height: 50px;
+  width: 50px;
+  background-color: #40b0df;
+  display: inline-block;
+  position: relative;
+  right: 1.9%;
+  border-radius: 50%;
+}
+.items h2 .circle::before {
+  content: "";
+}
+.items h2 {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-left: -55px;
+}
+.items p, .social-items p {
+  font-size: 1.5rem;
+  color: #fff;
+} */
+
+/* #skills .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 90%;
+}
+
+#skills .container .header {
+  justify-content: start;
+}
+#skills .container .header h1 {
+  align-items: flex-start;
+  padding: 1rem;
+} */
+
+
+
+
+
+
+
