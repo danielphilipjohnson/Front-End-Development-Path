@@ -2,6 +2,12 @@
     position: relative;
     width: 20rem;
     height: 100%;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      width: 95%;
+      overflow: hidden;
+    }
    
   &--image {
     max-width: 100%;
@@ -12,7 +18,6 @@
     transition: all 0.5s;
 
   }
-
 
   &--text {
     position: absolute;
@@ -26,8 +31,11 @@
     opacity: 0;
     transition: all 0.5s;
     backface-visibility: hidden;
-  
-   
+
+    @include respond(tab-port) {
+      left: 50%;
+    }
+
   }
 
   &:hover &--text {
@@ -39,6 +47,10 @@
     transform: translateX(-4rem) scale(1);
     filter: blur(3px) brightness(80%);
   }
-
+  @include respond(tab-port) {
+    &:hover &--image  {
+      transform: scale(1);
+      
+    }
+  }
 }
-
