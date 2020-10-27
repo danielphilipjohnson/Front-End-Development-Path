@@ -1,0 +1,39 @@
+$bg-url: url(https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/topbanner.jpg) top center/cover;
+$bg-height: 40vh;
+
+
+@mixin hero($bg-url, $height) {
+  .hero {
+    background: $bg-url;
+    height: $height;
+    position: relative;
+  
+    .content {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      padding: 0 0.8rem;
+      color: #fff;
+  
+      h1 {
+        z-index: 1000;
+      }
+    }
+  }
+  
+  .hero::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+}
+
+@include hero($bg-url, $bg-height);

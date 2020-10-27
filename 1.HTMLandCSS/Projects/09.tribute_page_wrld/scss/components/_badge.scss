@@ -1,0 +1,22 @@
+$badge-bgcolor-win: green;
+$badge-bgcolor-nominated: red;
+
+$badge-types: (
+  "won": $badge-bgcolor-win,
+  "nominated": $badge-bgcolor-nominated,
+);
+
+.badge {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-left: 1rem;
+
+  @each $name, $badge-color in $badge-types {
+    &.#{$name} {
+      background-color: $badge-color;
+      color: #fff;
+      font-size: 1.3rem;
+    }
+  }
+}

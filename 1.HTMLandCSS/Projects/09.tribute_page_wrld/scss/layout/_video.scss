@@ -1,0 +1,22 @@
+.video__container {
+  // background:rgba(0,0,0,0.9);
+  background: url(https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/bg.jpg);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+}
+
+
+.more__video__container {
+  header {
+    h3 {
+      color: #000;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .more__video__container {
+    padding: 2rem 4rem;
+  }
+}

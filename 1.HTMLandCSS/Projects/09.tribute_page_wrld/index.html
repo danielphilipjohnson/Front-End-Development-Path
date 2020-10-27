@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juice Wrld: Tribute Page</title>
+  <meta name="description" content="Daniel Philip Johnson React Developer
+      Juice Wrld: Tribute Page">
+  <meta name="keywords" content="Juice Wrld: Tribute Page, Freecodecamp React
+      Developer, Web Development,
+      Web Applications, Mobile Apps">
+  <meta name="author" content="Daniel Philip Johnson">
+
+  <!-- Facebook tags -->
+  <meta property="og:title" content="Freecodecamp project: Juice Wrld: Tribute
+      Page">
+  <meta property="og:description" content="Juice Wrld: Tribute Page using sass
+      and
+      html">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+  <meta property="og:url" content="https://danielphilipjohnson.github.io/ffc/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Non-Essential, But Recommended -->
+
+  <meta property="og:site_name" content="Freecodecamp project: Juice Wrld:
+      Tribute Page">
+  <meta name="twitter:image:alt" content="Profile of React Developer Daniel
+      Philip Johnson">
+
+  <!-- Twitter Tags -->
+  <meta name="twitter:title" content="Freecodecamp project: Juice Wrld:
+      Tribute Page">
+  <meta name="twitter:description" content="Freecodecamp project. Juice Wrld:
+      Tribute Page using sass and html">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+  <meta name="twitter:card" content="Twitter Profile">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <nav id="nav-bar" class="navbar__top">
+    <header class="top-header">
+      <h1 class="fade-in-left">Juice WRLD</h1>
+    </header>
+    <a href="javascript:void(0);" class="hamburger" onclick="hamburgerButton()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <nav class="subnav socials fade-in-right" id="subnav">
+    <a href="javascript:void(0);" class="hamburger" onclick="hamburgerButton()">
+      <i class="fas fa-times"></i>
+    </a>
+    <ul class="subnav__links fade-in-right">
+      <li class="subnav___link">
+        <a href="#about">About</a>
+      </li>
+
+      <li class="subnav___link">
+        <a href="#discography">Discography</a>
+      </li>
+
+      <li class="subnav___link">
+        <a href="#album">Album</a>
+      </li>
+      <li class="subnav___link">
+        <a href="#awards">Awards</a>
+      </li>
+      <li class="subnav___divider"></li>
+    </ul>
+
+    <ul class="social-icons fade-in-left">
+      <li class="nav-item twitter">
+        <a href="https://twitter.com/juiceworlddd?">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item facebook">
+        <a href="https://www.facebook.com/juiceworldddd/">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+      <li class="nav-item instagram">
+        <a href="https://github.com/danielphilipjohnson/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+      <li class="nav-item youtube">
+        <a href="https://www.linkedin.com/in/daniel-philip-johnson/">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </li>
+      <li class="nav-item spotify">
+        <a href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
+          <i class="fab fa-spotify"></i>
+        </a>
+      </li>
+
+      <li class="nav-item apple">
+        <a href="https://music.apple.com/gb/artist/juice-wrld/1368733420">
+          <i class="fab fa-apple"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="content fade-in-right">
+      <h1 id="title">Legends Never Die</h1>
+    </div>
+  </header>
+
+  <nav id="navbar" class="navbar">
+    <ul class="social-icons navbar__items">
+      <li class="navbar__item twitter">
+        <a href="https://twitter.com/juiceworlddd?">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+
+      <li class="navbar__item facebook">
+        <a href="https://www.facebook.com/juiceworldddd/">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+
+      <li class="navbar__item instagram">
+        <a href="https://github.com/danielphilipjohnson/">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </li>
+
+      <li class="navbar__item youtube">
+        <a href="https://www.linkedin.com/in/daniel-philip-johnson/">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </li>
+      <li class="navbar__item spotify">
+        <a href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
+          <i class="fab fa-spotify"></i>
+        </a>
+      </li>
+
+      <li class="navbar__item apple">
+        <a href="https://music.apple.com/gb/artist/juice-wrld/1368733420">
+          <i class="fab fa-apple"></i>
+        </a>
+      </li>
+
+    </ul>
+    <ul class="navbar__items hide-md">
+      <li class="navbar__item">
+        <a href="#about">
+          About
+        </a>
+      </li>
+      <li class="navbar__item">
+        <a href="#discography">
+          Discography
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="#album">
+          Album
+        </a>
+      </li>
+
+      <li class="navbar__item">
+        <a href="#awards">
+          Awards
+        </a>
+      </li>
+    </ul>
+
+    <a href="#" class="navbar__title">
+      <h1 class="hide-sm">Tribute Page</h1>
+    </a>
+  </nav>
+
+  <main id="main">
+    <section class="section-header video__container">
+      <header>
+        <h3>Latest</h3>
+      </header>
+      <div class="container video-card">
+        <div class="video-card-video">
+          <iframe src="https://www.youtube.com/embed/C5i-UnuUKUI" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media;
+              gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-card-body">
+          <h4 class="sub-title">Apr 24, 2020</h4>
+          <h2 class="title">Juice WRLD - Wishing Well</h2>
+
+          <p>
+          <ul class="social-icons-share-video">
+            <li class="label">Share:</li>
+            <li class="social-icons-share-item twitter">
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            <li class="social-icons-share-item facebook">
+              <a href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li class="social-icons-share-item instagram">
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            </li>
+          </ul>
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section-header more__video__container">
+      <header>
+        <h3>More Videos</h3>
+      </header>
+
+      <div class="video-cards">
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/3Klj_pjjqUM" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/TNAuyONWorE" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/0Hi2KQWmNM0" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/1VSZtyenNlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/1VSZtyenNlA" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video-card-spotify">
+          <iframe class="spotify-album" src="https://www.youtube.com/embed/EfP3Ya5-JoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-header about">
+      <header>
+        <h3>About</h3>
+      </header>
+
+      <div class="container profile">
+        <div class="bio">
+          <div id="img-div" class="profile__images">
+            <img id="image"
+              src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/profile2.jpeg"
+              alt="juice wrld profile picture">
+
+            <div id="img-caption" class="card">
+              <div class="card-body">
+                <ul>
+                  <li>
+                    <h3 class="title">Jarad <span>Anthony Higgins</span></h3>
+                  </li>
+                  <li>Rapper</li>
+                  <li>BIRTH DATE:</li>
+                  <li>December 2, 1998 </li>
+                  <li>DEATH DATE: </li>
+                  <li>December 8, 2019 (aged 21)</li>
+                  <li>PLACE OF BIRTH: </li>
+                  <li>Chicago, Illinois, U.S.</li>
+
+                </ul>
+                <p>
+                <ul class="social-icons-share-video center">
+                  <li class="social-icons-share-item twitter">
+                    <a href="#">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  <li class="social-icons-share-item facebook">
+                    <a href="#">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="social-icons-share-item instagram">
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  </li>
+                </ul>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <h3>Biography</h3>
+          <p id="tribute-info" class="mute">
+            Juice WRLD became a Top Ten hitmaker delivering introspective
+            lyrics
+            atop melodic production, with echoes of Travis Scott and Post
+            Malone.
+            His heartsick 2018 debut Goodbye & Good Riddance (2018), home to
+            his
+            biggest hit "Lucid Dreams," reflected a wide range of stylistic
+            influences: R&B instrumentation, dreamy beats, and even indie rock
+            melodicism. The momentum built by "Lucid Dreams" helped land
+            Juice's
+            sophomore effort A Death Race for Love (2019) at the top of the
+            charts.
+            Months later, at the height of his mainstream popularity, he
+            tragically
+            passed away after suffering a medical emergency at Chicago's
+            Midway
+            Airport; he had just turned 21. At the time of his death, Juice
+            had
+            three singles in the Hot 100 and both official LPs in the Top 100.
+          </p>
+          <p>
+            Born Jarad Higgins in 1998, the Calumet Park musician grew up
+            playing
+            piano, drums, and guitar, turning to rap freestyling in high
+            school.
+            Influenced by rock music and Chicago drill from Lil durk and ,
+            Chief
+            Keef
+          </p>
+          <p>
+            Higgins began recording as Juice TheKidd, a moniker derived from
+            his
+            haircut, which resembled 's in the film Juice. His early tracks
+            were
+            all
+            posted online, leading up to 2017's Juice WLRD 999 EP. Produced by
+            Nick
+            Mira and Sidepce, the set included the singles "Lucid Dreams
+            (Forget
+            Me)" and "All Girls Are the Same." Both tracks would also land on
+            his
+            official debut full-length, Goodbye & Good Riddance, which peaked
+            at
+            number 15 on the Billboard 200 upon release in May 2018. In
+            January
+            2019
+            Higgins issued the single "Robbery" ahead of the arrival of the
+            full-length A Death Race for Love, which was released later that
+            March.
+            Death Race shot to number one on the Billboard 200 and was soon
+            certified gold.
+          </p>
+          <p>
+            He followed with high-profile collaborations with Ellie
+            Goulding("Hate
+            Me"), Benny Blanco ("Graduation"), BTS ("All Night"), and Young
+            Boy
+            Never Broke Again ("Bandit"). In 2019, the latter track joined
+            "Lucid
+            Dreams" as the rapper's second Top 10 hit.
+
+          </p>
+          <p>
+            On December 8, 2019, Higgins suffered a medical emergency at
+            Chicago's
+            Midway International Airport and died. He had just turned 21. At
+            the
+            time of his death, he had three singles in the Hot 100 and both
+            official
+            LPs in the Top 100 on the Billboard 200. During the next several
+            months,
+            his verses appeared on tracks with Halsey, MarshMellow, and
+            Eminem.
+            The
+            posthumous album Legends Never Die followed in July of 2020 and
+            topped
+            the Billboard 200. ~ Neil Z. Yeung, Rovi
+
+          </p>
+          <p>Juice WRLD has recorded 50 Hot 100 Songs</p>
+          <p>Juice WRLD has been on the Artist 100 Chart for 123 weeks</p>
+        </div>
+
+        <div class="quotes">
+
+          <img
+            src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/profile1.jpeg"
+            alt="juice wrld profile picture">
+          <header>
+            <h3>Quotes</h3>
+          </header>
+
+          <blockquote cite="http://www.wikipedia.org">
+            Addiction knows no boundaries, and its impact goes beyond the
+            person
+            fighting it. We hope the conversations he started in his music and
+            his
+            legacy will help others win their battles, as that is what he
+            wanted
+            more than anything. We know that Jarad's legacy of love, joy and
+            emotional honesty will live on."[112] Wallace later established
+            Live
+            Free 999 Fund in honor of Higgins and the battle he faced against
+            addiction, anxiety and depression.[96] The fund's primary goal is
+            to
+            support programs that target young, underserved populations. With
+            a
+            focus on addiction, anxiety and depression, the organization hopes
+            to
+            normalize the conversation about the mental health challenges that
+            Higgins faced, and provide an avenue for people to process those
+            challenges in a healthy way.[96] Higgins' production team and
+            record
+            label have committed to supporting the organization.[96]
+            <cite>
+              Carmella Wallace
+            </cite>
+          </blockquote>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="discography" class="section-header discography">
+      <header class="">
+        <h3>
+          Discography
+        </h3>
+      </header>
+      <div class="albums">
+        <div class="album">
+          <div class="album__content legends">
+            <iframe class="spotify-track" src="https://open.spotify.com/embed/track/2U5WueTLIK5WJLD7mvDODv" width="300"
+              height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="album__content__track">
+              <h3>Legends Never Die</h3>
+              <p>Released: July 10, 2020</p>
+              <p>Label: Grade A Productions and Interscope Records.</p>
+              <p>Length 58:50</p>
+              <p>Listen:
+
+                <a class="listen" href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
+                  <i class="fab fa-spotify"></i>
+                </a>
+
+                <a class="listen" href="https://music.apple.com/gb/artist/juice-wrld/1368733420">
+                  <i class="fab fa-apple"></i>
+                </a>
+              </p>
+
+              <p>Share:
+              <ul class="social-icons-share">
+                <li class="social-icons-share-item twitter">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                <li class="social-icons-share-item facebook">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="social-icons-share-item instagram">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="album">
+          <div class="album__content death">
+            <iframe class="spotify-track" src="https://open.spotify.com/embed/track/41MCdlvXOl62B7Kv86Bb1v" width="300"
+              height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="album__content__track">
+              <h3>Death Race for Love</h3>
+              <p>Released: March 8, 2019</p>
+              <p>Label: Grade A Productions and Interscope Records.</p>
+              <p>Length 72:04:</p>
+              <p>Listen:
+
+                <a class="listen" href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
+                  <i class="fab fa-spotify"></i>
+                </a>
+
+                <a class="listen" href="https://music.apple.com/gb/artist/juice-wrld/1368733420">
+                  <i class="fab fa-apple"></i>
+                </a>
+              </p>
+
+              <p>Share:
+              <ul class="social-icons-share">
+                <li class="social-icons-share-item twitter">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                <li class="social-icons-share-item facebook">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="social-icons-share-item instagram">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="album">
+          <div class="album__content goodbye">
+            <iframe class="spotify-track" src="https://open.spotify.com/embed/track/24BNgrtp6Fag4M5BQPEgsV" width="300"
+              height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="album__content__track">
+              <h3>Goodbye & Good Riddance</h3>
+              <p>Released: May 23, 2018</p>
+              <p>Label: Grade A Productions and Interscope Records.</p>
+              <p>Length 47:20</p>
+              <p>Listen:
+
+                <a class="listen" href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz">
+                  <i class="fab fa-spotify"></i>
+                </a>
+
+                <a class="listen" href="https://music.apple.com/gb/artist/juice-wrld/1368733420">
+                  <i class="fab fa-apple"></i>
+                </a>
+              </p>
+
+              <p>Share:
+              <ul class="social-icons-share">
+                <li class="social-icons-share-item twitter">
+                  <a href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                <li class="social-icons-share-item facebook">
+                  <a href="#">
+                    <i class="fab fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="social-icons-share-item instagram">
+                  <a href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+                </li>
+              </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="album" class="section-header music overlay">
+      <header class="section-header">
+        <h3>
+          Album
+        </h3>
+      </header>
+      <div class="music__content">
+        <div class="album__img">
+          <img
+            src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/albumcover.png"
+            alt="">
+          <h4 class="sub-title">July 10, 2020</h4>
+          <h2 class="title">Legends Never Die</h2>
+          <p>
+            Legends Never Die is the third studio album by American rapper
+            Juice Wrld, released posthumously following his death on December
+            8, 2019. It was released on July 10, 2020, through Grade A
+            Productions and Interscope Records. The album features guest
+            appearances from The Weeknd, Trippie Redd, Marshmello, Polo G, The
+            Kid Laroi, and Halsey.
+          </p>
+          <div class="img-badges">
+            <img class=""
+              src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/9b73a7c3e09a3eff749869fe7660b490b7412f16/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/badges/apple-music.svg"
+              alt="apple
+                music">
+            <img class="spotify-badge"
+              src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/badges/Spotify_Logo_RGB_Green.png"
+              alt="spotify logo">
+            <img class="google-play"
+              src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/badges/google-play-badge.png"
+              alt="google play">
+          </div>
+        </div>
+        <div class="album__info">
+          <h3>Tracks</h3>
+          <div class="album__info__tracks">
+            <ul>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Anxiety (Intro) </p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Conversations</p>
+              </li>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Titanic</p>
+              </li>
+
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Bad Energy</p>
+              </li>
+
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Righteous</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Blood on My Jeans</p>
+              </li>
+
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Smile (with The Weeknd)</p>
+              </li>
+
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Tell Me U Luv Me (with Trippie Redd)</p>
+              </li>
+
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Hate the Other Side</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Get Through It (Interlude)</p>
+              </li>
+
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Life's a Mess (with Halsey)</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Come & Go (with Marshmello)</p>
+              </li>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>I Want It</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Fighting Demons</p>
+              </li>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Wishing Well</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Screw Juice</p>
+              </li>
+
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Up Up and Away</p>
+              </li>
+
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>The Man, The Myth, The Legend</p>
+              </li>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Stay High</p>
+              </li>
+
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Can't Die</p>
+              </li>
+              <li class="odd">
+                <span><i class="fas fa-play"></i></span>
+                <p>Man of the Year</p>
+              </li>
+              <li class="even">
+                <span><i class="fas fa-play"></i></span>
+                <p>Juice WRLD Speaks from Heaven</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards" class="container section-header">
+      <header class="alt">
+        <h3>Awards</h3>
+      </header>
+
+      <div class="awards">
+        <div class="award">
+          <div class="award__content">
+            <div class="award__image">
+              <img
+                src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/awards/vma-logo.png"
+                alt="mtv video awards">
+            </div>
+            <p class="subtitle">MTV Video Music Awards: 2018</p>
+
+            <h4>Song of Summer<span class="badge nominated">Nominated</span></h4>
+            <p>
+              Juice WRLD had everyone thinking about "Lucid Dreams" with his
+              debut performance at the 2018 MTV Video Music Awards on Monday
+              night (Aug. 20). The rapper's melancholic single brought a
+              somber atmosphere to the show as he sung on the ceremony's Push
+              Artist stage with a live backing band.
+            </p>
+            <p>
+              Juice WRLD's "Lucid Dreams," which was nominated for song of the
+              summer at the VMAs tonight, officially became his first Top 10
+              hit on the Billboard Hot 100 back in June.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="award">
+          <div class="award__content">
+            <div class="award__image">
+              <svg class="bet-logo" height="154px" viewBox="0 0 488 154" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>Fill 1</title>
+                <desc>Created with Sketch.</desc>
+                <defs />
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="Artboard" transform="translate(-1778.000000,
+                        -565.000000)" fill="#FFFFFF">
+                    <path d="M1892.7485,642.11135 C1899.89398,639.178986
+                          1905.97777,633.138826 1909.99364,625.635211
+                          C1909.38553,630.363715 1909.08739,635.364913
+                          1909.08739,640.726976 C1909.08739,646.709871
+                          1909.49188,652.462794 1910.25997,657.945751
+                          C1906.59315,651.095691 1900.76842,645.748172
+                          1892.7485,642.11135 Z M1875.48337,669.517952
+                          C1875.48337,679.983928 1864.09478,679.557617
+                          1864.09478,679.557617 L1815.88621,679.557617
+                          L1815.88621,659.499194 L1864.13569,659.499194
+                          C1876.0733,659.499194 1875.48337,669.517952
+                          1875.48337,669.517952 Z M1815.78895,604.68508
+                          L1864.04024,604.68508 C1875.97876,604.68508
+                          1875.3852,614.703838 1875.3852,614.703838
+                          C1875.3852,625.170723 1863.99843,624.742594
+                          1863.99843,624.742594 L1815.78895,624.742594
+                          L1815.78895,604.68508 Z M2162.38871,565
+                          L1977.43255,565 C1960.57464,565 1950.41772,567.308805
+                          1942.10511,572.387266 C1935.17779,576.774904
+                          1928.71404,582.777796 1923.63376,590.165062
+                          C1920.13147,595.100814 1917.33091,600.181093
+                          1915.14391,605.561335 C1915.14391,605.509524
+                          1915.14663,605.455894 1915.14663,605.403173
+                          C1915.14663,585.320208 1902.21642,569.15403
+                          1883.97504,566.383465 C1879.12383,565.691732
+                          1871.04665,565 1865.04375,565 L1778,565 L1778,719
+                          L1863.19398,719 C1885.35942,719 1895.05822,716.457588
+                          1903.36809,708.839441 C1910.98897,701.913027
+                          1914.91121,691.060736 1914.91121,678.36231
+                          C1914.91121,678.011445 1914.8903,677.674214
+                          1914.88394,677.327893 C1921.24133,695.38111
+                          1932.52357,708.463124 1947.18357,713.691567
+                          C1957.57501,717.382928 1970.9679,719 1990.12825,719
+                          L2025.54022,719 L2025.54022,679.434905
+                          L1999.98248,679.434905 C1969.23084,679.368549
+                          1959.15936,682.141842 1953.78639,659.732802
+                          L2025.54022,659.732802 L2025.54022,624.95984
+                          L1953.7164,624.916209 C1953.7164,624.916209
+                          1957.30232,604.565095 1978.6024,604.565095
+                          C1984.90344,604.565095 1989.09838,604.565095
+                          2000.17791,604.565095 L2049.32,604.565095 L2049.32,719
+                          L2093.96447,719 L2093.96447,604.565095
+                          L2150.07842,604.565095 L2162.38871,565 Z
+                          M2265.97678,624.801677 L2204.26716,624.801677
+                          L2185.31042,565.08908 L2166.3664,624.801677
+                          L2104.63951,624.801677 L2154.66512,660.57088
+                          L2135.45569,718.75094 L2185.31042,682.654506
+                          L2235.17878,718.75094 L2215.97661,660.57088
+                          L2265.97678,624.801677 Z" id="Fill-1" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <p class="subtitle"> BET Hip-Hop Awards: 2018</p>
+            <h4>Best New Hip Hop Artist<span class="badge nominated">Nominated</span></h4>
+            <p>The 2018 BET Hip Hop Awards are a recognition ceremony
+              held
+              on October 16, 2018 at the Fillmore Miami Beach at Jackie
+              Gleason Theater in Miami Beach, Florida. The nominations
+              were announced on September 9, 2018.</p>
+            <p>
+            <ul>
+              <li>BlocBoy JB</li>
+              <li>Juice Wrld</li>
+              <li>Lil Baby</li>
+              <li>Rich the Kid</li>
+              <li>XXXTentacion -- WINNER </li>
+            </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="award">
+          <div class="award__content">
+            <div class="award__image">
+              <img
+                src="https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/awards/billboardaward.jpg"
+                alt="top new
+                      artist">
+            </div>
+            <p class="subtitle">Billboard Music Awards: 2019 </p>
+            <h4>Top New Artist <span class="badge won">Won</span></h4>
+            <p>The Billboard Music Award is an honor given out annually
+              by
+              Billboard, a publication and music popularity chart
+              covering
+              the
+              music business. </p>
+            <p>
+            <ul>
+              <li>Bazzi</li>
+              <li>Juice WRLD -- WINNER</li>
+              <li>Lil Baby</li>
+              <li>Dua Lipa</li>
+              <li>Ella Mai</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="main__footer" id="main-footer">
+    <div class="container">
+      <div class="main__footer__top">
+        <div class="disclaimer">
+          <h4>Content Disclaimer</h4>
+          <p> The content of this project came from
+            <a id="tribute-link" target="_blank"
+              href="https://en.wikipedia.org/wiki/Juice_Wrld#Discography">Wikipedia</a>,
+            <a href="https://open.spotify.com/artist/4MCBfE4596Uoi2O4DtmEMz/about">Spotify</a>
+            and
+            <a href="https://www.youtube.com/channel/UC0BletW9phE4xHFM44q4qKA">Youtube</a>
+          </p>
+        </div>
+        <div class="techs">
+          <h4>Techs Used</h4>
+          <p>SASS</p>
+        </div>
+
+        <ul class="social-icons-footer">
+          <li class="nav-item twitter">
+            <a href="https://twitter.com/danielp_johnson">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+
+          <li class="nav-item facebook">
+            <a
+              href="httphttp://127.0.0.1:5500/Free-Code-Camp-Portfolio-2018-2020/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/index.htmls://www.facebook.com/DanielPhilipJohnson">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+
+          <li class="nav-item github">
+            <a href="https://github.com/danielphilipjohnson/">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+
+          
+          <li class="nav-item linkedin">
+            <a href="https://www.linkedin.com/in/daniel-philip-johnson/">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main__footer__bottom">
+        <p>Copyright &copy; 2020. All Rights Reserved | Designed and
+          built
+          with <span class="heart">❤️</span>
+          by <a href="">Daniel Philip Johnson </a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

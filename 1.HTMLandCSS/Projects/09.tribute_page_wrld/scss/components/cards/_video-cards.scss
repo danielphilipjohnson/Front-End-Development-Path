@@ -1,0 +1,82 @@
+
+
+$video-card-bg: #000;
+$video-card-body-color: #fff;
+$video-card-body-padding: 0.5rem 1rem;
+
+$subtitle-color: rgb(143, 137, 137);
+$subtitle-font-size: 0.7rem;
+$subtitle-margin: 0;
+
+@mixin base-video-card($video-card-bg) {
+  padding: 0;
+  background: $video-card-bg;
+}
+
+@mixin videocard {
+  .video-card {
+    @include base-video-card($video-card-bg);
+
+    .video-card-video {
+      iframe {
+        width: 100%;
+        height: 250px;
+      }
+    }
+
+    .video-card-body {
+      color: $video-card-body-color;
+      padding: $video-card-body-padding;
+
+      .sub-title {
+        color: $subtitle-color;
+        margin: $subtitle-margin;
+        font-size: $subtitle-font-size;
+      }
+
+      $title-font-size: 1.8rem;
+      $title-font-weight: 400;
+      $title-line-height: 1.2;
+      $title-margin-bottom: 0.5rem;
+
+      .title {
+        font-size: $title-font-size;
+        font-weight: $title-font-weight;
+        line-height: $title-line-height;
+        margin-bottom: $title-margin-bottom;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .video-card {
+      .video-card-video {
+        iframe {
+          width: 100%;
+          height: 500px;
+        }
+      }
+    }
+  }
+}
+
+@include videocard;
+
+
+
+$spotify-album-width: 100%;
+$spotify-album-height: 500px;
+
+
+@mixin spotify-album {
+  .spotify-album {
+    width: $spotify-album-width;
+    height: $spotify-album-height;
+  }
+}
+
+.video-card-spotify {
+  @include base-video-card($video-card-bg);
+
+  @include spotify-album;
+}

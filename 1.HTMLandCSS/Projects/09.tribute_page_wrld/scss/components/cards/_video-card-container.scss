@@ -1,0 +1,34 @@
+/* videos containers */
+
+$video-cards-columns-mobile: repeat(1, 1fr);
+$video-cards-columns-tablet: repeat(2, 1fr);
+$video-cards-columns-desktop: repeat(3, 1fr);
+
+@mixin video-cards-container(
+  $mobile-columns,
+  $tablet-columns,
+  $desktop-columns
+) {
+  .video-cards {
+    display: grid;
+    grid-template-columns: $mobile-columns;
+  }
+
+  @media screen and (min-width: 500px) and (max-width: 1000px) {
+    .video-cards {
+      grid-template-columns: $tablet-columns;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .video-cards {
+      grid-template-columns: $desktop-columns;
+    }
+  }
+}
+
+@include video-cards-container(
+  $video-cards-columns-mobile,
+  $video-cards-columns-tablet,
+  $video-cards-columns-desktop
+);

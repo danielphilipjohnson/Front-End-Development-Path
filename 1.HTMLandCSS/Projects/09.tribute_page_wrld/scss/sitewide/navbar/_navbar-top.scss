@@ -1,0 +1,15 @@
+.navbar__top {
+  position: relative;
+  background:linear-gradient(to right,#0f0f11,#1f1f22);
+  padding: 1rem;
+  width: 100%;
+  z-index: 9999;
+
+  .hamburger {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding: 1rem;
+    color: #fff;
+  }
+}

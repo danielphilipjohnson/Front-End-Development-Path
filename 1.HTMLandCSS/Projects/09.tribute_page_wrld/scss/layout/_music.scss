@@ -1,0 +1,126 @@
+.music {
+
+  &.overlay {
+    position: relative;
+    background-image: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/1.Tribute-Page/img/Legends_Never_Die.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.83);
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .music__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: self-end;
+    position: relative;
+    z-index: 1000;
+
+
+    .album__img {
+      padding: 0 2rem;
+      color: #fff;
+      margin:  0 auto;
+      text-align: center;
+
+      .img-badges {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          margin-right: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .album__info {
+      text-align: center;
+      color: #fff;
+      .album__info__tracks {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: flex-start;
+
+        ul {
+          list-style: none;
+          text-align: left;
+
+          li {
+            text-align: center;
+          }
+
+          span {
+            color: #d1bf76;
+          }
+
+          p {
+            display: inline-block;
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1148px) {
+
+  .music {
+    &.overlay {
+      padding: 3rem;
+    }
+
+    .music__content {
+      grid-template-columns: 1fr 2fr;
+      .album__img {
+        text-align: left;
+        .img-badges {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          img {
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .album__info {
+        text-align: left;
+
+        .album__info__tracks {
+
+          .odd {
+            float: left;
+            width: 50%;
+          }
+
+          .even {
+            float: right;
+            width: 50%;
+          }
+
+          li {
+            list-style: none;
+            text-align: left;
+            font-size: 0.9rem;
+
+            p {
+              display: inline-block;
+              padding-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

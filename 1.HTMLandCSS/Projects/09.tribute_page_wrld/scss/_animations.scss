@@ -1,0 +1,58 @@
+@mixin animation-base($animation, $duration, $delay) {
+  animation-name: $animation;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: $duration;
+  animation-delay: $delay;
+}
+
+@mixin fade-in-keyframe($keyframe-name) {
+  @keyframes #{$keyframe-name} {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fade-in-with-x-movement-keyframe($keyframe-name, $x-before, $x-after) {
+  @keyframes #{$keyframe-name} {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+}
+/* Make key frames */
+
+@include fade-in-with-x-movement-keyframe("fadeInLeftOpacity", -100px, 0px);
+@include fade-in-with-x-movement-keyframe("fadeInRightOpacity", 550px, 0px);
+@include fade-in-keyframe("fadeIn");
+
+
+/* Animations */
+
+.fade-in-left {
+  @include animation-base("fadeInLeftOpacity", 1.5s, 0);
+}
+
+.fade-in {
+  @include animation-base("fadeIn", 1.5s, 0);
+}
+
+.subnav {
+  &.fade-in-right {
+    @include animation-base("fadeInRightOpacity", 1s, 0);
+  }
+}
+
+
+.fade-in-right {
+  @include animation-base("fadeInRightOpacity", 1.5s, 0);
+}

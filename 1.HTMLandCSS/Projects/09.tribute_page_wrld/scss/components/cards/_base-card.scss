@@ -1,0 +1,38 @@
+$card-bg: rgb(28, 30, 33);
+$card-height: 393px;
+$card-margin: 0 1rem 0 0;
+
+.card {
+  margin: $card-margin;
+  height: $card-height;
+  text-align: center;
+  background-color: $card-bg;
+
+  .card-header {
+    width: 100%;
+    img {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  }
+  .card-body {
+    padding: 0.5rem;
+    h3 {
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding: 0.35rem;
+        color: rgb(176, 179, 184);
+        .title {
+          font-weight: 300;
+          font-size: 1.5rem;
+          span {
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+}

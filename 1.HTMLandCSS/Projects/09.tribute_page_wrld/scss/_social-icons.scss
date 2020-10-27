@@ -1,0 +1,73 @@
+$socialmedia-colors: (
+  "facebook": #4267b2,
+  "twitter": #1da1f2,
+  "youtube": #ff0000,
+  "instagram": #c13584,
+  "linkedin": #2867b2,
+  "github": #000,
+  "spotify": rgb(30, 215, 96),
+  "apple": #a1aaac,
+);
+
+// .social-icons{
+//   li {
+//     @each $social, $color in $socialmedia-colors {
+//       &.#{$social}:hover a {
+//         background-color: red;
+//         color: #{$color}!important;
+//       }
+//     }
+//   }
+// }
+
+
+
+@mixin base-social-icons-share($justify-content) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+
+  .social-icons-share-item {
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 42px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.75;
+    transition: background-color 0.75s;
+    a {
+      color: #fff;
+    }
+    @each $social, $color in $socialmedia-colors {
+      &.#{$social}:hover {
+        background-color: #{$color};
+      }
+    }
+  }
+}
+
+.social-icons-share {
+  @include base-social-icons-share(center);
+}
+
+/* find similarities */
+@mixin social-video-share {
+  .social-icons-share-video {
+    @include base-social-icons-share(flex-start);
+
+    /* does it exist */
+    &.center {
+      justify-content: center;
+    }
+    .label {
+      margin: 1rem 0.5rem 1rem 0;
+    }
+  }
+}
+
+@include social-video-share;
