@@ -1,0 +1,135 @@
+// Home Sections
+#home {
+  // Home Section Tools
+  &-tools {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
+      img {
+        width: 160px;
+        height: 145px;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+     
+    }
+  }
+
+  // Home Section Stats
+  &-stats {
+    
+    .stats {
+      background: url("../img/showcase1.jpg") no-repeat center right / cover;
+      // background: grey;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      
+      .stat-item {
+        display: flex;
+        ul {
+          width: 100%;
+          padding: 1rem;
+        }
+        z-index: 100;
+
+      }
+      li {
+        line-height: 2;
+        min-width: 250px;
+        color: #fff;
+        &.stats-title {
+          text-transform: uppercase;
+          font-size: 1.5rem;
+        }
+
+        &.stats-number {
+          font-size: 3.7rem;
+          font-weight: bolder;
+        }
+      }
+
+      div {
+        padding: 3rem 0;
+
+      
+      }
+      &::before {
+        content: '';
+        /* hides the text*/
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  // Home Section C
+  &-services {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      // process-step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      // process-icon
+      &-icon {
+        $primary-gradient-color: linear-gradient(90deg, rgba(233, 71, 234, 1) 0%, rgba(143, 58, 161, 1) 35%, rgba(52, 174, 185, 1) 100%);
+
+        background:$primary-gradient-color;
+
+        border-radius: 50%;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          $secondary-gradient-color: linear-gradient(to bottom left, #0000a3, #40b1df);
+          background: $main-color;
+          background: $secondary-gradient-color;
+
+          width: 90px;
+          
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
+}
