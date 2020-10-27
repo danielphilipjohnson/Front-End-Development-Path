@@ -1,0 +1,23 @@
+// Variables
+$website-width: 1280px;
+$main-color: #9B3CAB;
+$light-color: #f4f4f4;
+// $medium-color: #ccc;
+$medium-color: #3BA6B7;
+
+$dark-color: #333;
+$bg-image: url('../img/showcase1.jpg');
+$bg-gradient: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+$gold-color: #DAA520;
+
+
+
+
+// Set Text Color
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

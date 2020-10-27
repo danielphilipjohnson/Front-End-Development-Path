@@ -1,0 +1,147 @@
+// About Sections
+#about {
+  // About Info
+  &-information {
+    background: $bg-gradient;
+    .section-title {
+      color: #fff;
+    }
+    .about-info {
+      display: grid;
+      grid-template-areas: 'bioimage bio';
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      img {
+        border-radius: 10px;
+      }
+      p {
+        i {
+          color:#766dff;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    // Grid Area
+    .bio-image {
+      grid-area: bioimage;
+    }
+
+    .bio {
+      grid-area: bio;
+      padding: 2rem;
+      h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        line-height: 1;
+
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+      }
+      h3 {
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      .bio-text {
+        margin-bottom: 1.5rem;
+      }
+      p {
+        color:#777777; 
+        i {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  // About Skills
+  &-skills {
+    background-color: rgb(78, 73, 73);
+    .section-title {
+      color: #fff;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      justify-items: center;
+  
+      img {
+        width: 150px;
+        height: 150px;
+        padding: 2rem;
+      }
+    }
+
+  }
+  // About Logos
+  &-logos {
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+  // About Testimonials
+  &-testimonials {
+    padding-top: 4rem;
+    .testimonials {
+      background: url("../img/showcase1.jpg") no-repeat center right / cover;
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+      &> * {
+        z-index: 1000;
+        color: #fff;
+      }
+      div {
+        padding: 2rem 1rem;
+        .fa-star, .fa-star-half {
+          color: #DAA520;
+          font-size: 2rem;
+        }
+        text-align: center;
+        i {
+          font-size: 2.5rem;
+          padding-bottom: 0.5rem;
+        }
+      }
+      ul {
+        list-style: none;
+        margin-top: 1rem;
+        
+      }
+
+      p {
+        border-radius: 5px;
+        padding: 0.5rem;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      &::before {
+        content: '';
+        /* hides the text*/
+        background-color: rgba(0, 0, 0, 0.6);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}

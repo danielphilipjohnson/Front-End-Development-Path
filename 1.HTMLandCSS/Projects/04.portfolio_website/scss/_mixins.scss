@@ -1,0 +1,8 @@
+@mixin main-hover {
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  &:hover {
+    border-color: $medium-color;
+  }
+}
