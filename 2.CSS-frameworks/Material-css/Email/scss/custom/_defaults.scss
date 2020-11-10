@@ -1,0 +1,43 @@
+body {
+  padding-top: 1rem;
+  background-color: $body-bg;
+}
+
+main {
+  top: -26px;
+  position: relative;
+}
+
+@media screen and (max-width: 420px){
+  main{
+      top: -20px;
+  }
+}
+
+
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .splash-img {
+    margin-top: 4rem;
+    height: 250px;
+
+  }
+  .content-text {
+    color: $color-white;
+    text-align: center;
+    h3 {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    h4 {
+      font-size: 1.5rem;
+      font-weight: bolder;
+    }
+  }
+}
+.fixed-action-btn {
+  bottom: 110px;
+}
