@@ -1,0 +1,25 @@
+body {
+  background-color: $body-bg-color;
+  font-family: $body-font-family;
+}
+
+
+.post-ad p {
+  font-size: 1.1rem;
+  font-weight: bolder;
+}
+
+.user-post {
+  .username,
+  .shared-name {
+    font-weight: bold;
+  }
+}
+
+
+.cover-art {
+  background-image: url('https://placeimg.com/640/680/any');
+  background-size: cover;
+  padding: 15rem 0 0 0;
+}
+

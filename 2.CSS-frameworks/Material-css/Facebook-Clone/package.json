@@ -1,5 +1,5 @@
 {
-  "name": "email-materialcss",
+  "name": "facebookclone",
   "version": "1.0.0",
   "description": "Built a facebook clone using material css",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "sass": "node-sass -w scss/ -o css/ --recursive",
     "compile:sass": "node-sass scss/main.scss dist/index.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/index.comp.css -o dist/index.prefix.css",
-    "clean:css": "purgecss --css dist/index.prefix.css --content ./index.html --output dist/cleaned.css",
+    "clean:css": "purgecss --css dist/index.prefix.css --content ./*.html --output dist/cleaned.css",
     "compress:css": "node-sass dist/cleaned.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css clean:css compress:css"
   },

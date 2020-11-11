@@ -1,0 +1,55 @@
+.modal {
+  min-height: 100vh;
+  width: 100%;
+  nav {
+    @extend .blue;
+    @extend .darken-2;
+  }
+  .modal-content {
+    padding: 0px !important;
+  }
+  .comment-footer {
+    position: absolute;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+    .post-modal-btn-text {
+      margin: 0px;
+    }
+  }
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  .avatar {
+    height: 30px;
+    width: 40px;
+    margin-right: 15px;
+  }
+  .message {
+    background-color: #ebeced;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    width: 100%;
+    word-wrap: break-word;
+    .user {
+      margin: 0px;
+      padding: 0.25rem 0;
+    }
+    .comment {
+      margin: 0px;
+      padding: 0.25rem 0;
+    }
+  }
+}
+
+#comment-modal li {
+  padding: 0 0.25rem;
+}
