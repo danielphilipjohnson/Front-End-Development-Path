@@ -64,12 +64,15 @@
                                 <i class="material-icons right">close</i>
                             </span>
                             <div class="card-reveal-icons">
-                                <span>
-                                    <i class="material-icons">favorite</i> 39k
-                                </span>
-                                <span>
-                                    <i class="material-icons">message</i> 900
-                                </span>
+                                <div class="card-reveal-icons-top">
+                                    <span>
+                                        <i class="material-icons">favorite</i> 39k
+                                    </span>
+                                    <span>
+                                        <i class="material-icons">message</i> 900
+                                    </span>
+                                </div>
+                               
                                 <p>
                                     <a class="waves-effect waves-light btn
                                     modal-trigger" href="#photo-modal">View</a>
@@ -103,68 +106,65 @@
         <!-- Modal Structure -->
         <div id="photo-modal" class="modal picture-modal">
             <div class="modal-content picture-content">
-                <div class="card">
+                <article class="card card-post">
                     <div class="card-header">
                         <div class="row valign-wrapper">
-                            <img src="https://placeimg.com/640/480/any"
-                                alt="avatar" style="width:32px; height:32px;"
-                                class="circle responsive-img">
-                            <span class="black-text username">
+                            <img src="./img/avatar.jpg"
+                                alt="avatar" style="width:32px;
+                                height:32px;" class="circle responsive-img">
+                            <h6 class="black-text username">
                                 USER NAME
-                            </span>
+                            </h6>
                         </div>
                     </div>
                     <div class="card-image waves-effect waves-block
                         waves-light">
-                        <img class="activator"
-                            src="https://placeimg.com/640/480/any" alt="card
-                            image">
+                        <img class="" alt="post-image"
+                            src="https://placeimg.com/640/480/any">
                     </div>
                     <div class="card-content">
-                        <span class="card-title activator grey-text
-                            text-darken-4">
+                        <div class="card-title grey-text text-darken-4">
                             <i class="material-icons left">favorite</i>
-                            <i class="material-icons left">message</i>
+                            <div class="modal-trigger"
+                                data-target="comment-modal">
+                                <i class="material-icons left">message</i>
+                            </div>
                             <i class="material-icons right">save</i>
-                        </span>
+                        </div>
                     </div>
-                    <div class="card-content">
-                        <p class="grey-text text-darken-4">
-                            188 Likes
-                        </p>
-                    </div>
-                    <div class="card-content">
-                        <p class="grey-text text-darken-4">
-                            <a href="profile.html">Username</a> Yo! His palms
-                            are sweaty, knees weak, arms are heavy,There's vomit
-                            on his sweater already: Mom's spaghetti, He's
-                            nervous, but on the surface he looks calm and
-                            ready.To drop bombs, but he keeps
-                            on forgetting, What he wrote down, the whole crowd
-                            goes so loud 🎵🎶 Can't believe it's taken this long
-                            to watch 8Mile 😍
 
+                    <div class="card-content">
+                        <p class="grey-text text-darken-4">
+                            <a href="profile.html">Username</a> Yo! His
+                            palms are sweaty, knees weak, arms are
+                            heavy,There's vomit on his sweater already:
+                            Mom's spaghetti, He's nervous, but on the
+                            surface he looks calm and ready.To drop bombs,
+                            but he keeps
+                            on forgetting, What he wrote down, the whole
+                            crowd goes so loud 🎵🎶 Can't believe it's taken
+                            this long to watch 8Mile 😍
                         </p>
                     </div>
                     <div class="card-content">
-                        <p class="grey-text text-darken-4">
-                            <a href="profile.html">Username</a> Yo! His palms
-                            are sweaty, knees weak, arms are heavy,There's vomit
-                            on his sweater already: Mom's spaghetti, He's
-                            nervous, but on the surface he looks calm and
-                            ready.To drop bombs, but he keeps
-                            on forgetting, What he wrote down, the whole crowd
-                            goes so loud 🎵🎶 Can't believe it's taken this long
-                            to watch 8Mile 😍
-
-                        </p>
-                    </div>
-                    <div class="card-content card-timestamp">
                         <p class="grey-text text-darken-4">
                             59 minutes ago
                         </p>
                     </div>
-                </div>
+                    <div class="card-action">
+                        <div class="row">
+                            <div class="col s11">
+                                <input type="text" class="autocomplete
+                                    autocomplete-input" placeholder="Add a
+                                    comment">
+                            </div>
+                            <div class="col s1">
+                                <i class="material-icons">more_horiz</i>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
             </div>
         </div>
 

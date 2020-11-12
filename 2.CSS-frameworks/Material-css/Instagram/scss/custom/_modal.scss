@@ -1,29 +1,43 @@
-
 .modal-comment {
-
   @extend .modal;
   min-height: 100vh;
   width: 100%;
+
+  .comment-footer {
+    position: absolute;
+    bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0px;
+    right: 0px;
+    height: 100px;
+
+    input {
+      border: none;
+    }
+  }
 }
 
-
-.modal .picture-content {
-  padding: 0px;
+.picture-modal {
+  @extend .modal;
+  .picture-content {
+    padding: 0;
+  }
+  .card {
+    margin: 0;
+  }
 }
 
-.modal .picture-content .card {
-  margin: 0px;
-}
+// .modal .picture-content
 
-.modal.picture-modal {
-  max-height: 100%;
-  max-height: 100%;
-}
+// .modal.picture-modal {
+//   max-height: 100%;
+//   max-height: 100%;
+// }
 
-
-.modal-content {
-  padding: 0px !important;
-}
+// .modal-content {
+//   padding: 0px !important;
+// }
 
 .message-container {
   border-bottom: var(--post-border);
@@ -57,21 +71,3 @@
   margin: 0px;
   padding: 0.25rem 0;
 }
-
-.modal .comment-footer {
-  position: absolute;
-  bottom: 0px;
-  margin-right: auto;
-  margin-left: auto;
-  left: 0px;
-  right: 0px;
-  height: 100px;
-}
-
-#comment-modal li {
-  padding: 0 0.25rem;
-}
-#comment-modal input {
-  border: none;
-}
-
