@@ -6558,7 +6558,6 @@ body {
     margin-bottom: 0.75rem; }
 
 .card-explore {
-  margin: 0px;
   box-shadow: none; }
   .card-explore .card-image img {
     border-radius: 0; }
@@ -6634,7 +6633,8 @@ body {
   margin: 0px; }
 
 .row .explore-container {
-  padding: 0; }
+  padding: 0;
+  margin: 0 1rem; }
 
 .user-image-container {
   padding-right: 0px !important;
@@ -6683,3 +6683,6 @@ body {
 
 .profile-row {
   margin-bottom: 0px; }
+
+.card-reveal.card-transparent {
+  background-color: rgba(0, 0, 0, 0.5); }
