@@ -1,0 +1,7 @@
+.suggestions {
+  @extend .extra; 
+  @extend .col;
+  @extend .s12; 
+  @extend .l4; 
+  @extend .hide-on-med-and-down;
+}
