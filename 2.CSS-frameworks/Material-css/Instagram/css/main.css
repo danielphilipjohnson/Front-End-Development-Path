@@ -2026,7 +2026,7 @@ a {
   box-shadow: none !important; }
 
 /* 2dp elevation modified*/
-.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .dropdown-following, .collapsible, .sidenav {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
@@ -2331,24 +2331,26 @@ td, th {
       border: 0;
       border-right: 1px solid rgba(0, 0, 0, 0.12); } }
 
-.collection {
+.collection, .collection-following {
   margin: 0.5rem 0 1rem 0;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
   position: relative; }
-  .collection .collection-item {
+  .collection .collection-item, .collection-following .collection-item, .collection-following .collection-following-item {
     background-color: #fff;
     line-height: 1.5rem;
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid #e0e0e0; }
-    .collection .collection-item.avatar {
+    .collection .collection-item.avatar, .collection-following .collection-item.avatar, .collection-following .avatar.collection-following-item {
       min-height: 84px;
       padding-left: 72px;
       position: relative; }
-      .collection .collection-item.avatar:not(.circle-clipper) > .circle,
-      .collection .collection-item.avatar :not(.circle-clipper) > .circle {
+      .collection .collection-item.avatar:not(.circle-clipper) > .circle, .collection-following .collection-item.avatar:not(.circle-clipper) > .circle, .collection-following .collection .avatar.collection-following-item:not(.circle-clipper) > .circle, .collection-following .avatar.collection-following-item:not(.circle-clipper) > .circle,
+      .collection .collection-item.avatar :not(.circle-clipper) > .circle,
+      .collection-following .collection-item.avatar :not(.circle-clipper) > .circle,
+      .collection-following .avatar.collection-following-item :not(.circle-clipper) > .circle {
         position: absolute;
         width: 42px;
         height: 42px;
@@ -2356,47 +2358,47 @@ td, th {
         left: 15px;
         display: inline-block;
         vertical-align: middle; }
-      .collection .collection-item.avatar i.circle {
+      .collection .collection-item.avatar i.circle, .collection-following .collection-item.avatar i.circle, .collection-following .avatar.collection-following-item i.circle {
         font-size: 18px;
         line-height: 42px;
         color: #fff;
         background-color: #999;
         text-align: center; }
-      .collection .collection-item.avatar .title {
+      .collection .collection-item.avatar .title, .collection-following .collection-item.avatar .title, .collection-following .avatar.collection-following-item .title, .collection-following .collection-following-item.avatar .collection-following-item-message {
         font-size: 16px; }
-      .collection .collection-item.avatar p {
+      .collection .collection-item.avatar p, .collection-following .collection-item.avatar p, .collection-following .avatar.collection-following-item p {
         margin: 0; }
-      .collection .collection-item.avatar .secondary-content {
+      .collection .collection-item.avatar .secondary-content, .collection-following .collection-item.avatar .secondary-content, .collection-following .avatar.collection-following-item .secondary-content {
         position: absolute;
         top: 16px;
         right: 16px; }
-    .collection .collection-item:last-child {
+    .collection .collection-item:last-child, .collection-following .collection-item:last-child, .collection-following .collection-following-item:last-child {
       border-bottom: none; }
-    .collection .collection-item.active {
+    .collection .collection-item.active, .collection-following .collection-item.active, .collection-following .active.collection-following-item {
       background-color: #26a69a;
       color: #eafaf9; }
-      .collection .collection-item.active .secondary-content {
+      .collection .collection-item.active .secondary-content, .collection-following .collection-item.active .secondary-content, .collection-following .active.collection-following-item .secondary-content {
         color: #fff; }
-  .collection a.collection-item {
+  .collection a.collection-item, .collection-following a.collection-item, .collection-following a.collection-following-item {
     display: block;
     transition: .25s;
     color: #26a69a; }
-    .collection a.collection-item:not(.active):hover {
+    .collection a.collection-item:not(.active):hover, .collection-following a.collection-item:not(.active):hover, .collection-following a.collection-following-item:not(.active):hover {
       background-color: #ddd; }
-  .collection.with-header .collection-header {
+  .collection.with-header .collection-header, .with-header.collection-following .collection-header {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
     padding: 10px 20px; }
-  .collection.with-header .collection-item {
+  .collection.with-header .collection-item, .with-header.collection-following .collection-item, .collection.with-header .collection-following .collection-following-item, .collection-following .collection.with-header .collection-following-item, .with-header.collection-following .collection-following-item {
     padding-left: 30px; }
-  .collection.with-header .collection-item.avatar {
+  .collection.with-header .collection-item.avatar, .with-header.collection-following .collection-item.avatar, .collection.with-header .collection-following .avatar.collection-following-item, .collection-following .collection.with-header .avatar.collection-following-item, .with-header.collection-following .avatar.collection-following-item {
     padding-left: 72px; }
 
 .secondary-content {
   float: right;
   color: #26a69a; }
 
-.collapsible .collection {
+.collapsible .collection, .collapsible .collection-following {
   margin: 0;
   border: none; }
 
@@ -2544,7 +2546,7 @@ nav ul a span.badge {
   height: 22px;
   -webkit-font-smoothing: auto; }
 
-.collection-item span.badge {
+.collection-item span.badge, .collection-following .collection-following-item span.badge {
   margin-top: calc(0.75rem - 11px); }
 
 .collapsible span.badge {
@@ -3975,7 +3977,7 @@ button.btn-floating {
 .btn-block {
   display: block; }
 
-.dropdown-content {
+.dropdown-content, .dropdown-following {
   background-color: #fff;
   margin: 0;
   display: none;
@@ -3987,9 +3989,9 @@ button.btn-floating {
   top: 0;
   z-index: 9999;
   transform-origin: 0 0; }
-  .dropdown-content:focus {
+  .dropdown-content:focus, .dropdown-following:focus {
     outline: 0; }
-  .dropdown-content li {
+  .dropdown-content li, .dropdown-following li {
     clear: both;
     color: rgba(0, 0, 0, 0.87);
     cursor: pointer;
@@ -3997,34 +3999,34 @@ button.btn-floating {
     line-height: 1.5rem;
     width: 100%;
     text-align: left; }
-    .dropdown-content li:hover, .dropdown-content li.active {
+    .dropdown-content li:hover, .dropdown-following li:hover, .dropdown-content li.active, .dropdown-following li.active {
       background-color: #eee; }
-    .dropdown-content li:focus {
+    .dropdown-content li:focus, .dropdown-following li:focus {
       outline: none; }
-    .dropdown-content li.divider {
+    .dropdown-content li.divider, .dropdown-following li.divider {
       min-height: 0;
       height: 1px; }
-    .dropdown-content li > a, .dropdown-content li > span {
+    .dropdown-content li > a, .dropdown-following li > a, .dropdown-content li > span, .dropdown-following li > span {
       font-size: 16px;
       color: #26a69a;
       display: block;
       line-height: 22px;
       padding: 14px 16px; }
-    .dropdown-content li > span > label {
+    .dropdown-content li > span > label, .dropdown-following li > span > label {
       top: 1px;
       left: 0;
       height: 18px; }
-    .dropdown-content li > a > i {
+    .dropdown-content li > a > i, .dropdown-following li > a > i {
       height: inherit;
       line-height: inherit;
       float: left;
       margin: 0 24px 0 0;
       width: 24px; }
 
-body.keyboard-focused .dropdown-content li:focus {
+body.keyboard-focused .dropdown-content li:focus, body.keyboard-focused .dropdown-following li:focus {
   background-color: #dadada; }
 
-.input-field.col .dropdown-content [type="checkbox"] + label {
+.input-field.col .dropdown-content [type="checkbox"] + label, .input-field.col .dropdown-following [type="checkbox"] + label {
   top: 1px;
   left: 0;
   height: 18px;
@@ -5275,13 +5277,13 @@ select:disabled {
   color: rgba(0, 0, 0, 0.3);
   background-color: transparent; }
 
-body.keyboard-focused .select-dropdown.dropdown-content li:focus {
+body.keyboard-focused .select-dropdown.dropdown-content li:focus, body.keyboard-focused .select-dropdown.dropdown-following li:focus {
   background-color: rgba(0, 0, 0, 0.08); }
 
-.select-dropdown.dropdown-content li:hover {
+.select-dropdown.dropdown-content li:hover, .select-dropdown.dropdown-following li:hover {
   background-color: rgba(0, 0, 0, 0.08); }
 
-.select-dropdown.dropdown-content li.selected {
+.select-dropdown.dropdown-content li.selected, .select-dropdown.dropdown-following li.selected {
   background-color: rgba(0, 0, 0, 0.03); }
 
 .prefix ~ .select-wrapper {
@@ -6528,22 +6530,8 @@ input[type=range]::-ms-thumb {
 body {
   background-color: #fafafa; }
 
-.card {
-  border: 1px solid #e6e6e6;
-  border-radius: 3px;
-  box-shadow: 0px 0px; }
-
-.card-header {
-  margin: 10px; }
-
-.card-header .username {
-  margin-left: 10px; }
-
-.card-content {
-  padding: 12px 24px !important; }
-
-.card-reveal.card-transparent {
-  background-color: rgba(0, 0, 0, 0.5); }
+.dropdown-following {
+  margin: .25rem 0 0 1rem; }
 
 .card {
   border: 1px solid #e6e6e6;
@@ -6561,6 +6549,26 @@ body {
 
 .card-reveal.card-transparent {
   background-color: rgba(0, 0, 0, 0.5); }
+
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 0px 0px; }
+
+.card-header {
+  margin: 10px; }
+
+.card-header .username {
+  margin-left: 10px; }
+
+.card-content {
+  padding: 12px 24px !important; }
+
+.card-reveal.card-transparent {
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.collection-following .collection-following-item.avatar .collection-following-item-message {
+  margin: 0 0 1rem 0; }
 
 .modal .picture-content {
   padding: 0px; }
@@ -6623,17 +6631,8 @@ body {
 #comment-modal input {
   border: none; }
 
-:root {
-  /* work on refactoring */
-  --body-bg-color: #ebeced;
-  --body-font-family: "Lato", Arial, sans-serif;
-  --search-border: 1px solid #ebeced;
-  --story-avatar-border: 1px solid #ebeced;
-  --post-border: 1px solid #ebeced;
-  --card-border: 5px solid #ebeced; }
-
-.notification-message {
-  padding: 0 115px 0 0; }
+.mb-1 {
+  margin-bottom: 1rem; }
 
 .card-reveal-icons {
   color: white;
@@ -6656,7 +6655,7 @@ body {
 .card-user-image img {
   border-radius: 0px !important; }
 
-.dropdown-content {
+.dropdown-content, .dropdown-following {
   min-width: 80%;
   top: 64px !important; }
 
@@ -6707,7 +6706,7 @@ body {
 /* creating posts */
 .post-row {
   background-color: #fff;
-  border-top: var(--card-border);
+  border-top: 5px solid #ebeced;
   display: flex;
   align-items: flex-start;
   padding: 1rem 0;

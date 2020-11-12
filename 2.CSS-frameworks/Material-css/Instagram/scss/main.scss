@@ -3,10 +3,11 @@
 @import "node_modules/materialize-css/sass/materialize.scss";
 
 @import "./custom/defaults";
+@import "./custom/dropdown";
 // // @import "./custom/buttons";
 @import "./custom/card";
 // @import "./custom/grid";
-// // @import "./custom/collections";
+@import "./custom/collections";
 @import "./custom/form";
 @import "./custom/modal";
 // @import "./custom/nav";
@@ -24,9 +25,14 @@
 
 
 
-.notification-message {
-  padding: 0 115px 0 0;
-}
+
+
+//  ul.dropdown-content {
+//   min-width: 90%!important;
+//  }
+
+
+
 
 .card-reveal-icons {
   color: white;
