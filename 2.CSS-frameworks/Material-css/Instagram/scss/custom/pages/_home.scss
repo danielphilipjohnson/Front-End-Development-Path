@@ -4,3 +4,9 @@
   @extend .l4; 
   @extend .hide-on-med-and-down;
 }
+
+.posts {
+  @extend .col; 
+  @extend .s12; 
+  @extend .l8;
+}

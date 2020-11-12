@@ -2578,7 +2578,7 @@ table span.badge {
   .container {
     width: 70%; } }
 
-.col .row, .suggestions .row {
+.col .row, .suggestions .row, .posts .row {
   margin-left: -0.75rem;
   margin-right: -0.75rem; }
 
@@ -2600,543 +2600,543 @@ table span.badge {
     content: "";
     display: table;
     clear: both; }
-  .row .col, .row .suggestions {
+  .row .col, .row .suggestions, .row .posts {
     float: left;
     box-sizing: border-box;
     padding: 0 0.75rem;
     min-height: 1px; }
-    .row .col[class*="push-"], .row .suggestions[class*="push-"], .row .col[class*="pull-"], .row .suggestions[class*="pull-"] {
+    .row .col[class*="push-"], .row .suggestions[class*="push-"], .row .posts[class*="push-"], .row .col[class*="pull-"], .row .suggestions[class*="pull-"], .row .posts[class*="pull-"] {
       position: relative; }
-    .row .col.s1, .row .s1.suggestions {
+    .row .col.s1, .row .s1.suggestions, .row .s1.posts {
       width: 8.33333%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s2, .row .s2.suggestions {
+    .row .col.s2, .row .s2.suggestions, .row .s2.posts {
       width: 16.66667%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s3, .row .s3.suggestions {
+    .row .col.s3, .row .s3.suggestions, .row .s3.posts {
       width: 25%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s4, .row .s4.suggestions {
+    .row .col.s4, .row .s4.suggestions, .row .s4.posts {
       width: 33.33333%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s5, .row .s5.suggestions {
+    .row .col.s5, .row .s5.suggestions, .row .s5.posts {
       width: 41.66667%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s6, .row .s6.suggestions {
+    .row .col.s6, .row .s6.suggestions, .row .s6.posts {
       width: 50%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s7, .row .s7.suggestions {
+    .row .col.s7, .row .s7.suggestions, .row .s7.posts {
       width: 58.33333%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s8, .row .s8.suggestions {
+    .row .col.s8, .row .s8.suggestions, .row .s8.posts {
       width: 66.66667%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s9, .row .s9.suggestions {
+    .row .col.s9, .row .s9.suggestions, .row .s9.posts {
       width: 75%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s10, .row .s10.suggestions {
+    .row .col.s10, .row .s10.suggestions, .row .s10.posts {
       width: 83.33333%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s11, .row .s11.suggestions {
+    .row .col.s11, .row .s11.suggestions, .row .s11.posts {
       width: 91.66667%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.s12, .row .suggestions {
+    .row .col.s12, .row .suggestions, .row .posts {
       width: 100%;
       margin-left: auto;
       left: auto;
       right: auto; }
-    .row .col.offset-s1, .row .offset-s1.suggestions {
+    .row .col.offset-s1, .row .offset-s1.suggestions, .row .offset-s1.posts {
       margin-left: 8.33333%; }
-    .row .col.pull-s1, .row .pull-s1.suggestions {
+    .row .col.pull-s1, .row .pull-s1.suggestions, .row .pull-s1.posts {
       right: 8.33333%; }
-    .row .col.push-s1, .row .push-s1.suggestions {
+    .row .col.push-s1, .row .push-s1.suggestions, .row .push-s1.posts {
       left: 8.33333%; }
-    .row .col.offset-s2, .row .offset-s2.suggestions {
+    .row .col.offset-s2, .row .offset-s2.suggestions, .row .offset-s2.posts {
       margin-left: 16.66667%; }
-    .row .col.pull-s2, .row .pull-s2.suggestions {
+    .row .col.pull-s2, .row .pull-s2.suggestions, .row .pull-s2.posts {
       right: 16.66667%; }
-    .row .col.push-s2, .row .push-s2.suggestions {
+    .row .col.push-s2, .row .push-s2.suggestions, .row .push-s2.posts {
       left: 16.66667%; }
-    .row .col.offset-s3, .row .offset-s3.suggestions {
+    .row .col.offset-s3, .row .offset-s3.suggestions, .row .offset-s3.posts {
       margin-left: 25%; }
-    .row .col.pull-s3, .row .pull-s3.suggestions {
+    .row .col.pull-s3, .row .pull-s3.suggestions, .row .pull-s3.posts {
       right: 25%; }
-    .row .col.push-s3, .row .push-s3.suggestions {
+    .row .col.push-s3, .row .push-s3.suggestions, .row .push-s3.posts {
       left: 25%; }
-    .row .col.offset-s4, .row .offset-s4.suggestions {
+    .row .col.offset-s4, .row .offset-s4.suggestions, .row .offset-s4.posts {
       margin-left: 33.33333%; }
-    .row .col.pull-s4, .row .pull-s4.suggestions {
+    .row .col.pull-s4, .row .pull-s4.suggestions, .row .pull-s4.posts {
       right: 33.33333%; }
-    .row .col.push-s4, .row .push-s4.suggestions {
+    .row .col.push-s4, .row .push-s4.suggestions, .row .push-s4.posts {
       left: 33.33333%; }
-    .row .col.offset-s5, .row .offset-s5.suggestions {
+    .row .col.offset-s5, .row .offset-s5.suggestions, .row .offset-s5.posts {
       margin-left: 41.66667%; }
-    .row .col.pull-s5, .row .pull-s5.suggestions {
+    .row .col.pull-s5, .row .pull-s5.suggestions, .row .pull-s5.posts {
       right: 41.66667%; }
-    .row .col.push-s5, .row .push-s5.suggestions {
+    .row .col.push-s5, .row .push-s5.suggestions, .row .push-s5.posts {
       left: 41.66667%; }
-    .row .col.offset-s6, .row .offset-s6.suggestions {
+    .row .col.offset-s6, .row .offset-s6.suggestions, .row .offset-s6.posts {
       margin-left: 50%; }
-    .row .col.pull-s6, .row .pull-s6.suggestions {
+    .row .col.pull-s6, .row .pull-s6.suggestions, .row .pull-s6.posts {
       right: 50%; }
-    .row .col.push-s6, .row .push-s6.suggestions {
+    .row .col.push-s6, .row .push-s6.suggestions, .row .push-s6.posts {
       left: 50%; }
-    .row .col.offset-s7, .row .offset-s7.suggestions {
+    .row .col.offset-s7, .row .offset-s7.suggestions, .row .offset-s7.posts {
       margin-left: 58.33333%; }
-    .row .col.pull-s7, .row .pull-s7.suggestions {
+    .row .col.pull-s7, .row .pull-s7.suggestions, .row .pull-s7.posts {
       right: 58.33333%; }
-    .row .col.push-s7, .row .push-s7.suggestions {
+    .row .col.push-s7, .row .push-s7.suggestions, .row .push-s7.posts {
       left: 58.33333%; }
-    .row .col.offset-s8, .row .offset-s8.suggestions {
+    .row .col.offset-s8, .row .offset-s8.suggestions, .row .offset-s8.posts {
       margin-left: 66.66667%; }
-    .row .col.pull-s8, .row .pull-s8.suggestions {
+    .row .col.pull-s8, .row .pull-s8.suggestions, .row .pull-s8.posts {
       right: 66.66667%; }
-    .row .col.push-s8, .row .push-s8.suggestions {
+    .row .col.push-s8, .row .push-s8.suggestions, .row .push-s8.posts {
       left: 66.66667%; }
-    .row .col.offset-s9, .row .offset-s9.suggestions {
+    .row .col.offset-s9, .row .offset-s9.suggestions, .row .offset-s9.posts {
       margin-left: 75%; }
-    .row .col.pull-s9, .row .pull-s9.suggestions {
+    .row .col.pull-s9, .row .pull-s9.suggestions, .row .pull-s9.posts {
       right: 75%; }
-    .row .col.push-s9, .row .push-s9.suggestions {
+    .row .col.push-s9, .row .push-s9.suggestions, .row .push-s9.posts {
       left: 75%; }
-    .row .col.offset-s10, .row .offset-s10.suggestions {
+    .row .col.offset-s10, .row .offset-s10.suggestions, .row .offset-s10.posts {
       margin-left: 83.33333%; }
-    .row .col.pull-s10, .row .pull-s10.suggestions {
+    .row .col.pull-s10, .row .pull-s10.suggestions, .row .pull-s10.posts {
       right: 83.33333%; }
-    .row .col.push-s10, .row .push-s10.suggestions {
+    .row .col.push-s10, .row .push-s10.suggestions, .row .push-s10.posts {
       left: 83.33333%; }
-    .row .col.offset-s11, .row .offset-s11.suggestions {
+    .row .col.offset-s11, .row .offset-s11.suggestions, .row .offset-s11.posts {
       margin-left: 91.66667%; }
-    .row .col.pull-s11, .row .pull-s11.suggestions {
+    .row .col.pull-s11, .row .pull-s11.suggestions, .row .pull-s11.posts {
       right: 91.66667%; }
-    .row .col.push-s11, .row .push-s11.suggestions {
+    .row .col.push-s11, .row .push-s11.suggestions, .row .push-s11.posts {
       left: 91.66667%; }
-    .row .col.offset-s12, .row .offset-s12.suggestions {
+    .row .col.offset-s12, .row .offset-s12.suggestions, .row .offset-s12.posts {
       margin-left: 100%; }
-    .row .col.pull-s12, .row .pull-s12.suggestions {
+    .row .col.pull-s12, .row .pull-s12.suggestions, .row .pull-s12.posts {
       right: 100%; }
-    .row .col.push-s12, .row .push-s12.suggestions {
+    .row .col.push-s12, .row .push-s12.suggestions, .row .push-s12.posts {
       left: 100%; }
     @media only screen and (min-width: 601px) {
-      .row .col.m1, .row .m1.suggestions {
+      .row .col.m1, .row .m1.suggestions, .row .m1.posts {
         width: 8.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m2, .row .m2.suggestions {
+      .row .col.m2, .row .m2.suggestions, .row .m2.posts {
         width: 16.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m3, .row .m3.suggestions {
+      .row .col.m3, .row .m3.suggestions, .row .m3.posts {
         width: 25%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m4, .row .m4.suggestions {
+      .row .col.m4, .row .m4.suggestions, .row .m4.posts {
         width: 33.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m5, .row .m5.suggestions {
+      .row .col.m5, .row .m5.suggestions, .row .m5.posts {
         width: 41.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m6, .row .m6.suggestions {
+      .row .col.m6, .row .m6.suggestions, .row .m6.posts {
         width: 50%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m7, .row .m7.suggestions {
+      .row .col.m7, .row .m7.suggestions, .row .m7.posts {
         width: 58.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m8, .row .m8.suggestions {
+      .row .col.m8, .row .m8.suggestions, .row .m8.posts {
         width: 66.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m9, .row .m9.suggestions {
+      .row .col.m9, .row .m9.suggestions, .row .m9.posts {
         width: 75%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m10, .row .m10.suggestions {
+      .row .col.m10, .row .m10.suggestions, .row .m10.posts {
         width: 83.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m11, .row .m11.suggestions {
+      .row .col.m11, .row .m11.suggestions, .row .m11.posts {
         width: 91.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.m12, .row .m12.suggestions {
+      .row .col.m12, .row .m12.suggestions, .row .m12.posts {
         width: 100%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.offset-m1, .row .offset-m1.suggestions {
+      .row .col.offset-m1, .row .offset-m1.suggestions, .row .offset-m1.posts {
         margin-left: 8.33333%; }
-      .row .col.pull-m1, .row .pull-m1.suggestions {
+      .row .col.pull-m1, .row .pull-m1.suggestions, .row .pull-m1.posts {
         right: 8.33333%; }
-      .row .col.push-m1, .row .push-m1.suggestions {
+      .row .col.push-m1, .row .push-m1.suggestions, .row .push-m1.posts {
         left: 8.33333%; }
-      .row .col.offset-m2, .row .offset-m2.suggestions {
+      .row .col.offset-m2, .row .offset-m2.suggestions, .row .offset-m2.posts {
         margin-left: 16.66667%; }
-      .row .col.pull-m2, .row .pull-m2.suggestions {
+      .row .col.pull-m2, .row .pull-m2.suggestions, .row .pull-m2.posts {
         right: 16.66667%; }
-      .row .col.push-m2, .row .push-m2.suggestions {
+      .row .col.push-m2, .row .push-m2.suggestions, .row .push-m2.posts {
         left: 16.66667%; }
-      .row .col.offset-m3, .row .offset-m3.suggestions {
+      .row .col.offset-m3, .row .offset-m3.suggestions, .row .offset-m3.posts {
         margin-left: 25%; }
-      .row .col.pull-m3, .row .pull-m3.suggestions {
+      .row .col.pull-m3, .row .pull-m3.suggestions, .row .pull-m3.posts {
         right: 25%; }
-      .row .col.push-m3, .row .push-m3.suggestions {
+      .row .col.push-m3, .row .push-m3.suggestions, .row .push-m3.posts {
         left: 25%; }
-      .row .col.offset-m4, .row .offset-m4.suggestions {
+      .row .col.offset-m4, .row .offset-m4.suggestions, .row .offset-m4.posts {
         margin-left: 33.33333%; }
-      .row .col.pull-m4, .row .pull-m4.suggestions {
+      .row .col.pull-m4, .row .pull-m4.suggestions, .row .pull-m4.posts {
         right: 33.33333%; }
-      .row .col.push-m4, .row .push-m4.suggestions {
+      .row .col.push-m4, .row .push-m4.suggestions, .row .push-m4.posts {
         left: 33.33333%; }
-      .row .col.offset-m5, .row .offset-m5.suggestions {
+      .row .col.offset-m5, .row .offset-m5.suggestions, .row .offset-m5.posts {
         margin-left: 41.66667%; }
-      .row .col.pull-m5, .row .pull-m5.suggestions {
+      .row .col.pull-m5, .row .pull-m5.suggestions, .row .pull-m5.posts {
         right: 41.66667%; }
-      .row .col.push-m5, .row .push-m5.suggestions {
+      .row .col.push-m5, .row .push-m5.suggestions, .row .push-m5.posts {
         left: 41.66667%; }
-      .row .col.offset-m6, .row .offset-m6.suggestions {
+      .row .col.offset-m6, .row .offset-m6.suggestions, .row .offset-m6.posts {
         margin-left: 50%; }
-      .row .col.pull-m6, .row .pull-m6.suggestions {
+      .row .col.pull-m6, .row .pull-m6.suggestions, .row .pull-m6.posts {
         right: 50%; }
-      .row .col.push-m6, .row .push-m6.suggestions {
+      .row .col.push-m6, .row .push-m6.suggestions, .row .push-m6.posts {
         left: 50%; }
-      .row .col.offset-m7, .row .offset-m7.suggestions {
+      .row .col.offset-m7, .row .offset-m7.suggestions, .row .offset-m7.posts {
         margin-left: 58.33333%; }
-      .row .col.pull-m7, .row .pull-m7.suggestions {
+      .row .col.pull-m7, .row .pull-m7.suggestions, .row .pull-m7.posts {
         right: 58.33333%; }
-      .row .col.push-m7, .row .push-m7.suggestions {
+      .row .col.push-m7, .row .push-m7.suggestions, .row .push-m7.posts {
         left: 58.33333%; }
-      .row .col.offset-m8, .row .offset-m8.suggestions {
+      .row .col.offset-m8, .row .offset-m8.suggestions, .row .offset-m8.posts {
         margin-left: 66.66667%; }
-      .row .col.pull-m8, .row .pull-m8.suggestions {
+      .row .col.pull-m8, .row .pull-m8.suggestions, .row .pull-m8.posts {
         right: 66.66667%; }
-      .row .col.push-m8, .row .push-m8.suggestions {
+      .row .col.push-m8, .row .push-m8.suggestions, .row .push-m8.posts {
         left: 66.66667%; }
-      .row .col.offset-m9, .row .offset-m9.suggestions {
+      .row .col.offset-m9, .row .offset-m9.suggestions, .row .offset-m9.posts {
         margin-left: 75%; }
-      .row .col.pull-m9, .row .pull-m9.suggestions {
+      .row .col.pull-m9, .row .pull-m9.suggestions, .row .pull-m9.posts {
         right: 75%; }
-      .row .col.push-m9, .row .push-m9.suggestions {
+      .row .col.push-m9, .row .push-m9.suggestions, .row .push-m9.posts {
         left: 75%; }
-      .row .col.offset-m10, .row .offset-m10.suggestions {
+      .row .col.offset-m10, .row .offset-m10.suggestions, .row .offset-m10.posts {
         margin-left: 83.33333%; }
-      .row .col.pull-m10, .row .pull-m10.suggestions {
+      .row .col.pull-m10, .row .pull-m10.suggestions, .row .pull-m10.posts {
         right: 83.33333%; }
-      .row .col.push-m10, .row .push-m10.suggestions {
+      .row .col.push-m10, .row .push-m10.suggestions, .row .push-m10.posts {
         left: 83.33333%; }
-      .row .col.offset-m11, .row .offset-m11.suggestions {
+      .row .col.offset-m11, .row .offset-m11.suggestions, .row .offset-m11.posts {
         margin-left: 91.66667%; }
-      .row .col.pull-m11, .row .pull-m11.suggestions {
+      .row .col.pull-m11, .row .pull-m11.suggestions, .row .pull-m11.posts {
         right: 91.66667%; }
-      .row .col.push-m11, .row .push-m11.suggestions {
+      .row .col.push-m11, .row .push-m11.suggestions, .row .push-m11.posts {
         left: 91.66667%; }
-      .row .col.offset-m12, .row .offset-m12.suggestions {
+      .row .col.offset-m12, .row .offset-m12.suggestions, .row .offset-m12.posts {
         margin-left: 100%; }
-      .row .col.pull-m12, .row .pull-m12.suggestions {
+      .row .col.pull-m12, .row .pull-m12.suggestions, .row .pull-m12.posts {
         right: 100%; }
-      .row .col.push-m12, .row .push-m12.suggestions {
+      .row .col.push-m12, .row .push-m12.suggestions, .row .push-m12.posts {
         left: 100%; } }
     @media only screen and (min-width: 993px) {
-      .row .col.l1, .row .l1.suggestions {
+      .row .col.l1, .row .l1.suggestions, .row .l1.posts {
         width: 8.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l2, .row .l2.suggestions {
+      .row .col.l2, .row .l2.suggestions, .row .l2.posts {
         width: 16.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l3, .row .l3.suggestions {
+      .row .col.l3, .row .l3.suggestions, .row .l3.posts {
         width: 25%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l4, .row .suggestions {
+      .row .col.l4, .row .suggestions, .row .l4.posts, .row .posts.suggestions {
         width: 33.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l5, .row .l5.suggestions {
+      .row .col.l5, .row .l5.suggestions, .row .l5.posts {
         width: 41.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l6, .row .l6.suggestions {
+      .row .col.l6, .row .l6.suggestions, .row .l6.posts {
         width: 50%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l7, .row .l7.suggestions {
+      .row .col.l7, .row .l7.suggestions, .row .l7.posts {
         width: 58.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l8, .row .l8.suggestions {
+      .row .col.l8, .row .l8.suggestions, .row .suggestions.posts, .row .posts {
         width: 66.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l9, .row .l9.suggestions {
+      .row .col.l9, .row .l9.suggestions, .row .l9.posts {
         width: 75%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l10, .row .l10.suggestions {
+      .row .col.l10, .row .l10.suggestions, .row .l10.posts {
         width: 83.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l11, .row .l11.suggestions {
+      .row .col.l11, .row .l11.suggestions, .row .l11.posts {
         width: 91.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.l12, .row .l12.suggestions {
+      .row .col.l12, .row .l12.suggestions, .row .l12.posts {
         width: 100%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.offset-l1, .row .offset-l1.suggestions {
+      .row .col.offset-l1, .row .offset-l1.suggestions, .row .offset-l1.posts {
         margin-left: 8.33333%; }
-      .row .col.pull-l1, .row .pull-l1.suggestions {
+      .row .col.pull-l1, .row .pull-l1.suggestions, .row .pull-l1.posts {
         right: 8.33333%; }
-      .row .col.push-l1, .row .push-l1.suggestions {
+      .row .col.push-l1, .row .push-l1.suggestions, .row .push-l1.posts {
         left: 8.33333%; }
-      .row .col.offset-l2, .row .offset-l2.suggestions {
+      .row .col.offset-l2, .row .offset-l2.suggestions, .row .offset-l2.posts {
         margin-left: 16.66667%; }
-      .row .col.pull-l2, .row .pull-l2.suggestions {
+      .row .col.pull-l2, .row .pull-l2.suggestions, .row .pull-l2.posts {
         right: 16.66667%; }
-      .row .col.push-l2, .row .push-l2.suggestions {
+      .row .col.push-l2, .row .push-l2.suggestions, .row .push-l2.posts {
         left: 16.66667%; }
-      .row .col.offset-l3, .row .offset-l3.suggestions {
+      .row .col.offset-l3, .row .offset-l3.suggestions, .row .offset-l3.posts {
         margin-left: 25%; }
-      .row .col.pull-l3, .row .pull-l3.suggestions {
+      .row .col.pull-l3, .row .pull-l3.suggestions, .row .pull-l3.posts {
         right: 25%; }
-      .row .col.push-l3, .row .push-l3.suggestions {
+      .row .col.push-l3, .row .push-l3.suggestions, .row .push-l3.posts {
         left: 25%; }
-      .row .col.offset-l4, .row .offset-l4.suggestions {
+      .row .col.offset-l4, .row .offset-l4.suggestions, .row .offset-l4.posts {
         margin-left: 33.33333%; }
-      .row .col.pull-l4, .row .pull-l4.suggestions {
+      .row .col.pull-l4, .row .pull-l4.suggestions, .row .pull-l4.posts {
         right: 33.33333%; }
-      .row .col.push-l4, .row .push-l4.suggestions {
+      .row .col.push-l4, .row .push-l4.suggestions, .row .push-l4.posts {
         left: 33.33333%; }
-      .row .col.offset-l5, .row .offset-l5.suggestions {
+      .row .col.offset-l5, .row .offset-l5.suggestions, .row .offset-l5.posts {
         margin-left: 41.66667%; }
-      .row .col.pull-l5, .row .pull-l5.suggestions {
+      .row .col.pull-l5, .row .pull-l5.suggestions, .row .pull-l5.posts {
         right: 41.66667%; }
-      .row .col.push-l5, .row .push-l5.suggestions {
+      .row .col.push-l5, .row .push-l5.suggestions, .row .push-l5.posts {
         left: 41.66667%; }
-      .row .col.offset-l6, .row .offset-l6.suggestions {
+      .row .col.offset-l6, .row .offset-l6.suggestions, .row .offset-l6.posts {
         margin-left: 50%; }
-      .row .col.pull-l6, .row .pull-l6.suggestions {
+      .row .col.pull-l6, .row .pull-l6.suggestions, .row .pull-l6.posts {
         right: 50%; }
-      .row .col.push-l6, .row .push-l6.suggestions {
+      .row .col.push-l6, .row .push-l6.suggestions, .row .push-l6.posts {
         left: 50%; }
-      .row .col.offset-l7, .row .offset-l7.suggestions {
+      .row .col.offset-l7, .row .offset-l7.suggestions, .row .offset-l7.posts {
         margin-left: 58.33333%; }
-      .row .col.pull-l7, .row .pull-l7.suggestions {
+      .row .col.pull-l7, .row .pull-l7.suggestions, .row .pull-l7.posts {
         right: 58.33333%; }
-      .row .col.push-l7, .row .push-l7.suggestions {
+      .row .col.push-l7, .row .push-l7.suggestions, .row .push-l7.posts {
         left: 58.33333%; }
-      .row .col.offset-l8, .row .offset-l8.suggestions {
+      .row .col.offset-l8, .row .offset-l8.suggestions, .row .offset-l8.posts {
         margin-left: 66.66667%; }
-      .row .col.pull-l8, .row .pull-l8.suggestions {
+      .row .col.pull-l8, .row .pull-l8.suggestions, .row .pull-l8.posts {
         right: 66.66667%; }
-      .row .col.push-l8, .row .push-l8.suggestions {
+      .row .col.push-l8, .row .push-l8.suggestions, .row .push-l8.posts {
         left: 66.66667%; }
-      .row .col.offset-l9, .row .offset-l9.suggestions {
+      .row .col.offset-l9, .row .offset-l9.suggestions, .row .offset-l9.posts {
         margin-left: 75%; }
-      .row .col.pull-l9, .row .pull-l9.suggestions {
+      .row .col.pull-l9, .row .pull-l9.suggestions, .row .pull-l9.posts {
         right: 75%; }
-      .row .col.push-l9, .row .push-l9.suggestions {
+      .row .col.push-l9, .row .push-l9.suggestions, .row .push-l9.posts {
         left: 75%; }
-      .row .col.offset-l10, .row .offset-l10.suggestions {
+      .row .col.offset-l10, .row .offset-l10.suggestions, .row .offset-l10.posts {
         margin-left: 83.33333%; }
-      .row .col.pull-l10, .row .pull-l10.suggestions {
+      .row .col.pull-l10, .row .pull-l10.suggestions, .row .pull-l10.posts {
         right: 83.33333%; }
-      .row .col.push-l10, .row .push-l10.suggestions {
+      .row .col.push-l10, .row .push-l10.suggestions, .row .push-l10.posts {
         left: 83.33333%; }
-      .row .col.offset-l11, .row .offset-l11.suggestions {
+      .row .col.offset-l11, .row .offset-l11.suggestions, .row .offset-l11.posts {
         margin-left: 91.66667%; }
-      .row .col.pull-l11, .row .pull-l11.suggestions {
+      .row .col.pull-l11, .row .pull-l11.suggestions, .row .pull-l11.posts {
         right: 91.66667%; }
-      .row .col.push-l11, .row .push-l11.suggestions {
+      .row .col.push-l11, .row .push-l11.suggestions, .row .push-l11.posts {
         left: 91.66667%; }
-      .row .col.offset-l12, .row .offset-l12.suggestions {
+      .row .col.offset-l12, .row .offset-l12.suggestions, .row .offset-l12.posts {
         margin-left: 100%; }
-      .row .col.pull-l12, .row .pull-l12.suggestions {
+      .row .col.pull-l12, .row .pull-l12.suggestions, .row .pull-l12.posts {
         right: 100%; }
-      .row .col.push-l12, .row .push-l12.suggestions {
+      .row .col.push-l12, .row .push-l12.suggestions, .row .push-l12.posts {
         left: 100%; } }
     @media only screen and (min-width: 1201px) {
-      .row .col.xl1, .row .xl1.suggestions {
+      .row .col.xl1, .row .xl1.suggestions, .row .xl1.posts {
         width: 8.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl2, .row .xl2.suggestions {
+      .row .col.xl2, .row .xl2.suggestions, .row .xl2.posts {
         width: 16.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl3, .row .xl3.suggestions {
+      .row .col.xl3, .row .xl3.suggestions, .row .xl3.posts {
         width: 25%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl4, .row .xl4.suggestions {
+      .row .col.xl4, .row .xl4.suggestions, .row .xl4.posts {
         width: 33.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl5, .row .xl5.suggestions {
+      .row .col.xl5, .row .xl5.suggestions, .row .xl5.posts {
         width: 41.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl6, .row .xl6.suggestions {
+      .row .col.xl6, .row .xl6.suggestions, .row .xl6.posts {
         width: 50%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl7, .row .xl7.suggestions {
+      .row .col.xl7, .row .xl7.suggestions, .row .xl7.posts {
         width: 58.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl8, .row .xl8.suggestions {
+      .row .col.xl8, .row .xl8.suggestions, .row .xl8.posts {
         width: 66.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl9, .row .xl9.suggestions {
+      .row .col.xl9, .row .xl9.suggestions, .row .xl9.posts {
         width: 75%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl10, .row .xl10.suggestions {
+      .row .col.xl10, .row .xl10.suggestions, .row .xl10.posts {
         width: 83.33333%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl11, .row .xl11.suggestions {
+      .row .col.xl11, .row .xl11.suggestions, .row .xl11.posts {
         width: 91.66667%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.xl12, .row .xl12.suggestions {
+      .row .col.xl12, .row .xl12.suggestions, .row .xl12.posts {
         width: 100%;
         margin-left: auto;
         left: auto;
         right: auto; }
-      .row .col.offset-xl1, .row .offset-xl1.suggestions {
+      .row .col.offset-xl1, .row .offset-xl1.suggestions, .row .offset-xl1.posts {
         margin-left: 8.33333%; }
-      .row .col.pull-xl1, .row .pull-xl1.suggestions {
+      .row .col.pull-xl1, .row .pull-xl1.suggestions, .row .pull-xl1.posts {
         right: 8.33333%; }
-      .row .col.push-xl1, .row .push-xl1.suggestions {
+      .row .col.push-xl1, .row .push-xl1.suggestions, .row .push-xl1.posts {
         left: 8.33333%; }
-      .row .col.offset-xl2, .row .offset-xl2.suggestions {
+      .row .col.offset-xl2, .row .offset-xl2.suggestions, .row .offset-xl2.posts {
         margin-left: 16.66667%; }
-      .row .col.pull-xl2, .row .pull-xl2.suggestions {
+      .row .col.pull-xl2, .row .pull-xl2.suggestions, .row .pull-xl2.posts {
         right: 16.66667%; }
-      .row .col.push-xl2, .row .push-xl2.suggestions {
+      .row .col.push-xl2, .row .push-xl2.suggestions, .row .push-xl2.posts {
         left: 16.66667%; }
-      .row .col.offset-xl3, .row .offset-xl3.suggestions {
+      .row .col.offset-xl3, .row .offset-xl3.suggestions, .row .offset-xl3.posts {
         margin-left: 25%; }
-      .row .col.pull-xl3, .row .pull-xl3.suggestions {
+      .row .col.pull-xl3, .row .pull-xl3.suggestions, .row .pull-xl3.posts {
         right: 25%; }
-      .row .col.push-xl3, .row .push-xl3.suggestions {
+      .row .col.push-xl3, .row .push-xl3.suggestions, .row .push-xl3.posts {
         left: 25%; }
-      .row .col.offset-xl4, .row .offset-xl4.suggestions {
+      .row .col.offset-xl4, .row .offset-xl4.suggestions, .row .offset-xl4.posts {
         margin-left: 33.33333%; }
-      .row .col.pull-xl4, .row .pull-xl4.suggestions {
+      .row .col.pull-xl4, .row .pull-xl4.suggestions, .row .pull-xl4.posts {
         right: 33.33333%; }
-      .row .col.push-xl4, .row .push-xl4.suggestions {
+      .row .col.push-xl4, .row .push-xl4.suggestions, .row .push-xl4.posts {
         left: 33.33333%; }
-      .row .col.offset-xl5, .row .offset-xl5.suggestions {
+      .row .col.offset-xl5, .row .offset-xl5.suggestions, .row .offset-xl5.posts {
         margin-left: 41.66667%; }
-      .row .col.pull-xl5, .row .pull-xl5.suggestions {
+      .row .col.pull-xl5, .row .pull-xl5.suggestions, .row .pull-xl5.posts {
         right: 41.66667%; }
-      .row .col.push-xl5, .row .push-xl5.suggestions {
+      .row .col.push-xl5, .row .push-xl5.suggestions, .row .push-xl5.posts {
         left: 41.66667%; }
-      .row .col.offset-xl6, .row .offset-xl6.suggestions {
+      .row .col.offset-xl6, .row .offset-xl6.suggestions, .row .offset-xl6.posts {
         margin-left: 50%; }
-      .row .col.pull-xl6, .row .pull-xl6.suggestions {
+      .row .col.pull-xl6, .row .pull-xl6.suggestions, .row .pull-xl6.posts {
         right: 50%; }
-      .row .col.push-xl6, .row .push-xl6.suggestions {
+      .row .col.push-xl6, .row .push-xl6.suggestions, .row .push-xl6.posts {
         left: 50%; }
-      .row .col.offset-xl7, .row .offset-xl7.suggestions {
+      .row .col.offset-xl7, .row .offset-xl7.suggestions, .row .offset-xl7.posts {
         margin-left: 58.33333%; }
-      .row .col.pull-xl7, .row .pull-xl7.suggestions {
+      .row .col.pull-xl7, .row .pull-xl7.suggestions, .row .pull-xl7.posts {
         right: 58.33333%; }
-      .row .col.push-xl7, .row .push-xl7.suggestions {
+      .row .col.push-xl7, .row .push-xl7.suggestions, .row .push-xl7.posts {
         left: 58.33333%; }
-      .row .col.offset-xl8, .row .offset-xl8.suggestions {
+      .row .col.offset-xl8, .row .offset-xl8.suggestions, .row .offset-xl8.posts {
         margin-left: 66.66667%; }
-      .row .col.pull-xl8, .row .pull-xl8.suggestions {
+      .row .col.pull-xl8, .row .pull-xl8.suggestions, .row .pull-xl8.posts {
         right: 66.66667%; }
-      .row .col.push-xl8, .row .push-xl8.suggestions {
+      .row .col.push-xl8, .row .push-xl8.suggestions, .row .push-xl8.posts {
         left: 66.66667%; }
-      .row .col.offset-xl9, .row .offset-xl9.suggestions {
+      .row .col.offset-xl9, .row .offset-xl9.suggestions, .row .offset-xl9.posts {
         margin-left: 75%; }
-      .row .col.pull-xl9, .row .pull-xl9.suggestions {
+      .row .col.pull-xl9, .row .pull-xl9.suggestions, .row .pull-xl9.posts {
         right: 75%; }
-      .row .col.push-xl9, .row .push-xl9.suggestions {
+      .row .col.push-xl9, .row .push-xl9.suggestions, .row .push-xl9.posts {
         left: 75%; }
-      .row .col.offset-xl10, .row .offset-xl10.suggestions {
+      .row .col.offset-xl10, .row .offset-xl10.suggestions, .row .offset-xl10.posts {
         margin-left: 83.33333%; }
-      .row .col.pull-xl10, .row .pull-xl10.suggestions {
+      .row .col.pull-xl10, .row .pull-xl10.suggestions, .row .pull-xl10.posts {
         right: 83.33333%; }
-      .row .col.push-xl10, .row .push-xl10.suggestions {
+      .row .col.push-xl10, .row .push-xl10.suggestions, .row .push-xl10.posts {
         left: 83.33333%; }
-      .row .col.offset-xl11, .row .offset-xl11.suggestions {
+      .row .col.offset-xl11, .row .offset-xl11.suggestions, .row .offset-xl11.posts {
         margin-left: 91.66667%; }
-      .row .col.pull-xl11, .row .pull-xl11.suggestions {
+      .row .col.pull-xl11, .row .pull-xl11.suggestions, .row .pull-xl11.posts {
         right: 91.66667%; }
-      .row .col.push-xl11, .row .push-xl11.suggestions {
+      .row .col.push-xl11, .row .push-xl11.suggestions, .row .push-xl11.posts {
         left: 91.66667%; }
-      .row .col.offset-xl12, .row .offset-xl12.suggestions {
+      .row .col.offset-xl12, .row .offset-xl12.suggestions, .row .offset-xl12.posts {
         margin-left: 100%; }
-      .row .col.pull-xl12, .row .pull-xl12.suggestions {
+      .row .col.pull-xl12, .row .pull-xl12.suggestions, .row .pull-xl12.posts {
         right: 100%; }
-      .row .col.push-xl12, .row .push-xl12.suggestions {
+      .row .col.push-xl12, .row .push-xl12.suggestions, .row .push-xl12.posts {
         left: 100%; } }
 
 nav {
@@ -4026,7 +4026,7 @@ button.btn-floating {
 body.keyboard-focused .dropdown-content li:focus, body.keyboard-focused .dropdown-following li:focus {
   background-color: #dadada; }
 
-.input-field.col .dropdown-content [type="checkbox"] + label, .input-field.suggestions .dropdown-content [type="checkbox"] + label, .input-field.col .dropdown-following [type="checkbox"] + label, .input-field.suggestions .dropdown-following [type="checkbox"] + label {
+.input-field.col .dropdown-content [type="checkbox"] + label, .input-field.suggestions .dropdown-content [type="checkbox"] + label, .input-field.posts .dropdown-content [type="checkbox"] + label, .input-field.col .dropdown-following [type="checkbox"] + label, .input-field.suggestions .dropdown-following [type="checkbox"] + label, .input-field.posts .dropdown-following [type="checkbox"] + label {
   top: 1px;
   left: 0;
   height: 18px;
@@ -4744,11 +4744,12 @@ textarea.materialize-textarea + label:after, .select-wrapper + label:after {
     .input-field.inline input,
     .input-field.inline .select-dropdown {
       margin-bottom: 1rem; }
-  .input-field.col label, .input-field.suggestions label {
+  .input-field.col label, .input-field.suggestions label, .input-field.posts label {
     left: 0.75rem; }
-  .input-field.col .prefix ~ label, .input-field.suggestions .prefix ~ label,
+  .input-field.col .prefix ~ label, .input-field.suggestions .prefix ~ label, .input-field.posts .prefix ~ label,
   .input-field.col .prefix ~ .validate ~ label,
-  .input-field.suggestions .prefix ~ .validate ~ label {
+  .input-field.suggestions .prefix ~ .validate ~ label,
+  .input-field.posts .prefix ~ .validate ~ label {
     width: calc(100% - 3rem - 1.5rem); }
   .input-field > label {
     color: #9e9e9e;
@@ -6538,17 +6539,22 @@ body {
   min-width: 80%;
   top: 64px !important; }
 
-.card-header {
-  margin: 10px; }
-
-.card-header .username {
-  margin-left: 10px; }
-
-.card-content {
-  padding: 12px 24px !important; }
-
-.card-reveal.card-transparent {
-  background-color: rgba(0, 0, 0, 0.5); }
+.card-post {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 0px 0px; }
+  .card-post .card-header {
+    padding: 0 1rem;
+    margin: 1rem; }
+    .card-post .card-header .username {
+      margin-left: .5rem; }
+  .card-post .card-image {
+    border-radius: 0; }
+    .card-post .card-image img {
+      border-radius: inherit; }
+  .card-post .card-content {
+    padding: .95rem .75rem;
+    margin-bottom: .75rem; }
 
 .collection-following .collection-following-item.avatar .collection-following-item-message {
   margin: 0 0 1rem 0; }
@@ -6616,6 +6622,3 @@ body {
 
 .mb-1 {
   margin-bottom: 1rem; }
-
-.card-post .card-header {
-  padding: 0 1rem; }
