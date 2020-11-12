@@ -1,50 +1,140 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <!--Import Google Icon Font-->
-    <title>Instagram clone</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <head>
+        <!--Import Google Icon Font-->
+        <title>Instagram clone</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
 
-    <!-- <link rel="stylesheet" href="./css/materialize.min.css"> -->
-    <link type="text/css" rel="stylesheet" href="./css/main.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset='utf-8'>
-</head>
+        <!-- <link rel="stylesheet" href="./css/materialize.min.css"> -->
+        <link type="text/css" rel="stylesheet" href="./css/main.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset='utf-8'>
+    </head>
 
-<body>
-    <div class="navbar-fixed">
-        <nav class="blue">
-            <div class="nav-wrapper">
-                <ul class="left">
-                    <li>
-                        <a href="index.html">
-                            <i class="material-icons">hd</i>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="right">
-                    <li>
-                        <a href="explore.html">
-                            <i class="large material-icons">explore</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a class='dropdown-button' href='#' data-activates='dropdown-follow'>
-                            <i class="large material-icons"> favorite_border</i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="profile.html">
-                            <i class="large material-icons">person</i>
-                        </a>
-                    </li>
-                </ul>
+    <body>
+        <div class="navbar-fixed">
+            <nav class="blue">
+                <div class="nav-wrapper">
+                    <ul class="left">
+                        <li>
+                            <a href="index.html">
+                                <i class="material-icons">hd</i>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li>
+                            <a href="explore.html">
+                                <i class="large material-icons">explore</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class='dropdown-button' href='#'
+                                data-activates='dropdown-follow'>
+                                <i class="large material-icons"> favorite_border</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html">
+                                <i class="large material-icons">person</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <main class="container">
+            <div class="row">
+
+                <section class="col s12 l8">
+                    <article >
+                        <div class="card card-post">
+                            <div class="card-header">
+                                <div class="row valign-wrapper">
+                                    <img src="./img/avatar.jpg"
+                                        alt="avatar" style="width:32px;
+                                        height:32px;" class="circle responsive-img">
+                                    <h6 class="black-text username">
+                                        USER NAME
+                                    </h6>
+                                </div>
+                            </div>
+                            <div class="card-image waves-effect waves-block
+                                waves-light">
+                                <img class="" alt="post-image"
+                                    src="https://placeimg.com/640/480/any">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-title grey-text text-darken-4">
+                                    <i class="material-icons left">favorite</i>
+                                    <div class="modal-trigger"
+                                        data-target="comment-modal">
+                                        <i class="material-icons left">message</i>
+                                    </div>
+                                    <i class="material-icons right">save</i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <p class="card-title grey-text text-darken-4">
+                                    188 Likes
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <p class="grey-text text-darken-4">
+                                    <a href="profile.html">Username</a> Yo! His
+                                    palms are sweaty, knees weak, arms are
+                                    heavy,There's vomit on his sweater already:
+                                    Mom's spaghetti, He's nervous, but on the
+                                    surface he looks calm and ready.To drop bombs,
+                                    but he keeps
+                                    on forgetting, What he wrote down, the whole
+                                    crowd goes so loud 🎵🎶 Can't believe it's taken
+                                    this long to watch 8Mile 😍
+                                </p>
+                            </div>
+                            <div class="card-content">
+                                <p class="grey-text text-darken-4">
+                                    59 minutes ago
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <div class="row">
+                                    <div class="col s11">
+                                        <input type="text" class="autocomplete
+                                            autocomplete-input" placeholder="Add a
+                                            comment">
+                                    </div>
+                                    <div class="col s1">
+                                        <i class="material-icons">more_horiz</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+               
+
+                <div class="extra col s12 l4 hide-on-med-and-down">
+                    <p>Suggestions For You <span class="right">See all</span></p>
+                    <ul class="collection">
+                        <li class="collection-item avatar">
+                          <img src="./img/avatar.jpg" alt="avatar" class="circle">
+                          <span class="title">Title</span>
+                          <p class="grey-text lighten-2">Suggested for you<br>
+                          </p>
+                          <a href="#!" class="secondary-content blue-text">Follow </a>
+                        </li>
+                      </ul>
+                </div>
+              
             </div>
-        </nav>
-    </div>
-    <main class="row">
-        <section class="col s12 l6 offset-l2">
+
+            <!-- <section class="col s12 l6 offset-l2">
             <div class="card">
                 <div class="card-header">
                     <div class="row valign-wrapper">
@@ -75,56 +165,6 @@
                     <p class="grey-text text-darken-4">
                         <a href="profile.html">Username</a> Yo! His palms are sweaty, knees weak, arms are heavy,There's vomit on his sweater already: Mom's spaghetti, He's nervous, but on the surface he looks calm and ready.To drop bombs, but he keeps
                         on forgetting, What he wrote down, the whole crowd goes so loud 🎵🎶 Can't believe it's taken this long to watch 8Mile 😍
-                    </p>
-                </div>
-                <div class="card-content">
-                    <p class="grey-text text-darken-4">
-                        59 minutes ago
-                    </p>
-                </div>
-                <div class="card-action">
-                    <div class="row">
-                        <div class="col s11">
-                            <input type="text" class="autocomplete autocomplete-input" placeholder="Add a comment">
-                        </div>
-                        <div class="col s1">
-                            <i class="material-icons">more_horiz</i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="col s12 l6 offset-l2">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row valign-wrapper">
-                        <img src="https://placeimg.com/640/480/any" alt="avatar" style="width:32px; height:32px;" class="circle responsive-img">
-                        <h6 class="black-text username">
-                            USER NAME
-                        </h6>
-                    </div>
-                </div>
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="" alt="post-image" src="https://placeimg.com/640/480/any">
-                </div>
-                <div class="card-content">
-                    <div class="card-title  grey-text text-darken-4">
-                        <i class="material-icons left">favorite</i>
-                        <div class="modal-trigger" data-target="comment-modal">
-                            <i class="material-icons left">message</i>
-                        </div>
-                        <i class="material-icons right">save</i>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p class="card-title grey-text text-darken-4">
-                        188 Likes
-                    </p>
-                </div>
-                <div class="card-content">
-                    <p class="grey-text text-darken-4">
-                        <a href="profile.html">Username</a> Yo! His palms are sweaty, knees weak, arms are heavy,There's vomit on his sweater already: Mom's spaghetti, He's nervous, but on the surface he looks calm and ready.To drop bombs, but he keeps
-                        on forgetting, What he wrote down, the whole crowd goes so loud 🎵🎶 Can't believe it's taken this long to watch 8Mile 😍
 
                     </p>
                 </div>
@@ -144,76 +184,85 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </section> -->
+        </main>
 
-    <!-- Modal Structure -->
-    <div id="comment-modal" class="modal">
+        <!-- Modal Structure -->
+        <div id="comment-modal" class="modal">
 
-        <nav class="blue darken-2">
-            <div class="nav-wrapper">
-                <ul class="left">
-                    <li>
-                        <a href="#!" class="modal-action modal-close">
-                            <i class="material-icons">arrow_back</i>
-                        </a>
-                    </li>
-                    <li class="">
-                        Comments
-                    </li>
+            <nav class="blue darken-2">
+                <div class="nav-wrapper">
+                    <ul class="left">
+                        <li>
+                            <a href="#!" class="modal-action modal-close">
+                                <i class="material-icons">arrow_back</i>
+                            </a>
+                        </li>
+                        <li class="">
+                            Comments
+                        </li>
 
-                </ul>
-            </div>
-        </nav>
+                    </ul>
+                </div>
+            </nav>
 
-        <div class="modal-content">
-            <div class="message-container">
-                <img src="https://placeimg.com/640/480/any" alt="avatar" class="circle left" width="55" height="55">
-                <div class="message">
-                    <div class="row">
-                        <p class="col s12 comment">
-                            <span class="user">Username</span> efjeiruoewiur</p>
-                        <p class="grey-text lighten-1">20h</p>
+            <div class="modal-content">
+                <div class="message-container">
+                    <img src="./img/avatar.jpg" alt="avatar"
+                        class="circle left" width="55" height="55">
+                        <div class="message">
+                            <div class="row">
+                                <p class="col s12 comment">
+                                    <span class="user">Username</span>
+                                    efjeiruoewiur</p>
+                                <p class="grey-text lighten-1">20h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer comment-footer">
+                    <!-- post form row -->
+                    <div class="row post-row">
+                        <div class="col s3 l2 offset-l1">
+                            <img class="circle" alt="avatar"
+                                src="./img/avatar.jpg"
+                                height="45" width="45">
+                        </div>
+                        <div class="col s6 l5 post-btn-container">
+                            <p class="post-modal-btn-text grey-text
+                                text-darken-1">
+                                <input type="text" name="addcomment"
+                                    id="addcomment" placeholder="Add a comment">
+                            </p>
+                        </div>
+                        <div class="col s2 offset-s1 l2 offset-l2 photo-icon
+                            grey-text text-darken-1">
+                            <p class="blue-text">Post</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="modal-footer comment-footer">
-            <!-- post form row -->
-            <div class="row post-row">
-                <div class="col s3 l2 offset-l1">
-                    <img class="circle" alt="avatar" src="https://placeimg.com/640/480/any" height="45" width="45">
-                </div>
-                <div class="col s6 l5 post-btn-container">
-                    <p class="post-modal-btn-text grey-text text-darken-1">
-                        <input type="text" name="addcomment" id="addcomment" placeholder="Add a comment">
+            <!-- Dropdown Structure -->
+            <ul id='dropdown-follow' class='dropdown-following
+                collection-following'>
+                <li class="collection-following-item avatar">
+                    <img src="./img/avatar.jpg" alt="avatar"
+                        class="circle">
+                    <p class="title collection-following-item-message">dfgdfgdfgfdgdfgdfgdfb
+                        <span>started following you.</span>
+                        <span>3w</span>
                     </p>
-                </div>
-                <div class="col s2 offset-s1 l2 offset-l2 photo-icon grey-text text-darken-1">
-                    <p class="blue-text">Post</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown-follow' class='dropdown-following collection-following'>
-        <li class="collection-following-item avatar">
-            <img src="https://placeimg.com/640/480/any" alt="avatar" class="circle">
-            <p class="title collection-following-item-message">dfgdfgdfgfdgdfgdfgdfb
-                <span>started following you.</span>
-                <span>3w</span>
-            </p>
-            <button class="btn blue">Follow</button>
-        </li>
-    </ul>
+                    <button class="btn blue">Follow</button>
+                </li>
+            </ul>
 
 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="./js/materialize.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script type="text/javascript" src="./js/materialize.min.js"></script>
+            <script type="text/javascript" src="./js/main.js"></script>
 
-</body>
+        </body>
 
-</html>
+    </html>
