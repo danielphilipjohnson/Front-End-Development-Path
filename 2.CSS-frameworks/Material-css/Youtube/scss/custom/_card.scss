@@ -1,0 +1,28 @@
+
+.card-video {
+  @extend .card;
+  box-shadow: none;
+  padding-bottom: 0.5rem;
+  
+  .video-image {
+    padding: 0 0 0.5rem 0;
+  }
+  .video-suggestion-content {
+    padding: 0;
+    .suggestion-title {
+      font-size: 1rem;
+    }
+
+    .suggestion-details {
+      color: #888888;
+      font-size: 0.8rem;
+      padding-top: 0.5rem;
+      a {
+        color: #888888;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

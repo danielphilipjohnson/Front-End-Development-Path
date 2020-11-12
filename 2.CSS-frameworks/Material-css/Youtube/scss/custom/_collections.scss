@@ -1,0 +1,10 @@
+.collection-item-subscription {
+  @extend .collection-item;
+  .subscription {
+    display: flex;
+    align-items: center;
+    img {
+      margin-right: 0.75rem;
+    }
+  }
+}
