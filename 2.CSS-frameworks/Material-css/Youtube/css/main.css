@@ -2026,7 +2026,7 @@ a {
   box-shadow: none !important; }
 
 /* 2dp elevation modified*/
-.z-depth-1, nav, .card-panel, .card, .card-video, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav, .sidenav-dark {
+.z-depth-1, nav, .card-panel, .card, .card-video, .card-next-video, .toast, .btn, .btn-large, .btn-small, .btn-floating, .dropdown-content, .collapsible, .sidenav, .sidenav-dark {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); }
 
 .z-depth-1-half, .btn:hover, .btn-large:hover, .btn-small:hover, .btn-floating:hover {
@@ -3446,67 +3446,67 @@ small {
   border-radius: 2px;
   background-color: #fff; }
 
-.card, .card-video {
+.card, .card-video, .card-next-video {
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
   transition: box-shadow .25s;
   border-radius: 2px; }
-  .card .card-title, .card-video .card-title {
+  .card .card-title, .card-video .card-title, .card-next-video .card-title {
     font-size: 24px;
     font-weight: 300; }
-    .card .card-title.activator, .card-video .card-title.activator {
+    .card .card-title.activator, .card-video .card-title.activator, .card-next-video .card-title.activator {
       cursor: pointer; }
-  .card.small, .small.card-video, .card.medium, .medium.card-video, .card.large, .large.card-video {
+  .card.small, .small.card-video, .small.card-next-video, .card.medium, .medium.card-video, .medium.card-next-video, .card.large, .large.card-video, .large.card-next-video {
     position: relative; }
-    .card.small .card-image, .small.card-video .card-image, .card.medium .card-image, .medium.card-video .card-image, .card.large .card-image, .large.card-video .card-image {
+    .card.small .card-image, .small.card-video .card-image, .small.card-next-video .card-image, .card.medium .card-image, .medium.card-video .card-image, .medium.card-next-video .card-image, .card.large .card-image, .large.card-video .card-image, .large.card-next-video .card-image {
       max-height: 60%;
       overflow: hidden; }
-    .card.small .card-image + .card-content, .small.card-video .card-image + .card-content, .card.medium .card-image + .card-content, .medium.card-video .card-image + .card-content, .card.large .card-image + .card-content, .large.card-video .card-image + .card-content {
+    .card.small .card-image + .card-content, .small.card-video .card-image + .card-content, .small.card-next-video .card-image + .card-content, .card.medium .card-image + .card-content, .medium.card-video .card-image + .card-content, .medium.card-next-video .card-image + .card-content, .card.large .card-image + .card-content, .large.card-video .card-image + .card-content, .large.card-next-video .card-image + .card-content {
       max-height: 40%; }
-    .card.small .card-content, .small.card-video .card-content, .card.medium .card-content, .medium.card-video .card-content, .card.large .card-content, .large.card-video .card-content {
+    .card.small .card-content, .small.card-video .card-content, .small.card-next-video .card-content, .card.medium .card-content, .medium.card-video .card-content, .medium.card-next-video .card-content, .card.large .card-content, .large.card-video .card-content, .large.card-next-video .card-content {
       max-height: 100%;
       overflow: hidden; }
-    .card.small .card-action, .small.card-video .card-action, .card.medium .card-action, .medium.card-video .card-action, .card.large .card-action, .large.card-video .card-action {
+    .card.small .card-action, .small.card-video .card-action, .small.card-next-video .card-action, .card.medium .card-action, .medium.card-video .card-action, .medium.card-next-video .card-action, .card.large .card-action, .large.card-video .card-action, .large.card-next-video .card-action {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0; }
-  .card.small, .small.card-video {
+  .card.small, .small.card-video, .small.card-next-video {
     height: 300px; }
-  .card.medium, .medium.card-video {
+  .card.medium, .medium.card-video, .medium.card-next-video {
     height: 400px; }
-  .card.large, .large.card-video {
+  .card.large, .large.card-video, .large.card-next-video {
     height: 500px; }
-  .card.horizontal, .horizontal.card-video {
+  .card.horizontal, .horizontal.card-video, .horizontal.card-next-video {
     display: flex; }
-    .card.horizontal.small .card-image, .horizontal.small.card-video .card-image, .card.horizontal.medium .card-image, .horizontal.medium.card-video .card-image, .card.horizontal.large .card-image, .horizontal.large.card-video .card-image {
+    .card.horizontal.small .card-image, .horizontal.small.card-video .card-image, .horizontal.small.card-next-video .card-image, .card.horizontal.medium .card-image, .horizontal.medium.card-video .card-image, .horizontal.medium.card-next-video .card-image, .card.horizontal.large .card-image, .horizontal.large.card-video .card-image, .horizontal.large.card-next-video .card-image {
       height: 100%;
       max-height: none;
       overflow: visible; }
-      .card.horizontal.small .card-image img, .horizontal.small.card-video .card-image img, .card.horizontal.medium .card-image img, .horizontal.medium.card-video .card-image img, .card.horizontal.large .card-image img, .horizontal.large.card-video .card-image img {
+      .card.horizontal.small .card-image img, .horizontal.small.card-video .card-image img, .horizontal.small.card-next-video .card-image img, .card.horizontal.medium .card-image img, .horizontal.medium.card-video .card-image img, .horizontal.medium.card-next-video .card-image img, .card.horizontal.large .card-image img, .horizontal.large.card-video .card-image img, .horizontal.large.card-next-video .card-image img {
         height: 100%; }
-    .card.horizontal .card-image, .horizontal.card-video .card-image {
+    .card.horizontal .card-image, .horizontal.card-video .card-image, .horizontal.card-next-video .card-image {
       max-width: 50%; }
-      .card.horizontal .card-image img, .horizontal.card-video .card-image img {
+      .card.horizontal .card-image img, .horizontal.card-video .card-image img, .horizontal.card-next-video .card-image img {
         border-radius: 2px 0 0 2px;
         max-width: 100%;
         width: auto; }
-    .card.horizontal .card-stacked, .horizontal.card-video .card-stacked {
+    .card.horizontal .card-stacked, .horizontal.card-video .card-stacked, .horizontal.card-next-video .card-stacked {
       display: flex;
       flex-direction: column;
       flex: 1;
       position: relative; }
-      .card.horizontal .card-stacked .card-content, .horizontal.card-video .card-stacked .card-content {
+      .card.horizontal .card-stacked .card-content, .horizontal.card-video .card-stacked .card-content, .horizontal.card-next-video .card-stacked .card-content {
         flex-grow: 1; }
-  .card.sticky-action .card-action, .sticky-action.card-video .card-action {
+  .card.sticky-action .card-action, .sticky-action.card-video .card-action, .sticky-action.card-next-video .card-action {
     z-index: 2; }
-  .card.sticky-action .card-reveal, .sticky-action.card-video .card-reveal {
+  .card.sticky-action .card-reveal, .sticky-action.card-video .card-reveal, .sticky-action.card-next-video .card-reveal {
     z-index: 1;
     padding-bottom: 64px; }
-  .card .card-image, .card-video .card-image {
+  .card .card-image, .card-video .card-image, .card-next-video .card-image {
     position: relative; }
-    .card .card-image img, .card-video .card-image img {
+    .card .card-image img, .card-video .card-image img, .card-next-video .card-image img {
       display: block;
       border-radius: 2px 2px 0 0;
       position: relative;
@@ -3515,39 +3515,39 @@ small {
       top: 0;
       bottom: 0;
       width: 100%; }
-    .card .card-image .card-title, .card-video .card-image .card-title {
+    .card .card-image .card-title, .card-video .card-image .card-title, .card-next-video .card-image .card-title {
       color: #fff;
       position: absolute;
       bottom: 0;
       left: 0;
       max-width: 100%;
       padding: 24px; }
-  .card .card-content, .card-video .card-content {
+  .card .card-content, .card-video .card-content, .card-next-video .card-content {
     padding: 24px;
     border-radius: 0 0 2px 2px; }
-    .card .card-content p, .card-video .card-content p {
+    .card .card-content p, .card-video .card-content p, .card-next-video .card-content p {
       margin: 0; }
-    .card .card-content .card-title, .card-video .card-content .card-title {
+    .card .card-content .card-title, .card-video .card-content .card-title, .card-next-video .card-content .card-title {
       display: block;
       line-height: 32px;
       margin-bottom: 8px; }
-      .card .card-content .card-title i, .card-video .card-content .card-title i {
+      .card .card-content .card-title i, .card-video .card-content .card-title i, .card-next-video .card-content .card-title i {
         line-height: 32px; }
-  .card .card-action, .card-video .card-action {
+  .card .card-action, .card-video .card-action, .card-next-video .card-action {
     background-color: inherit;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     position: relative;
     padding: 16px 24px; }
-    .card .card-action:last-child, .card-video .card-action:last-child {
+    .card .card-action:last-child, .card-video .card-action:last-child, .card-next-video .card-action:last-child {
       border-radius: 0 0 2px 2px; }
-    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating), .card-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating), .card-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating), .card-next-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
       color: #ffab40;
       margin-right: 24px;
       transition: color .3s ease;
       text-transform: uppercase; }
-      .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover, .card-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+      .card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover, .card-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover, .card-next-video .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
         color: #ffd8a6; }
-  .card .card-reveal, .card-video .card-reveal {
+  .card .card-reveal, .card-video .card-reveal, .card-next-video .card-reveal {
     padding: 24px;
     position: absolute;
     background-color: #fff;
@@ -3558,7 +3558,7 @@ small {
     height: 100%;
     z-index: 3;
     display: none; }
-    .card .card-reveal .card-title, .card-video .card-reveal .card-title {
+    .card .card-reveal .card-title, .card-video .card-reveal .card-title, .card-next-video .card-reveal .card-title {
       cursor: pointer;
       display: block; }
 
@@ -6548,7 +6548,7 @@ footer {
   footer {
     padding-left: 0; } }
 
-body, .card, .card-video {
+body, .card, .card-video, .card-next-video {
   background-color: #131313;
   color: white;
   font-family: Roboto, Arial, sans-serif; }
@@ -6559,6 +6559,12 @@ main {
 section {
   border-bottom: 1px solid darkgrey;
   margin: 0 1rem; }
+
+.video-suggestion-container {
+  padding: 0 0.2rem; }
+
+.main-content {
+  padding: 0 2rem; }
 
 nav {
   background-color: #232323; }
@@ -6577,6 +6583,24 @@ nav {
 .card-video {
   box-shadow: none;
   padding-bottom: 0.5rem; }
+  .card-video .card-video-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0; }
+  .card-video .video-content {
+    padding: 0rem; }
+    .card-video .video-content .video-title {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-bottom: 0.5rem; }
+    .card-video .video-content.video-text p {
+      margin-top: 0; }
+    .card-video .video-content .views {
+      color: #717e83;
+      font-size: 1rem; }
+    .card-video .video-content .video-stats i {
+      padding: 0 .9rem; }
   .card-video .video-image {
     padding: 0 0 0.5rem 0; }
   .card-video .video-suggestion-content {
@@ -6591,6 +6615,45 @@ nav {
         color: #888888; }
       .card-video .video-suggestion-content .suggestion-details p {
         margin: 0; }
+  .card-video .video-action {
+    padding: 1rem 0; }
+  .card-video-profile {
+    align-items: center;
+    display: flex; }
+    .card-video-profile .info p {
+      margin: 0; }
+
+.card-additional-text {
+  color: #717e83;
+  font-size: 0.85rem; }
+
+.card-next-video {
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  box-shadow: none;
+  padding-bottom: 1rem; }
+  .card-next-video .card-video-suggestion {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin: 0 0 2px 0;
+    overflow: hidden; }
+
+.comment-content {
+  padding: 1rem 0rem; }
+  .comment-content .comment-header {
+    display: flex;
+    align-items: center; }
+    .comment-content .comment-header .comment-text {
+      padding-left: 0.9rem; }
+      .comment-content .comment-header .comment-text p {
+        margin: 0rem; }
+      .comment-content .comment-header .comment-text .reply {
+        padding: 0.5rem 0; }
+        .comment-content .comment-header .comment-text .reply a {
+          padding-right: 1.5rem; }
+          .comment-content .comment-header .comment-text .reply a span {
+            padding: 0 1.5rem; }
 
 .collection-item-subscription .subscription {
   display: flex;
@@ -6614,93 +6677,9 @@ nav {
 .inline {
   display: inline; }
 
-/* maybe other page */
-.card-video-profile {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 0; }
-
-.card-video-suggestion {
-  color: white !important;
-  font-size: 1rem !important;
-  font-weight: 500 !important;
-  line-height: 1.6rem !important;
-  margin: 0 0 2px 0 !important;
-  overflow: hidden; }
-
-#main-content {
-  padding: 0 2rem; }
-
-.video-content {
-  padding: 0rem !important; }
-
-.video-title {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 500;
-  padding-bottom: 0.5rem; }
-
-.views {
-  color: #717e83;
-  font-size: 1rem; }
-
-.video-stats i {
-  padding: 0 10px; }
-
-/* first page */
-.video-suggestion-container {
-  padding: 0 0.2rem; }
-
-/* end of first page */
-.p-0 {
-  padding: 0rem 0.75rem !important; }
-
-.profile {
-  align-items: center;
-  display: flex; }
-
-.profile-info {
-  padding-left: 1rem; }
-
-.profile-info p {
-  margin: 0rem; }
-
-.video-text p {
-  margin-top: 0rem; }
-
-.video-action {
-  padding: 0 !important; }
-
-.comment-header {
-  display: flex;
-  align-items: center; }
-
-.comment-content {
-  padding: 1rem 0rem !important; }
-
-.comment-text {
-  padding-left: 10px; }
-
-.comment-text p {
-  margin: 0rem; }
-
-.reply {
-  padding: 0.5rem 0; }
-
-.reply a,
-.reply a span {
-  padding-right: 1.5rem; }
-
-.reply a span {
-  padding-left: 1.5rem; }
-
 .label {
   font-size: 0.8rem;
   padding-right: 0.5rem; }
 
-.card-additional-text {
-  color: #717e83;
-  font-size: 0.85rem; }
-
-.first-card {
-  border-bottom: 1px solid rgba(160, 160, 160, 0.2); }
+.p-0 {
+  padding: 0rem 0.75rem !important; }

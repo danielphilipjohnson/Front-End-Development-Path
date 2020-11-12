@@ -31,3 +31,16 @@ section {
   border-bottom: 1px solid darkgrey;
   margin: 0 1rem;
 }
+
+
+.video-suggestion-container {
+  padding: 0 .2rem;
+  @extend .col;
+  @extend .s12;
+  @extend .m6;
+  @extend .l3;
+}
+
+.main-content {
+  padding: 0 2rem;
+}
