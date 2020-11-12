@@ -4,102 +4,13 @@
 
 @import "./custom/defaults";
 @import "./custom/dropdown";
-// // @import "./custom/buttons";
 @import "./custom/card";
-// @import "./custom/grid";
 @import "./custom/collections";
 @import "./custom/form";
 @import "./custom/modal";
-// @import "./custom/nav";
-// @import "./custom/tabs";
+
 @import "./custom/util";
 
 @import "./custom/pages/home";
 @import "./custom/pages/explore";
-
-
- $body-bg-color: #ebeced;
- $body-font-family: "Lato", Arial, sans-serif;
- $search-border: 1px solid #ebeced;
- $story-avatar-border: 1px solid #ebeced;
- $post-border: 1px solid #ebeced;
- $card-border: 5px solid #ebeced;
-
-
-
-
-
-
-
-
-
-
-.user-image-container {
-  padding-right: 0px!important;
-  padding-bottom: 10.5px!important;
-}
-
-
-
-.card-user-image {
-  border: none;
-
-}
-
-.card-user-image img {
-  border-radius: 0px!important;
-}
-
-
-
-
-.card-header .profile {
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-}
-
-.profile-img-container {
-  width: 20%;
-}
-
-.profile-username-container {
-  width: 80%;
-}
-
-.profile-username-container .btn {
-  width: 100%;
-}
-
-.card-user-stats {
-  padding: 0rem 2rem;
-  border-top: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: space-between;
-  text-align: center
-}
-
-.card-user-stats p {
-  padding: 0 30px;
-}
-
-.card-user-buttons {
-  padding: 0.5rem 2rem;
-  border-top: 1px solid #e6e6e6;
-  display: flex;
-  justify-content: space-around;
-}
-
-.card-user {
-  background-color: transparent;
-  border: none;
-  margin-bottom: 0px;
-}
-
-.profile-row {
-  margin-bottom: 0px;
-}
-// .card-reveal.card-transparent {
-//   background-color: rgba(0, 0, 0, 0.5);
-
-// }
+@import "./custom/pages/profile";
