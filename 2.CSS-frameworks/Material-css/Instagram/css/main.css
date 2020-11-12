@@ -2045,7 +2045,7 @@ a {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -7px rgba(0, 0, 0, 0.2); }
 
 /* 24dp elevation */
-.z-depth-5, .modal {
+.z-depth-5, .modal, .modal-comment {
   box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2); }
 
 .hoverable {
@@ -4121,7 +4121,7 @@ body.keyboard-focused .dropdown-content li:focus, body.keyboard-focused .dropdow
 .waves-effect .waves-ripple {
   z-index: -1; }
 
-.modal {
+.modal, .modal-comment {
   display: none;
   position: fixed;
   left: 0;
@@ -4134,25 +4134,25 @@ body.keyboard-focused .dropdown-content li:focus, body.keyboard-focused .dropdow
   overflow-y: auto;
   border-radius: 2px;
   will-change: top, opacity; }
-  .modal:focus {
+  .modal:focus, .modal-comment:focus {
     outline: none; }
   @media only screen and (max-width: 992px) {
-    .modal {
+    .modal, .modal-comment {
       width: 80%; } }
-  .modal h1, .modal h2, .modal h3, .modal h4 {
+  .modal h1, .modal-comment h1, .modal h2, .modal-comment h2, .modal h3, .modal-comment h3, .modal h4, .modal-comment h4 {
     margin-top: 0; }
-  .modal .modal-content {
+  .modal .modal-content, .modal-comment .modal-content {
     padding: 24px; }
-  .modal .modal-close {
+  .modal .modal-close, .modal-comment .modal-close {
     cursor: pointer; }
-  .modal .modal-footer {
+  .modal .modal-footer, .modal-comment .modal-footer {
     border-radius: 0 0 2px 2px;
     background-color: #fafafa;
     padding: 4px 6px;
     height: 56px;
     width: 100%;
     text-align: right; }
-    .modal .modal-footer .btn, .modal .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal .modal-footer .btn-flat {
+    .modal .modal-footer .btn, .modal-comment .modal-footer .btn, .modal .modal-footer .btn-large, .modal-comment .modal-footer .btn-large, .modal .modal-footer .btn-small, .modal-comment .modal-footer .btn-small, .modal .modal-footer .btn-flat, .modal-comment .modal-footer .btn-flat {
       margin: 6px 0; }
 
 .modal-overlay {
@@ -4168,21 +4168,21 @@ body.keyboard-focused .dropdown-content li:focus, body.keyboard-focused .dropdow
   display: none;
   will-change: opacity; }
 
-.modal.modal-fixed-footer {
+.modal.modal-fixed-footer, .modal-fixed-footer.modal-comment {
   padding: 0;
   height: 70%; }
-  .modal.modal-fixed-footer .modal-content {
+  .modal.modal-fixed-footer .modal-content, .modal-fixed-footer.modal-comment .modal-content {
     position: absolute;
     height: calc(100% - 56px);
     max-height: 100%;
     width: 100%;
     overflow-y: auto; }
-  .modal.modal-fixed-footer .modal-footer {
+  .modal.modal-fixed-footer .modal-footer, .modal-fixed-footer.modal-comment .modal-footer {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
     bottom: 0; }
 
-.modal.bottom-sheet {
+.modal.bottom-sheet, .bottom-sheet.modal-comment {
   top: auto;
   bottom: -100%;
   margin: 0;
@@ -6567,20 +6567,19 @@ body {
 .collection-following .collection-following-item.avatar .collection-following-item-message {
   margin: 0 0 1rem 0; }
 
-.modal .picture-content {
-  padding: 0px; }
-
-.modal .picture-content .card, .modal .picture-content .card-post, .modal .picture-content .card-explore {
-  margin: 0px; }
-
-.modal.picture-modal {
-  max-height: 100%;
-  max-height: 100%; }
-
-/* comment */
-.modal {
+.modal-comment {
   min-height: 100vh;
   width: 100%; }
+
+.modal .picture-content, .modal-comment .picture-content {
+  padding: 0px; }
+
+.modal .picture-content .card, .modal-comment .picture-content .card, .modal .picture-content .card-post, .modal-comment .picture-content .card-post, .modal .picture-content .card-explore, .modal-comment .picture-content .card-explore {
+  margin: 0px; }
+
+.modal.picture-modal, .picture-modal.modal-comment {
+  max-height: 100%;
+  max-height: 100%; }
 
 .modal-content {
   padding: 0px !important; }
@@ -6613,7 +6612,7 @@ body {
   margin: 0px;
   padding: 0.25rem 0; }
 
-.modal .comment-footer {
+.modal .comment-footer, .modal-comment .comment-footer {
   position: absolute;
   bottom: 0px;
   margin-right: auto;

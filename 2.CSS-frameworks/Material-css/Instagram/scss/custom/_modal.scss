@@ -1,4 +1,12 @@
 
+.modal-comment {
+
+  @extend .modal;
+  min-height: 100vh;
+  width: 100%;
+}
+
+
 .modal .picture-content {
   padding: 0px;
 }
@@ -12,13 +20,6 @@
   max-height: 100%;
 }
 
-
-
-/* comment */
-.modal {
-  min-height: 100vh;
-  width: 100%;
-}
 
 .modal-content {
   padding: 0px !important;
