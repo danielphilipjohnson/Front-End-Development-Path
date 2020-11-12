@@ -1,0 +1,148 @@
+@import "./custom/variables";
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+@import "./custom/defaults";
+// // @import "./custom/buttons";
+@import "./custom/card";
+// @import "./custom/grid";
+// // @import "./custom/collections";
+@import "./custom/form";
+@import "./custom/modal";
+// @import "./custom/nav";
+// @import "./custom/tabs";
+@import "./custom/util";
+
+
+
+ $body-bg-color: #ebeced;
+ $body-font-family: "Lato", Arial, sans-serif;
+ $search-border: 1px solid #ebeced;
+ $story-avatar-border: 1px solid #ebeced;
+ $post-border: 1px solid #ebeced;
+ $card-border: 5px solid #ebeced;
+
+
+
+.notification-message {
+  padding: 0 115px 0 0;
+}
+
+.card-reveal-icons {
+  color: white;
+  text-align: center;
+}
+
+.explore-container {
+  padding: 0px!important;
+}
+
+.user-image-container {
+  padding-right: 0px!important;
+  padding-bottom: 10.5px!important;
+}
+
+.explore-card,
+.card-user-image {
+  margin: 0px;
+}
+
+.card-user-image {
+  border: none;
+
+}
+
+.card-user-image img {
+  border-radius: 0px!important;
+}
+
+.dropdown-content {
+  min-width: 80%;
+  top: 64px!important;
+}
+
+.secondary-content {
+  color: white!important;
+}
+
+.card-header .profile {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-img-container {
+  width: 20%;
+}
+
+.profile-username-container {
+  width: 80%;
+}
+
+.profile-username-container .btn {
+  width: 100%;
+}
+
+.card-user-stats {
+  padding: 0rem 2rem;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  text-align: center
+}
+
+.card-user-stats p {
+  padding: 0 30px;
+}
+
+.card-user-buttons {
+  padding: 0.5rem 2rem;
+  border-top: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-user {
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0px;
+}
+
+.profile-row {
+  margin-bottom: 0px;
+}
+
+
+.card-timestamp {
+  padding-bottom: 50px !important;
+}
+
+
+
+/* creating posts */
+.post-row {
+  background-color: #fff;
+  border-top: $card-border;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  margin: 0px;
+}
+
+.post-btn-container {
+  border: none;
+  text-align: center;
+
+}
+
+.post-modal-btn-text {
+  margin: 0px;
+}
+
+.photo-icon {
+  text-align: center;
+}
+
+.photo-icon p {
+  margin: 11px;
+}
