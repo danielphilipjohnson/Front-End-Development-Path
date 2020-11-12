@@ -7,27 +7,32 @@
     padding: 0 1rem;
     margin: 1rem;
     .username {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
   }
-  .card-image  {
+  .card-image {
     border-radius: 0;
     img {
       border-radius: inherit;
     }
   }
   .card-content {
-    padding: .95rem .75rem;
-    margin-bottom: .75rem;
+    padding: 0.95rem 0.75rem;
+    margin-bottom: 0.75rem;
   }
 }
 
+.card-explore {
+  @extend .card;
+  margin: 0px;
 
-
-
-
-
-
+  box-shadow: none;
+  .card-image {
+    img {
+      border-radius: 0;
+    }
+  }
+}
 
 // .card-reveal.card-transparent {
 //   background-color: rgba(0, 0, 0, 0.5);

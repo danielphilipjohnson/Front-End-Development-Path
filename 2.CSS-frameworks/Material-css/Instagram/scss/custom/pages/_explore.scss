@@ -1,0 +1,13 @@
+
+.card-user-image {
+  margin: 0px;
+}
+.row {
+  .explore-container {
+
+    @extend .col; 
+    @extend .s6; 
+    @extend .l3;
+    padding: 0;
+  }
+}
