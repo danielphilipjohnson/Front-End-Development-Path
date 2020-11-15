@@ -1,0 +1,14 @@
+.music-collection {
+  @extend .collection;
+  @extend .col;
+  @extend .s12;
+
+  border: 0;
+
+  .collection-item {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    align-items: center;
+  }
+}
