@@ -1,0 +1,51 @@
+.card-play-music {
+  background-color: #222326;
+  box-shadow: 0px 0px;
+  @extend .card;   
+  @extend .col;  
+  @extend .s12;  
+  @extend .m8;  
+  @extend .offset-m2;  
+  @extend .l6;  
+  @extend .offset-l3;
+  .artist-play {
+    display: flex;
+    justify-content: space-between;
+    .card-content {
+      padding: 0.5rem;
+    }
+  }
+  .music-control {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    i {
+      margin-right: 5px;
+    }
+  }
+
+}
+
+
+.music-card{
+  @extend .card;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px;
+  text-align: center;
+  .card-content {
+    padding: 0rem 1.2rem;
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+    p {
+      color: #919496;
+    }
+  }
+}

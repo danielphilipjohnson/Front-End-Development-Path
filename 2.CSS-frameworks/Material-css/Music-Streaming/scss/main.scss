@@ -1,0 +1,145 @@
+@import "./custom/variables";
+
+@import "node_modules/materialize-css/sass/materialize.scss";
+@import "./custom/card";
+@import "./custom/collections";
+@import "./custom/defaults";
+@import "./custom/modal";
+@import "./custom/nav";
+@import "./custom/util";
+
+@import "./custom/pages/home";
+
+
+
+.artist-avatar {
+  border-radius: 50%!important;
+}
+
+.carousel-music {
+  @extend .carousel;
+  height: 270px;
+  .carousel-item {
+    top: -20px;
+  }
+}
+
+
+
+
+.song-slider .card-content {
+  padding: 0.5rem;
+}
+
+
+
+.section-header {
+  text-align: center;
+  h5 {
+    margin-bottom: 2px;
+  }
+  p {
+    color: #919496;
+    margin: 0 0 5px 0;
+  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.current-song {
+  p {
+    font-size: 1.2rem;
+    margin: 0 0 6px 0;
+    .material-icons {
+      font-size: 1.1rem;
+    }
+  }
+
+  h6 {
+    margin: 6px 0 0 0;
+  }
+}
+
+
+
+
+
+
+/* other pages */
+
+.music-collection,
+.video-collection {
+  border: 0px;
+}
+
+.music-collection .collection-item {
+  background-color: transparent;
+  border: 0px;
+  display: flex;
+  align-items: center;
+
+}
+
+.video-collection .collection-item {
+  background-color: transparent;
+  border: 0px;
+
+
+}
+
+.music-collection .collection-item i {
+  padding-right: 20px;
+
+}
+
+.container-box {
+  position: relative;
+  display: inline-block;
+}
+
+.genre-image {
+  max-width: 100%;
+}
+
+.genre-tile {
+  background-size: cover;
+  background-color: rgba(4, 0, 100, 0.47);
+  padding: 0rem!important;
+}
+
+.genre-tile .text-content {
+  background-color: rgba(0, 0, 0, .69);
+  height: 150px;
+
+}
+
+
+
+.album-cover img {
+  height: 170px;
+  margin: auto;
+  width: 170px!important;
+}
+
+.album-title {
+  margin: 0.5rem;
+}
+
+.album-title~p {
+  margin: 0.75rem!important;
+}
+
+.song-title {
+  padding-left: 5px;
+  position: relative;
+  top: -7px;
+
+}
