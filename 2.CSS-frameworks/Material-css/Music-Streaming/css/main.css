@@ -6531,11 +6531,6 @@ input[type=range]::-ms-thumb {
     text-align: center;
     margin-top: 1.2rem; } }
 
-.carousel-music {
-  height: 270px; }
-  .carousel-music .carousel-item {
-    top: -20px; }
-
 .card-play-music {
   background-color: #222326;
   box-shadow: 0px 0px; }
@@ -6562,7 +6557,7 @@ input[type=range]::-ms-thumb {
     padding: 0rem 1.2rem; }
     .music-card .card-content h5 {
       font-size: 1rem;
-      margin-bottom: 2px; }
+      margin-bottom: 0.25rem; }
     .music-card .card-content p {
       color: #919496; }
     .music-card .card-content .album-title {
@@ -6570,7 +6565,7 @@ input[type=range]::-ms-thumb {
     .music-card .card-content .album-title ~ p {
       margin: 0.75rem; }
   .music-card .card-image .artist-avatar {
-    border-radius: 50% !important; }
+    border-radius: 50%; }
   .music-card .genre-tile {
     background-size: cover;
     background-color: rgba(4, 0, 100, 0.47);
@@ -6581,6 +6576,11 @@ input[type=range]::-ms-thumb {
   .music-card .album-cover img {
     margin: auto;
     width: 170px; }
+
+.carousel-music {
+  height: 270px; }
+  .carousel-music .carousel-item {
+    top: -20px; }
 
 .music-collection {
   border: 0; }
@@ -6614,7 +6614,7 @@ main {
   width: 100%; }
 
 .modal-content {
-  padding: 0px !important; }
+  padding: 0; }
 
 .modal-content .card-image img {
   height: 200px;
@@ -6622,7 +6622,7 @@ main {
   width: 200px; }
 
 .nav-play {
-  background-color: #1DB954; }
+  background-color: #1db954; }
   .nav-play .play-song {
     display: flex;
     justify-content: space-between; }
@@ -6646,11 +6646,11 @@ main {
     margin-bottom: 0.4rem; }
     .bottom-nav .current-playing .current-song p {
       font-size: 1.2rem;
-      margin: 0 0 6px 0; }
+      margin: 0 0 0.45rem 0; }
       .bottom-nav .current-playing .current-song p .material-icons {
         font-size: 1.1rem; }
     .bottom-nav .current-playing .current-song h6 {
-      margin: 6px 0 0 0; }
+      margin: 0.45rem 0 0 0; }
   .bottom-nav .nav-icons {
     display: flex;
     justify-content: space-between;
@@ -6661,12 +6661,12 @@ main {
       font-size: 2.5rem; }
     .bottom-nav .nav-icons .btn-link {
       color: white;
-      margin: 0px; }
+      margin: 0; }
 
 .section-header {
   text-align: center; }
   .section-header h5 {
-    margin-bottom: 2px; }
+    margin-bottom: 0.25rem; }
   .section-header p {
     color: #919496;
-    margin: 0 0 5px 0; }
+    margin: 0 0 0.45rem 0; }

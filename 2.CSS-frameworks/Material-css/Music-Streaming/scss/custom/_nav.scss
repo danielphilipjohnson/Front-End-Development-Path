@@ -1,5 +1,5 @@
 .nav-play {
-  background-color: #1DB954;
+  background-color: #1db954;
   .play-song {
     display: flex;
     justify-content: space-between;
@@ -8,8 +8,6 @@
     }
   }
 }
-
-
 
 .bottom-nav {
   background-color: #222326;
@@ -27,22 +25,20 @@
     display: flex;
     justify-content: center;
     margin-bottom: 0.4rem;
-    
+
     .current-song {
       p {
         font-size: 1.2rem;
-        margin: 0 0 6px 0;
+        margin: 0 0 0.45rem 0;
         .material-icons {
           font-size: 1.1rem;
         }
       }
-    
+
       h6 {
-        margin: 6px 0 0 0;
+        margin: 0.45rem 0 0 0;
       }
     }
-    
-    
   }
 
   .nav-icons {
@@ -59,7 +55,7 @@
 
     .btn-link {
       color: white;
-      margin: 0px;
+      margin: 0;
     }
   }
 }
