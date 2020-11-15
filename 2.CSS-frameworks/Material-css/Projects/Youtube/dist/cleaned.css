@@ -337,6 +337,10 @@ i {
   Media Query Classes
 **********************/
 
+@media only screen and (min-width: 993px) {
+  .show-on-large {
+    display: block !important; } }
+
 .page-footer {
   padding-top: 20px;
   color: #fff;
@@ -1173,6 +1177,17 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:before {
 @media only screen and (max-width: 992px) {
   .sidenav > a, .sidenav-dark > a {
     padding: 0 16px; } }
+
+.sidenav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  height: 120vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 997;
+  display: none; }
 
 /*
     @license
