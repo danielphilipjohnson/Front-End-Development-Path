@@ -1,6 +1,7 @@
 @import "./custom/variables";
 
 @import "node_modules/materialize-css/sass/materialize.scss";
+@import "./custom/carousel";
 @import "./custom/card";
 @import "./custom/collections";
 @import "./custom/defaults";
@@ -12,38 +13,6 @@
 
 
 
-.artist-avatar {
-  border-radius: 50%!important;
-}
-
-.carousel-music {
-  @extend .carousel;
-  height: 270px;
-  .carousel-item {
-    top: -20px;
-  }
-}
-
-
-
-
-.song-slider .card-content {
-  padding: 0.5rem;
-}
-
-
-
-.section-header {
-  text-align: center;
-  h5 {
-    margin-bottom: 2px;
-  }
-  p {
-    color: #919496;
-    margin: 0 0 5px 0;
-  
-  }
-}
 
 
 
@@ -54,19 +23,13 @@
 
 
 
-.current-song {
-  p {
-    font-size: 1.2rem;
-    margin: 0 0 6px 0;
-    .material-icons {
-      font-size: 1.1rem;
-    }
-  }
 
-  h6 {
-    margin: 6px 0 0 0;
-  }
-}
+
+
+
+
+
+
 
 
 
@@ -74,6 +37,12 @@
 
 
 /* other pages */
+
+.song-slider .card-content {
+  padding: 0.5rem;
+}
+
+
 
 .music-collection,
 .video-collection {
@@ -98,10 +67,58 @@
 .music-collection .collection-item i {
   padding-right: 20px;
 
-}
-
-.container-box {
-  position: relative;
+}<div class="col s6  m6 l3">
+<div class="music-card card">
+    <div class="card-image">
+        <a href="album.html">
+            <img src="https://placeimg.com/640/480/any">
+        </a>
+    </div>
+    <div class="card-content">
+        <h5>MIX TITLE</h5>
+        <p>Artist, artist, artist</p>
+    </div>
+    song-title              </div>
+</div>
+<div class="col s6 m6 l3">
+<div class="music-card card">
+    <div class="card-image">
+        <a href="album.html">
+            <img src="https://placeimg.com/640/480/any">
+        </a>
+    </div>
+    <div class="card-content">
+        <h5>MIX TITLE</h5>
+        <p>Artist, artist, artist</p>
+    </div>
+</div>
+</div>
+<div class="col s6 m6 l3">
+<div class="music-card card">
+    <div class="card-image">
+        <a href="album.html">
+            <img src="https://placeimg.com/640/480/any">
+        </a>
+    </div>
+    <div class="card-content">
+        <h5>MIX TITLE</h5>
+        <p>Artist, artist, artist</p>
+    </div>
+</div>
+</div>
+<div class="col s6 m6 l3">
+<div class="music-card card">
+    <div class="card-image">
+        <a href="album.html">
+            <img src="https://placeimg.com/640/480/any">
+        </a>
+    </div>
+    <div class="card-content">
+        <h5>MIX TITLE</h5>
+        <p>Artist, artist, artist</p>
+    </div>
+</div>
+</div>e;
   display: inline-block;
 }
 
