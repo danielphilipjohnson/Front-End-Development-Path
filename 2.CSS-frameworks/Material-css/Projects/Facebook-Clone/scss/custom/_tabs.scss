@@ -1,0 +1,33 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.nav-tabs {
+  @extend .blue-text;
+  @extend .text-darken-2;
+  .nav-tab {
+    @extend .tab;
+    @extend .col;
+    @extend .s3;
+
+    a {
+      color: #1976d2;
+    }
+  }
+}
+
+.story-tabs {
+  @extend .tabs;
+  height: 100px;
+  .story-tab {
+      line-height: 15px;
+      p {
+        font-size: 0.9rem;
+        margin: 0px;
+        padding: 0.3rem 0;
+        text-align: center;
+      }
+  }
+}

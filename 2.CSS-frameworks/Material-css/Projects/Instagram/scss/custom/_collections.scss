@@ -1,0 +1,13 @@
+.collection-following {
+  @extend .collection;
+  .collection-following-item {
+    @extend .collection-item;
+
+    &.avatar {
+      .collection-following-item-message {
+        @extend .title;
+        margin: 0 0 1rem 0;
+      }
+    }
+  }
+ }

@@ -1,0 +1,43 @@
+.text-bold {
+  font-weight: bold;
+}
+
+.p-0 {
+  padding: 0rem !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+
+.emojis {
+  .emoji {
+    border-radius: 50%;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.55rem;
+    margin: 0 0.5rem;
+
+    &.like {
+      color: white;
+      background-color: blue;
+    }
+
+    &.love {
+      color: white;
+      background-color: red;
+    }
+  }
+}
+
+.globe {
+  top: 3px;
+  position: relative;
+}
+
+.btn-secondary {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+
+

@@ -1,0 +1,26 @@
+{
+  "name": "facebookclone",
+  "version": "1.0.0",
+  "description": "Built a facebook clone using material css",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive",
+    "compile:sass": "node-sass scss/main.scss dist/index.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/index.comp.css -o dist/index.prefix.css",
+    "clean:css": "purgecss --css dist/index.prefix.css --content ./*.html --output dist/cleaned.css",
+    "compress:css": "node-sass dist/cleaned.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css clean:css compress:css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "materialize-css": "^1.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-cli": "^8.1.0",
+    "purgecss": "^3.0.0"
+  }
+}

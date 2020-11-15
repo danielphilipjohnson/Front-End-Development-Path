@@ -1,0 +1,10 @@
+.profile-row {
+  @extend .row;
+  margin-bottom: 0;
+}
+
+.user-image-container {
+  @extend .col; 
+  @extend .s4;
+  @extend .l3;
+}

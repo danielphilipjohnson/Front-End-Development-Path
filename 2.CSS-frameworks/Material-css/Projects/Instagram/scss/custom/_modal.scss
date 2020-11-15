@@ -1,0 +1,61 @@
+.modal-comment {
+  @extend .modal;
+  min-height: 100vh;
+  width: 100%;
+
+  .message-container {
+    border-bottom: $post-border;
+
+    display: flex;
+    align-items: center;
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+
+    img {
+      height: auto;
+      width: 3.5rem;
+      margin-right: 1rem;
+    }
+    .message {
+      padding: 0 2.75rem;
+      width: 100%;
+      word-wrap: break-word;
+      p {
+        margin: 0;
+      }
+      .user {
+        margin: 0;
+        padding: 0.25rem 0;
+      }
+      .comment {
+        margin: 0;
+        padding: 0.25rem 0;
+      }
+
+    }
+  }
+
+  .comment-footer {
+    position: absolute;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    height: 100px;
+
+    input {
+      border: none;
+    }
+  }
+}
+
+.picture-modal {
+  @extend .modal;
+  .picture-content {
+    padding: 0;
+  }
+  .card {
+    margin: 0;
+  }
+}

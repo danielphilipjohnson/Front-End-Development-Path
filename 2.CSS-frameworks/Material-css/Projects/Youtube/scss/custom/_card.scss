@@ -1,0 +1,88 @@
+.card-video {
+  @extend .card;
+  box-shadow: none;
+  padding-bottom: .5rem;
+
+  .card-video-profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .video-content {
+    padding: 0rem;
+    .video-title {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      padding-bottom: .5rem;
+    }
+    &.video-text p {
+      margin-top: 0;
+    }
+
+    .views {
+      color: #717e83;
+      font-size: 1rem;
+    }
+    .video-stats i {
+      padding: 0 .9rem;
+    }
+  }
+  
+  .video-image {
+    padding: 0 0 .5rem 0;
+  }
+  .video-suggestion-content {
+    padding: 0;
+    .suggestion-title {
+      font-size: 1rem;
+    }
+
+    .suggestion-details {
+      color: #888888;
+      font-size: .8rem;
+      padding-top: .5rem;
+      a {
+        color: #888888;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .video-action {
+    padding: 1rem 0;
+  }
+  
+  &-profile {
+    align-items: center;
+    display: flex;
+    .info {
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.card-additional-text {
+  color: #717e83;
+  font-size: .85rem;
+}
+
+.card-next-video {
+  @extend .card;
+  border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+  box-shadow: none;
+  padding-bottom: 1rem;
+
+  .card-video-suggestion {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    margin: 0 0 2px 0;
+    overflow: hidden;
+  }
+}

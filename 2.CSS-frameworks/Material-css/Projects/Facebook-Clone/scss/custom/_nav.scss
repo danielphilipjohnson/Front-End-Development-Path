@@ -1,0 +1,21 @@
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  .search-icon {
+    width: 60%;
+  }
+  
+  .search-icon a i {
+    border-bottom: $search-border;
+  }
+  
+  .search-text {
+    position: absolute;
+    left: 105px;
+    top: 0px;
+  }
+}
+
+nav .nav-left {
+  width: 80%;
+}

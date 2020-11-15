@@ -1,0 +1,46 @@
+header,
+main,
+footer {
+    padding-left: 220px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+
+
+body,
+.card {
+    background-color: #131313;
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+
+main {
+  padding-top: 1.5rem;
+}
+
+
+section {
+  border-bottom: 1px solid darkgrey;
+  margin: 0 1rem;
+}
+
+
+.video-suggestion-container {
+  padding: 0 .2rem;
+  @extend .col;
+  @extend .s12;
+  @extend .m6;
+  @extend .l3;
+}
+
+.main-content {
+  padding: 0 2rem;
+}
