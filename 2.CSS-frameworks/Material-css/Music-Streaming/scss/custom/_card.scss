@@ -1,13 +1,14 @@
 .card-play-music {
   background-color: #222326;
   box-shadow: 0px 0px;
-  @extend .card;   
-  @extend .col;  
-  @extend .s12;  
-  @extend .m8;  
-  @extend .offset-m2;  
-  @extend .l6;  
+  @extend .card;
+  @extend .col;
+  @extend .s12;
+  @extend .m8;
+  @extend .offset-m2;
+  @extend .l6;
   @extend .offset-l3;
+
   .artist-play {
     display: flex;
     justify-content: space-between;
@@ -29,11 +30,9 @@
       margin-right: 5px;
     }
   }
-
 }
 
-
-.music-card{
+.music-card {
   @extend .card;
   background-color: rgba(0, 0, 0, 0);
   // box-shadow: 0px 0px;
@@ -47,12 +46,37 @@
     p {
       color: #919496;
     }
+
+    .album-title {
+      margin: 0.5rem;
+    }
+
+    .album-title ~ p {
+      margin: 0.75rem;
+    }
   }
 
   .card-image {
     .artist-avatar {
-      border-radius: 50%!important;
+      border-radius: 50% !important;
     }
-    
+  }
+
+  .genre-tile {
+    background-size: cover;
+    background-color: rgba(4, 0, 100, 0.47);
+    padding: 0;
+    .text-content {
+      background-color: rgba(0, 0, 0, 0.69);
+      height: 150px;
+    }
+  }
+
+  .album-cover {
+    img {
+      // height: 170px;
+      margin: auto;
+      width: 170px;
+    }
   }
 }

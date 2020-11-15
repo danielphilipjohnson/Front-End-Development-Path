@@ -10,5 +10,19 @@
     border: 0;
     display: flex;
     align-items: center;
+    i {
+      padding-right: 1.75rem;
+    }
+  }
+}
+
+.video-collection {
+  @extend .collection;
+  @extend .col;
+  @extend .s12;
+  border: 0;
+  .collection-item {
+    background-color: transparent;
+    border: 0;
   }
 }
