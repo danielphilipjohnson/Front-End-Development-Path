@@ -13,6 +13,7 @@
 - [Facebook Clone](#facebook-clone)
 - [Hotel](#hotel)
 - [Instagram Clone](#instagram-clone)
+- [Messenger Clone](#messenger-clone)
 - [Spotify Clone](#spotify-clone)
 - [Youtube](#youtube)
 
@@ -31,11 +32,7 @@
 
 ![emailimage](./Resources/screenshots/email-desktop.png)
 
-<h3 align="center">Mobile View</h3>
-
-![emailimage](./Resources/screenshots/email-mobile.png)
-
-[![CodePen](https://img.shields.io/badge/Gmail%20Clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+[![CodePen](https://img.shields.io/badge/Gmail%20Clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/full/zYBbNBK)
 
 ## Facebook Clone
 
@@ -43,11 +40,7 @@
 
 ![emailimage](./Resources/screenshots/facebookclone-desktop.jpg)
 
-<h3 align="center">Mobile View</h3>
-
-![emailimage](./Resources/screenshots/facebookclone-mobile.png)
-
-[![CodePen](https://img.shields.io/badge/Facebook%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+[![CodePen](https://img.shields.io/badge/Facebook%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/zYBbNZo)
 
 ## Hotel
 
@@ -55,11 +48,7 @@
 
 ![emailimage](./Resources/screenshots/hotel-desktop.jpg)
 
-<h3 align="center">Mobile View</h3>
-
-![emailimage](./Resources/screenshots/hotel-mobile.png)
-
-[![CodePen](https://img.shields.io/badge/Hotel-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+[![CodePen](https://img.shields.io/badge/Hotel-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/VwjRPrx)
 
 ## Instagram Clone
 
@@ -67,11 +56,16 @@
 
 ![emailimage](./Resources/screenshots/igclone-desktop.jpg)
 
-<h3 align="center">Mobile View</h3>
+[![CodePen](https://img.shields.io/badge/Instagram%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/gOMEgQy)
 
-![emailimage](./Resources/screenshots/igclone-mobile.png)
+## Messenger Clone
 
-[![CodePen](https://img.shields.io/badge/Instagram%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+<h3 align="center">Desktop View</h3>
+
+![emailimage](./Resources/screenshots/messengerclone-desktop.png)
+
+[![CodePen](https://img.shields.io/badge/messenger-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/gOMEgQy)
+
 
 ## Spotify Clone
 
@@ -79,11 +73,7 @@
 
 ![emailimage](./Resources/screenshots/spotifyclone-desktop.png)
 
-<h3 align="center">Mobile View</h3>
-
-![emailimage](./Resources/screenshots/spotifyclone-mobile.png)
-
-[![CodePen](https://img.shields.io/badge/spotify%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+[![CodePen](https://img.shields.io/badge/spotify%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/eYzXvEV)
 
 ## Youtube
 
@@ -91,8 +81,4 @@
 
 ![emailimage](./Resources/screenshots/ytclone-desktop.png)
 
-<h3 align="center">Mobile View</h3>
-
-![emailimage](./Resources/screenshots/ytclone-mobile.png)
-
-[![CodePen](https://img.shields.io/badge/Youtube%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io)
+[![CodePen](https://img.shields.io/badge/Youtube%20clone-green?logo=CodePen&color=000000&style=for-the-badge)](https://codepen.io/danielphilipjohnson/pen/VwjRpoL)
