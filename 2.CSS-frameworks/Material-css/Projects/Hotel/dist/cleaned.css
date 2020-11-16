@@ -620,7 +620,7 @@ nav {
       font-size: 1.2rem;
       border: none;
       padding-left: 2rem; }
-      nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=email]:valid {
+      nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid {
         border: none;
         -webkit-box-shadow: none;
                 box-shadow: none; }
@@ -861,6 +861,7 @@ label {
 input:not([type]),
 input[type=text]:not(.browser-default),
 input[type=email]:not(.browser-default),
+input[type=url]:not(.browser-default),
 input[type=number]:not(.browser-default),
 input[type=search]:not(.browser-default) {
   background-color: transparent;
@@ -884,6 +885,7 @@ input[type=search]:not(.browser-default) {
   input:not([type]):disabled,
   input[type=text]:not(.browser-default):disabled,
   input[type=email]:not(.browser-default):disabled,
+  input[type=url]:not(.browser-default):disabled,
   input[type=number]:not(.browser-default):disabled,
   input[type=search]:not(.browser-default):disabled {
     color: rgba(0, 0, 0, 0.42);
@@ -891,12 +893,14 @@ input[type=search]:not(.browser-default) {
   input:not([type]):disabled + label,
   input[type=text]:not(.browser-default):disabled + label,
   input[type=email]:not(.browser-default):disabled + label,
+  input[type=url]:not(.browser-default):disabled + label,
   input[type=number]:not(.browser-default):disabled + label,
   input[type=search]:not(.browser-default):disabled + label {
     color: rgba(0, 0, 0, 0.42); }
   input:not([type]):focus:not([readonly]),
   input[type=text]:not(.browser-default):focus:not([readonly]),
   input[type=email]:not(.browser-default):focus:not([readonly]),
+  input[type=url]:not(.browser-default):focus:not([readonly]),
   input[type=number]:not(.browser-default):focus:not([readonly]),
   input[type=search]:not(.browser-default):focus:not([readonly]) {
     border-bottom: 1px solid #26a69a;
@@ -905,12 +909,14 @@ input[type=search]:not(.browser-default) {
   input:not([type]):focus:not([readonly]) + label,
   input[type=text]:not(.browser-default):focus:not([readonly]) + label,
   input[type=email]:not(.browser-default):focus:not([readonly]) + label,
+  input[type=url]:not(.browser-default):focus:not([readonly]) + label,
   input[type=number]:not(.browser-default):focus:not([readonly]) + label,
   input[type=search]:not(.browser-default):focus:not([readonly]) + label {
     color: #26a69a; }
   input:not([type]).validate + label,
   input[type=text]:not(.browser-default).validate + label,
   input[type=email]:not(.browser-default).validate + label,
+  input[type=url]:not(.browser-default).validate + label,
   input[type=number]:not(.browser-default).validate + label,
   input[type=search]:not(.browser-default).validate + label {
     width: 100%; }
@@ -920,6 +926,7 @@ input[type=search]:not(.browser-default) {
 input:not([type]) + label:after,
 input[type=text]:not(.browser-default) + label:after,
 input[type=email]:not(.browser-default) + label:after,
+input[type=url]:not(.browser-default) + label:after,
 input[type=number]:not(.browser-default) + label:after,
 input[type=search]:not(.browser-default) + label:after {
   display: block;
