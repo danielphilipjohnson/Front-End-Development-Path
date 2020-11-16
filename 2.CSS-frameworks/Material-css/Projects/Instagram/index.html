@@ -102,9 +102,9 @@
             </li>
             <li>
               <a
-                class="dropdown-button"
+                class="dropdown-trigger"
                 href="#"
-                data-activates="dropdown-follow"
+                data-target="dropdown-follow"
               >
                 <i class="large material-icons"> favorite_border</i>
               </a>
@@ -140,7 +140,7 @@
             <div class="card-content">
               <div class="card-title grey-text text-darken-4">
                 <i class="material-icons left">favorite</i>
-                <div class="modal-trigger" data-target="comment-modal">
+                <div class="modal-trigger" href="#comment-modal">
                   <i class="material-icons left">message</i>
                 </div>
                 <i class="material-icons right">save</i>
@@ -381,7 +381,10 @@
     </div>
 
     <!-- Dropdown Structure -->
-    <ul id="dropdown-follow" class="dropdown-following collection-following">
+    <ul
+      id="dropdown-follow"
+      class="dropdown-content dropdown-following collection-following"
+    >
       <li class="collection-following-item avatar">
         <img src="./img/avatar.jpg" alt="avatar" class="circle" />
         <p class="title collection-following-item-message">
@@ -402,4 +405,3 @@
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
