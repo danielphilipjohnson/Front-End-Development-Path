@@ -40,7 +40,7 @@
   <meta name="twitter:card" content="Twitter Profile">
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
 
   <link type="text/css" rel="stylesheet" href="./css/style.css" />
 
@@ -49,7 +49,11 @@
 <body>
   <nav>
     <div class="nav-wrapper">
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+      <a
+        href="#"
+        data-target="mobile-demo"
+        class="sidenav-trigger show-on-large"
+      >
         <i class="material-icons">menu</i>
       </a>
       <ul class="left">
@@ -59,8 +63,8 @@
         <li>
           <form>
             <div class="input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search" style="top:-8px">
+              <input id="search" type="search" required />
+              <label class="label-icon" for="search" style="top: -8px">
                 <i class="material-icons">search</i>
               </label>
               <i class="material-icons">close</i>
@@ -84,16 +88,68 @@
             <i class="large material-icons">notifications</i>
           </a>
         </li>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <li>
-          <a href="#">
-            SIGN IN
-          </a>
+          <a href="#"> SIGN IN </a>
         </li>
       </ul>
     </div>
-
   </nav>
+
+  <ul class="sidenav sidenav-dark" id="mobile-demo">
+    <li>
+      <a href="./index.html" class="">Logo</a>
+    </li>
+    <li>
+      <a href="#!"> <i class="tiny material-icons">person_pin</i>Home</a>
+    </li>
+    <li>
+      <a href="#!"> <i class="tiny material-icons">group</i>Trending</a>
+    </li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li>
+      <a class="subheader">LIBRARY</a>
+    </li>
+    <li>
+      <a href="#!"> <i class="tiny material-icons">history</i>History</a>
+    </li>
+    <li>
+      <a href="#!">
+        <i class="tiny material-icons">watch_later</i>Watch Later</a
+      >
+    </li>
+    <li>
+      <a href="#!">
+        <i class="tiny material-icons">thumb_up</i>Liked videos</a
+      >
+    </li>
+    <li>
+      <a class="subheader">SUBSCRIPTIONS</a>
+    </li>
+    <li class="collection-item-subscription avatar">
+      <a href="#!" class="subscription">
+        <img
+          src="https://placeimg.com/640/480/any"
+          alt=""
+          class="circle"
+          style="width: 35px; height: 35px"
+        />
+        <span>Title</span>
+      </a>
+    </li>
+    <li class="collection-item-subscription avatar">
+      <a href="#!" class="subscription">
+        <img
+          src="https://placeimg.com/640/480/any"
+          alt=""
+          class="circle"
+          style="width: 35px; height: 35px"
+        />
+        <span>Title</span>
+      </a>
+    </li>
+  </ul>
 
   <main>
     <section class="row main-content">
