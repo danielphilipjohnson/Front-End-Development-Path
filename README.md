@@ -2,53 +2,60 @@
 
 ![Path](https://github.com/danielphilipjohnson/Front-End-Development-Path/blob/master/images/front-end.jpeg)
 
-Table of Contents
--------------------------
-- 1. HTML: To Add
-- 2. CSS
-    - Features
-    - Sites
-- 3. Javascript: To add
-- 4. Git: To add
-- 5. Web Security: To Add
-- 6. Package Managers
-    - npm
-    - yarn
-- 7. CSS Archticture: To add
-- 8. Preprocessor
-    - sass
-    - less
-- 9. Build Tools
-        - Task Runners
-            - npm scripts 
-            - gulp
-        - Module Bundle
-            - Webpack
-            - parcel.js
+<h2>Table of content</h2>
 
-- 10. Frameworks
-    - Angular JS
-    - ReactJs
-    - Vue JS
-- 11. Modern CSS: TODO
-- 12. CSS Frameworks
-    - Bootstrap 3.3
-    - Bootstrap 4
-    - Materalize 
-    - Semantic
-
-- 13. Testing
-    - Jasmine
-    - Jest
-    - Mocha
+- [Front-End-Development-Path](#front-end-development-path)
+  - [HTML and CSS](#html-and-css)
+  - [CSS Frameworks](#css-frameworks)
+    - [MaterializeCSS Tools used](#materializecss-tools-used)
+    - [MaterializeCSS Projects](#materializecss-projects)
+  - [FutureProjects](#futureprojects)
+  - [Todo](#todo)
 
 
-## To Add
-- HTML
-- JS
-- BEM notes
-- Redux 
-- vuex
-- modern css
-- reactstrap
-- progressive web app 
+## HTML and CSS
+
+
+## CSS Frameworks
+
+### MaterializeCSS Tools used
+[![Html](https://img.shields.io/badge/HTML5-v5.0.0-green?logo=HTML5&color=E34F26&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+[![Sass](https://img.shields.io/badge/sass-v5.0.0-green?logo=jquery&color=CC6699&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+[![Jquery](https://img.shields.io/badge/jquery-v5.1.0-green?logo=jquery&color=0769AD&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+[![PostCss](https://img.shields.io/badge/PostCss-v8-green?logo=PostCss&color=DD3A0A&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+
+### MaterializeCSS Projects
+- [Email Gmail clone](#email-gmail-clone)
+- [Facebook Clone](#facebook-clone)
+- [Hotel](#hotel)
+- [Instagram Clone](#instagram-clone)
+- [Messenger Clone](#messenger-clone)
+- [Spotify Clone](#spotify-clone)
+- [Youtube](#youtube)
+  
+
+## FutureProjects
+- Recipe Box
+- Weather App
+
+## Todo
+- CSS Frameworks
+  - Materalize 
+  - Bootstrap 4
+  - Semantic
+- Javascript
+- Package Managers
+  - npm
+  - yarn
+- Build Tools
+  - Task Runners
+    - npm scripts 
+    - gulp
+  - Module Bundle
+    - Webpack
+    - parcel.js
+- React
+- Testing
+  - Jasmine
+  - Jest
+  - Mocha
