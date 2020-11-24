@@ -25,6 +25,17 @@ function App() {
           <p className="transaction__subheading">Monthly budget</p>
         </div>
 
+        <div className="credit-cards">
+          <header className="header">
+            <h2>My Cards</h2>
+            <div className="header--right">
+              <p>Add</p>
+              <button className="btn-addcard">+</button>
+            </div>
+          </header>
+
+          <img src={masterCardImg} alt="" className="bank-card" />
+        </div>
         <div className="transaction__list-container">
           <header className="header">
             <h2>Transactions</h2>
@@ -35,11 +46,6 @@ function App() {
 
           <TransactionList />
         </div>
-      </div>
-
-      <div>
-        <h2>My Cards</h2>
-        <img src={masterCardImg} alt="" className="bank-card" />
       </div>
     </div>
   );
