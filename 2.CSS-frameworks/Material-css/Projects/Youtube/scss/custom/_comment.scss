@@ -1,0 +1,24 @@
+.comment-content {
+  padding: 1rem 0rem;
+  .comment-header {
+    display: flex;
+    align-items: center;
+    .comment-text {
+      padding-left: .9rem;
+      p {
+        margin: 0rem;
+      }
+
+      .reply {
+        padding: .5rem 0;
+        a  {
+        
+          padding-right: 1.5rem;
+          span {
+            padding: 0 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

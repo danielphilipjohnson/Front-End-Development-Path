@@ -1,0 +1,23 @@
+.modal-wrapper {
+  display: flex;
+  justify-content: space-between;
+  .action {
+    padding: 1rem;
+  }
+  .logo {
+    padding: 1rem;
+  }
+}
+
+.modal {
+  min-height: 100vh;
+  width: 100%;
+  background-color: $primary-color;
+  .modal-close {
+    padding: 0.75rem;
+  }
+}
+
+.modal-content {
+  padding: 0px !important;
+}

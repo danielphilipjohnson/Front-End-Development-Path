@@ -1,0 +1,34 @@
+.side-nav {
+  width: 275px;
+}
+
+.sidenav-message {
+  background-color: $primary-color;
+}
+
+
+
+
+footer {
+  background-color: #222326;
+  overflow: hidden;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  .nav-icons {
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: .9rem;
+  }
+}
+
+.bottom-nav {
+  @extend .col;
+  @extend .offset-l1;
+  bottom: 0;
+}
+
+.aside-footer {
+  bottom: 60px;
+}

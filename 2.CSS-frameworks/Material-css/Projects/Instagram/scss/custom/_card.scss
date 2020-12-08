@@ -1,0 +1,108 @@
+.card-post {
+  @extend .card;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 0;
+  .card-header {
+    padding: 0 1rem;
+    margin: 1rem;
+    .username {
+      margin-left: 0.5rem;
+    }
+  }
+  .card-image {
+    border-radius: 0;
+    img {
+      border-radius: inherit;
+    }
+  }
+  .card-content {
+    padding: 0.95rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+}
+
+.card-explore {
+  @extend .card;
+
+  box-shadow: none;
+  .card-image {
+    img {
+      border-radius: 0;
+    }
+
+    .card-reveal.card-transparent {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  .card-reveal-icons {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+.card-user {
+  @extend .card;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0;
+  .card-header  {
+    padding: 1rem;
+    .profile {
+      align-items: center;
+      display: flex;
+      &-img-container {
+        min-width: 30%;
+      }
+      
+      &-username-container {
+        width: 70%;
+      }
+    }
+  }
+  
+ &-buttons {
+    padding: 0.5rem 2rem;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-around;
+  }
+  &-stats {
+    padding: 0rem 2rem;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    p {
+      padding: 0 2.5rem;
+    }
+  }
+
+}
+
+
+.card-user-image {
+  @extend .card;
+  border: none;
+  img {
+    border-radius: 0;
+  }
+  .card-reveal-icons {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}

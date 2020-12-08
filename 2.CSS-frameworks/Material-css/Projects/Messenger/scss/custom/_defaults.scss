@@ -1,0 +1,9 @@
+body {
+  background-color: $body-bg;
+}
+
+nav {
+  background-color:$nav-bg;
+  display: flex;
+  justify-content: space-around;
+}

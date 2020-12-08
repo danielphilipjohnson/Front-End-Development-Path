@@ -1,0 +1,7 @@
+.carousel-music {
+  @extend .carousel;
+  height: 270px;
+  .carousel-item {
+    top: -20px;
+  }
+}
