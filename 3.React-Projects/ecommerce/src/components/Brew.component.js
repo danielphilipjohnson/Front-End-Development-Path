@@ -10,7 +10,7 @@ import {
   Mask,
   IconButton,
 } from "gestalt";
-
+import { calculatePrice, setCart, getCart } from "../utils";
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
@@ -33,6 +33,7 @@ const BrewComponent = ({ match }) => {
         }
       });
       setCartItems(updateCart);
+      setCart(updateCart);
     } else {
       const { _id, name, image, price } = brew;
       const newCartItem = {
@@ -44,6 +45,7 @@ const BrewComponent = ({ match }) => {
       };
 
       setCartItems([...cartItems, newCartItem]);
+      setCart([...cartItems, newCartItem]);
     }
   };
 
@@ -76,6 +78,7 @@ const BrewComponent = ({ match }) => {
 
   useEffect(() => {
     graph();
+    setCartItems(getCart());
   }, []);
   return (
     <Box
@@ -186,7 +189,7 @@ const BrewComponent = ({ match }) => {
                   <Text color="red">Please select some items</Text>
                 )}
               </Box>
-              <Text size="lg">Total: $3.99</Text>
+              <Text size="lg">Total: {calculatePrice(cartItems)}</Text>
               <Text>
                 <Link to="/checkout">Checkout</Link>
               </Text>
