@@ -1,16 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Box, Heading, Text, Image, Card, Button, Mask } from "gestalt";
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  Card,
+  Button,
+  Mask,
+  IconButton,
+} from "gestalt";
 
 import Strapi from "strapi-sdk-javascript/build/main";
 const apiUrl = process.env.API_URL || "http://localhost:1337";
 const strapi = new Strapi(apiUrl);
 
 const BrewComponent = ({ match }) => {
-  console.log(match.params.brandId);
   const [brews, setBrews] = useState([]);
   const [brand, setBrand] = useState("");
   const [cartItems, setCartItems] = useState([]);
+
+  const addToCart = (brew) => {
+    const existsInCart = cartItems.find((item) => item._id === brew._id);
+
+    if (existsInCart) {
+      const updateCart = cartItems.map((item) => {
+        if (item._id === brew._id) {
+          const newItem = item.quantity + 1;
+          return { ...item, quantity: newItem };
+        } else {
+          return item;
+        }
+      });
+      setCartItems(updateCart);
+    } else {
+      const { _id, name, image, price } = brew;
+      const newCartItem = {
+        _id,
+        name,
+        image,
+        price,
+        quantity: 1,
+      };
+      const updatedCartItem = cartItems.concat(...brew, newCartItem);
+
+      setCartItems(updatedCartItem);
+    }
+  };
 
   const graph = async () => {
     try {
@@ -94,7 +130,11 @@ const BrewComponent = ({ match }) => {
                   <Text color="orchid">${brew.price}</Text>
                   <Box marginTop={2}>
                     <Text bold size="xl">
-                      <Button color="blue" text="Add to Cart" />
+                      <Button
+                        onClick={() => addToCart(brew)}
+                        color="blue"
+                        text="Add to Cart"
+                      />
                     </Text>
                   </Box>
                 </Box>
@@ -103,8 +143,8 @@ const BrewComponent = ({ match }) => {
           ))}
         </Box>
       </Box>
-      {/* user cart */}
-      <Box marginTop={2} marginLeft={8}>
+      {/* User Cart */}
+      <Box alignSelf="end" marginTop={2} marginLeft={8}>
         <Mask shape="rounded" wash>
           <Box
             display="flex"
@@ -112,12 +152,29 @@ const BrewComponent = ({ match }) => {
             alignItems="center"
             padding={2}
           >
+            {/* User Cart Heading */}
             <Heading align="center" size="md">
-              Your cart
+              Your Cart
             </Heading>
             <Text color="gray" italic>
               {cartItems.length} items selected
             </Text>
+
+            {/* Cart Items */}
+            {cartItems.map((item) => (
+              <Box key={item._id} display="flex" alignItems="center">
+                <Text>
+                  {item.name} x {item.quantity} - $
+                  {(item.quantity * item.price).toFixed(2)}
+                </Text>
+                <IconButton
+                  accessibilityLabel="Delete Item"
+                  icon="cancel"
+                  size="sm"
+                  iconColor="red"
+                />
+              </Box>
+            ))}
 
             <Box
               display="flex"
@@ -130,7 +187,7 @@ const BrewComponent = ({ match }) => {
                   <Text color="red">Please select some items</Text>
                 )}
               </Box>
-              <Text size="lg">total: $3.99</Text>
+              <Text size="lg">Total: $3.99</Text>
               <Text>
                 <Link to="/checkout">Checkout</Link>
               </Text>
