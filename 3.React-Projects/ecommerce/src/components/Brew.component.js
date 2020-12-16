@@ -49,6 +49,15 @@ const BrewComponent = ({ match }) => {
     }
   };
 
+  const deleteItemFromCart = (itemToDeleteId) => {
+    const filteredItems = cartItems.filter(
+      (item) => item._id !== itemToDeleteId
+    );
+
+    setCartItems(filteredItems);
+    setCart(filteredItems);
+  };
+
   const graph = async () => {
     try {
       const response = await strapi.request("POST", "/graphql", {
@@ -174,6 +183,7 @@ const BrewComponent = ({ match }) => {
                   icon="cancel"
                   size="sm"
                   iconColor="red"
+                  onClick={() => deleteItemFromCart(item._id)}
                 />
               </Box>
             ))}
