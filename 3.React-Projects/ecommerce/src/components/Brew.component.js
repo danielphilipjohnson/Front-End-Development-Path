@@ -42,9 +42,8 @@ const BrewComponent = ({ match }) => {
         price,
         quantity: 1,
       };
-      const updatedCartItem = cartItems.concat(...brew, newCartItem);
 
-      setCartItems(updatedCartItem);
+      setCartItems([...cartItems, newCartItem]);
     }
   };
 
