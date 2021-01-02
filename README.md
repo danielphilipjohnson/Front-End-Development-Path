@@ -17,19 +17,8 @@
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/daniel-philip-johnson/">
   <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
   </a>
+  <img alt="GitHub followers" src="https://img.shields.io/github/followers/danielphilipjohnson?style=social">
 </p>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ![Path](https://github.com/danielphilipjohnson/Front-End-Development-Path/blob/master/images/front-end.jpeg)
@@ -39,6 +28,7 @@
 - [Front-End-Development-Path](#front-end-development-path)
 - [![Daniel Philip Johnson header](https://danielphilipjohnson.github.io/)](#)
   - [HTML and CSS](#html-and-css)
+    - [Tools Used](#tools-used)
   - [CSS Frameworks](#css-frameworks)
     - [MaterializeCSS Tools used](#materializecss-tools-used)
     - [MaterializeCSS Projects](#materializecss-projects)
@@ -48,6 +38,24 @@
 
 ## HTML and CSS
 
+### Tools Used
+
+[![Html](https://img.shields.io/badge/HTML5-v5-green?logo=HTML5&color=E34F26&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+ [![CSS3](https://img.shields.io/badge/CSS3-v3-green?logo=CSS3&color=1572B6&style=for-the-badge)](https://danielphilipjohnson.github.io/) [![Sass](https://img.shields.io/badge/Sass-v4.5.3-green?logo=sass&color=CC6699&style=for-the-badge)](https://danielphilipjohnson.github.io/)
+
+Projects
+- Edgeledger
+- Presentation
+- News
+- Portfolio
+- Survey form
+- Product Landing Page
+- Technical Documentation page
+- Personal portfolio SPA
+- Tribute page: Juice Wrld
+- Natours
+- Trillo
+- Nexter
 
 ## CSS Frameworks
 
@@ -72,10 +80,12 @@
 - Weather App
 
 ## Todo
-- CSS Frameworks
-  - Materalize 
+- React
+- 
+- CSS Frameworks 
   - Bootstrap 4
   - Semantic
+  - Tailwind
 - Javascript
 - Package Managers
   - npm
@@ -87,7 +97,7 @@
   - Module Bundle
     - Webpack
     - parcel.js
-- React
+
 - Testing
   - Jasmine
   - Jest
