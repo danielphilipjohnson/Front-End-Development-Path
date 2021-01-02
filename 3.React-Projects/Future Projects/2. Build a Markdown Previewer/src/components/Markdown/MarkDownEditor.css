@@ -1,0 +1,28 @@
+.blog-title {
+  border: none;
+  padding: 10px 0px;
+  font-size: 26px;
+  height: 70px;
+}
+
+.blog-content {
+  border: none;
+  font-style: 17px;
+  line-height: 30px;
+  height: 250px;
+}
+
+.modal {
+  background-color:rgba(3,31,65, .95);
+  margin-top: 4rem;
+  z-index: 9999;
+}
+.modal-dialog {
+  margin: 1.75rem 0;
+}
+
+.user-photo {
+  width: 50px;
+  height: 50px;
+}
+

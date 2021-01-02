@@ -1,0 +1,36 @@
+.profile-img {
+  width: 50px;
+  border-radius: 4px;
+}
+
+.profile-box {
+  width: 75px;
+  height: 79px;
+  background-color: beige;
+  border-radius: 6px;
+}
+
+.profile-letter {
+  margin: 0px 0px 0px 17px;
+  font-size: 4rem;
+  color: #36465d;
+}
+
+
+.card-footer {
+  border: none;
+  background-color: inherit;
+}
+
+.footer-info {
+  color: #8f8f8f;
+  font-weight: bold;
+}
+
+.footer-icons {
+  padding: 2px 5px;
+}
+
+.card-blog {
+  max-width: 35.5rem;
+}
