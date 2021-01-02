@@ -1,0 +1,26 @@
+.drum-display {
+
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to top, #434343, #000000); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to top, #434343, #000000); */
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* width: 75%; */
+  /* margin: 0 1rem 0 0.15rem;
+   */
+  color: white;
+  /* padding: 1rem 0 1rem 0.5rem; */
+  margin: 1rem;
+}
+
+.drum-display__title {
+  margin: 0;
+  padding: 0.5rem;
+  color: #8C2424;
+  background: #0E0E0E;
+}
+
+.drum-display img {
+  width: 100%;
+  height: 250px;
+}
