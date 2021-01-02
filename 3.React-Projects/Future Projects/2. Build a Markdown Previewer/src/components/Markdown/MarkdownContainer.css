@@ -1,0 +1,19 @@
+.post-user {
+  color: #8f8f8f;
+}
+
+.post-user span {
+  font-weight: bold;
+}
+
+
+.post-content {
+  padding: 1.4rem 2.4rem;
+  font-size: 14px;
+  color: #444;
+}
+
+.post-tags {
+  font-size: 14px;
+  color: #8f8f8f;
+}
