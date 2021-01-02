@@ -1,0 +1,120 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="An attempt at a spotify clone">
+        <meta name="keywords" content="HTML, CSS, JavaScript, Music player,
+            spotify-clone, playlists">
+        <meta name="author" content="Daniel Philip Johnson">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Spotify Clone</title>
+    </head>
+    <body>
+        <header>
+            <h1>Spotify Clone</h1>
+            <nav>
+                <ul class="links">
+                    <li>
+                        <a href="http://">🏠 Home</a>
+                    </li>
+                    <li>
+                        <a href="http://">🔍 Search</a>
+                    </li>
+                    <li>
+                        <a href="http://">📚 Library</a>
+                    </li>
+                </ul>
+                <div class="playlists">
+                    <p>Playlist</p>
+                    <ul>
+                        <li><button>+ Create playlist</button>
+                        </li>
+                        <li>
+                            <span>❤️</span>
+                            <a href="http://"> Songs liked</a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="divider">
+                <ul class="users-playlist">
+                    <li>Your playlists</li>
+                </ul>
+                <hr>
+            </nav>
+        </header>
+        <main class="container">
+            <section class="suggestions">
+                <header class="suggestions-header">
+                    <h2>Listened Recently</h2>
+                    <p>View more</p>
+                </header>
+                <div class="card">
+                    <img src="https://dummyimage.com/150x150/000/fff&text=song"
+                        alt="">
+                    <h3>Playlist name</h3>
+                    <p>Description</p>
+                </div>
+                <div class="card">
+                    <img src="https://dummyimage.com/150x150/000/fff&text=song"
+                        alt="">
+                    <h3>Playlist name</h3>
+                    <p>Description</p>
+                </div>
+                <div class="card">
+                    <img src="https://dummyimage.com/150x150/000/fff&text=song"
+                        alt="">
+                    <h3>Playlist name</h3>
+                    <p>Description</p>
+                </div>
+                <div class="card">
+                    <img src="https://dummyimage.com/150x150/000/fff&text=song"
+                        alt="">
+                    <h3>Playlist name</h3>
+                    <p>Description</p>
+                </div>
+                <hr>
+            </section>
+        </main>
+        <footer class="player-bar-container">
+            <div class="player-bar-left">
+                <img src="https://dummyimage.com/150x150/000/fff&text=song"
+                    alt="album name">
+                <div class="song-info">
+                    <a href="http://" class="song-title"><h2>Song Title</h2></a>
+                    <a href="http://" class="artist-name"><h3>Artist Name</h3></a>
+                </div>
+                <div class="control-btn">
+                    <p class="favorite">❤️</p>
+                    <p class="fullscreen">🗔</p>
+                </div>
+            </div>
+            <div class="player-bar-center">
+                <div class="player-control-container">
+                    <ul class="player-control-buttons">
+                        <li class="shuffle">🔀</li>
+                        <li class="previous-song">⏮️</li>
+                        <li class="play">🎵</li>
+                        <li class="next-song">⏭️</li>
+                        <li class="repeat">🔁</li>
+                    </ul>
+                </div>
+                <div class="playback-bar">
+                    <span class="start-time">0.00</span>
+                    <progress max="100" value="50"></progress>
+                    <span class="end-time">3.00</span>
+                </div>
+            </div>
+            <div class="player-bar-right">
+                <div class="more-controls">
+                    <div class="song-list">
+                        <p>🎵</p>
+                    </div>
+                    <div class="connect-device">📱</div>
+                    <div class="volume-bar">
+                        <p class="icon">🔉</p>
+                        <progress class="range" min="0" max="100" value="50"></progress>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
