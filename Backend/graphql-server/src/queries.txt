@@ -1,0 +1,46 @@
+// built one that replicates github
+
+//  mimic api https://pokeapi.co/
+
+query {
+  users {
+    id
+    name
+    email
+    age
+  }
+}
+
+
+
+mutation {
+  createUser(id: 3, name: "Robert", email: "robert@gmail.com", age: 21) {
+    id
+    name
+    email
+    age
+  }
+}
+
+// implement edit and delete
+
+
+
+
+
+// subscriptions
+// https://hackernoon.com/from-zero-to-graphql-subscriptions-416b9e0284f3
+subscription {
+  users {
+    id
+    name
+    email
+    age
+  }
+}
+
+
+// https://www.freecodecamp.org/news/learn-how-to-use-react-and-graphql-to-make-a-full-stack-social-network/
+// https://www.freecodecamp.org/news/why-graphql-is-the-future-of-apis-6a900fb0bc81/
+
+// https://www.freecodecamp.org/news/learn-how-to-use-react-and-graphql-to-make-a-full-stack-social-network/
