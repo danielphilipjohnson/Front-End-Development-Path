@@ -3,7 +3,11 @@ import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { fab } from "@fortawesome/free-brands-svg-icons"
+import { library } from "@fortawesome/fontawesome-svg-core"
+
 import {
   faGithubAlt,
   faTwitter,
@@ -13,9 +17,17 @@ import {
 } from "@fortawesome/free-brands-svg-icons"
 
 import { faUser } from "@fortawesome/free-regular-svg-icons"
+library.add(
+  fab,
+  faGithubAlt,
+  faTwitter,
+  faLinkedinIn,
+  faStackOverflow,
+  faCodepen
+)
 
 function Header({ siteTitle }) {
-  const { site, profilePhoto } = useStaticQuery(
+  const { site, profilePhoto, allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
         site {
@@ -23,11 +35,13 @@ function Header({ siteTitle }) {
             title
             description
             profileImage
-            githubLink
-            twitterLink
-            linkedinLink
-            codepenLink
-            stackoverflowLink
+            socials {
+              link
+              FontAwesomeIcon {
+                logo
+                type
+              }
+            }
           }
         }
         profilePhoto: file(relativePath: { eq: "profile.png" }) {
@@ -37,11 +51,26 @@ function Header({ siteTitle }) {
             }
           }
         }
+        allMarkdownRemark(
+          filter: { id: { eq: "f5d851a1-6e19-55be-bf5f-8482a9468e4e" } }
+        ) {
+          totalCount
+          edges {
+            node {
+              id
+              frontmatter {
+                title
+                date(formatString: "DD MMMM, YYYY")
+                slug
+              }
+              excerpt
+            }
+          }
+        }
       }
     `
   )
-  console.log(profilePhoto)
-
+  console.log(allMarkdownRemark)
   return (
     <header className="header text-center">
       <h1 className="blog-name pt-lg-4 mb-0">
@@ -76,51 +105,39 @@ function Header({ siteTitle }) {
             </div>
 
             <ul className="social-list list-inline py-3 mx-auto">
-              <li className="list-inline-item">
-                <a href={site.siteMetadata.twitterLink}>
-                  <i className="fab fa-twitter fa-fw"></i>
-                  <FontAwesomeIcon icon={faTwitter} swapOpacity />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href={site.siteMetadata.faLinkedin}>
-                  <FontAwesomeIcon icon={faLinkedinIn} inverse />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href={site.siteMetadata.githubLink}>
-                  <FontAwesomeIcon icon={faGithubAlt} />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href={site.siteMetadata.githubLink}>
-                  <FontAwesomeIcon icon={faStackOverflow} />
-                </a>
-              </li>
-              <li className="list-inline-item">
-                <a href={site.siteMetadata.stackoverflowLink}>
-                  <FontAwesomeIcon icon={faCodepen} />
-                </a>
-              </li>
+              {site.siteMetadata.socials.map(social => {
+                return (
+                  <li className="list-inline-item" key={social.link}>
+                    <a href={social.link}>
+                      <FontAwesomeIcon
+                        icon={[
+                          `${social.FontAwesomeIcon.type}`,
+                          `${social.FontAwesomeIcon.logo}`,
+                        ]}
+                      />
+                    </a>
+                  </li>
+                )
+              })}
             </ul>
             <hr />
           </div>
 
           <ul className="navbar-nav flex-column text-left">
-            {/* <li className="nav-item active">
+            <li className="nav-item active">
               <a className="nav-link" href="/">
                 <i className="fas fa-home fa-fw mr-2"></i>Blog Home
                 <span className="sr-only">(current)</span>
               </a>
-            </li> */}
-            {/* <li className="nav-item">
-              <a className="nav-link" href="/">
+            </li>
+            <li className="nav-item">
+              {/* <a className="nav-link" href="/">
                 <i className="fas fa-bookmark fa-fw mr-2"></i>Blog Post
-              </a>{" "}
-              <a className="nav-link" href="/">
+              </a> */}
+              <Link to="/about" className="nav-link">
                 <i className="fas fa-user fa-fw mr-2"></i>About Me
-              </a>
-            </li> */}
+              </Link>
+            </li>
             <li className="nav-item">
               <Link to={"/about"} className="nav-link">
                 <FontAwesomeIcon icon={faUser} className="mr-2" />

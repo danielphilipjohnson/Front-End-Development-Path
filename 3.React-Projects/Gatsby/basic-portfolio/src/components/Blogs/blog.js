@@ -8,7 +8,7 @@ function Blog({ blog }) {
         <img
           className="mr-3 img-fluid post-thumb d-none d-md-flex"
           src={image}
-          alt="image"
+          alt="blog about"
         />
         <div className="media-body">
           <h3 className="title mb-1">
@@ -18,7 +18,7 @@ function Blog({ blog }) {
             <span className="date">{datePublish}</span>
             <span className="time">{lengthToRead} min read</span>
             <span className="comment">
-              <a href="#">8 comments</a>
+              <a href="/">8 comments</a>
             </span>
           </div>
           <div className="intro">{body}</div>

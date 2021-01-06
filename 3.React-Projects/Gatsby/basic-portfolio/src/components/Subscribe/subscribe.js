@@ -13,7 +13,7 @@ function subscribe() {
         </div>
         <form className="signup-form form-inline justify-content-center pt-3">
           <div className="form-group">
-            <label className="sr-only" for="semail">
+            <label className="sr-only" htmlFor="semail">
               Your email
             </label>
             <input

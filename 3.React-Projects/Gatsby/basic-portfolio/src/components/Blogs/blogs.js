@@ -1,18 +1,6 @@
 import React from "react"
 import Blog from "./blog"
 
-const dummyData = {
-  image: "https://source.unsplash.com/random",
-  title: "Why Every Developer Should Have A Blog",
-  datePublish: "Published 2 days ago",
-  lengthToRead: 5,
-  body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-  link: "#",
-}
-
 const dummyDatablogs = [
   {
     image: "https://source.unsplash.com/random",
@@ -104,13 +92,13 @@ function Blogs() {
         <nav className="blog-nav nav nav-justified my-5">
           <a
             className="nav-link-prev nav-item nav-link d-none rounded-left"
-            href="#"
+            href="/blog-list"
           >
             Previous<i className="arrow-prev fas fa-long-arrow-alt-left"></i>
           </a>
           <a
             className="nav-link-next nav-item nav-link rounded"
-            href="blog-list.html"
+            href="/blog-list"
           >
             Next<i className="arrow-next fas fa-long-arrow-alt-right"></i>
           </a>
