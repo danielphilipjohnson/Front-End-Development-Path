@@ -8,7 +8,9 @@ function About() {
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: { frontmatter: { id: { eq: "1" } } }) {
+        allMarkdownRemark(
+          filter: { frontmatter: { type: { eq: "util" }, id: { eq: "1" } } }
+        ) {
           edges {
             node {
               html

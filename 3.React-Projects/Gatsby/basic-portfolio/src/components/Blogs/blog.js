@@ -11,7 +11,7 @@ function Blog({ blog }) {
         />
         <div className="media-body">
           <h3 className="title mb-1">
-            <a href="blog-post.html">{blog.frontmatter.title}</a>
+            <a href={blog.frontmatter.slug}>{blog.frontmatter.title}</a>
           </h3>
           <div className="meta mb-1">
             <span className="date">{blog.frontmatter.datePublish}</span>

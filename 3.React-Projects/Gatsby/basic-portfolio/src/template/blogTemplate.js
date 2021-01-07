@@ -2,9 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
-export default function Template({ data }) {
-  const { markdownRemark } = data
-  const { frontmatter, html, timeToRead } = markdownRemark
+export default function Template({ data, pageContext }) {
+  // use to cycle blogs
+  const { previous, next } = pageContext
+  const { allMarkdownRemark } = data
+  const { frontmatter, html, timeToRead } = allMarkdownRemark.edges[0].node
+  console.log(previous)
+  console.log(next)
   return (
     <Layout>
       <div className="main-wrapper">
@@ -68,17 +72,38 @@ export default function Template({ data }) {
   )
 }
 
-export const pageQuery = graphql`
+// export const pageQuery = graphql`
+//   query($slug: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       timeToRead
+//       frontmatter {
+//         date(formatString: "MMMM DD, YYYY")
+//         slug
+//         title
+//         cover
+//         imageCredit
+//       }
+//     }
+//   }
+// `
+export const query = graphql`
   query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        slug
-        title
-        cover
-        imageCredit
+    allMarkdownRemark(filter: { frontmatter: { slug: { eq: $slug } } }) {
+      edges {
+        node {
+          excerpt
+          id
+          timeToRead
+          html
+          frontmatter {
+            datePublish
+            id
+            slug
+            title
+            cover
+          }
+        }
       }
     }
   }

@@ -1,8 +1,8 @@
 ---
 id: "6"
 type: "blog"
-slug: "/blogs/about-remote-working"
-title: "About Remote Working"
+slug: "/blogs/10-tips-for-making-a-good-fullstack-developer-even-better "
+title: "10 Tips for Making a Good Fullstack Developer Even Better "
 datePublish: "2021-07-01"
 cover: "https://source.unsplash.com/random"
 imageCredit: "unsplash"

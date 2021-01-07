@@ -1,8 +1,8 @@
 ---
 id: "3"
 type: "blog"
-slug: "/blogs/high-performance-javascript"
-title: "High Performance JavaScript"
+slug: "/blogs/7-answers-to-the-most-frequently-asked-questions-about-js"
+title: "7 Answers to the Most Frequently Asked Questions About Js"
 datePublish: "2021-07-01"
 cover: "https://source.unsplash.com/random"
 imageCredit: "unsplash"
