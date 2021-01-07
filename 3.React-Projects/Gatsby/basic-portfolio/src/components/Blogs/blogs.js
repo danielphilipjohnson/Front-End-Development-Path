@@ -1,92 +1,36 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import Blog from "./blog"
 
-const dummyDatablogs = [
-  {
-    image: "https://source.unsplash.com/random",
-    title: "Why Every Developer Should Have A Blog",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "A Guide to Becoming a Full-Stack Developer",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "High Performance JavaScript",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "Top 5 JavaScript Frameworks",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "Learn React in 24 Hours",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "Top 5 JavaScript Frameworks",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-  {
-    image: "https://source.unsplash.com/random",
-    title: "About Remote Working",
-    datePublish: "Published 2 days ago",
-    lengthToRead: 5,
-    body: `Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-  commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-  Donec quam felis, ultricies...`,
-    link: "#",
-  },
-]
-
 function Blogs() {
+  const { allMarkdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }) {
+          edges {
+            node {
+              excerpt
+              id
+              timeToRead
+              frontmatter {
+                datePublish
+                id
+                slug
+                title
+                cover
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
   return (
     <section className="blog-list px-3 py-5 p-md-5">
       <div className="container">
-        {dummyDatablogs.map(blog => {
-          return <Blog blog={blog} />
+        {allMarkdownRemark.edges.map(blog => {
+          return <Blog key={blog.node.id} blog={blog.node} />
         })}
 
         <nav className="blog-nav nav nav-justified my-5">

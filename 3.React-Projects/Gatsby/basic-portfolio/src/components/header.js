@@ -27,7 +27,7 @@ library.add(
 )
 
 function Header({ siteTitle }) {
-  const { site, profilePhoto, allMarkdownRemark } = useStaticQuery(
+  const { site, profilePhoto } = useStaticQuery(
     graphql`
       query {
         site {
@@ -51,26 +51,9 @@ function Header({ siteTitle }) {
             }
           }
         }
-        allMarkdownRemark(
-          filter: { id: { eq: "f5d851a1-6e19-55be-bf5f-8482a9468e4e" } }
-        ) {
-          totalCount
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                date(formatString: "DD MMMM, YYYY")
-                slug
-              }
-              excerpt
-            }
-          }
-        }
       }
     `
   )
-  console.log(allMarkdownRemark)
   return (
     <header className="header text-center">
       <h1 className="blog-name pt-lg-4 mb-0">
