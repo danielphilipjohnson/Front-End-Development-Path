@@ -1,46 +1,78 @@
-// built one that replicates github
+# documentation
 
-//  mimic api https://pokeapi.co/
+## get users by id
+query {
+  user(id: "b45326a2-cfb4-4fea-a235-9d0bd0645a51"){
+    first_name
+  }
+}
+
+##  get user by univeristy
+query {
+  userByUniversity(university: "Gonzaga University"){
+    first_name
+  }
+}
+
+## get all users
 
 query {
   users {
-    id
-    name
+    first_name
+    last_name
     email
-    age
+    gender
+    language
+    race
+    job_title
+    skills
+    university
   }
 }
 
+## Create a new user
+mutation {
+	createUser(id:"gfdkghdfkjg", first_name:"dsfsdf",
+        last_name:"dsfsdfsdf",
+        email:"dsfsafdsa",
+        gender:"dsfsdf",
+        language:"dsfsa",
+        race:"sdffsadf",
+        job_title:"sadfsdaf",
+        skills:"asdfsdaf",
+        university:"sdafsdaf") {
+    id
+  }
+}
 
+## Update a user
 
 mutation {
-  createUser(id: 3, name: "Robert", email: "robert@gmail.com", age: 21) {
+	updateUser(id:"gfdkghdfkjg", first_name:"dsfsdf",
+        last_name:"dsfsdfsdf",
+        email:"dsfsafdsa",
+        gender:"dsfsdf",
+        language:"dsfsa",
+        race:"sdffsadf",
+        job_title:"sadfsdaf",
+        skills:"asdfsdaf",
+        university:"sdafsdaf") {
     id
-    name
-    email
-    age
   }
 }
 
-// implement edit and delete
+## Delete a user
 
-
-
-
-
-// subscriptions
-// https://hackernoon.com/from-zero-to-graphql-subscriptions-416b9e0284f3
-subscription {
-  users {
-    id
-    name
+mutation {
+  deleteUser(id:"6581b3df-3094-49b7-ade9-f4441155d1be") {
+    first_name
+    last_name
     email
-    age
+    gender
+    language
+    race
+    job_title
+    skills
+    university
   }
 }
-
-
-// https://www.freecodecamp.org/news/learn-how-to-use-react-and-graphql-to-make-a-full-stack-social-network/
-// https://www.freecodecamp.org/news/why-graphql-is-the-future-of-apis-6a900fb0bc81/
-
-// https://www.freecodecamp.org/news/learn-how-to-use-react-and-graphql-to-make-a-full-stack-social-network/

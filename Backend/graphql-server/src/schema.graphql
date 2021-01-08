@@ -1,17 +1,48 @@
 type User {
   id: ID!
-  name: String!
+  first_name: String!
+  last_name: String!
   email: String!
-  age: Int
+  gender: String!
+  language: String!
+  race: String!
+  job_title: String!
+  skills: String!
+  university: String!
 }
 
 type Query {
-  users: [User!]!
+  greeting: String
   user(id: ID!): User!
+  userByUniversity(university: String!): User!
+  users: [User!]!
 }
 
 type Mutation {
-  createUser(id: ID!, name: String!, email: String!, age: Int): User!
-  updateUser(id: ID!, name: String, email: String, age: Int): User!
+  createUser(
+    id: ID!
+    first_name: String!
+    last_name: String!
+    email: String!
+    gender: String!
+    language: String!
+    race: String!
+    job_title: String!
+    skills: String!
+    university: String!
+  ): User!
+
+  updateUser(
+    id: ID!
+    first_name: String!
+    last_name: String!
+    email: String!
+    gender: String!
+    language: String!
+    race: String!
+    job_title: String!
+    skills: String!
+    university: String!
+  ): User!
   deleteUser(id: ID!): User!
 }
