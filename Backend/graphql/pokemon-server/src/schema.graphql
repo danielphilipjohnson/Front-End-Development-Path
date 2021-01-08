@@ -1,0 +1,128 @@
+type Query {
+  hello: String
+  pokemon(id: Int): Pokemon
+  pokemonByName(name: String): Pokemon
+  pokemons: [Pokemon]
+}
+
+type Ability {
+  name: String!
+  url: String!
+}
+
+type Abilities {
+  ability: Ability
+  is_hidden: Boolean
+  slot: Int!
+}
+
+type Forms {
+  name: String!
+  url: String!
+}
+
+type Version {
+  name: String!
+  url: String!
+}
+
+type GameIndices {
+  game_index: Int
+  version: Version
+}
+
+type Move {
+  name: String!
+  url: String!
+}
+
+type MoveLearnMethod {
+  name: String!
+  url: String!
+}
+type VersionGroup {
+  name: String!
+  url: String!
+}
+
+type VersionGroupDetails {
+  level_learned_at: Int
+  move_learn_method: MoveLearnMethod
+  version_group: VersionGroup
+}
+
+type Moves {
+  move: Move
+  version_group_details: [VersionGroupDetails]
+}
+
+type Species {
+  name: String!
+  url: String!
+}
+
+type otherSprites {
+  dream_world: DreamWorld
+  officialArtwork: [OfficialArtwork]
+}
+
+type DreamWorld {
+  front_default: String
+  front_female: String
+}
+
+type OfficialArtwork {
+  front_default: String!
+}
+
+type Sprites {
+  back_default: String
+  back_female: String
+  back_shiny: String
+  back_shiny_female: String
+  front_default: String
+  front_female: String
+  front_shiny: String
+  front_shiny_female: String
+  other: otherSprites
+}
+
+type Stat {
+  name: String
+  url: String
+}
+
+type Stats {
+  base_stat: Int
+  effort: Int
+  stat: Stat
+}
+
+type Type {
+  name: String
+  url: String
+}
+
+type Types {
+  slot: Int
+  type: Type
+}
+
+type Pokemon {
+  abilities: [Abilities]
+  base_experience: Int
+  forms: [Forms]
+  game_indices: [GameIndices]
+  height: Int
+  id: ID!
+  is_default: Boolean
+  location_area_encounters: String
+  moves: [Moves]
+  name: String
+  order: Int
+  species: Species
+  sprites: Sprites
+  stats: [Stats]
+  types: [Types]
+  weight: Int
+}
