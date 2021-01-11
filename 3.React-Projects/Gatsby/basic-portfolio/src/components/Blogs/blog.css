@@ -224,7 +224,14 @@ input[class^="btn-"]:hover {
 #main-footer {
   background: #333;
   color: #fff;
+  padding-left: 321px;
 }
+@media (max-width: 990px) {
+  #main-footer {
+    padding-left: 0;
+  }
+}
+
 #main-footer .footer-top {
   display: flex;
   justify-content: space-between;
@@ -359,7 +366,7 @@ make different types how i make my own npm package
   height: 40px;
   text-align: center;
   font-size: 1.4rem;
-  line-height: 1.75;
+  line-height: 1.45;
   transition: background-color 0.75s;
 }
 .social-icons .nav-item a {

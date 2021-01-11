@@ -1,15 +1,14 @@
 import React from "react"
 
 import { useStaticQuery, graphql } from "gatsby"
-import "./blog.css"
-import Header from "../header"
 
-import Footer from "../Sitewide/Footer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { faFileAlt, faObjectUngroup } from "@fortawesome/free-regular-svg-icons"
 
 import { faMobileAlt, faDesktop } from "@fortawesome/free-solid-svg-icons"
+
+import "./blog.css"
 
 function RecentBlogs() {
   const { allMarkdownRemark } = useStaticQuery(
@@ -39,11 +38,10 @@ function RecentBlogs() {
       }
     `
   )
-  console.log(allMarkdownRemark)
   return (
     <>
       <header id="welcome-section">
-        <div className="header-content">
+        <div className="header-content px-4">
           <h1 className="text-white">I Am Daniel Philip Johnson</h1>
           <h2 className="text-white">
             I'm a React Developer
@@ -60,13 +58,21 @@ function RecentBlogs() {
           </p>
 
           <div className="badge-contact-sm">
-            <a href="https://codepen.io/danielphilipjohnson/" target="_blank">
+            <a
+              href="https://codepen.io/danielphilipjohnson/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/codepen.png"
                 alt="codepen"
               />
             </a>
-            <a href="#" target="_blank">
+            <a
+              href="https://dev.to/danielphilipjohnson"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/dev.webp"
                 alt="dev blog"
@@ -75,6 +81,7 @@ function RecentBlogs() {
             <a
               href="https://www.instagram.com/danielphilipjohnson/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/instagram.jpg"
@@ -84,13 +91,18 @@ function RecentBlogs() {
             <a
               href="https://www.linkedin.com/in/daniel-philip-johnson/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/linkedin.png"
                 alt="linkedin"
               />
             </a>
-            <a href="https://twitter.com/danielp_johnson" target="_blank">
+            <a
+              href="https://twitter.com/danielp_johnson"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/twitter.png"
                 alt="twitter"
@@ -102,6 +114,7 @@ function RecentBlogs() {
               href="https://github.com/danielphilipjohnson/"
               id="profile-link"
               target="_blank"
+              rel="noreferrer"
               className="btn-medium"
             >
               View My Work
@@ -283,7 +296,7 @@ function RecentBlogs() {
         </section>
       </section>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   )
 }

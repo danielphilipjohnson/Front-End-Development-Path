@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Blog from "./blog"
 import Header from "../header"
@@ -50,7 +50,7 @@ function Blogs({ data, pageContext }) {
                 className="nav-link-next nav-item nav-link rounded"
                 href={`/blog/${pageContext.currentPage + 1}`}
               >
-                blog/ Next
+                Next
                 <i className="arrow-next fas fa-long-arrow-alt-right"></i>
               </a>
             )}

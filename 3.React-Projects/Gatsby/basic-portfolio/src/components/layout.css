@@ -8721,6 +8721,7 @@ h6 {
   color: #fff;
   background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg");
 }
+
 .header::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.6);
@@ -8729,6 +8730,12 @@ h6 {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 1017px) {
+  .header::before {
+    position: static;
+  }
 }
 
 .header .blog-name {

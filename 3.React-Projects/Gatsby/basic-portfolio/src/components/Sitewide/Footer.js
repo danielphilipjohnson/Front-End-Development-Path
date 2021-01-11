@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function Footer() {
@@ -8,37 +10,53 @@ function Footer() {
         <div class="footer-top">
           <div class="sitemap">
             <p>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </p>
             <p>
-              <a href="#">Blog</a>
+              <Link to="/blogs">Blogs</Link>
             </p>
             <p>
-              <a href="#">Contact</a>
+              <a href="/contact">Contact</a>
             </p>
           </div>
 
           <ul class="social-icons">
             <li class="nav-item twitter">
-              <a href="https://twitter.com/danielp_johnson">
+              <a
+                href="https://twitter.com/danielp_johnson"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={["fab", "twitter"]} />
               </a>
             </li>
 
             <li class="nav-item facebook">
-              <a href="https://www.facebook.com/DanielPhilipJohnson">
+              <a
+                href="https://www.facebook.com/DanielPhilipJohnson"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={["fab", "facebook"]} />
               </a>
             </li>
 
             <li class="nav-item github">
-              <a href="https://github.com/danielphilipjohnson/">
+              <a
+                href="https://github.com/danielphilipjohnson/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={["fab", "github"]} />
               </a>
             </li>
 
             <li class="nav-item linkedin">
-              <a href="https://www.linkedin.com/in/daniel-philip-johnson/">
+              <a
+                href="https://www.linkedin.com/in/daniel-philip-johnson/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={["fab", "linkedin"]} />
               </a>
             </li>
@@ -46,9 +64,19 @@ function Footer() {
         </div>
         <div class="footer-bottom">
           <p>
-            Copyright &copy; 2020. All Rights Reserved | Designed and built with{" "}
-            <span class="heart">❤️</span>
-            by <a href="">Daniel Philip Johnson </a>
+            Copyright © {new Date().getFullYear()}. All Rights Reserved |
+            Designed and built with{" "}
+            <span class="heart" role="img" aria-label="love">
+              ❤️
+            </span>
+            by{" "}
+            <a
+              href="https://twitter.com/danielp_johnson"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Daniel Philip Johnson
+            </a>
           </p>
         </div>
       </div>
