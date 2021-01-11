@@ -3,13 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import "./404.css"
-import { Controls, PlayState, Tween } from "react-gsap"
+import { Tween } from "react-gsap"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <div className="container not-found-container p-4">
-      <div class="row">
-        <div class="col-md-6 align-self-center">
+      <div className="row">
+        <div className="col-md-6 align-self-center">
           <svg
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
@@ -770,7 +770,7 @@ const NotFoundPage = () => (
             </g>
           </svg>
         </div>
-        <div class="col-md-6 align-self-center ">
+        <div className="col-md-6 align-self-center ">
           <h1>404</h1>
           <h2>UH OH! You're lost.</h2>
           <p>
@@ -778,7 +778,7 @@ const NotFoundPage = () => (
             mystery. But you can click the button below to go back to the
             homepage.
           </p>
-          <button class="btn green">HOME</button>
+          <button className="btn green">HOME</button>
         </div>
       </div>
     </div>

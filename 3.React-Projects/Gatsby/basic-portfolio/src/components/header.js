@@ -58,7 +58,7 @@ function Header({ siteTitle }) {
   return (
     <header className="header text-center">
       <h1 className="blog-name pt-lg-4 mb-0">
-        <a href="index.html">{siteTitle}</a>
+        <Link to="/">{siteTitle}</Link>
       </h1>
 
       <nav className="navbar navbar-expand-lg navbar-dark">
@@ -124,7 +124,7 @@ function Header({ siteTitle }) {
             <li className="nav-item">
               <Link to={"/about"} className="nav-link">
                 <FontAwesomeIcon icon={faUser} className="mr-2" />
-                Find out more about me
+                About Me
               </Link>
             </li>
           </ul>

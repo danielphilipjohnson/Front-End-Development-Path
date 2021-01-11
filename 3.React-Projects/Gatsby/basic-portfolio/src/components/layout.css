@@ -6782,7 +6782,11 @@ button.bg-dark:focus {
 .my-5 {
   margin-bottom: 3rem !important;
 }
-.ml-5,
+.ml-5,/**
+* Implement Gatsby's Node APIs in this file.
+*
+* See: https://www.gatsbyjs.com/docs/node-apis/
+*/
 .mx-5 {
   margin-left: 3rem !important;
 }
@@ -8742,6 +8746,8 @@ h6 {
   font-weight: bold;
   font-size: 1.5rem;
   color: #fff;
+  z-index: 9999;
+  position: relative;
 }
 .header .blog-name a {
   color: #fff;
@@ -8902,7 +8908,7 @@ h6 {
   display: none;
 }
 .blog-nav .nav-link {
-  background: #5fcb71;
+  background: #2c0230;
   color: #fff;
   font-size: 1rem;
   padding: 1rem;

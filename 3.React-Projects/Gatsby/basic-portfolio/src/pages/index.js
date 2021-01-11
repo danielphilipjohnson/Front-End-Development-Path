@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import RecentBlogs from "../components/Blogs/recent-blogs"
+import RecentBlogs from "../components/blogs/recent-blogs"
 
 const IndexPage = ({ data }) => {
   return (

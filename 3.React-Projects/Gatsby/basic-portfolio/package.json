@@ -31,7 +31,9 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "gsap": "^3.5.1",
+    "prettier": "2.2.1",
+    "react-gsap": "^2.2.1"
   },
   "keywords": [
     "gatsby"

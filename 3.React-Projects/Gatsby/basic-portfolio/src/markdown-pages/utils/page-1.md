@@ -59,6 +59,7 @@ I’m currently taking Testing Javscript with Kent C. Dodds.
 
 
 ### Projects
+
 #### 1. Flexbox Edge Ledger: 
 <a href="https://codepen.io/danielphilipjohnson/pen/JjXbpXa?editors=1010"><img src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/portfolio-items/Welcome-To-Edge-Ledger-desktop.png" class="img-fluid"></a>
 

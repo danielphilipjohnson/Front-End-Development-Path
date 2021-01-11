@@ -1,43 +1,39 @@
 import React from "react"
 
-import { useStaticQuery, graphql } from "gatsby"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import { faFileAlt, faObjectUngroup } from "@fortawesome/free-regular-svg-icons"
 
 import { faMobileAlt, faDesktop } from "@fortawesome/free-solid-svg-icons"
 
-import "./blog.css"
-
 function RecentBlogs() {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(
-          sort: { order: DESC, fields: frontmatter___date }
-          limit: 20
-          skip: 0
-          filter: { frontmatter: { type: { eq: "blog" } } }
-        ) {
-          edges {
-            node {
-              excerpt
-              id
-              timeToRead
-              frontmatter {
-                date
-                id
-                slug
-                title
-                cover
-              }
-            }
-          }
-        }
-      }
-    `
-  )
+  // const { allMarkdownRemark } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       allMarkdownRemark(
+  //         sort: { order: DESC, fields: frontmatter___date }
+  //         limit: 20
+  //         skip: 0
+  //         filter: { frontmatter: { type: { eq: "blog" } } }
+  //       ) {
+  //         edges {
+  //           node {
+  //             excerpt
+  //             id
+  //             timeToRead
+  //             frontmatter {
+  //               date
+  //               id
+  //               slug
+  //               title
+  //               cover
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
   return (
     <>
       <header id="welcome-section">
