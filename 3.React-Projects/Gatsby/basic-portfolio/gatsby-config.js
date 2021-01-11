@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Portfolio Basic`,
+    title: `Daniel's React Portfolio`,
     description: `React Developer for CodeCareer. My goal is to help others get their first programming job. Lets talk: #reactjs #js #css`,
     author: `@gatsbyjs`,
     profileImage:
