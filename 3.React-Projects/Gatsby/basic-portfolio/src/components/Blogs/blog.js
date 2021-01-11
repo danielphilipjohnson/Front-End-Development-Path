@@ -14,7 +14,7 @@ function Blog({ blog }) {
             <a href={blog.frontmatter.slug}>{blog.frontmatter.title}</a>
           </h3>
           <div className="meta mb-1">
-            <span className="date">{blog.frontmatter.datePublish}</span>
+            <span className="date">{blog.frontmatter.date}</span>
             <span className="time">{blog.timeToRead} min read</span>
             <span className="comment">
               <a href="/">8 comments</a>

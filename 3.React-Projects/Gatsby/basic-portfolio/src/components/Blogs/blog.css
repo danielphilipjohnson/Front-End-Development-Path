@@ -1,0 +1,1938 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+/* img {
+  width: 100%;
+} */
+
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.btn-main,
+.btn-medium,
+.btn-light,
+.btn-dark {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn-main {
+  color: #fff;
+  background-color: #9b3cab;
+}
+
+.btn-medium {
+  color: #fff;
+  background-color: #3ba6b7;
+  font-weight: bolder;
+}
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333;
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #9b3cab;
+}
+
+.bg-main {
+  background: #9b3cab;
+  color: #fff;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000;
+}
+
+.bg-medium {
+  background: #3ba6b7;
+  color: #fff;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: #9b3cab;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.heart {
+  color: red;
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  transition: transform 0.5s;
+}
+.heart:hover {
+  transform: scale(2);
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  padding: 0 1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.br {
+  border-right: 2px solid #fff;
+  transform: rotate(23deg);
+  margin-left: 1.55rem;
+}
+
+#navbar,
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  padding: 0.55rem;
+}
+#navbar.top,
+#main-nav.top {
+  background: none;
+}
+#navbar ul,
+#main-nav ul {
+  display: flex;
+}
+#navbar li,
+#main-nav li {
+  padding: 1rem 1.5rem;
+}
+#navbar a,
+#main-nav a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+}
+#navbar a:hover,
+#main-nav a:hover {
+  border-color: #3ba6b7;
+}
+#navbar a.current,
+#main-nav a.current {
+  border-color: #9b3cab;
+}
+
+#main-footer {
+  background: #333;
+  color: #fff;
+}
+#main-footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8b8a8a;
+  padding: 1rem 0;
+  /* LINKS */
+}
+#main-footer .footer-top .sitemap {
+  display: flex;
+}
+#main-footer .footer-top .sitemap > * {
+  padding: 1rem;
+}
+#main-footer .footer-top .sitemap > * a {
+  color: #fff;
+  font-weight: 800;
+  border-bottom: 3px transparent solid;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+}
+#main-footer .footer-top .sitemap > * a:hover {
+  border-color: #3ba6b7;
+}
+#main-footer .footer-top .sitemap > * a .heart {
+  color: red;
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  transition: transform 0.5s;
+}
+#main-footer .footer-top .sitemap > * a .heart:hover {
+  transform: scale(2);
+}
+#main-footer .footer-top .social .fab {
+  margin-right: 1rem;
+  border: 2px #fff solid;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0.5rem;
+}
+#main-footer .footer-top .social .fab:hover {
+  background: #9b3cab;
+}
+#main-footer .footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+#main-footer .footer-bottom a {
+  color: #fff;
+  transition: color 0.5s;
+}
+#main-footer .footer-bottom a:hover {
+  color: #3ba6b7;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* TODO
+
+make different types how i make my own npm package
+
+*/
+.facebook:hover {
+  background-color: #4267b2;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+}
+
+.instagram:hover {
+  background-color: #c13584;
+}
+
+.linkedin:hover {
+  background-color: #2867b2;
+}
+
+.github:hover {
+  background-color: #000;
+}
+
+.pinterest:hover {
+  background-color: #e60023;
+}
+
+.google:hover {
+  background-color: #f4b400;
+}
+
+.rss:hover {
+  background-color: #e58738;
+}
+
+.email:hover {
+  background-color: #2da112;
+}
+
+.snapchat:hover {
+  background-color: #fffc00;
+}
+
+.podcast:hover {
+  background-color: #8f35cb;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+}
+.social-icons .nav-item {
+  padding: 7px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.75;
+  transition: background-color 0.75s;
+}
+.social-icons .nav-item a {
+  color: #fff;
+}
+.social-icons .nav-item.facebook:hover {
+  background-color: #4267b2;
+}
+.social-icons .nav-item.twitter:hover {
+  background-color: #1da1f2;
+}
+.social-icons .nav-item.youtube:hover {
+  background-color: #ff0000;
+}
+.social-icons .nav-item.instagram:hover {
+  background-color: #c13584;
+}
+.social-icons .nav-item.linkedin:hover {
+  background-color: #2867b2;
+}
+.social-icons .nav-item.github:hover {
+  background-color: #000;
+}
+.social-icons .nav-item.pinterest:hover {
+  background-color: #e60023;
+}
+.social-icons .nav-item.google:hover {
+  background-color: #f4b400;
+}
+.social-icons .nav-item.rss:hover {
+  background-color: #e58738;
+}
+.social-icons .nav-item.email:hover {
+  background-color: #2da112;
+}
+.social-icons .nav-item.snapchat:hover {
+  background-color: #fffc00;
+}
+.social-icons .nav-item.podcast:hover {
+  background-color: #8f35cb;
+}
+
+.badge-contact-sm {
+  margin-bottom: 2rem;
+}
+.badge-contact-sm img {
+  width: 50px;
+  background-color: #fff;
+  padding: 0.55rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.badge-contact-md {
+  margin-bottom: 2rem;
+}
+.badge-contact-md img {
+  width: 100px;
+  background-color: #fff;
+  padding: 0.55rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.badge-contact-lg {
+  margin-bottom: 2rem;
+}
+.badge-contact-lg img {
+  width: 200px;
+  background-color: #fff;
+  padding: 0.55rem;
+  margin-right: 0.5rem;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#about-information {
+  background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+}
+#about-information .section-title {
+  color: #fff;
+}
+#about-information .about-info {
+  display: grid;
+  grid-template-areas: "bioimage bio";
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+#about-information .about-info img {
+  border-radius: 10px;
+}
+#about-information .about-info p i {
+  color: #766dff;
+  margin-right: 0.5rem;
+}
+#about-information .bio-image {
+  grid-area: bioimage;
+}
+#about-information .bio {
+  grid-area: bio;
+  padding: 2rem;
+}
+#about-information .bio h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+#about-information .bio h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+#about-information .bio h3 {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+#about-information .bio .bio-text {
+  margin-bottom: 1.5rem;
+}
+#about-information .bio p {
+  color: #777777;
+}
+#about-information .bio p i {
+  margin-bottom: 1.5rem;
+}
+
+#about-skills {
+  background-color: #4e4949;
+}
+#about-skills .section-title {
+  color: #fff;
+}
+#about-skills .skills {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+#about-skills .skills img {
+  width: 150px;
+  height: 150px;
+  padding: 2rem;
+}
+
+#about-logos .about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+#about-logos .about-logos img {
+  width: 70%;
+}
+
+#about-testimonials {
+  padding-top: 4rem;
+}
+#about-testimonials .testimonials {
+  background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg");
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 0.5rem;
+}
+#about-testimonials .testimonials > * {
+  z-index: 1000;
+  color: #fff;
+}
+#about-testimonials .testimonials div {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+#about-testimonials .testimonials div .fa-star,
+#about-testimonials .testimonials div .fa-star-half {
+  color: #daa520;
+  font-size: 2rem;
+}
+#about-testimonials .testimonials div i {
+  font-size: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+#about-testimonials .testimonials ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+#about-testimonials .testimonials p {
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+#about-testimonials .testimonials img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+#about-testimonials .testimonials::before {
+  content: "";
+  /* hides the text*/
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#contact-form .text-fields {
+  display: grid;
+  grid-template-areas: "name email" "subject phone" "message message";
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+#contact-form .text-fields .name-input {
+  grid-area: name;
+}
+#contact-form .text-fields .subject-input {
+  grid-area: subject;
+}
+#contact-form .text-fields .email-input {
+  grid-area: email;
+}
+#contact-form .text-fields .phone-input {
+  grid-area: phone;
+}
+#contact-form .text-fields .message-input {
+  grid-area: message;
+  height: 100px;
+}
+#contact-form .text-fields .text-input {
+  padding: 0.5rem 1rem;
+}
+
+#contact-form button[type="submit"] {
+  width: 50%;
+}
+
+#contact-info .contact-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+#contact-tagline {
+  background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+  color: #fff;
+}
+#contact-tagline h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+
+#home-tools .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+#home-tools .specials img {
+  width: 160px;
+  height: 145px;
+  margin-bottom: 0.5rem;
+}
+#home-tools .specials h3 {
+  margin-bottom: 0.5rem;
+}
+
+#home-stats .stats {
+  background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg");
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+#home-stats .stats .stat-item {
+  display: flex;
+  z-index: 100;
+}
+#home-stats .stats .stat-item ul {
+  width: 100%;
+  padding: 1rem;
+}
+#home-stats .stats li {
+  line-height: 2;
+  min-width: 250px;
+  color: #fff;
+}
+#home-stats .stats li.stats-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+#home-stats .stats li.stats-number {
+  font-size: 3.7rem;
+  font-weight: bolder;
+}
+#home-stats .stats div {
+  padding: 3rem 0;
+}
+#home-stats .stats::before {
+  content: "";
+  /* hides the text*/
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#home-services .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center;
+}
+#home-services .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background: #9b3cab;
+  color: #fff;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1rem;
+  transition: all 1s;
+}
+#home-services .process-icon {
+  background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+  border-radius: 50%;
+  color: #fff;
+  padding: 2rem;
+  width: 116px;
+  height: 116px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  transition: all 1s;
+}
+#home-services .process-icon:hover {
+  background: #9b3cab;
+  background: linear-gradient(to bottom left, #0000a3, #40b1df);
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+#home-services .process-icon:hover .process-step {
+  background: #333;
+  color: #fff;
+}
+
+#welcome-section {
+  background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg")
+    no-repeat center right/cover;
+  height: 100vh;
+  color: #fff;
+  position: relative;
+}
+#welcome-section .header-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#welcome-section .header-content > * {
+  z-index: 9999;
+}
+#welcome-section .header-content h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+}
+#welcome-section::before {
+  content: "";
+  /* hides the text*/
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#welcome-inner {
+  background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg")
+    no-repeat 20% 30% / cover;
+  height: 5.5rem;
+  border-bottom: 3px solid #9b3cab;
+}
+
+@media (max-width: 1000px) {
+  #welcome-section {
+    height: 100%;
+    padding-bottom: 2rem;
+  }
+  #welcome-section .header-content {
+    padding-top: 7rem;
+  }
+  #welcome-section .header-content h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  #welcome-section .header-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+  #home-tools .specials,
+  #home-services .process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #home-stats .stats .stat-item .br {
+    display: none;
+  }
+  #about-information .bio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  #about-information .bio h2 {
+    margin-bottom: 1rem;
+  }
+  #about-information .about-info {
+    padding: 0.5rem;
+    grid-template-areas: "bioimage" "bio";
+  }
+  #about-skills .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #about-testimonials .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #about-testimonials .testimonials div {
+    border-right: 1px solid rebeccapurple;
+  }
+}
+
+@media (min-width: 772px) and (max-width: 1000px) {
+  #welcome-section {
+    height: 100%;
+  }
+  #welcome-section .header-content {
+    padding-top: 5rem;
+  }
+  #about-skills .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1400px) {
+  #about-skills .skills {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  #navbar,
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+  }
+  #navbar li,
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.6;
+    background: #fff;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  h2,
+  h3,
+  h4 {
+    text-transform: uppercase;
+  }
+
+  /* img {
+    width: 100%;
+  } */
+
+  .container {
+    max-width: 1280px;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .btn-main,
+  .btn-medium,
+  .btn-light,
+  .btn-dark {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-main {
+    color: #fff;
+    background-color: #9b3cab;
+  }
+
+  .btn-medium {
+    color: #fff;
+    background-color: #3ba6b7;
+    font-weight: bolder;
+  }
+
+  .btn-light {
+    color: #333;
+    background-color: #f4f4f4;
+  }
+
+  .btn-dark {
+    color: #f4f4f4;
+    background-color: #333;
+  }
+
+  button[class^="btn-"]:hover,
+  a[class^="btn-"]:hover,
+  input[class^="btn-"]:hover {
+    background-color: #9b3cab;
+  }
+
+  .bg-main {
+    background: #9b3cab;
+    color: #fff;
+  }
+
+  .bg-dark {
+    background: #333;
+    color: #fff;
+  }
+
+  .bg-light {
+    background: #f4f4f4;
+    color: #000;
+  }
+
+  .bg-medium {
+    background: #3ba6b7;
+    color: #fff;
+  }
+
+  .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .py-1 {
+    padding: 1rem 0;
+  }
+
+  .py-2 {
+    padding: 2rem 0;
+  }
+
+  .py-3 {
+    padding: 3rem 0;
+  }
+
+  .py-4 {
+    padding: 4rem 0;
+  }
+
+  .my-1 {
+    margin: 1rem 0;
+  }
+
+  .my-2 {
+    margin: 2rem 0;
+  }
+
+  .my-3 {
+    margin: 3rem 0;
+  }
+
+  .my-4 {
+    margin: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+  }
+
+  .bottom-line {
+    height: 2px;
+    width: 3rem;
+    background: #9b3cab;
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+  .heart {
+    color: red;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    transition: transform 0.5s;
+  }
+  .heart:hover {
+    transform: scale(2);
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+    padding: 0 1rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .br {
+    border-right: 2px solid #fff;
+    transform: rotate(23deg);
+    margin-left: 1.55rem;
+  }
+
+  #navbar,
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    padding: 0.55rem;
+  }
+  #navbar.top,
+  #main-nav.top {
+    background: none;
+  }
+  #navbar ul,
+  #main-nav ul {
+    display: flex;
+  }
+  #navbar li,
+  #main-nav li {
+    padding: 1rem 1.5rem;
+  }
+  #navbar a,
+  #main-nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+  }
+  #navbar a:hover,
+  #main-nav a:hover {
+    border-color: #3ba6b7;
+  }
+  #navbar a.current,
+  #main-nav a.current {
+    border-color: #9b3cab;
+  }
+
+  #main-footer {
+    background: #333;
+    color: #fff;
+  }
+  #main-footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #8b8a8a;
+    padding: 1rem 0;
+    /* LINKS */
+  }
+  #main-footer .footer-top .sitemap {
+    display: flex;
+  }
+  #main-footer .footer-top .sitemap > * {
+    padding: 1rem;
+  }
+  #main-footer .footer-top .sitemap > * a {
+    color: #fff;
+    font-weight: 800;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+  }
+  #main-footer .footer-top .sitemap > * a:hover {
+    border-color: #3ba6b7;
+  }
+  #main-footer .footer-top .sitemap > * a .heart {
+    color: red;
+    display: inline-block;
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    transition: transform 0.5s;
+  }
+  #main-footer .footer-top .sitemap > * a .heart:hover {
+    transform: scale(2);
+  }
+  #main-footer .footer-top .social .fab {
+    margin-right: 1rem;
+    border: 2px #fff solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0.5rem;
+  }
+  #main-footer .footer-top .social .fab:hover {
+    background: #9b3cab;
+  }
+  #main-footer .footer-bottom {
+    text-align: center;
+    padding: 1.5rem 0;
+  }
+  #main-footer .footer-bottom a {
+    color: #fff;
+    transition: color 0.5s;
+  }
+  #main-footer .footer-bottom a:hover {
+    color: #3ba6b7;
+  }
+
+  /* .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .item {
+    position: relative;
+    background: #9b3cab;
+    overflow: hidden;
+  }
+  .item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: inherit;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .item:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+  }
+  .item:hover .item-image {
+    transform: scale(1.2);
+  }
+  .item:hover .item-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .item-image {
+    height: 200px;
+    transform: translateZ(0);
+    display: block;
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .item-image:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+    overflow: hidden;
+  }
+  .item-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+  }
+  .item-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    transform: translateY(-20%);
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+      transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition-delay: 300ms;
+  }
+  .item-text a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .item-text-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .item-text-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 5px 0 0 0;
+  }
+  .item-text-category {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin: 0;
+  } */
+
+  /* TODO
+
+make different types how i make my own npm package
+
+*/
+  .facebook:hover {
+    background-color: #4267b2;
+  }
+
+  .twitter:hover {
+    background-color: #1da1f2;
+  }
+
+  .youtube:hover {
+    background-color: #ff0000;
+  }
+
+  .instagram:hover {
+    background-color: #c13584;
+  }
+
+  .linkedin:hover {
+    background-color: #2867b2;
+  }
+
+  .github:hover {
+    background-color: #000;
+  }
+
+  .pinterest:hover {
+    background-color: #e60023;
+  }
+
+  .google:hover {
+    background-color: #f4b400;
+  }
+
+  .rss:hover {
+    background-color: #e58738;
+  }
+
+  .email:hover {
+    background-color: #2da112;
+  }
+
+  .snapchat:hover {
+    background-color: #fffc00;
+  }
+
+  .podcast:hover {
+    background-color: #8f35cb;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    color: #fff;
+  }
+  .social-icons .nav-item {
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.75;
+    transition: background-color 0.75s;
+  }
+  .social-icons .nav-item a {
+    color: #fff;
+  }
+  .social-icons .nav-item.facebook:hover {
+    background-color: #4267b2;
+  }
+  .social-icons .nav-item.twitter:hover {
+    background-color: #1da1f2;
+  }
+  .social-icons .nav-item.youtube:hover {
+    background-color: #ff0000;
+  }
+  .social-icons .nav-item.instagram:hover {
+    background-color: #c13584;
+  }
+  .social-icons .nav-item.linkedin:hover {
+    background-color: #2867b2;
+  }
+  .social-icons .nav-item.github:hover {
+    background-color: #000;
+  }
+  .social-icons .nav-item.pinterest:hover {
+    background-color: #e60023;
+  }
+  .social-icons .nav-item.google:hover {
+    background-color: #f4b400;
+  }
+  .social-icons .nav-item.rss:hover {
+    background-color: #e58738;
+  }
+  .social-icons .nav-item.email:hover {
+    background-color: #2da112;
+  }
+  .social-icons .nav-item.snapchat:hover {
+    background-color: #fffc00;
+  }
+  .social-icons .nav-item.podcast:hover {
+    background-color: #8f35cb;
+  }
+
+  .badge-contact-sm {
+    margin-bottom: 2rem;
+  }
+  .badge-contact-sm img {
+    width: 50px;
+    background-color: #fff;
+    padding: 0.55rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .badge-contact-md {
+    margin-bottom: 2rem;
+  }
+  .badge-contact-md img {
+    width: 100px;
+    background-color: #fff;
+    padding: 0.55rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .badge-contact-lg {
+    margin-bottom: 2rem;
+  }
+  .badge-contact-lg img {
+    width: 200px;
+    background-color: #fff;
+    padding: 0.55rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  #about-information {
+    background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+  }
+  #about-information .section-title {
+    color: #fff;
+  }
+  #about-information .about-info {
+    display: grid;
+    grid-template-areas: "bioimage bio";
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  #about-information .about-info img {
+    border-radius: 10px;
+  }
+  #about-information .about-info p i {
+    color: #766dff;
+    margin-right: 0.5rem;
+  }
+  #about-information .bio-image {
+    grid-area: bioimage;
+  }
+  #about-information .bio {
+    grid-area: bio;
+    padding: 2rem;
+  }
+  #about-information .bio h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  #about-information .bio h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+  #about-information .bio h3 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+  #about-information .bio .bio-text {
+    margin-bottom: 1.5rem;
+  }
+  #about-information .bio p {
+    color: #777777;
+  }
+  #about-information .bio p i {
+    margin-bottom: 1.5rem;
+  }
+
+  #about-skills {
+    background-color: #4e4949;
+  }
+  #about-skills .section-title {
+    color: #fff;
+  }
+  #about-skills .skills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-items: center;
+  }
+  #about-skills .skills img {
+    width: 150px;
+    height: 150px;
+    padding: 2rem;
+  }
+
+  #about-logos .about-logos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  #about-logos .about-logos img {
+    width: 70%;
+  }
+
+  #about-testimonials {
+    padding-top: 4rem;
+  }
+  #about-testimonials .testimonials {
+    background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg");
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+  }
+  #about-testimonials .testimonials > * {
+    z-index: 1000;
+    color: #fff;
+  }
+  #about-testimonials .testimonials div {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  #about-testimonials .testimonials div .fa-star,
+  #about-testimonials .testimonials div .fa-star-half {
+    color: #daa520;
+    font-size: 2rem;
+  }
+  #about-testimonials .testimonials div i {
+    font-size: 2.5rem;
+    padding-bottom: 0.5rem;
+  }
+  #about-testimonials .testimonials ul {
+    list-style: none;
+    margin-top: 1rem;
+  }
+  #about-testimonials .testimonials p {
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+  #about-testimonials .testimonials img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+  #about-testimonials .testimonials::before {
+    content: "";
+    /* hides the text*/
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #contact-form .text-fields {
+    display: grid;
+    grid-template-areas: "name email" "subject phone" "message message";
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  #contact-form .text-fields .name-input {
+    grid-area: name;
+  }
+  #contact-form .text-fields .subject-input {
+    grid-area: subject;
+  }
+  #contact-form .text-fields .email-input {
+    grid-area: email;
+  }
+  #contact-form .text-fields .phone-input {
+    grid-area: phone;
+  }
+  #contact-form .text-fields .message-input {
+    grid-area: message;
+    height: 100px;
+  }
+  #contact-form .text-fields .text-input {
+    padding: 0.5rem 1rem;
+  }
+
+  #contact-form button[type="submit"] {
+    width: 50%;
+  }
+
+  #contact-info .contact-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+  }
+
+  #contact-tagline {
+    background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+    color: #fff;
+  }
+  #contact-tagline h1 {
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  #home-tools .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #home-tools .specials img {
+    width: 160px;
+    height: 145px;
+    margin-bottom: 0.5rem;
+  }
+  #home-tools .specials h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  #home-stats .stats {
+    background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg");
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+  #home-stats .stats .stat-item {
+    display: flex;
+    z-index: 100;
+  }
+  #home-stats .stats .stat-item ul {
+    width: 100%;
+    padding: 1rem;
+  }
+  #home-stats .stats li {
+    line-height: 2;
+    min-width: 250px;
+    color: #fff;
+  }
+  #home-stats .stats li.stats-title {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  #home-stats .stats li.stats-number {
+    font-size: 3.7rem;
+    font-weight: bolder;
+  }
+  #home-stats .stats div {
+    padding: 3rem 0;
+  }
+  #home-stats .stats::before {
+    content: "";
+    /* hides the text*/
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #home-services .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+  }
+  #home-services .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    background: #9b3cab;
+    color: #fff;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1rem;
+    transition: all 1s;
+  }
+  #home-services .process-icon {
+    background: linear-gradient(90deg, #e947ea 0%, #8f3aa1 35%, #34aeb9 100%);
+    border-radius: 50%;
+    color: #fff;
+    padding: 2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+    transition: all 1s;
+  }
+  #home-services .process-icon:hover {
+    background: #9b3cab;
+    background: linear-gradient(to bottom left, #0000a3, #40b1df);
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+  }
+  #home-services .process-icon:hover .process-step {
+    background: #333;
+    color: #fff;
+  }
+
+  #welcome-section {
+    background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg")
+      no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+  }
+  #welcome-section .header-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #welcome-section .header-content > * {
+    z-index: 9999;
+  }
+  #welcome-section .header-content h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  #welcome-section::before {
+    content: "";
+    /* hides the text*/
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  #welcome-inner {
+    background: url("https://raw.githubusercontent.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/master/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/img/showcase1.jpg")
+      no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid #9b3cab;
+  }
+
+  @media (max-width: 1000px) {
+    #welcome-section {
+      height: 100%;
+      padding-bottom: 2rem;
+    }
+    #welcome-section .header-content {
+      padding-top: 7rem;
+    }
+    #welcome-section .header-content h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #welcome-section .header-content h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+    #home-tools .specials,
+    #home-services .process {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #home-stats .stats .stat-item .br {
+      display: none;
+    }
+    #about-information .bio h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    #about-information .bio h2 {
+      margin-bottom: 1rem;
+    }
+    #about-information .about-info {
+      padding: 0.5rem;
+      grid-template-areas: "bioimage" "bio";
+    }
+    #about-skills .skills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #about-testimonials .testimonials {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    #about-testimonials .testimonials div {
+      border-right: 1px solid rebeccapurple;
+    }
+  }
+
+  @media (min-width: 772px) and (max-width: 1000px) {
+    #welcome-section {
+      height: 100%;
+    }
+    #welcome-section .header-content {
+      padding-top: 5rem;
+    }
+    #about-skills .skills {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1000px) and (max-width: 1400px) {
+    #about-skills .skills {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .container {
+      padding: 0 0.5rem;
+    }
+    #navbar,
+    #main-nav {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+    #navbar li,
+    #main-nav li {
+      padding: 0.55rem;
+    }
+    #welcome-section {
+      height: 8rem;
+      border-bottom: 3px solid #9b3cab;
+      background-position: 20% 30%;
+    }
+    #welcome-section .header-content {
+      display: none;
+    }
+    #welcome-inner {
+      height: 10rem;
+    }
+    #home-tools .specials,
+    #home-stats .stats,
+    #home-services .process,
+    #about-testimonials .testimonials,
+    #contact-info .contact-info,
+    .items {
+      grid-template-columns: 1fr;
+    }
+    #home-tools .specials div {
+      border-bottom: 1px #f4f4f4 solid;
+      padding-bottom: 1rem;
+    }
+    #home-tools .specials div:last-child {
+      border: none;
+      padding-bottom: 0;
+    }
+    #home-stats .stats .stat-item {
+      padding: 2rem 0 1rem;
+    }
+    #home-stats .stats .stat-item .br {
+      display: none;
+    }
+    #about-information .bio h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    #about-information .bio h2 {
+      margin-bottom: 1rem;
+    }
+    #about-skills .skills {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    #about-logos {
+      display: none;
+    }
+    #contact-form .text-fields {
+      grid-template-areas: "name" "subject" "email" "phone" "message";
+    }
+    #contact-info div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px #555 solid;
+    }
+    #contact-info div:last-child {
+      border: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    #contact-tagline h1 {
+      font-size: 2rem;
+    }
+    #main-footer .footer-top {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 580px) {
+    #main-footer .footer-top {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-height: 580px) {
+    #welcome-section .header-content {
+      padding-top: 3rem;
+    }
+  }
+
+  @media (max-height: 330px) {
+    #welcome-section .header-content h1 {
+      font-size: 2rem;
+    }
+  }
+
+  #main-nav li {
+    padding: 0.55rem;
+  }
+  #welcome-section {
+    height: 8rem;
+    border-bottom: 3px solid #9b3cab;
+    background-position: 20% 30%;
+  }
+  #welcome-section .header-content {
+    display: none;
+  }
+  #welcome-inner {
+    height: 10rem;
+  }
+  #home-tools .specials,
+  #home-stats .stats,
+  #home-services .process,
+  #about-testimonials .testimonials,
+  #contact-info .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+  #home-tools .specials div {
+    border-bottom: 1px #f4f4f4 solid;
+    padding-bottom: 1rem;
+  }
+  #home-tools .specials div:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+  #home-stats .stats .stat-item {
+    padding: 2rem 0 1rem;
+  }
+  #home-stats .stats .stat-item .br {
+    display: none;
+  }
+  #about-information .bio h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  #about-information .bio h2 {
+    margin-bottom: 1rem;
+  }
+  #about-skills .skills {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #about-logos {
+    display: none;
+  }
+  #contact-form .text-fields {
+    grid-template-areas: "name" "subject" "email" "phone" "message";
+  }
+  #contact-info div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px #555 solid;
+  }
+  #contact-info div:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #contact-tagline h1 {
+    font-size: 2rem;
+  }
+  #main-footer .footer-top {
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 580px) {
+  #main-footer .footer-top {
+    flex-direction: column;
+  }
+}
+
+@media (max-height: 580px) {
+  #welcome-section .header-content {
+    padding-top: 3rem;
+  }
+}
+
+@media (max-height: 330px) {
+  #welcome-section .header-content h1 {
+    font-size: 2rem;
+  }
+}

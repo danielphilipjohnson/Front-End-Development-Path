@@ -3,15 +3,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import Subscribe from "../components/Subscribe/subscribe"
-import Blogs from "../components/Blogs/blogs"
+import RecentBlogs from "../components/Blogs/recent-blogs"
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  console.log(data)
   return (
     <Layout>
       <SEO title="Home" />
-
-      <h2>Add newest blog page</h2>
-      {/* <Blogs />  we need to include newest blogs*/}
+      <RecentBlogs />
       {/* <Subscribe /> */}
     </Layout>
   )

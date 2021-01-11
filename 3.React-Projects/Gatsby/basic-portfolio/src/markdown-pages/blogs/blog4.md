@@ -3,7 +3,7 @@ id: "2"
 type: "blog"
 slug: "/blogs/25-surprising-facts-about-fullstack-developer"
 title: "25 Surprising Facts About Fullstack Developer"
-datePublish: "2021-07-01"
+date: "2021-08-01"
 cover: "https://source.unsplash.com/random"
 imageCredit: "unsplash"
 

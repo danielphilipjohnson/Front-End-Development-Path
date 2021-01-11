@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { library } from "@fortawesome/fontawesome-svg-core"
 
+import { faHome } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithubAlt,
   faTwitter,
@@ -16,7 +17,7 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons"
 
-import { faUser } from "@fortawesome/free-regular-svg-icons"
+import { faUser, faBookmark } from "@fortawesome/free-regular-svg-icons"
 library.add(
   fab,
   faGithubAlt,
@@ -108,17 +109,16 @@ function Header({ siteTitle }) {
 
           <ul className="navbar-nav flex-column text-left">
             <li className="nav-item active">
-              <a className="nav-link" href="/">
-                <i className="fas fa-home fa-fw mr-2"></i>Blog Home
+              <Link className="nav-link" to="/">
+                <FontAwesomeIcon icon={faHome} className="mr-2" />
+                Home
                 <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              {/* <a className="nav-link" href="/">
-                <i className="fas fa-bookmark fa-fw mr-2"></i>Blog Post
-              </a> */}
-              <Link to="/about" className="nav-link">
-                <i className="fas fa-user fa-fw mr-2"></i>About Me
+              <Link className="nav-link" to="/blog">
+                <FontAwesomeIcon icon={faBookmark} className="mr-2" />
+                Blogs
               </Link>
             </li>
             <li className="nav-item">

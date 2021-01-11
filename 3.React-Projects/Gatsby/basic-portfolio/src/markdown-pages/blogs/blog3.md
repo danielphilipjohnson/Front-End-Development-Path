@@ -3,7 +3,7 @@ id: "3"
 type: "blog"
 slug: "/blogs/7-answers-to-the-most-frequently-asked-questions-about-js"
 title: "7 Answers to the Most Frequently Asked Questions About Js"
-datePublish: "2021-07-01"
+date: "2021-03-01"
 cover: "https://source.unsplash.com/random"
 imageCredit: "unsplash"
 
