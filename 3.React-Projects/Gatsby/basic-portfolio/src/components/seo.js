@@ -1,72 +1,84 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React from "react"
+import { useLocation } from "@reach/router"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
+function SEO({ description, lang, meta, title, image, article }) {
+  const { pathname } = useLocation()
+  const { site } = useStaticQuery(query)
+  const {
+    defaultTitle,
+    titleTemplate,
+    defaultDescription,
+    siteUrl,
+    defaultImage,
+    twitterUsername,
+  } = site.siteMetadata
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image || defaultImage}`,
+    url: `${siteUrl}${pathname}`,
+  }
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={seo.title}
+      titleTemplate={titleTemplate}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: seo.description,
         },
         {
-          property: `og:title`,
-          content: title,
+          name: "image",
+          content: seo.image,
         },
         {
-          property: `og:description`,
-          content: metaDescription,
+          property: "og:url",
+          content: seo.url,
         },
         {
           property: `og:type`,
           content: `website`,
         },
         {
+          property: `og:title`,
+          content: seo.title,
+        },
+        {
+          property: `og:description`,
+          content: seo.description,
+        },
+        {
+          property: "og:image",
+          content: seo.image,
+        },
+
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: twitterUsername,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: seo.title,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: seo.description,
+        },
+        {
+          name: "twitter:image",
+          content: seo.image,
         },
       ].concat(meta)}
     />
@@ -75,15 +87,41 @@ function SEO({ description, lang, meta, title }) {
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
+  title: "Daniel Philip Johnson",
   description: ``,
+  image: "",
+  article: false,
+  meta: [],
 }
 
 SEO.propTypes = {
-  description: PropTypes.string,
   lang: PropTypes.string,
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+
+  article: PropTypes.bool,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 }
 
 export default SEO
+
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        author
+        defaultDescription: description
+        facebookImage
+        defaultImage: image
+        keywords
+        profileImage
+        titleTemplate
+        defaultTitle: title
+        twitterImage
+        siteUrl: url
+        twitterUsername
+      }
+    }
+  }
+`

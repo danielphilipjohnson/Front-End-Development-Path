@@ -30,7 +30,7 @@ function About() {
   return (
     <Layout>
       <SEO title="Home" />
-      <section className="about-section py-5">
+      <section className="about-section py-5 px-2">
         {allMarkdownRemark.edges.map(({ node }) => (
           <article
             className="my-4 container"

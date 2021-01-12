@@ -4,7 +4,7 @@ type: "blog"
 slug: "/blogs/10-tips-for-making-a-good-fullstack-developer-even-better"
 title: "10 Tips for Making a Good Fullstack Developer Even Better "
 date: "2021-01-01"
-cover: "https://source.unsplash.com/random"
+cover: "https://source.unsplash.com/1000x400/?nature,water"
 imageCredit: "unsplash"
 
 ---
