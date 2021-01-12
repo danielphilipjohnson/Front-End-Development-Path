@@ -1,6 +1,13 @@
 import React from "react"
 
 function Blog({ blog }) {
+  const cupsOfCoffee = () => {
+    let amountOfCoffees = ""
+    for (let i = 0; i < blog.timeToRead; i++) {
+      amountOfCoffees += "☕ "
+    }
+    return amountOfCoffees
+  }
   return (
     <div className="item mb-5">
       <div className="media">
@@ -15,7 +22,7 @@ function Blog({ blog }) {
           </h3>
           <div className="meta mb-1">
             <span className="date">{blog.frontmatter.date}</span>
-            <span className="time">{blog.timeToRead} min read</span>
+            <span className="time">{cupsOfCoffee()} min read</span>
             <span className="comment">
               <a href="/">8 comments</a>
             </span>

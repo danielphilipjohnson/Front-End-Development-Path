@@ -11,18 +11,18 @@ date: "2021-07-01"
 <a href="https://codepen.io/danielphilipjohnson/">
 <img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/codepen.png">
 </a>
-<a href="https://twitter.com/danielp_johnson"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/twitter.png"></a>&nbsp;&nbsp;
-<a href="https://www.instagram.com/danielphilipjohnson/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/instagram.jpg"></a>&nbsp;&nbsp;
-<a href="/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/dev.webp"></a>
-<a href="https://www.linkedin.com/in/daniel-philip-johnson/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/linkedin.png"></a>
+<a href="https://twitter.com/danielp_johnson"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/twitter.png" alt="twitter"></a>&nbsp;&nbsp;
+<a href="https://www.instagram.com/danielphilipjohnson/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/instagram.jpg" alt="instagram"></a>&nbsp;&nbsp;
+<a href="/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/dev.webp" alt="instagram"></a>
+<a href="https://www.linkedin.com/in/daniel-philip-johnson/"><img height="30" src="https://raw.githubusercontent.com/danielphilipjohnson/danielphilipjohnson/master/social-icons/linkedin.png" alt="linkedin"></a>
 </p>
 <p align='center'>
 <a class="header-badge" target="_blank" href="https://twitter.com/danielp_johnson">
-  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/danielp_johnson?style=social">
+  <img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/danielp_johnson?style=social" alt="twitter">
   </a>
   
   <a class="header-badge" target="_blank" href="https://www.linkedin.com/in/daniel-philip-johnson/">
-  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
+  <img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social" alt="linkedin">
   </a>
 </p>
 
@@ -46,11 +46,12 @@ I discovered programming as a young child by helping my mother program the game 
   - JSworld Conference: 22-27 Feb 2021
   - Angular Global Summit: 16-17 Feb 2021
   - React JS Case Study Festival: 16-17 March 2021
+- 
 - 📓 Skills to improve
-  - Gatsby
-  - Tailwind
-  - GraphQL
-  - Redux
+    - Gatsby
+    - Tailwind
+    - GraphQL
+    - Redux
   
 
 <h2 align="center">Currently Studying</h2>

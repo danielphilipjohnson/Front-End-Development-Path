@@ -4,7 +4,7 @@ type: "blog"
 slug: "/blogs/7-answers-to-the-most-frequently-asked-questions-about-js"
 title: "7 Answers to the Most Frequently Asked Questions About Js"
 date: "2021-03-01"
-cover: "https://source.unsplash.com/random"
+cover: "https://source.unsplash.com/1000x400/?nature,water"
 imageCredit: "unsplash"
 
 ---

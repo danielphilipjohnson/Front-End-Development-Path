@@ -57,10 +57,6 @@ function Header({ siteTitle }) {
   )
   return (
     <header className="header text-center">
-      <h1 className="blog-name pt-lg-4 mb-0">
-        <Link to="/">{siteTitle}</Link>
-      </h1>
-
       <nav className="navbar navbar-expand-lg navbar-dark">
         <button
           className="navbar-toggler"

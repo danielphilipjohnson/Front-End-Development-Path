@@ -4,7 +4,7 @@ type: "blog"
 slug: "/blogs/learn-react-in-24-hours"
 title: "Learn React in 24 Hours"
 date: "2021-07-01"
-cover: "https://source.unsplash.com/random"
+cover: "https://source.unsplash.com/1000x400/?nature,water"
 imageCredit: "unsplash"
 
 ---
