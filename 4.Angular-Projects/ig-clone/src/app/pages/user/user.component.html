@@ -1,67 +1,90 @@
 <main class="container">
-    <h4 *ngIf="!user">User doesnt exist</h4>
-    <div class="row profile-row" *ngIf="user">
-        <article class="col s12 l12 ">
-            <div class="card card-user ">
-                <div class="card-header ">
-                    <div class="profile avatar ">
-                        <div class="profile-img-container ">
-                            <img src="{{user.avatar}} " alt=" " class="circle " style="width:77px; height:77px; ">
-                        </div>
-                        <div class="profile-username-container ">
-                            <h5 class="title ">{{user.username}}</h5>
-                            <button class="btn waves-block waves-effect ">Edit Profile</button>
-                        </div>
-                    </div>
-                    <p>{{user.firstName}} {{user.lastName}} 🌴{{user.state}} 🌴 {{user.caption}}</p>
-                </div>
-                <div class="card-user-stats ">
-                    <p>
-                        197
-                        <br> posts
-                    </p>
-                    <p>
-                        {{user.followers}}
-                        <br> followers
-                    </p>
-                    <p>
-                        {{user.following}}
-                        <br> following
-                    </p>
-                </div>
-                <div class="card-user-buttons ">
-                    <i class="material-icons ">view_module</i>
-                    <i class="material-icons ">bookmark</i>
-                </div>
+  <h4 *ngIf="!user">User doesnt exist</h4>
+  <div class="row profile-row" *ngIf="user">
+    <article class="col s12 l12">
+      <div class="card card-user">
+        <div class="card-header">
+          <div class="profile avatar">
+            <div class="profile-img-container">
+              <img
+                src="{{ user.avatar }} "
+                alt=" "
+                class="circle"
+                style="width: 77px; height: 77px"
+              />
             </div>
-        </article>
-    </div>
-
-    <div class="row profile-row " *ngIf="user.posts.length> 0">
-        <article class="user-image-container col s4 l3" *ngFor="let post of user.posts">
-            <div class="card card-user-image">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <a routerLink="/user/photo/{{post.id}}"><img class="activator" src="{{post.image}}" alt="avatar" style="height:205px; width:205px;"></a>
-                </div>
-                <div class="card-reveal card-transparent">
-                    <span class="card-title white-text">
-            <i class="material-icons right">close</i>
-          </span>
-                    <div class="card-reveal-icons">
-                        <p>
-                            <i class="material-icons">favorite</i> 39k
-                        </p>
-                        <p>
-                            <i class="material-icons">message</i> 900
-                        </p>
-                        <a class="waves-effect waves-light btn modal-trigger" href="#photo-modal">View</a>
-                    </div>
-                </div>
+            <div class="profile-username-container">
+              <h5 class="title">{{ user.username }}</h5>
+              <button class="btn waves-block waves-effect">Edit Profile</button>
             </div>
-        </article>
-    </div>
+          </div>
+          <p>
+            {{ user.firstName }} {{ user.lastName }} 🌴{{ user.state }} 🌴
+            {{ user.caption }}
+          </p>
+        </div>
+        <div class="card-user-stats">
+          <p>
+            197
+            <br />
+            posts
+          </p>
+          <p>
+            {{ user.followers }}
+            <br />
+            followers
+          </p>
+          <p>
+            {{ user.following }}
+            <br />
+            following
+          </p>
+        </div>
+        <div class="card-user-buttons">
+          <i class="material-icons">view_module</i>
+          <i class="material-icons">bookmark</i>
+        </div>
+      </div>
+    </article>
+  </div>
 
-    <div class="row profile-row" *ngIf="user.posts.length < 1">
-        <h3>No Posts</h3>
+  <div class="row profile-row" *ngIf="user">
+    <div *ngIf="user.posts.length > 0">
+      <article
+        class="user-image-container col s12 m4 l3"
+        *ngFor="let post of user.posts"
+      >
+        <div class="card card-user-image">
+          <div class="card-image waves-effect waves-block waves-light">
+            <a routerLink="/user/photo/{{ post.id }}"
+              ><img
+                class="activator"
+                src="{{ post.image }}"
+                alt="avatar"
+                style="height: 205px; object-fit: cover"
+            /></a>
+          </div>
+          <div class="card-reveal card-transparent">
+            <span class="card-title white-text">
+              <i class="material-icons right">close</i>
+            </span>
+            <div class="card-reveal-icons">
+              <p><i class="material-icons">favorite</i> 39k</p>
+              <p><i class="material-icons">message</i> 900</p>
+              <a
+                class="waves-effect waves-light btn modal-trigger"
+                href="#photo-modal"
+                >View</a
+              >
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
+    <div *ngIf="user.posts.length === 0">
+      <div>
+        <h3 class="col">No Posts</h3>
+      </div>
+    </div>
+  </div>
 </main>

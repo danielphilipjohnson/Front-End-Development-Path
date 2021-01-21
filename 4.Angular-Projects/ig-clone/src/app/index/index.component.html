@@ -1,4 +1,12 @@
-<main class="row" (scroll)="onScrollDown($event)" infiniteScroll [infiniteScrollDistance]="0.06" [infiniteScrollThrottle]="150" (scrolled)="onScrollDown()" (scrolledUp)="onScrollUp()">
-    <app-photos [posts]=recentPhotos></app-photos>
-    <app-photos [posts]=extraPhotos></app-photos>
+<main
+  class="row"
+  (scroll)="onScrollDown()"
+  infiniteScroll
+  [infiniteScrollDistance]="0.06"
+  [infiniteScrollThrottle]="150"
+  (scrolled)="onScrollDown()"
+  (scrolledUp)="onScrollUp()"
+>
+  <app-photos [posts]="recentPhotos"></app-photos>
+  <app-photos [posts]="extraPhotos"></app-photos>
 </main>
