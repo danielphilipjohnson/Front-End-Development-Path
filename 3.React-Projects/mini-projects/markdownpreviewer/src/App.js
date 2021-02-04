@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 
 import blogData from "./data/blogs";
 
@@ -11,39 +11,38 @@ import BlogPost from "./components/Blog/BlogPost";
 
 import "./App.css";
 
-class App extends Component {
-  state = {
-    blogs: blogData,
-  };
+const App = () => {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    setBlogs(blogData);
+  }, []);
 
-  render() {
-    const BlogItems = this.state.blogs.map((blog) => (
-      <BlogPost
-        id={blog.id}
-        username={blog.username}
-        title={blog.title}
-        body={blog.body}
-        profileUrl={blog.profileUrl}
-        image={blog.url}
-      />
-    ));
+  const BlogItems = blogs.map((blog) => (
+    <BlogPost
+      id={blog.id}
+      username={blog.username}
+      title={blog.title}
+      body={blog.body}
+      profileUrl={blog.profileUrl}
+      image={blog.url}
+    />
+  ));
 
-    return (
-      <div>
-        <Navbar />
+  return (
+    <>
+      <Navbar />
 
-        <div className="container">
-          <BlogType />
+      <div className="container">
+        <BlogType />
 
-          <div className="posts d-flex flex-row flex-wrap">
-            <MarkdownContainer />
+        <div className="posts d-flex flex-row flex-wrap">
+          <MarkdownContainer />
 
-            {BlogItems}
-          </div>
+          {BlogItems}
         </div>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default App;
