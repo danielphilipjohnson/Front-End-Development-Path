@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 
 import blogData from "./data/blogs";
 
+import Layout from "./components/layout/index";
+
 import MarkdownContainer from "./components/Markdown/MarkdownContainer";
 
 import Navbar from "./components/sitewide/Navbar";
@@ -32,7 +34,7 @@ const App = () => {
     <>
       <Navbar />
 
-      <div className="container">
+      <Layout>
         <BlogType />
 
         <div className="posts d-flex flex-row flex-wrap">
@@ -40,7 +42,7 @@ const App = () => {
 
           {BlogItems}
         </div>
-      </div>
+      </Layout>
     </>
   );
 };
