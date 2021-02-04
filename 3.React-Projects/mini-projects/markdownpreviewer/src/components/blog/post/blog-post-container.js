@@ -13,6 +13,7 @@ const BlogPostContainer = () => {
   return blogs.map((blog) => (
     <BlogPost
       id={blog.id}
+      key={blog.id}
       username={blog.username}
       title={blog.title}
       body={blog.body}

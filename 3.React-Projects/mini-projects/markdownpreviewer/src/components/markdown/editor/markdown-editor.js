@@ -42,7 +42,7 @@ const MarkDownEditor = ({ text, changeMarkup, changeTitle }) => {
                 type="text"
                 onChange={upDateTitle}
               />
-              <textArea
+              <textarea
                 className="blog-content"
                 value={text}
                 onChange={updateMarkup}

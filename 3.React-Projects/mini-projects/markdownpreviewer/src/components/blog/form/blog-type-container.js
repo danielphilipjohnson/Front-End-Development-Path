@@ -23,37 +23,37 @@ const BlogType = () => {
               >
                 <p className="page-link">
                   <i className="fa fa-font text" aria-hidden="true"></i>
-                  <p>Text</p>
+                  <span>Text</span>
                 </p>
               </li>
               <li className="page-item">
                 <p className="page-link">
                   <i className="fa fa-camera photo" aria-hidden="true"></i>
-                  <p>Photo</p>
+                  <span>Photo</span>
                 </p>
               </li>
               <li className="page-item d-none d-sm-flex">
                 <p className="page-link">
                   <i className="fa fa-quote-left quote" aria-hidden="true"></i>
-                  <p>Quote</p>
+                  <span>Quote</span>
                 </p>
               </li>
               <li className="page-item d-none d-sm-flex">
                 <p className="page-link">
                   <i className="fa fa-link link" aria-hidden="true"></i>
-                  <p>Link</p>
+                  <span>Link</span>
                 </p>
               </li>
               <li className="page-item d-none d-md-flex">
                 <p className="page-link">
                   <i className="fa fa-comments chat" aria-hidden="true"></i>
-                  <p>Chat</p>
+                  <span>Chat</span>
                 </p>
               </li>
               <li className="page-item">
                 <p className="page-link">
                   <i className="fa fa-music audio" aria-hidden="true"></i>
-                  <p>Audio</p>
+                  <span>Audio</span>
                 </p>
               </li>
               <li className="page-item">
@@ -62,7 +62,7 @@ const BlogType = () => {
                     className="fa fa-video-camera video"
                     aria-hidden="true"
                   ></i>
-                  <p>Video</p>
+                  <span>Video</span>
                 </p>
               </li>
             </ul>
