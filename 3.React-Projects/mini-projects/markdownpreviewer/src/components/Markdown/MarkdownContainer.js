@@ -1,6 +1,6 @@
 import React from "react";
 import MarkdownPreviewer from "./MarkdownPreviewer";
-import './MarkdownContainer.css';
+import "./MarkdownContainer.css";
 
 export default function MarkdownContainer() {
   return (
@@ -22,8 +22,7 @@ export default function MarkdownContainer() {
               </p>
             </div>
             <div className="share">
-            
-              <a href="#">Follow</a>
+              <a href="/">Follow</a>
             </div>
           </div>
           <div className="post-content">
@@ -48,7 +47,6 @@ export default function MarkdownContainer() {
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

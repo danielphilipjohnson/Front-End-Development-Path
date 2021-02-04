@@ -1,11 +1,11 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
-const DisplayContainer = (props) => {
+const DisplayContainer = ({ title, newText }) => {
   return (
     <div className="created-blog">
-      <h1>{props.title}</h1>
-      <ReactMarkdown>{props.newText}</ReactMarkdown>
+      <h1>{title}</h1>
+      <ReactMarkdown>{newText}</ReactMarkdown>
     </div>
   );
 };
