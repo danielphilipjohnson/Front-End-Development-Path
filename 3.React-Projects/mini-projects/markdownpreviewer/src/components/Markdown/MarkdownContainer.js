@@ -1,8 +1,8 @@
 import React from "react";
 import MarkdownPreviewer from "./previewer/index";
-import "./MarkdownContainer.css";
+import "./markdown-container.css";
 
-export default function MarkdownContainer() {
+const MarkdownContainer = () => {
   return (
     <div className="media">
       <div className="d-none d-lg-flex mr-4 profile-box">
@@ -49,4 +49,6 @@ export default function MarkdownContainer() {
       </div>
     </div>
   );
-}
+};
+
+export default MarkdownContainer;
