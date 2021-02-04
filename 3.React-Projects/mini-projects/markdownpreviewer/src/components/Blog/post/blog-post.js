@@ -1,13 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
+import "./blog-post.css";
 
-import "./BlogPost.css";
-class BlogPost extends Component {
-  render() {
-   
-    return (
-     
-      <div className="media">
+const BlogPost = () => {
+  return (
+    <div className="media">
       <div className="d-none d-lg-flex mr-4 profile-box">
         <img
           className=" rounded"
@@ -37,13 +34,11 @@ class BlogPost extends Component {
               </div>
             </div>
           </div>
-          <img
-            className="img-fluid"
-            src={this.props.image}
-            alt="blog post"
-          />
+          <img className="img-fluid" src={this.props.image} alt="blog post" />
           <div className="card-block">
-            <p className="card-text text-muted post-tags p-3">{this.props.body}</p>
+            <p className="card-text text-muted post-tags p-3">
+              {this.props.body}
+            </p>
           </div>
           <div className="card-footer text-muted">
             <div className="float-left footer-info">17,543 Notes</div>
@@ -62,9 +57,7 @@ class BlogPost extends Component {
         </div>
       </div>
     </div>
-    );
-    
-  }
-}
+  );
+};
 
 export default BlogPost;

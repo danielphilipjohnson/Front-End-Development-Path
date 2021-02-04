@@ -1,5 +1,5 @@
 import React from "react";
-import "./BlogType.css";
+import "./blog-type.css";
 
 const BlogType = () => {
   return (

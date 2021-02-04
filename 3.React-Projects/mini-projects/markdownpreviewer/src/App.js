@@ -4,10 +4,11 @@ import blogData from "./data/blogs";
 
 import Layout from "./components/layout/index";
 
+import BlogType from "./components/Blog/form/index";
+
 import MarkdownContainer from "./components/Markdown/MarkdownContainer";
 
-import BlogType from "./components/Blog/form/BlogType";
-import BlogPost from "./components/Blog/BlogPost";
+import BlogPost from "./components/Blog/post/index";
 
 import "./App.css";
 
