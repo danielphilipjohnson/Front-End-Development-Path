@@ -6,7 +6,7 @@ import Layout from "./components/layout/index";
 
 import MarkdownContainer from "./components/Markdown/MarkdownContainer";
 
-import BlogType from "./components/Blog/BlogType";
+import BlogType from "./components/Blog/form/BlogType";
 import BlogPost from "./components/Blog/BlogPost";
 
 import "./App.css";
