@@ -36,7 +36,10 @@ const MarkDownEditor = ({ text, changeMarkup, changeTitle }) => {
               <i className="fa fa-cog" aria-hidden="true"></i>
             </div>
             <div className="modal-body d-flex flex-column pt-0">
+              <label htmlFor="blog-title">Blog title</label>
+
               <input
+                id="blog-title"
                 className="blog-title"
                 placeholder="Title"
                 type="text"
