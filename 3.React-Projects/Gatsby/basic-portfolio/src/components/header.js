@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -72,9 +72,10 @@ function Header({ siteTitle }) {
 
         <div id="navigation" className="collapse navbar-collapse flex-column">
           <div className="profile-section pt-3 pt-lg-0">
-            <Img
+            <img
               className="profile-image mb-3 rounded-circle mx-auto"
-              fluid={profilePhoto.childImageSharp.fluid}
+              // fluid={profilePhoto.childImageSharp.fluid}
+              src={site.siteMetadata.profileImage}
               alt="profile"
             />
 

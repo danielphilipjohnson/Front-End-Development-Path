@@ -1,0 +1,12 @@
+<main class="container">
+    <div class="row">
+        <h5 class="col s12">Explore</h5>
+        <div class="explore-container col s6 l3" *ngFor="let photo of photos">
+            <div class="card explore-card">
+                <div class="card-image explore-image waves-effect waves-block waves-light">
+                    <a routerLink="/user/photo/{{photo.id}}"> <img class="activator" src="{{ photo.image }}" alt="card image"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

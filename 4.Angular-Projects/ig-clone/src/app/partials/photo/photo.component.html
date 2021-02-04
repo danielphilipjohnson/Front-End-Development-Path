@@ -1,0 +1,92 @@
+<main class="row">
+  <section class="col s12 l6 offset-l2" *ngIf="photo">
+    <div class="card">
+      <div class="card-header">
+        <div class="row valign-wrapper">
+          <a routerLink="/user/{{ photo.userId }}">
+            <img
+              src="{{ photo.avatar }}"
+              alt="avatar"
+              style="width: 32px; height: 32px"
+              class="circle responsive-img"
+            />
+          </a>
+          <h6 class="black-text username">
+            {{ photo.username }}
+          </h6>
+        </div>
+      </div>
+      <div class="card-image waves-effect waves-block waves-light">
+        <img alt="photo-image" src="{{ photo.image }}" />
+      </div>
+      <div class="card-content">
+        <div class="card-title grey-text text-darken-4">
+          <i class="material-icons left">favorite</i>
+          <div class="modal-trigger" data-target="comment-modal">
+            <i class="material-icons left">message</i>
+          </div>
+          <i class="material-icons right">save</i>
+        </div>
+      </div>
+      <div class="card-content">
+        <p class="card-title grey-text text-darken-4">{{ photo.like }} Likes</p>
+      </div>
+
+      <div *ngIf="photo.comments.length > 0">
+        <div class="card-content" *ngFor="let comment of photo.comments">
+          <p class="grey-text text-darken-4">
+            <a routerLink="/user/{{ comment.userId }}">{{
+              comment.username
+            }}</a>
+            {{ comment.body }}
+          </p>
+        </div>
+        <div class="card-content">
+          <p class="grey-text text-darken-4">
+            {{ photo.dateCreated }}
+          </p>
+        </div>
+        <div class="card-action">
+          <div class="row">
+            <form [formGroup]="commentForm">
+              <div class="col s11">
+                <input
+                  type="text"
+                  formControlName="body"
+                  class="autocomplete autocomplete-input"
+                  placeholder="Add a comment"
+                />
+              </div>
+              <div class="col s1">
+                <i class="material-icons" (click)="onClick()">send</i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="photo.comments.length < 1">
+        <div class="card-action">
+          <div class="row">
+            <form [formGroup]="commentForm">
+              <div class="col s11">
+                <input
+                  type="text"
+                  formControlName="body"
+                  class="autocomplete autocomplete-input"
+                  placeholder="Add a comment"
+                />
+              </div>
+              <div class="col s1">
+                <i class="material-icons" (click)="onClick()">send</i>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!photo">
+      <h4>No user found</h4>
+    </div>
+  </section>
+</main>

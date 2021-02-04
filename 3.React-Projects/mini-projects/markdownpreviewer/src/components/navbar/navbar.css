@@ -1,0 +1,50 @@
+.navbar {
+  box-shadow: 0 0 0 1px hsla(0, 0%, 100%, 0.13);
+  background-color: #001935;
+}
+.navbar.fixed-top {
+  z-index: 9999;
+}
+
+.nav-icons {
+  color: #9ba3ae;
+  font-size: 1.6rem;
+  padding: 10px 8px;
+}
+
+.nav-icons:hover {
+  color: #fdffff;
+  transform: rotate(19deg);
+}
+
+.logo {
+  font-family: "Russo One", sans-serif;
+  color: white;
+  padding: 6px 14px 0 10px;
+}
+
+.logo:hover {
+  transform: rotate(19deg);
+}
+
+.search-icon {
+  position: absolute;
+  z-index: 99;
+  padding: 10px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.search-icon:focus {
+  color: grey;
+}
+
+.search-box {
+  padding-left: 40px;
+  background-color: #405368;
+}
+
+.search-box:focus {
+  background-color: white;
+  border: none;
+  color: grey;
+}

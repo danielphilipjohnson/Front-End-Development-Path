@@ -9,6 +9,8 @@
 </h1>
 
 
+# 1024 x 512 twitter image i need
+
 # add this
 
 https://codepen.io/jh3y/pen/BaNOJWK

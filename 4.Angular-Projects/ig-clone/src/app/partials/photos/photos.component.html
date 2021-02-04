@@ -1,0 +1,84 @@
+<section
+  [hidden]="!posts"
+  class="col s12 l6 offset-l2"
+  *ngFor="let post of posts; let p = index"
+>
+  <div class="card">
+    <div class="card-header">
+      <div class="row valign-wrapper">
+        <a routerLink="/user/{{ post.userId }}">
+          <img
+            src="{{ post.avatar }}"
+            alt="avatar"
+            style="width: 32px; height: 32px"
+            class="circle responsive-img"
+          />
+        </a>
+        <h6 class="black-text username">
+          {{ post.username }}
+        </h6>
+      </div>
+    </div>
+    <div class="card-image waves-effect waves-block waves-light">
+      <a routerLink="user/photo/{{ post.id }}"
+        ><img alt="post-image" src="{{ post.image }}"
+      /></a>
+    </div>
+    <div class="card-content">
+      <div class="card-title grey-text text-darken-4">
+        <i class="material-icons left">favorite</i>
+        <div class="modal-trigger" data-target="comment-modal">
+          <i class="material-icons left">message</i>
+        </div>
+        <i class="material-icons right">save</i>
+      </div>
+    </div>
+
+    <div class="card-content">
+      <p class="card-title grey-text text-darken-4">{{ post.likes }} Likes</p>
+    </div>
+
+    <div class="card-content">
+      <p class="grey-text text-darken-4">
+        {{ post.dateCreated }}
+      </p>
+    </div>
+
+    <section *ngIf="post.comments">
+      <div
+        class="card-content"
+        *ngFor="let comment of post.comments; let c = index"
+      >
+        <p class="grey-text text-darken-4">
+          <a routerLink="/user/{{ comment.userId }}">{{ comment.username }}</a>
+          {{ comment.body }}
+        </p>
+      </div>
+
+      <div class="card-action">
+        <div class="row">
+          <form
+            id="{{ postIDkey }}-{{ p }}"
+            [formGroup]="commentForm"
+            (ngSubmit)="onSubmit($event)"
+          >
+            <div class="col s11">
+              <input
+                type="text"
+                formControlName="body"
+                class="autocomplete autocomplete-input"
+                placeholder="Add a comment"
+              />
+            </div>
+            <div class="col s1">
+              <button type="submit" [disabled]="!commentForm.valid">
+                <i class="material-icons">send</i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section *ngIf="!post.comments">No comment</section>
+  </div>
+</section>

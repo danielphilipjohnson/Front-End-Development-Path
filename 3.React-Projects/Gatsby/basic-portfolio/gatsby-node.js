@@ -16,8 +16,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // get recent
-
   const generateBlogItemPages = async () => {
     const result = await graphql(
       `
@@ -49,7 +47,7 @@ exports.createPages = async ({ graphql, actions }) => {
       // previous and next are objects props sent as pageContect object to blogPostTemplate
       createPage({
         path: post.node.frontmatter.slug,
-        component: path.resolve(`./src/template/blogTemplate.js`),
+        component: path.resolve(`./src/template/blog-template.js`),
         context: {
           slug: post.node.frontmatter.slug,
           previous,
