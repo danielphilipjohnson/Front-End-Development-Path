@@ -4,7 +4,7 @@ import Layout from "../../components/layout/index";
 
 import BlogType from "../../components/Blog/form/index";
 
-import MarkdownContainer from "../../components/Markdown/MarkdownContainer";
+import MarkdownContainer from "../../components/markdown/index";
 
 import BlogPost from "../../components/Blog/post/index";
 
