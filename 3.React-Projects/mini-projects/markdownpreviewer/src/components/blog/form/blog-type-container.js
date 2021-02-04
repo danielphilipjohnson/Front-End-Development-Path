@@ -4,8 +4,8 @@ import "./blog-type.css";
 const BlogType = () => {
   return (
     <div className="d-flex flex-row modal-bar mt-4">
-      <div className="media d-none d-lg-flex">
-        <div className="d-flex mr-4 profile-box">
+      <div className="media blog-post-card d-lg-flex">
+        <div className="d-none d-lg-flex mr-4 profile-box">
           <img
             className=" rounded"
             src="https://placeimg.com/450/450/any"
@@ -32,19 +32,19 @@ const BlogType = () => {
                   <p>Photo</p>
                 </p>
               </li>
-              <li className="page-item">
+              <li className="page-item d-none d-sm-flex">
                 <p className="page-link">
                   <i className="fa fa-quote-left quote" aria-hidden="true"></i>
                   <p>Quote</p>
                 </p>
               </li>
-              <li className="page-item">
+              <li className="page-item d-none d-sm-flex">
                 <p className="page-link">
                   <i className="fa fa-link link" aria-hidden="true"></i>
                   <p>Link</p>
                 </p>
               </li>
-              <li className="page-item">
+              <li className="page-item d-none d-md-flex">
                 <p className="page-link">
                   <i className="fa fa-comments chat" aria-hidden="true"></i>
                   <p>Chat</p>

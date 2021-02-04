@@ -1,6 +1,25 @@
+.blog-post-card {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  .blog-post-card {
+    width: unset;
+  }
+}
+.blog-post-card .media-body {
+  justify-content: center;
+  display: flex;
+}
+
 .page-link {
-  padding: 1rem 1.2rem .2rem 1.2rem;
+  padding: 1rem 1rem 0.2rem 1rem;
   border: none;
+}
+@media only screen and (min-width: 500px) {
+  .page-link {
+    padding: 1rem 1.2rem 0.2rem 1.2rem;
+  }
 }
 
 .page-link i {
@@ -22,25 +41,25 @@
 }
 
 .photo {
-  color: #FF492F;
+  color: #ff492f;
 }
 
 .quote {
-  color: #FF8A00;
+  color: #ff8a00;
 }
 
 .link {
-  color: #00CF35;
+  color: #00cf35;
 }
 
 .chat {
-  color: #FF8A00;
+  color: #ff8a00;
 }
 
 .audio {
-  color: #7C5CFF;
+  color: #7c5cff;
 }
 
 .video {
-  color: #7C5CFF;
+  color: #7c5cff;
 }
