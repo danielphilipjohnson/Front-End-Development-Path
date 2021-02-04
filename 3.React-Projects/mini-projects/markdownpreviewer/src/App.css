@@ -25,9 +25,3 @@ img {
 .created-blog {
   word-wrap: break-word;
 }
-
-@media only screen and (min-width: 600px) {
-  .card-blog {
-    max-width: 35.5rem;
-  }
-}
