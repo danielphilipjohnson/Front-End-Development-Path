@@ -2,11 +2,11 @@ import React from "react";
 
 import Layout from "../../components/layout/index";
 
-import BlogType from "../../components/Blog/form/index";
+import BlogType from "../../components/blog/form/index";
 
 import MarkdownContainer from "../../components/markdown/index";
 
-import BlogPost from "../../components/Blog/post/index";
+import BlogPost from "../../components/blog/post/index";
 
 const index = () => {
   return (
