@@ -1,0 +1,46 @@
+.page-link {
+  padding: 1rem 1.2rem .2rem 1.2rem;
+  border: none;
+}
+
+.page-link i {
+  font-size: 2.6rem;
+}
+
+.page-link i:hover {
+  transform: scale(1.2);
+}
+
+.page-link p {
+  padding-top: 10px;
+  color: #696969;
+  text-align: center;
+}
+
+.text {
+  color: black;
+}
+
+.photo {
+  color: #FF492F;
+}
+
+.quote {
+  color: #FF8A00;
+}
+
+.link {
+  color: #00CF35;
+}
+
+.chat {
+  color: #FF8A00;
+}
+
+.audio {
+  color: #7C5CFF;
+}
+
+.video {
+  color: #7C5CFF;
+}
