@@ -14,7 +14,7 @@ const index = () => {
       <Layout>
         <BlogType />
 
-        <div className="posts d-flex flex-row flex-wrap">
+        <div className="posts d-flex flex-column">
           <MarkdownContainer />
           <BlogPost />
         </div>

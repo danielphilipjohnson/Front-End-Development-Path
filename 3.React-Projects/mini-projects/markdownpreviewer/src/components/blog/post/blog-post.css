@@ -16,7 +16,6 @@
   color: #36465d;
 }
 
-
 .card-footer {
   border: none;
   background-color: inherit;
@@ -29,8 +28,4 @@
 
 .footer-icons {
   padding: 2px 5px;
-}
-
-.card-blog {
-  max-width: 35.5rem;
 }
