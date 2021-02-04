@@ -2,13 +2,13 @@ import React from "react";
 
 import "./blog-post.css";
 
-const BlogPost = () => {
+const BlogPost = (props) => {
   return (
     <div className="media">
       <div className="d-none d-lg-flex mr-4 profile-box">
         <img
           className=" rounded"
-          src={this.props.profileUrl}
+          src={props.profileUrl}
           alt="user profile"
         />
       </div>
@@ -18,7 +18,7 @@ const BlogPost = () => {
             <div className="media-body d-flex">
               <img
                 className="mr-3 profile-img"
-                src={this.props.profileUrl}
+                src={props.profileUrl}
                 alt="user profile"
               />
               <div
@@ -26,7 +26,7 @@ const BlogPost = () => {
                         space-between align-items-center"
               >
                 <div className="post-user pr-3">
-                  <p className="m-0">{this.props.username}</p>
+                  <p className="m-0">{props.username}</p>
                 </div>
                 <div className="share">
                   <a href="#">Follow</a>
@@ -34,10 +34,10 @@ const BlogPost = () => {
               </div>
             </div>
           </div>
-          <img className="img-fluid" src={this.props.image} alt="blog post" />
+          <img className="img-fluid" src={props.image} alt="blog post" />
           <div className="card-block">
             <p className="card-text text-muted post-tags p-3">
-              {this.props.body}
+              {props.body}
             </p>
           </div>
           <div className="card-footer text-muted">
