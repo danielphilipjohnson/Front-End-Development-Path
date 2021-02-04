@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DisplayContainer from "./display/index";
-import MarkDownEditor from "./editor/index";
+import DisplayContainer from "../display/index";
+import MarkDownEditor from "../editor/index";
 
 const MarkdownPreviewer = () => {
   const [convertedMarkdownText, setConvertedMarkdownText] = useState(

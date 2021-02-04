@@ -1,5 +1,5 @@
 import React from "react";
-import MarkdownPreviewer from "./MarkdownPreviewer";
+import MarkdownPreviewer from "./previewer/index";
 import "./MarkdownContainer.css";
 
 export default function MarkdownContainer() {
