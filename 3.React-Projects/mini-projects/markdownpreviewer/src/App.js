@@ -6,8 +6,6 @@ import Layout from "./components/layout/index";
 
 import MarkdownContainer from "./components/Markdown/MarkdownContainer";
 
-import Navbar from "./components/sitewide/Navbar";
-
 import BlogType from "./components/Blog/BlogType";
 import BlogPost from "./components/Blog/BlogPost";
 
@@ -32,8 +30,6 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-
       <Layout>
         <BlogType />
 
