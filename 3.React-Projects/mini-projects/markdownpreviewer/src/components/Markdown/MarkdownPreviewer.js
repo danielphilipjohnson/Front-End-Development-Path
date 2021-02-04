@@ -1,37 +1,43 @@
-import React, { Component } from 'react';
-import DisplayContainer from './DisplayContainer';
-import MarkDownEditor from './MarkDownEditor';
+import React, { Component } from "react";
+import DisplayContainer from "./display/DisplayContainer";
+import MarkDownEditor from "./editor/markdown-editor";
 //var marked = require('marked');
 
 class MarkdownPreviewer extends Component {
-  constructor(){
+  constructor() {
     super();
     this.state = {
-      convertedMarkdownText: "* apples \n * banana \n ![placeholder](https://placeimg.com/450/250/any)",
-      title: 'Blog Title'
-    }
-     this.changeMarkup = this.changeMarkup.bind(this);
-     this.changeTitle = this.changeTitle.bind(this);
+      convertedMarkdownText:
+        "* apples \n * banana \n ![placeholder](https://placeimg.com/450/250/any)",
+      title: "Blog Title",
+    };
+    this.changeMarkup = this.changeMarkup.bind(this);
+    this.changeTitle = this.changeTitle.bind(this);
   }
-  changeMarkup(modifiedText){
+  changeMarkup(modifiedText) {
     this.setState({
-      convertedMarkdownText: modifiedText
-    })
+      convertedMarkdownText: modifiedText,
+    });
   }
-  changeTitle(newTitle){
+  changeTitle(newTitle) {
     this.setState({
-      title: newTitle
-    })
+      title: newTitle,
+    });
   }
 
   render() {
     return (
-      <div>
-      
-        <MarkDownEditor text={this.state.convertedMarkdownText} changeMarkup={this.changeMarkup} changeTitle={this.changeTitle}/>
-        <DisplayContainer newText={this.state.convertedMarkdownText} title={this.state.title}/>
-
-      </div>
+      <>
+        <MarkDownEditor
+          text={this.state.convertedMarkdownText}
+          changeMarkup={this.changeMarkup}
+          changeTitle={this.changeTitle}
+        />
+        <DisplayContainer
+          newText={this.state.convertedMarkdownText}
+          title={this.state.title}
+        />
+      </>
     );
   }
 }
