@@ -5,7 +5,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="container">{children}</main>
+      <main className="d-flex justify-content-center  align-items-center flex-column pt-4 mb-4">
+        {children}
+      </main>
       <Footer />
     </>
   );

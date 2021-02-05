@@ -13,6 +13,7 @@ const Footer = () => {
               <a
                 id="tribute-link"
                 target="_blank"
+                rel="noreferrer"
                 href="https://en.wikipedia.org/wiki/HP_20b"
               >
                 Wikipedia
@@ -26,25 +27,41 @@ const Footer = () => {
 
           <ul class="social-icons-footer">
             <li class="nav-item twitter">
-              <a href="https://twitter.com/danielp_johnson">
+              <a
+                href="https://twitter.com/danielp_johnson"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i class="fab fa-twitter"></i>
               </a>
             </li>
 
             <li class="nav-item facebook">
-              <a href="httphttp://127.0.0.1:5500/Free-Code-Camp-Portfolio-2018-2020/1.Responsive-Web-Design-Certification/5.Personal-Portfolio-Webpage/index.htmls://www.facebook.com/DanielPhilipJohnson">
+              <a
+                href="https://www.facebook.com/DanielPhilipJohnson/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i class="fab fa-facebook"></i>
               </a>
             </li>
 
             <li class="nav-item github">
-              <a href="https://github.com/danielphilipjohnson/">
+              <a
+                href="https://github.com/danielphilipjohnson/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i class="fab fa-github"></i>
               </a>
             </li>
 
             <li class="nav-item linkedin">
-              <a href="https://www.linkedin.com/in/daniel-philip-johnson/">
+              <a
+                href="https://www.linkedin.com/in/daniel-philip-johnson/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <i class="fab fa-linkedin"></i>
               </a>
             </li>
@@ -55,7 +72,8 @@ const Footer = () => {
           <p>
             Copyright &copy; 2020. All Rights Reserved | Designed and built with{" "}
             <span class="heart">❤️</span>
-            by <a href="">Daniel Philip Johnson </a>
+            by{" "}
+            <a href="https://danielphilipjohnson.com">Daniel Philip Johnson </a>
           </p>
         </div>
       </div>
