@@ -7,6 +7,8 @@
  * @param {*} buttonValue
  */
 
+// need to implement operate
+
 const isNumber = (item) => {
   return /[0-9]+/.test(item);
 };
@@ -54,17 +56,17 @@ export default function calculator(stateObj, buttonValue) {
 
     // check if an operation has been pressed
     if (stateObj.operation) {
-      console.log(stateObj.next + buttonValue);
       if (stateObj.next) {
-        console.log(stateObj.next + buttonValue);
         return {
           next: stateObj.next + buttonValue,
+          total: stateObj.total,
+          operation: stateObj.operation,
         };
       }
       return {
         next: buttonValue,
-        // total: stateObj.total,
-        // operation: stateObj.operation,
+        total: stateObj.total,
+        operation: stateObj.operation,
       };
     }
 
@@ -75,12 +77,13 @@ export default function calculator(stateObj, buttonValue) {
     return {
       next: buttonValue,
       total: null,
-      operation: null,
+      operation: stateObj.operation,
     };
   }
 
   if (buttonValue === "+/-") {
     if (stateObj.next) {
+      // DRY
       return { next: (-1 * parseFloat(stateObj.next)).toString() };
     }
     if (stateObj.total) {
