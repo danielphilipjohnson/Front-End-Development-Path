@@ -3,7 +3,7 @@ import React from "react";
 const NavbarContainer = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         Js Calculator
       </a>
       <button
@@ -25,6 +25,7 @@ const NavbarContainer = () => {
               class="nav-link"
               href="https://codepen.io/danielphilipjohnson/pen/abdpKOv"
               target="_blank"
+              rel="noreferrer"
             >
               Codepen <span class="sr-only">(current)</span>
             </a>
@@ -32,8 +33,9 @@ const NavbarContainer = () => {
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://github.com/danielphilipjohnson/Free-Code-Camp-Portfolio-2018-2019/tree/master/2.Front-End-Libraries-Certification/4.%20Build%20a%20JavaScript%20Calculator"
+              href="https://github.com/danielphilipjohnson/"
               target="_blank"
+              rel="noreferrer"
             >
               Github
             </a>
@@ -43,6 +45,7 @@ const NavbarContainer = () => {
               class="nav-link"
               href="https://danielphilipjohnson.com"
               target="_blank"
+              rel="noreferrer"
             >
               Personal Website
             </a>
