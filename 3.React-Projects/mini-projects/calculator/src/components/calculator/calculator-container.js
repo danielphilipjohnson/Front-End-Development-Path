@@ -5,6 +5,8 @@ import Display from "./display/index";
 
 import CalculatorButtons from "./btns/btns";
 
+import CalculatorLogic from "../../calculation/calculator";
+
 const Calculator = () => {
   const [calcValue, setCalcValue] = useState({
     total: null,
@@ -12,15 +14,10 @@ const Calculator = () => {
     operation: null,
   });
 
-  const calc = (state, value) => {
-    console.log(state);
-    console.log(value);
-    // call independent module for calculating
-    // set the state with the result
-  };
-
   const handleClick = (buttonValue) => {
-    calc(calcValue, buttonValue);
+    console.log(calcValue);
+    console.log(buttonValue);
+    setCalcValue(CalculatorLogic(calcValue, buttonValue));
   };
 
   return (
