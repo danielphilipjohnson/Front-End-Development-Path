@@ -15,9 +15,9 @@ const Calculator = () => {
   });
 
   const handleClick = (buttonValue) => {
-    console.log(calcValue);
     console.log(buttonValue);
     setCalcValue(CalculatorLogic(calcValue, buttonValue));
+    console.log(calcValue);
   };
 
   return (

@@ -7,6 +7,10 @@
  * @param {*} buttonValue
  */
 
+const isNumber = (item) => {
+  return /[0-9]+/.test(item);
+};
+
 const clearCalculation = () => {
   return {
     total: null,
@@ -22,7 +26,7 @@ const calculateNext = (next, buttonValue) => {
     return {
       next: buttonValue,
       total: null,
-      operation: null,
+      // operation: null,
     };
   } else {
     // concat the numbers
@@ -42,11 +46,26 @@ export default function calculator(stateObj, buttonValue) {
     return clearCalculation();
   }
 
-  //idiot implementation change later
-  if (!NaN) {
+  if (isNumber(buttonValue)) {
     // dont allow zero to be pushed twice
     if (buttonValue === "0" && stateObj.next === "0") {
-      return { total: null, next: null, operation: null };
+      return clearCalculation();
+    }
+
+    // check if an operation has been pressed
+    if (stateObj.operation) {
+      console.log(stateObj.next + buttonValue);
+      if (stateObj.next) {
+        console.log(stateObj.next + buttonValue);
+        return {
+          next: stateObj.next + buttonValue,
+        };
+      }
+      return {
+        next: buttonValue,
+        // total: stateObj.total,
+        // operation: stateObj.operation,
+      };
     }
 
     if (stateObj.next) {
@@ -69,4 +88,26 @@ export default function calculator(stateObj, buttonValue) {
     }
     return { total: null, next: null, operation: null };
   }
+
+  // need to work on operation
+  if (stateObj.operation) {
+    return {
+      total: null,
+      next: null,
+      operation: buttonValue,
+    };
+  }
+
+  // if a number has not been entered first just save the operation for later
+  if (!stateObj.next) {
+    return { operation: buttonValue };
+  }
+
+  // set the current value in next to the total
+  // and save the operation
+  return {
+    total: stateObj.next,
+    next: null,
+    operation: buttonValue,
+  };
 }
