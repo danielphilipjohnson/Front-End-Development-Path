@@ -1,0 +1,119 @@
+.main__footer {
+  font-family: "Josefin Sans", sans-serif;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+  .main__footer {
+    margin-top: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main__footer {
+    position: absolute;
+    bottom: 0;
+    margin: -6rem 0;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .main__footer {
+    margin: unset;
+  }
+}
+
+.main__footer .main__footer__top {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8b8a8a;
+  padding: 1rem 0;
+}
+.main__footer .main__footer__top .social-icons-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #fff;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item {
+  padding: 14px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 0.5rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 0;
+  transition: background-color 0.75s;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item a {
+  color: #fff;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.facebook:hover {
+  background-color: #4267b2;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.twitter:hover {
+  background-color: #1da1f2;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.youtube:hover {
+  background-color: #ff0000;
+}
+.main__footer
+  .main__footer__top
+  .social-icons-footer
+  .nav-item.instagram:hover {
+  @media screen and (min-width: 375px) {
+    .main__footer {
+      margin-top: 1.25rem;
+    }
+  }
+
+  background-color: #c13584;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.linkedin:hover {
+  background-color: #2867b2;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.github:hover {
+  background-color: #000;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.spotify:hover {
+  background-color: #1ed760;
+}
+.main__footer .main__footer__top .social-icons-footer .nav-item.apple:hover {
+  background-color: #a1aaac;
+}
+.main__footer .main__footer__bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.main__footer .main__footer__bottom .heart {
+  color: red;
+  display: inline-block;
+  padding: 0 0.5rem;
+  font-size: 1.3rem;
+  transition: transform 0.5s;
+}
+.main__footer .main__footer__bottom .heart:hover {
+  transform: scale(2);
+}
+.main__footer .main__footer__bottom a {
+  color: #fff;
+  transition: color 0.5s;
+}
+.main__footer .main__footer__bottom a:hover {
+  color: #eee;
+}
+
+@media screen and (min-width: 1000px) {
+  .main__footer .main__footer__top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
