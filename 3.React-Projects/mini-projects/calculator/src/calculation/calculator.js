@@ -19,10 +19,25 @@ const performOperation = (numberOne, numberTwo, operation) => {
   ); //If two is null and dividing or multiplying, then current value is 1 to deal with
   // divide by zero // other operations put 0
 
-  console.log(one.div(two).toString());
+  if (operation === "+") {
+    return one.plus(two).toString();
+  }
+  if (operation === "-") {
+    return one.minus(two).toString();
+  }
+  if (operation === "*") {
+    return one.times(two).toString();
+  }
+  if (operation === "÷") {
+    if (two === "0") {
+      alert("Divide by 0 error");
+      return "0";
+    } else {
+      return one.div(two).toString();
+    }
+  }
+  throw Error(`Unknown operation '${operation}'`);
 };
-
-performOperation(null, "1", "/");
 
 const isNumber = (item) => {
   return /[0-9]+/.test(item);
@@ -96,6 +111,23 @@ export default function calculator(stateObj, buttonValue) {
     };
   }
 
+  if (buttonValue === "=") {
+    if (stateObj.next && stateObj.operation) {
+      return {
+        total: performOperation(
+          stateObj.total,
+          stateObj.next,
+          stateObj.operation
+        ),
+        next: null,
+        operation: null,
+      };
+    } else {
+      // '=' with no operation, nothing to do
+      return {};
+    }
+  }
+
   if (buttonValue === "+/-") {
     if (stateObj.next) {
       // DRY
@@ -110,7 +142,11 @@ export default function calculator(stateObj, buttonValue) {
   // need to work on operation
   if (stateObj.operation) {
     return {
-      total: null,
+      total: performOperation(
+        stateObj.total,
+        stateObj.next,
+        stateObj.operation
+      ),
       next: null,
       operation: buttonValue,
     };
