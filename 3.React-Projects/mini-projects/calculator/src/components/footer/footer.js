@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="main__footer" id="main-footer">
-      <div class="container">
-        <div class="main__footer__top">
-          <div class="disclaimer">
+    <footer className="main__footer" id="main-footer">
+      <div className="container">
+        <div className="main__footer__top">
+          <div className="disclaimer">
             <h4>Content Disclaimer</h4>
             <p>
               {" "}
@@ -25,53 +25,53 @@ const Footer = () => {
             </p>
           </div>
 
-          <ul class="social-icons-footer">
-            <li class="nav-item twitter">
+          <ul className="social-icons-footer">
+            <li className="nav-item twitter">
               <a
                 href="https://twitter.com/danielp_johnson"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fab fa-twitter"></i>
+                <i className="fab fa-twitter"></i>
               </a>
             </li>
 
-            <li class="nav-item facebook">
+            <li className="nav-item facebook">
               <a
                 href="https://www.facebook.com/DanielPhilipJohnson/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fab fa-facebook"></i>
+                <i className="fab fa-facebook"></i>
               </a>
             </li>
 
-            <li class="nav-item github">
+            <li className="nav-item github">
               <a
                 href="https://github.com/danielphilipjohnson/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fab fa-github"></i>
+                <i className="fab fa-github"></i>
               </a>
             </li>
 
-            <li class="nav-item linkedin">
+            <li className="nav-item linkedin">
               <a
                 href="https://www.linkedin.com/in/daniel-philip-johnson/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"></i>
               </a>
             </li>
           </ul>
         </div>
 
-        <div class="main__footer__bottom">
+        <div className="main__footer__bottom">
           <p>
             Copyright &copy; 2020. All Rights Reserved | Designed and built with{" "}
-            <span class="heart">❤️</span>
+            <span className="heart">❤️</span>
             by{" "}
             <a href="https://danielphilipjohnson.com">Daniel Philip Johnson </a>
           </p>
