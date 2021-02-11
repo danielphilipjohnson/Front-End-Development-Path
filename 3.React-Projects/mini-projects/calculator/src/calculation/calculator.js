@@ -9,14 +9,13 @@ import Big from "big.js";
  * @param {*} buttonValue
  */
 
-// need to implement operate
-
 const performOperation = (numberOne, numberTwo, operation) => {
   const one = Big(numberOne || "0");
 
   const two = Big(
     numberTwo || (operation === "/" || operation === "*" ? "1" : "0")
-  ); //If two is null and dividing or multiplying, then current value is 1 to deal with
+  );
+  //If two is null and dividing or multiplying, then current value is 1 to deal with
   // divide by zero // other operations put 0
 
   if (operation === "+") {
@@ -28,7 +27,7 @@ const performOperation = (numberOne, numberTwo, operation) => {
   if (operation === "*") {
     return one.times(two).toString();
   }
-  if (operation === "÷") {
+  if (operation === "/") {
     if (two === "0") {
       alert("Divide by 0 error");
       return "0";
@@ -52,8 +51,6 @@ const clearCalculation = () => {
 };
 
 const calculateNext = (next, buttonValue, stateObj, operation) => {
-  console.log("calculateNext");
-  console.log(operation);
   if (next === "0") {
     // if next is 0 overwrite with button value
     // to prevent 01 displaying
@@ -81,7 +78,6 @@ export default function calculator(stateObj, buttonValue) {
   }
 
   if (isNumber(buttonValue)) {
-    console.log("is number runs");
     // dont allow zero to be pushed twice
     if (buttonValue === "0" && stateObj.next === "0") {
       return clearCalculation();
@@ -96,8 +92,7 @@ export default function calculator(stateObj, buttonValue) {
           operation: stateObj.operation,
         };
       }
-      console.log("is number runs with only operating");
-      console.log(stateObj);
+
       return {
         next: buttonValue,
         total: stateObj.total,
@@ -157,7 +152,11 @@ export default function calculator(stateObj, buttonValue) {
   if (buttonValue === "+/-") {
     if (stateObj.next) {
       // DRY
-      return { next: (-1 * parseFloat(stateObj.next)).toString() };
+      return {
+        next: (-1 * parseFloat(stateObj.next)).toString(),
+        total: stateObj.total,
+        operation: stateObj.operation,
+      };
     }
     if (stateObj.total) {
       return { total: (-1 * parseFloat(stateObj.total)).toString() };
