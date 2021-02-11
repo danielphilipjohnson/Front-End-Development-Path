@@ -1,3 +1,5 @@
+import Big from "big.js";
+
 /**
  *
  * @param {*} state is an object containing
@@ -8,6 +10,19 @@
  */
 
 // need to implement operate
+
+const performOperation = (numberOne, numberTwo, operation) => {
+  const one = Big(numberOne || "0");
+
+  const two = Big(
+    numberTwo || (operation === "/" || operation === "*" ? "1" : "0")
+  ); //If two is null and dividing or multiplying, then current value is 1 to deal with
+  // divide by zero // other operations put 0
+
+  console.log(one.div(two).toString());
+};
+
+performOperation(null, "1", "/");
 
 const isNumber = (item) => {
   return /[0-9]+/.test(item);
@@ -69,7 +84,7 @@ export default function calculator(stateObj, buttonValue) {
         operation: stateObj.operation,
       };
     }
-
+    // If there is no operation pressed, update next and clear the value
     if (stateObj.next) {
       return calculateNext(stateObj.next, buttonValue);
     }

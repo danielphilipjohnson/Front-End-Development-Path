@@ -15,9 +15,7 @@ const Calculator = () => {
   });
 
   const handleClick = (buttonValue) => {
-    console.log(buttonValue);
     setCalcValue(CalculatorLogic(calcValue, buttonValue));
-    console.log(calcValue);
   };
 
   return (
@@ -25,7 +23,7 @@ const Calculator = () => {
       <div class="calculator__outershell p-2 d-flex flex-column">
         <div class="calculator__inner">
           <Header />
-          <Display />
+          <Display calcValue={calcValue} />
           <CalculatorButtons handleClick={handleClick} />
 
           <div class="d-flex flex-row align-content-center py-1 px-4">
