@@ -51,14 +51,16 @@ const clearCalculation = () => {
   };
 };
 
-const calculateNext = (next, buttonValue) => {
+const calculateNext = (next, buttonValue, stateObj, operation) => {
+  console.log("calculateNext");
+  console.log(operation);
   if (next === "0") {
     // if next is 0 overwrite with button value
     // to prevent 01 displaying
     return {
       next: buttonValue,
-      total: null,
-      // operation: null,
+      total: stateObj.total,
+      operation: stateObj.operation,
     };
   } else {
     // concat the numbers
@@ -68,7 +70,7 @@ const calculateNext = (next, buttonValue) => {
     return {
       next: updatedNext,
       total: null,
-      operation: null,
+      operation: operation,
     };
   }
 };
@@ -79,6 +81,7 @@ export default function calculator(stateObj, buttonValue) {
   }
 
   if (isNumber(buttonValue)) {
+    console.log("is number runs");
     // dont allow zero to be pushed twice
     if (buttonValue === "0" && stateObj.next === "0") {
       return clearCalculation();
@@ -93,6 +96,8 @@ export default function calculator(stateObj, buttonValue) {
           operation: stateObj.operation,
         };
       }
+      console.log("is number runs with only operating");
+      console.log(stateObj);
       return {
         next: buttonValue,
         total: stateObj.total,
@@ -101,14 +106,35 @@ export default function calculator(stateObj, buttonValue) {
     }
     // If there is no operation pressed, update next and clear the value
     if (stateObj.next) {
-      return calculateNext(stateObj.next, buttonValue);
+      return calculateNext(
+        stateObj.next,
+        buttonValue,
+        stateObj,
+        stateObj.operation
+      );
     }
 
     return {
       next: buttonValue,
-      total: null,
+      total: stateObj.total,
       operation: stateObj.operation,
     };
+  }
+
+  if (buttonValue === ".") {
+    if (stateObj.next) {
+      // ignore a . if the next number already has one
+      if (stateObj.next.includes(".")) {
+        return {};
+      }
+      console.log("next total ", stateObj.total);
+      return {
+        next: stateObj.next + ".",
+        total: stateObj.total,
+        operation: stateObj.operation,
+      };
+    }
+    return { next: "0." };
   }
 
   if (buttonValue === "=") {

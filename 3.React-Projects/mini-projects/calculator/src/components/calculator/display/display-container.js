@@ -1,6 +1,7 @@
 import React from "react";
 
 const DisplayContainer = ({ calcValue }) => {
+  console.log(calcValue);
   return (
     <div className="calculator__inner--screen p-1 d-flex flex-row">
       <h1
@@ -11,6 +12,9 @@ const DisplayContainer = ({ calcValue }) => {
       >
         {calcValue.next || calcValue.total || "0"}
       </h1>
+      {/* <p>
+        {calcValue.total} {calcValue.operation} {calcValue.next}
+      </p> */}
     </div>
   );
 };
