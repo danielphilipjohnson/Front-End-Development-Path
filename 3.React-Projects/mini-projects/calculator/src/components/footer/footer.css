@@ -5,13 +5,25 @@
   text-align: center;
   padding: 1rem;
   width: 100%;
-  margin: -6rem 0;
+}
+
+@media screen and (min-width: 375px) {
+  .main__footer {
+    margin-top: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .main__footer {
     position: absolute;
     bottom: 0;
+    margin: -6rem 0;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .main__footer {
+    margin: unset;
   }
 }
 
@@ -58,6 +70,12 @@
   .main__footer__top
   .social-icons-footer
   .nav-item.instagram:hover {
+  @media screen and (min-width: 375px) {
+    .main__footer {
+      margin-top: 1.25rem;
+    }
+  }
+
   background-color: #c13584;
 }
 .main__footer .main__footer__top .social-icons-footer .nav-item.linkedin:hover {

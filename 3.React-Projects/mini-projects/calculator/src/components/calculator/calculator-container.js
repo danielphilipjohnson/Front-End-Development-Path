@@ -19,7 +19,7 @@ const Calculator = () => {
   };
 
   return (
-    <div class="calculator pt-0">
+    <div class="calculator">
       <div class="calculator__outershell mx-2 d-flex flex-column">
         <div class="calculator__inner">
           <Header />
