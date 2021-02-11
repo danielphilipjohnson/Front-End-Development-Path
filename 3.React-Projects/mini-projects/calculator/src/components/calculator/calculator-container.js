@@ -19,14 +19,14 @@ const Calculator = () => {
   };
 
   return (
-    <div class="calculator pt-4">
-      <div class="calculator__outershell p-2 d-flex flex-column">
+    <div class="calculator pt-0">
+      <div class="calculator__outershell mx-2 d-flex flex-column">
         <div class="calculator__inner">
           <Header />
           <Display calcValue={calcValue} />
           <CalculatorButtons handleClick={handleClick} />
 
-          <div class="d-flex flex-row align-content-center py-1 px-4">
+          <div class="d-flex flex-row align-content-center py-1 px-2">
             <input
               class="btn col-sm-6 m-1"
               type="button"

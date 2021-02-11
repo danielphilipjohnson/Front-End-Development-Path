@@ -116,6 +116,27 @@ export default function calculator(stateObj, buttonValue) {
     };
   }
 
+  if (buttonValue === "%") {
+    if (stateObj.operation && stateObj.next) {
+      const result = performOperation(
+        stateObj.total,
+        stateObj.next,
+        stateObj.operation
+      );
+      return {
+        total: Big(result).div(Big("100")).toString(),
+        next: null,
+        operation: null,
+      };
+    }
+    if (stateObj.next) {
+      return {
+        next: Big(stateObj.next).div(Big("100")).toString(),
+      };
+    }
+    return {};
+  }
+
   if (buttonValue === ".") {
     if (stateObj.next) {
       // ignore a . if the next number already has one

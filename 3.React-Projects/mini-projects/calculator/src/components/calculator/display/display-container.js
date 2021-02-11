@@ -1,7 +1,6 @@
 import React from "react";
 
 const DisplayContainer = ({ calcValue }) => {
-  console.log(calcValue);
   return (
     <div className="calculator__inner--screen p-1 d-flex flex-row">
       <h1

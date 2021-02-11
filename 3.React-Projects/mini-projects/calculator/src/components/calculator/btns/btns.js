@@ -11,7 +11,7 @@ const Btns = ({ handleClick }) => {
     <>
       {btnVals.map((btns) => {
         return (
-          <div class="d-flex flex-row align-content-center py-1 px-4">
+          <div class="d-flex flex-row align-content-center py-1 px-2">
             {btns.map((btn) => {
               return (
                 <input
