@@ -4,12 +4,13 @@ import { useGlobalContext } from "../../../context/context";
 import "./Controls.css";
 
 const Controls = () => {
-  const { bankSets, updateSoundBankAndDisplay } = useGlobalContext();
+  const { bankSets, updateSoundBankAndDisplays } = useGlobalContext();
 
   const handleOnChange = (e) => {
     const soundSetName = e.target.value;
     console.log("handle change called");
-    updateSoundBankAndDisplay(soundSetName);
+    updateSoundBankAndDisplays(soundSetName);
+    // updateSoundBankAndDisplay(soundSetName);
   };
 
   const makeSoundOptions = () => {

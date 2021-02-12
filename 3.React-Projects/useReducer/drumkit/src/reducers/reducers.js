@@ -10,7 +10,20 @@ const reducer = (state, action) => {
     case "CHANGE_SOUND_FILE_NAME":
       return { ...state, soundFileName: action.payload };
     case "UPDATE_SOUND_BANK_NAME":
-      return { ...state, display: action.payload };
+      const availableSoundBanks = state.bankSets;
+
+      let selectedSoundBank;
+      for (let index = 0; index < availableSoundBanks.length; index++) {
+        const soundBank = availableSoundBanks[index];
+
+        if (soundBank.soundBanksName === action.payload) {
+          console.log("true");
+          selectedSoundBank = soundBank;
+          break;
+        }
+      }
+      console.log(selectedSoundBank);
+      return { ...state, currentSoundBank: selectedSoundBank };
     case "LOADING":
       return { ...state, loading: true };
     default:

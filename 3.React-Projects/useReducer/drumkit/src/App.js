@@ -9,7 +9,7 @@ import Navbar from "./components/navbar/navbar";
 import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
-  const { loading, bankSets } = useGlobalContext();
+  const { loading, bankSets, updateSoundBankAndDisplays } = useGlobalContext();
   // const [bankSets, setBankSets] = useState(SoundBanks);
   const [currentBankSet, setCurrentBankSet] = useState(bankSets[0]);
 
@@ -26,6 +26,7 @@ function App() {
   };
   const updateSoundBankAndDisplay = (newSoundBankName) => {
     console.log("updateSoundBankAndDisplay");
+    updateSoundBankAndDisplays(newSoundBankName);
     changeCurrentSoundBankName(newSoundBankName);
     changeSoundBanks(newSoundBankName);
   };
@@ -49,10 +50,6 @@ function App() {
     return selectedSoundBank;
   };
 
-  const updateDisplaySoundFileName = (name) => {
-    setDisplay(name);
-  };
-
   return (
     <div id="drum-machine" className="App">
       <Navbar />
@@ -66,12 +63,11 @@ function App() {
                 <button className="btn-drum btn-drum">Edit</button>
               </div>
               <Display
-                text={display}
                 updateSoundBankAndDisplay={updateSoundBankAndDisplay}
                 bankSets={bankSets}
               />
             </div>
-            <PadBank currentsoundBanksName={currentSoundBanksName} />
+            <PadBank />
           </div>
         </div>
       </main>

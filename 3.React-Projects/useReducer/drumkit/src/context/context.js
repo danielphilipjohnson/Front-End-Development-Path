@@ -22,20 +22,19 @@ const AppProvider = ({ children }) => {
   const changeVolume = (volume) => {
     dispatch({ type: "CHANGE_VOLUME", payload: volume });
   };
-
   const changeCurrentSoundBankName = (SoundBankName) => {
     dispatch({ type: "CHANGE_SOUNDBANK_NAME", payload: SoundBankName });
   };
-
   const updateDisplaySoundFileName = (name) => {
     console.log("dispatched filename");
     dispatch({ type: "CHANGE_SOUND_FILE_NAME", payload: name });
   };
+
   const fetchData = async () => {
     dispatch({ type: "LOADING" });
   };
 
-  const updateSoundBankAndDisplay = (soundSetName) => {
+  const updateSoundBankAndDisplays = (soundSetName) => {
     console.log(soundSetName);
     // changeCurrentSoundBankName(newSoundBankName)
 
@@ -54,7 +53,7 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         updateDisplaySoundFileName,
-        updateSoundBankAndDisplay,
+        updateSoundBankAndDisplays,
         changeVolume,
         changeCurrentSoundBankName,
       }}
