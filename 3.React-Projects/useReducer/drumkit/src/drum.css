@@ -29,10 +29,13 @@
 
 .control-panel {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  /* padding-top: 1rem; */
+  grid-template-columns: 1fr;
 }
-
+@media only screen and (min-width: 768px) {
+  .control-panel {
+    grid-template-columns: 1fr 2fr;
+  }
+}
 .power-button {
   background: #536976;
   /* fallback for old browsers */

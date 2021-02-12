@@ -6,14 +6,21 @@
   position: fixed;
   width: 100%;
 }
+
 .nav__links {
   display: flex;
   flex-direction: column;
 
   list-style: none;
-  margin: 0;
+  margin-top: 1rem;
   justify-content: space-between;
   color: #8c8c8c;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav__links {
+    padding-left: 1rem;
+  }
 }
 
 .nav-logo {
@@ -40,6 +47,7 @@
   .mid {
     flex-wrap: nowrap;
     flex-direction: row;
+    margin-right: 0.75rem;
   }
 }
 

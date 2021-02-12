@@ -2,7 +2,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar">
+    <aside className="sidebar hidden-sm">
       <ul className="sidebar__links">
         <li>
           <div className="btn-drum">
