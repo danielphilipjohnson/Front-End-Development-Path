@@ -27,7 +27,11 @@ const reducer = (state, action) => {
           break;
         }
       }
-      return { ...state, currentSoundBank: selectedSoundBank };
+      return {
+        ...state,
+        currentSoundBank: selectedSoundBank,
+        currentSoundBanksName: action.payload,
+      };
     case "LOADING":
       return { ...state, loading: true };
     default:

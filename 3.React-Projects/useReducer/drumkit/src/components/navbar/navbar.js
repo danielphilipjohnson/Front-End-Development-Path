@@ -1,4 +1,5 @@
 import React from "react";
+import SelectSoundBank from "../drum-machine/controls/SelectSoundBank";
 import "./navbar.css";
 
 const Navbar = () => {
@@ -10,10 +11,11 @@ const Navbar = () => {
         </li>
         <li>
           <div className="mid">
-            <select className="sound-select" name="sounds" id="sounds">
+            <SelectSoundBank classes="sound-select" name="sounds" id="sounds" />
+            {/* <select className="sound-select" name="sounds" id="sounds">
               <option value="default">Club - Default</option>
               <option value="extra">Extra</option>
-            </select>
+            </select> */}
 
             <div className="btn-drum btn-drum--sm">
               <span>130</span>
