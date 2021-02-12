@@ -1,19 +1,12 @@
 import React, { useEffect, useCallback } from "react";
 import { useGlobalContext } from "../../../context/context";
 
-const DrumButton = ({
-  id,
-  keyTrigger,
-  source,
-  keyCode,
-  soundId,
-  updateDisplaySoundFileName,
-}) => {
-  const { volume } = useGlobalContext();
+const DrumButton = ({ id, keyTrigger, source, keyCode, soundId }) => {
+  const { volume, updateDisplaySoundFileName } = useGlobalContext();
 
   const playSound = (e) => {
     const sound = document.getElementById(keyTrigger);
-
+    console.log(soundId);
     updateDisplaySoundFileName(soundId);
     sound.volume = volume;
     sound.currentTime = 0;

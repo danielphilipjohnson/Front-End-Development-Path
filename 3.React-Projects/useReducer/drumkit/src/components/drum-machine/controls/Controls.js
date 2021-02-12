@@ -1,13 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { useGlobalContext } from "../../../context/context";
 
 import "./Controls.css";
 
-const Controls = ({ updateSoundBankAndDisplay }) => {
-  const { bankSets } = useGlobalContext();
+const Controls = () => {
+  const { bankSets, updateSoundBankAndDisplay } = useGlobalContext();
 
   const handleOnChange = (e) => {
     const soundSetName = e.target.value;
+    console.log("handle change called");
     updateSoundBankAndDisplay(soundSetName);
   };
 

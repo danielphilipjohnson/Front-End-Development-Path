@@ -10,10 +10,10 @@ import Sidebar from "./components/sidebar/sidebar";
 
 function App() {
   const { loading, bankSets } = useGlobalContext();
-  console.log(loading);
   // const [bankSets, setBankSets] = useState(SoundBanks);
   const [currentBankSet, setCurrentBankSet] = useState(bankSets[0]);
-  const [currentSoundBanksName, setCurrentSoundBanksName] = useState("default");
+
+  const [currentSoundBanksName, setCurrentSoundBanksName] = useState();
   const [display, setDisplay] = useState("-");
 
   const changeCurrentSoundBankName = (SoundBankName) => {
@@ -71,11 +71,7 @@ function App() {
                 bankSets={bankSets}
               />
             </div>
-            <PadBank
-              currentsoundBanksName={currentSoundBanksName}
-              currentBankSet={currentBankSet}
-              updateDisplaySoundFileName={updateDisplaySoundFileName}
-            />
+            <PadBank currentsoundBanksName={currentSoundBanksName} />
           </div>
         </div>
       </main>

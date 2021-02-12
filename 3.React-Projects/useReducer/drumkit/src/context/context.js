@@ -11,6 +11,9 @@ const initialState = {
   display: "-",
   volume: 0.5,
   bankSets: SoundBanks,
+  currentSoundBank: SoundBanks[0],
+  currentSoundBanksName: "",
+  soundFileName: "--",
 };
 
 const AppProvider = ({ children }) => {
@@ -20,13 +23,23 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CHANGE_VOLUME", payload: volume });
   };
 
+  const changeCurrentSoundBankName = (SoundBankName) => {
+    dispatch({ type: "CHANGE_SOUNDBANK_NAME", payload: SoundBankName });
+  };
+
   const updateDisplaySoundFileName = (name) => {
-    dispatch({ type: "CHANGE_DISPLAY", payload: name });
+    console.log("dispatched filename");
+    dispatch({ type: "CHANGE_SOUND_FILE_NAME", payload: name });
   };
   const fetchData = async () => {
     dispatch({ type: "LOADING" });
+  };
 
-    // dispatch({ type: "DISPLAY_ITEMS", payload: cart });
+  const updateSoundBankAndDisplay = (soundSetName) => {
+    console.log(soundSetName);
+    // changeCurrentSoundBankName(newSoundBankName)
+
+    dispatch({ type: "UPDATE_SOUND_BANK_NAME", payload: soundSetName });
   };
 
   useEffect(() => {
@@ -41,7 +54,9 @@ const AppProvider = ({ children }) => {
       value={{
         ...state,
         updateDisplaySoundFileName,
+        updateSoundBankAndDisplay,
         changeVolume,
+        changeCurrentSoundBankName,
       }}
     >
       {children}
