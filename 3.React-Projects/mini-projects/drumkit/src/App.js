@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import "./drum.css";
 import Display from "./components/drum-machine/display/display";
@@ -8,7 +8,7 @@ import Sidebar from "./components/sidebar/sidebar";
 
 import SoundBanks from "./data/soundBank";
 
-function Ap() {
+function App() {
   const [bankSets, setBankSets] = useState(SoundBanks);
   const [currentBankSet, setCurrentBankSet] = useState(bankSets[0]);
   const [currentSoundBanksName, setCurrentSoundBanksName] = useState("default");
@@ -83,77 +83,6 @@ function Ap() {
       </main>
     </div>
   );
-}
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bankSets: SoundBanks,
-      currentBankSet: SoundBanks[0],
-      display: "-",
-      currentsoundBanksName: "default",
-      audioVolume: 0.5,
-    };
-
-    this.changeVolume = this.changeVolume.bind(this);
-
-    this.updateDisplaySoundFileName = this.updateDisplaySoundFileName.bind(
-      this
-    );
-
-    this.updateSoundBankAndDisplay = this.updateSoundBankAndDisplay.bind(this);
-  }
-
-  changeCurrentSoundBankName(SoundBankName) {
-    this.setState({ currentsoundBanksName: SoundBankName });
-  }
-
-  // Requires testing function does three things
-  changeSoundBanks(newSoundBankName) {
-    const soundBank = this.retrieveSoundBankViaName(newSoundBankName);
-
-    this.setState({ currentBankSet: soundBank });
-  }
-
-  changeVolume(volume) {
-    this.setState({ audioVolume: volume });
-  }
-
-  retrieveSoundBankViaName(name) {
-    // retrieve all sound banks
-    const availableSoundBanks = this.state.bankSets;
-
-    let selectedSoundBank;
-
-    for (let index = 0; index < availableSoundBanks.length; index++) {
-      const soundBank = availableSoundBanks[index];
-
-      if (soundBank.soundBanksName === name) {
-        console.log("true");
-        selectedSoundBank = soundBank;
-        break;
-      }
-    }
-
-    return selectedSoundBank;
-  }
-
-  updateDisplaySoundFileName(name) {
-    this.setState({ display: name });
-  }
-  updateSoundBankAndDisplay(newSoundBankName) {
-    this.changeCurrentSoundBankName(newSoundBankName);
-    this.changeSoundBanks(newSoundBankName);
-  }
-
-  render() {
-    return (
-      <div id="drum-machine" className="App">
-        <Ap />
-      </div>
-    );
-  }
 }
 
 export default App;
