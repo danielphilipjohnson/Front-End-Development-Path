@@ -35,11 +35,6 @@ class DrumButton extends Component {
     var myClasses = "drum-button " + this.props.id;
     return (
       <div>
-        {/* <p className="button-text">
-          <span>{this.props.id}:</span>
-          {this.props.name}
-        </p> */}
-
         <div
           id={this.props.soundId}
           onClick={this.playSound}
