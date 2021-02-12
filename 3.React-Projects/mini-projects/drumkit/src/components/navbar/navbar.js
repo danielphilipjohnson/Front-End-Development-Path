@@ -1,16 +1,15 @@
 import React from "react";
-import './Navbar.css';
+import "./navbar.css";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav className="nav">
       <ul className="nav__links">
         <li className="nav-logo">
-          <h1 >@ DrumMachine v1</h1>
+          <h1>@ DrumMachine v1</h1>
         </li>
         <li>
           <div className="mid">
-
             <select className="sound-select" name="sounds" id="sounds">
               <option value="default">Club - Default</option>
               <option value="extra">Extra</option>
@@ -28,8 +27,8 @@ export default function Navbar() {
           </div>
         </li>
         <li></li>
-  
       </ul>
     </nav>
   );
-}
+};
+export default Navbar;
