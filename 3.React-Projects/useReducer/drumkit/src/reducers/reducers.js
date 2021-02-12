@@ -1,5 +1,11 @@
 const reducer = (state, action) => {
   switch (action.type) {
+    case "DISPLAY_SOUND_BANK_KEYS":
+      return {
+        ...state,
+        bankSets: action.payload,
+        currentSoundBank: action.payload[0],
+      };
     case "CHANGE_VOLUME":
       return { ...state, volume: action.payload };
     case "CHANGE_DISPLAY":

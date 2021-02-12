@@ -10,8 +10,8 @@ const initialState = {
   loading: false,
   display: "-",
   volume: 0.5,
-  bankSets: SoundBanks,
-  currentSoundBank: SoundBanks[0],
+  bankSets: [],
+  currentSoundBank: null,
   currentSoundBanksName: "",
   soundFileName: "--",
 };
@@ -19,6 +19,10 @@ const initialState = {
 const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const fetchData = async () => {
+    dispatch({ type: "LOADING" });
+    dispatch({ type: "DISPLAY_SOUND_BANK_KEYS", payload: SoundBanks });
+  };
   const changeVolume = (volume) => {
     dispatch({ type: "CHANGE_VOLUME", payload: volume });
   };
@@ -26,18 +30,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CHANGE_SOUNDBANK_NAME", payload: SoundBankName });
   };
   const updateDisplaySoundFileName = (name) => {
-    console.log("dispatched filename");
     dispatch({ type: "CHANGE_SOUND_FILE_NAME", payload: name });
   };
 
-  const fetchData = async () => {
-    dispatch({ type: "LOADING" });
-  };
-
   const updateSoundBankAndDisplays = (soundSetName) => {
-    console.log(soundSetName);
-    // changeCurrentSoundBankName(newSoundBankName)
-
     dispatch({ type: "UPDATE_SOUND_BANK_NAME", payload: soundSetName });
   };
 

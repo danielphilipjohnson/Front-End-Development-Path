@@ -3,6 +3,7 @@ import Controls from "../controls/Controls";
 import VolumeControl from "../controls/VolumeControl";
 
 import { useGlobalContext } from "../../../context/context";
+
 import "./display.css";
 
 const Display = () => {
@@ -18,16 +19,16 @@ const Display = () => {
 
         <div className="sample-bank">
           <p className="sample-bank__label">Tune</p>
-          <input type="range" min="1" max="100" value="50" />
+          <input type="range" min="1" max="100" defaultValue="50" />
         </div>
 
         <div className="sample-bank">
           <p className="sample-bank__label">Gain</p>
-          <input type="range" min="1" max="100" value="50" />
+          <input type="range" min="1" max="100" defaultValue="50" />
         </div>
         <div className="sample-bank">
           <p className="sample-bank__label">Pan</p>
-          <input type="range" min="1" max="100" value="50" />
+          <input type="range" min="1" max="100" defaultValue="50" />
         </div>
 
         <VolumeControl />
