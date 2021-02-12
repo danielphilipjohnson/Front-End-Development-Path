@@ -1,0 +1,50 @@
+.controls {
+  padding-top: 0.5rem;
+  background-color: #3d3d3d;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+
+.sample-bank {
+  background-color: #3d3d3d;
+  border: 1px solid rgba(0, 0, 0, 0.352);
+  /* border-radius: 6px; */
+  /* margin-bottom: .5rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: -4px;
+  
+}
+.sample-bank:first-of-type  {
+  border-top: none;
+  
+}
+.sample-bank__label {
+  margin: 0;
+  padding: 1rem;
+}
+
+
+.select-samples {
+  padding: 1rem;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  z-index: 10;
+}
+
+.sample-bank .fa-chevron-right {
+  margin-right: 1rem;
+  position: absolute;
+  right: 0;
+ 
+}
