@@ -81,9 +81,8 @@ class App extends Component {
             <div className="control-panel">
               <div className="controls">
                 <div className="btn-group">
-                    <button className="btn-drum btn-drum--active">Record</button>
-                    <button className="btn-drum btn-drum">Edit</button>
-                
+                  <button className="btn-drum btn-drum--active">Record</button>
+                  <button className="btn-drum btn-drum">Edit</button>
                 </div>
                 <Display
                   text={this.state.display}
