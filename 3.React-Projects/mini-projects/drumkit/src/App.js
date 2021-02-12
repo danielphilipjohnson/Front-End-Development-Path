@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import "./App.css";
 import "./drum.css";
-// import Display from "./Components/Display";
+import Display from "./components/drum-machine/display/display";
 // import PadBank from "./Components/PadBank";
 import Navbar from "./components/navbar/navbar";
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/sidebar/sidebar";
 
 import SoundBanks from "./data/soundBank";
 
@@ -76,14 +76,12 @@ class App extends Component {
         <Navbar />
         <main>
           <Sidebar />
-
-          {/* <div>
+          <div>
             <div className="control-panel">
               <div className="controls">
                 <div className="btn-group">
-                    <button className="btn-drum btn-drum--active">Record</button>
-                    <button className="btn-drum btn-drum">Edit</button>
-                
+                  <button className="btn-drum btn-drum--active">Record</button>
+                  <button className="btn-drum btn-drum">Edit</button>
                 </div>
                 <Display
                   text={this.state.display}
@@ -92,20 +90,8 @@ class App extends Component {
                   changeVolume={this.changeVolume}
                 />
               </div>
-              import "./App.css";
-
-function App() {
-  return <div className="App">hello</div>;
-}
-
-export default App;
-={this.state.audioVolume}
-                currentsoundBanksName={this.state.currentsoundBanksName}
-                currentBankSet={this.state.currentBankSet}
-                updateDisplaySoundFileName={this.updateDisplaySoundFileName}
-              />
             </div>
-          </div> */}
+          </div>
         </main>
       </div>
     );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Controls from "../controls/Controls";
 import VolumeControl from "../controls/VolumeControl";
-import "./Display.css";
+import "./display.css";
 
 class Display extends Component {
   render() {

@@ -18,10 +18,6 @@ const Sidebar = () => {
             <div className="btn-drum signal">
               <i class="fas fa-signal"></i>
             </div>
-            {/* <div className="btn-drum">
-            <i class="fas fa-wave-square"></i>
-          </div> */}
-
             <div className="btn-drum">
               <i class="fas fa-pencil-alt"></i>
             </div>
