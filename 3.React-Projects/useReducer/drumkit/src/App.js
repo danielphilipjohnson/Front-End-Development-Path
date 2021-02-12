@@ -1,54 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "./context/context";
 
-import "./App.css";
-import "./drum.css";
 import Display from "./components/drum-machine/display/display";
 import PadBank from "./components/drum-machine/pad-bank/PadBank";
 import Navbar from "./components/navbar/navbar";
 import Sidebar from "./components/sidebar/sidebar";
 
+import "./App.css";
+import "./drum.css";
+
 function App() {
-  const { loading, bankSets, updateSoundBankAndDisplays } = useGlobalContext();
-  // const [bankSets, setBankSets] = useState(SoundBanks);
-  const [currentBankSet, setCurrentBankSet] = useState(bankSets[0]);
-
-  const [currentSoundBanksName, setCurrentSoundBanksName] = useState();
-  const [display, setDisplay] = useState("-");
-
-  const changeCurrentSoundBankName = (SoundBankName) => {
-    setCurrentSoundBanksName(SoundBankName);
-  };
-  const changeSoundBanks = (newSoundBankName) => {
-    console.log(newSoundBankName);
-    const soundBank = retrieveSoundBankViaName(newSoundBankName);
-    setCurrentBankSet(soundBank);
-  };
-  const updateSoundBankAndDisplay = (newSoundBankName) => {
-    console.log("updateSoundBankAndDisplay");
-    updateSoundBankAndDisplays(newSoundBankName);
-    changeCurrentSoundBankName(newSoundBankName);
-    changeSoundBanks(newSoundBankName);
-  };
-
-  const retrieveSoundBankViaName = (name) => {
-    // retrieve all sound banks
-    const availableSoundBanks = bankSets;
-
-    let selectedSoundBank;
-
-    for (let index = 0; index < availableSoundBanks.length; index++) {
-      const soundBank = availableSoundBanks[index];
-
-      if (soundBank.soundBanksName === name) {
-        console.log("true");
-        selectedSoundBank = soundBank;
-        break;
-      }
-    }
-
-    return selectedSoundBank;
-  };
+  const { loading } = useGlobalContext();
 
   return (
     <div id="drum-machine" className="App">
@@ -62,10 +24,7 @@ function App() {
                 <button className="btn-drum btn-drum--active">Record</button>
                 <button className="btn-drum btn-drum">Edit</button>
               </div>
-              <Display
-                updateSoundBankAndDisplay={updateSoundBankAndDisplay}
-                bankSets={bankSets}
-              />
+              <Display />
             </div>
             <PadBank />
           </div>

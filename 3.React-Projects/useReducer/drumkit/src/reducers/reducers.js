@@ -17,12 +17,10 @@ const reducer = (state, action) => {
         const soundBank = availableSoundBanks[index];
 
         if (soundBank.soundBanksName === action.payload) {
-          console.log("true");
           selectedSoundBank = soundBank;
           break;
         }
       }
-      console.log(selectedSoundBank);
       return { ...state, currentSoundBank: selectedSoundBank };
     case "LOADING":
       return { ...state, loading: true };

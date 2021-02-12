@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import Controls from "../controls/Controls";
 import VolumeControl from "../controls/VolumeControl";
 
 import { useGlobalContext } from "../../../context/context";
 import "./display.css";
 
-const Display = (props) => {
+const Display = () => {
   const { soundFileName } = useGlobalContext();
   return (
     <header id="display" className="top">
@@ -32,7 +32,7 @@ const Display = (props) => {
 
         <VolumeControl />
 
-        <Controls updateSoundBankAndDisplay={props.updateSoundBankAndDisplay} />
+        <Controls />
       </div>
     </header>
   );
