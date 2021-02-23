@@ -3,6 +3,8 @@ import "./Home.css";
 import Bg from "../../images/bg.jpg";
 import Product from "../../Product";
 import shippingImg from "../../images/shipping.jpg";
+import popitemsImg from "../../images/popitems.jpg";
+import topdealitemImg from "../../images/topdealitem.jpg";
 import "./card.css";
 function Home() {
   return (
@@ -18,19 +20,34 @@ function Home() {
             </a>
           </div>
           <div className="card">
-            <h2 className="card__title">Free delivery on your first order</h2>
-            <img className="card__image" src={shippingImg} alt="shipping" />
-            <a href="#"></a>
+            <h2 className="card__title">Customers' most loved for him</h2>
+            <img className="card__image" src={popitemsImg} alt="shipping" />
+            <a className="card__link" href="#">
+              See more
+            </a>
+          </div>
+          <div className="card">
+            <h2 className="card__title">Top Deal</h2>
+            <img
+              className="card__item__image"
+              src={topdealitemImg}
+              alt="shipping"
+              style={{ height: "240px", width: "125px" }}
+            />
+            <p className="card__description">
+              £4.79- £17.99 Command Hanging Strips and Bathroom Products
+            </p>
+            <a className="card__link" href="#">
+              Shop more deals
+            </a>
           </div>
           <div className="card">
             <h2 className="card__title">Free delivery on your first order</h2>
             <img className="card__image" src={shippingImg} alt="shipping" />
-            <a href="#"></a>
-          </div>
-          <div className="card">
-            <h2 className="card__title">Free delivery on your first order</h2>
-            <img className="card__image" src={shippingImg} alt="shipping" />
-            <a href="#"></a>
+            <a className="card__link" href="#">
+              {" "}
+              Shop more deals
+            </a>
           </div>
           {/* <Product
             id="1"
