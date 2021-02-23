@@ -1,28 +1,21 @@
-.subheader__container {
+.checkoutSubNav__items {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: #242f41;
-  font-family: arial, san-serif;
-}
+  width: 100%;
 
-.subheader_links {
-  display: flex;
   list-style: none;
-  align-items: center;
-  padding: 0;
+  word-wrap: normal;
+  border-top: 1px solid rgba(0, 0, 0, 0.17);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  height: 33px;
+  background: #fafafa;
 }
-.subheader__hamburger {
-  display: flex;
-  align-items: center;
-  align-content: center;
-}
-.subheader__hamburger span {
-  padding-left: 0.5rem;
-  font-weight: bold;
-}
-.subheader_links li {
-  font-size: 0.85rem;
-  color: #fff;
-  padding: 0 0.5rem;
+.checkoutSubNav__items li {
+  position: relative;
+  float: left;
+  height: 31px;
+  line-height: 2rem;
+  color: #333;
+  font-size: 0.9rem;
+  padding: 0 0.95rem;
 }
