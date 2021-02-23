@@ -1,5 +1,5 @@
-import React from 'react';
-import './CheckoutSubNav.css';
+import React from "react";
+import "./CheckoutSubNav.css";
 function CheckoutSubNav() {
   return (
     <div className="checkoutSubNav">
@@ -19,7 +19,7 @@ function CheckoutSubNav() {
         <li>Amazon Assistant</li>
       </ul>
     </div>
-  )
+  );
 }
 
-export default CheckoutSubNav
+export default CheckoutSubNav;
