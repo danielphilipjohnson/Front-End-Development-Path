@@ -10,23 +10,24 @@ function Subheader() {
         <li className="subheader__hamburger">
           <MenuIcon /> <span>All</span>
         </li>
-        <li>Best Sellers</li>
-        <li>Prime Video</li>
-        <li>Today's Deals</li>
-        <li>Prime</li>
-        <li>New Releases</li>
-        <li>Books</li>
-        <li>Gift Ideas</li>
-        <li>Electronics</li>
-        <li>Beauty</li>
-        <li>Gift Cards & Top Up</li>
-        <li>Home & Garden</li>
-        <li>Vouchers</li>
-        <li>Kindle Books</li>
+        <li className="hide-mobile show-tablet">Best Sellers</li>
+        <li className="hide-mobile  show-tablet">Prime Video</li>
+        <li className="hide-mobile  show-tablet">Today's Deals</li>
+        <li className="hide-mobile show-desktop">Prime</li>
+        <li className="hide-mobile show-desktop">New Releases</li>
+        <li className="hide-mobile show-desktop">Books</li>
+        <li className="hide-mobile show-desktop">Gift Ideas</li>
+        <li className="hide-mobile show-desktop">Electronics</li>
+        <li className="hide-mobile show-desktop">Beauty</li>
+        <li className="hide-mobile show-desktop">Gift Cards & Top Up</li>
+        <li className="hide-mobile show-desktop">Home & Garden</li>
+        <li className="hide-mobile show-desktop">Vouchers</li>
+        <li className="hide-mobile show-desktop">Kindle Books</li>
       </ul>
-      <div className="subheader__banner">
-        <img src={subNavImage} alt="" />
-      </div>
+      <div
+        className="subheader__banner"
+        style={{ backgroundImage: `url(${subNavImage})` }}
+      ></div>
     </div>
   );
 }
