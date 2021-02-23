@@ -1,18 +1,28 @@
-.checkoutSubNav {
-  border-top:1px solid rgba(0,0,0,.17);
-  border-bottom: 1px solid rgba(0,0,0,.1);
-  background: #fafafa;
+.subheader__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #242f41;
+  font-family: arial, san-serif;
 }
-.checkoutSubNav__items {
+
+.subheader_links {
   display: flex;
   list-style: none;
-  font-size: 0.8rem;
-
+  align-items: center;
+  padding: 0;
 }
-.checkoutSubNav__items > li {
-  padding: 1rem 0.5rem;
+.subheader__hamburger {
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
-.checkoutSubNav__items > li:hover {
-  color: rgb(212, 109, 25);
-  border-bottom: 1px solid rgb(212, 109, 25);
+.subheader__hamburger span {
+  padding-left: 0.5rem;
+  font-weight: bold;
+}
+.subheader_links li {
+  font-size: 0.85rem;
+  color: #fff;
+  padding: 0 0.5rem;
 }

@@ -28,7 +28,7 @@ function Header() {
           <span>.co.uk</span>
         </Link>
 
-        <div className="header__search__address">
+        <div className="header__search__address hide-mobile show-desktop">
           <RoomIcon />
           <div>
             <p>Hello</p>
@@ -41,7 +41,7 @@ function Header() {
         <div className="select-box">
           <select
             aria-describedby="search Dropdown"
-            class="header__search-dropdown"
+            class="header__search-dropdown hide-mobile show-desktop"
           >
             <option selected="selected" value="amazon-devices">
               Amazon Devices
@@ -98,7 +98,7 @@ function Header() {
       </div>
 
       <div className="nav-right header__nav">
-        <div className="header__option">
+        <div className="header__option hide-mobile show-desktop">
           <span class="flag-icon flag-icon-gb"></span>
         </div>
         <Link to={!user && "/login"}>
