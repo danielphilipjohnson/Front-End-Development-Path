@@ -2,14 +2,37 @@ import React from "react";
 import "./Home.css";
 import Bg from "../../images/bg.jpg";
 import Product from "../../Product";
-
+import shippingImg from "../../images/shipping.jpg";
+import "./card.css";
 function Home() {
   return (
     <div className="home">
       <div className="home__container">
         <img className="home__image" src={Bg} />
-        <div className="home__row">
-          <Product
+        <div className="card-grid">
+          <div className="card">
+            <h2 className="card__title">Free delivery on your first order</h2>
+            <img className="card__image" src={shippingImg} alt="shipping" />
+            <a className="card__link" href="#">
+              Find out more
+            </a>
+          </div>
+          <div className="card">
+            <h2 className="card__title">Free delivery on your first order</h2>
+            <img className="card__image" src={shippingImg} alt="shipping" />
+            <a href="#"></a>
+          </div>
+          <div className="card">
+            <h2 className="card__title">Free delivery on your first order</h2>
+            <img className="card__image" src={shippingImg} alt="shipping" />
+            <a href="#"></a>
+          </div>
+          <div className="card">
+            <h2 className="card__title">Free delivery on your first order</h2>
+            <img className="card__image" src={shippingImg} alt="shipping" />
+            <a href="#"></a>
+          </div>
+          {/* <Product
             id="1"
             title="The lean startup"
             price={29.99}
@@ -23,10 +46,10 @@ function Home() {
             price={17.95}
             image={process.env.PUBLIC_URL + "/images/norton.jpg"}
             rating={5}
-          />
+          /> */}
         </div>
         <div className="home__row">
-          <Product
+          {/* <Product
             id="3"
             title="Echo Dot (3rd Gen) - Smart speaker with Alexa - Charcoal Fabric"
             price={49.99}
@@ -47,16 +70,16 @@ function Home() {
             price={39.99}
             image={process.env.PUBLIC_URL + "/images/lego.jpg"}
             rating={5}
-          />
+          /> */}
         </div>
         <div className="home__row">
-          <Product
+          {/* <Product
             id="6"
             title="Mastering React Test-Driven Development: Build rock-solid, well-tested web apps with React, Redux and GraphQL Paperback – 3 May 2019"
             price={30.99}
             image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
             rating={5}
-          />
+          /> */}
         </div>
       </div>
     </div>
