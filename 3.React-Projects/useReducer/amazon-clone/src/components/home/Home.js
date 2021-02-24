@@ -8,8 +8,10 @@ import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
 import RecommendedProducts from "./recommended-products/recommended-products";
+import SubCards from "./sub-cards/sub-card";
 
 import "./card.css";
+
 function Home() {
   return (
     <div className="home">
@@ -101,13 +103,10 @@ function Home() {
             image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
             rating={5}
           /> */}
-
-      
-</div>
-        <RecommendedProducts />
-
-
         </div>
+        <RecommendedProducts />
+        <SubCards />
+        <RecommendedProducts />
       </div>
     </div>
   );
