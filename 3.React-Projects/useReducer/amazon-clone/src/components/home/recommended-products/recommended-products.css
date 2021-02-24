@@ -2,6 +2,7 @@
   width: 100%;
   margin-bottom: 2rem;
 }
+
 .recommended__items__row {
   padding: 1rem 1rem;
   background-color: #fff;
@@ -25,7 +26,6 @@
 .recommended__items-product {
   width: 100%;
   height: auto;
-
   max-width: 220px;
   max-height: 200px;
   vertical-align: middle;

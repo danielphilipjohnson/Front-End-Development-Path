@@ -9,22 +9,46 @@ import item5 from "../../../images/items/item5.jpg";
 import item6 from "../../../images/items/item6.jpg";
 import item7 from "../../../images/items/item7.jpg";
 
+// random generate which products
 function RecommendedProducts() {
   return (
     <div className="recommended__items__container">
       <div className="recommended__items__row">
-        <div className="">
-          <h2 className="recommended__items-title">
-            Recommended items other customers often buy again
-          </h2>
-        </div>
+        <h2 className="recommended__items-title">
+          Recommended items other customers often buy again
+        </h2>
+
         <div className="recommended__items-cards">
-          <img className="recommended__items-product" src={item1} alt="" />
-          <img className="recommended__items-product" src={item2} alt="" />
-          <img className="recommended__items-product" src={item3} alt="" />
-          <img className="recommended__items-product" src={item4} alt="" />
-          <img className="recommended__items-product" src={item5} alt="" />
-          <img className="recommended__items-product" src={item6} alt="" />
+          <img
+            className="recommended__items-product"
+            src={item1}
+            alt="product description"
+          />
+          <img
+            className="recommended__items-product"
+            src={item2}
+            alt="product description"
+          />
+          <img
+            className="recommended__items-product"
+            src={item3}
+            alt="product description"
+          />
+          <img
+            className="recommended__items-product"
+            src={item4}
+            alt="product description"
+          />
+          <img
+            className="recommended__items-product"
+            src={item5}
+            alt="product description"
+          />
+          <img
+            className="recommended__items-product"
+            src={item6}
+            alt="product description"
+          />
         </div>
       </div>
     </div>
