@@ -132,6 +132,7 @@ function Home() {
               </div>
             </div>
           </div>
+
           <div className="sub__cards-grid">
             <h2 className="sub__cards-title">Garden & Outdoors</h2>
 
