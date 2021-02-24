@@ -1,6 +1,11 @@
 .sub__cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
+}
+.sub__cards-grid {
   background-color: #fff;
-  width: 25%;
+  margin-right: 0.5rem;
   padding: 1rem;
 }
 .sub__cards-title {
@@ -13,6 +18,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 1rem;
+}
+.sub__card-img {
+  width: 100%;
 }
 .sub__card-title {
   font-size: 0.75rem;

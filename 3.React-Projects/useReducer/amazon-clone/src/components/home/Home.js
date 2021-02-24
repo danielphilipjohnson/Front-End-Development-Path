@@ -109,24 +109,93 @@ function Home() {
         </div>
         <RecommendedProducts />
 
-        <div>
-          <div className="sub__cards-container">
+        <div className="sub__cards-container">
+          <div className="sub__cards-grid">
             <h2 className="sub__cards-title">Garden & Outdoors</h2>
+
             <div className="sub__cards-items">
               <div className="sub__card">
-                <img src={subItem1} alt="sub__card" />
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
                 <p className="sub__card-title">ffsfsdfsd</p>
               </div>
               <div className="sub__card">
-                <img src={subItem1} alt="sub__card" />
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
                 <p className="sub__card-title">ffsfsdfsd</p>
               </div>
               <div className="sub__card">
-                <img src={subItem1} alt="sub__card" />
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
                 <p className="sub__card-title">ffsfsdfsd</p>
               </div>
               <div className="sub__card">
-                <img src={subItem1} alt="sub__card" />
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+            </div>
+          </div>
+          <div className="sub__cards-grid">
+            <h2 className="sub__cards-title">Garden & Outdoors</h2>
+
+            <div className="sub__cards-items">
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="sub__cards-grid">
+            <h2 className="sub__cards-title">Garden & Outdoors</h2>
+
+            <div className="sub__cards-items">
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="sub__cards-grid">
+            <h2 className="sub__cards-title">Garden & Outdoors</h2>
+
+            <div className="sub__cards-items">
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
+              </div>
+              <div className="sub__card">
+                <img className="sub__card-img" src={subItem1} alt="sub__card" />
                 <p className="sub__card-title">ffsfsdfsd</p>
               </div>
             </div>
