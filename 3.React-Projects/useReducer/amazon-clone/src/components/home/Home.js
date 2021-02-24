@@ -10,7 +10,6 @@ import topdealitemImg from "../../images/topdealitem.jpg";
 import RecommendedProducts from "./recommended-products/recommended-products";
 
 import "./card.css";
-
 function Home() {
   return (
     <div className="home">
@@ -102,18 +101,12 @@ function Home() {
             image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
             rating={5}
           /> */}
-        </div>
 
+      
+</div>
         <RecommendedProducts />
 
-        <div className="home__row">
-          {/* <Product
-            id="6"
-            title="Mastering React Test-Driven Development: Build rock-solid, well-tested web apps with React, Redux and GraphQL Paperback – 3 May 2019"
-            price={30.99}
-            image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
-            rating={5}
-          /> */}
+
         </div>
       </div>
     </div>
