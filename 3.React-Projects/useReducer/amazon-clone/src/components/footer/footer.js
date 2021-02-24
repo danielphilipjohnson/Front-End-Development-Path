@@ -4,7 +4,9 @@ import "./footer.css";
 function Footer() {
   return (
     <footer>
-      <div className="footer-top"></div>
+      <div className="footer-top">
+        <a href="#home-top">Back to top</a>
+      </div>
       <div className="footer__mid">
         <div className="footer__container">
           <ul className="footer__mid-items">
