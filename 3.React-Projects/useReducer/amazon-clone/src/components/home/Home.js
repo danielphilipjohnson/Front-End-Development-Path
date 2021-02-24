@@ -9,6 +9,8 @@ import topdealitemImg from "../../images/topdealitem.jpg";
 
 import RecommendedProducts from "./recommended-products/recommended-products";
 
+import subItem1 from "../../images/sub-items/sub-item1.jpg";
+
 import "./card.css";
 function Home() {
   return (
@@ -101,12 +103,30 @@ function Home() {
             image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
             rating={5}
           /> */}
-
-      
-</div>
+        </div>
         <RecommendedProducts />
 
-
+        <div>
+          <div className="card">
+            <div className="sub-cards">
+              <div className="sub-card">
+                <img src={subItem1} alt="sub-card" />
+                <p>ffsfsdfsd</p>
+              </div>
+              <div className="sub-card">
+                <img src={subItem1} alt="sub-card" />
+                <p>ffsfsdfsd</p>
+              </div>
+              <div className="sub-card">
+                <img src={subItem1} alt="sub-card" />
+                <p>ffsfsdfsd</p>
+              </div>
+              <div className="sub-card">
+                <img src={subItem1} alt="sub-card" />
+                <p>ffsfsdfsd</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
