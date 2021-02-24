@@ -1,138 +1,211 @@
 import React from "react";
+import "./footer.css";
 
 function Footer() {
   return (
     <footer>
       <div className="footer-top"></div>
-      <div className="footer-mid">
-        <ul>
-          <li>
-            <h4>Get to Know Us</h4>
-          </li>
-          <li>
-            <a href="#">Careers</a>
-          </li>
-          <li>
-            <a href="#">About Us</a>
-          </li>
-          <li>
-            <a href="#">UK Modern Slavery Statement</a>
-          </li>
-        </ul>
+      <div className="footer__mid">
+        <div className="footer__container">
+          <ul className="footer__mid-items">
+            <li>
+              <h4 className="footer__mid-title">Get to Know Us</h4>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Careers
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                UK Modern Slavery Statement
+              </a>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <h4>Make Money with Us</h4>
-          </li>
-          <li>
-            <a href="#">Sell on Amazon</a>
-          </li>
-          <li>
-            <a href="#">Sell Under Private Brands</a>
-          </li>
-          <li>
-            <a href="#">Sell on Amazon Business</a>
-          </li>
-          <li>
-            <a href="#">Sell on Amazon Handmade</a>
-          </li>
-          <li>
-            <a href="#">Sell on Amazon Launchpad</a>
-          </li>
-          <li>
-            <a href="#">Associates Programme</a>
-          </li>
-          <li>
-            <a href="#">Fulfilment by Amazon</a>
-          </li>
-          <li>
-            <a href="#">Seller Fulfilled Prime</a>
-          </li>
-          <li>
-            <a href="#">Advertise Your Products</a>
-          </li>
-          <li>
-            <a href="#">Independently Publish with Us</a>
-          </li>
-          <li>
-            <a href="#">Amazon Pay</a>
-          </li>
-          <li>
-            <a href="#">Host an Amazon Hub</a>
-          </li>
-          <li>
-            <a href="#">›See all</a>
-          </li>
-        </ul>
+          <ul className="footer__mid-items">
+            <li>
+              <h4 className="footer__mid-title">Make Money with Us</h4>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Sell on Amazon
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Sell Under Private Brands
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Sell on Amazon Business
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Sell on Amazon Handmade
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Sell on Amazon Launchpad
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Associates Programme
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Fulfilment by Amazon
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Seller Fulfilled Prime
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Advertise Your Products
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Independently Publish with Us
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Pay
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Host an Amazon Hub
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                ›See all
+              </a>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <h4>Amazon Payment Methods</h4>
-          </li>
-          <li>
-            <a href="#">Amazon Platinum Mastercard</a>
-          </li>
-          <li>
-            <a href="#">Amazon Classic Mastercard</a>
-          </li>
-          <li>
-            <a href="#">Amazon Money Store</a>
-          </li>
-          <li>
-            <a href="#">Gift Cards</a>
-          </li>
-          <li>
-            <a href="#">Amazon Currency Converter</a>
-          </li>
-          <li>
-            <a href="#">Payment Methods Help</a>
-          </li>
-          <li>
-            <a href="#">Shop with Points</a>
-          </li>
-          <li>
-            <a href="#">Top Up Your Account</a>
-          </li>
-          <li>
-            <a href="#">Top Up Your Account in Store</a>
-          </li>
-        </ul>
+          <ul className="footer__mid-items">
+            <li>
+              <h4 className="footer__mid-title">Amazon Payment Methods</h4>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Platinum Mastercard
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Classic Mastercard
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Money Store
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Gift Cards
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Currency Converter
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Payment Methods Help
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Shop with Points
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Top Up Your Account
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Top Up Your Account in Store
+              </a>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <h4>Let Us Help You</h4>
-          </li>
-          <li>
-            <a href="#">COVID-19 and Amazon</a>
-          </li>
-          <li>
-            <a href="#">Track Packages or View Orders</a>
-          </li>
-          <li>
-            <a href="#">Delivery Rates & Policies</a>
-          </li>
-          <li>
-            <a href="#">Amazon Prime</a>
-          </li>
-          <li>
-            <a href="#">Returns & Replacements</a>
-          </li>
-          <li>
-            <a href="#">Recycling</a>
-          </li>
-          <li>
-            <a href="#">Manage Your Content and Devices</a>
-          </li>
-          <li>
-            <a href="#">Amazon Mobile App</a>
-          </li>
-          <li>
-            <a href="#">Amazon Assistant</a>
-          </li>
-          <li>
-            <a href="#">Customer Service</a>
-          </li>
-        </ul>
+          <ul className="footer__mid-items">
+            <li>
+              <h4 className="footer__mid-title">Let Us Help You</h4>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                COVID-19 and Amazon
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Track Packages or View Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Delivery Rates & Policies
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Prime
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Returns & Replacements
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Recycling
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Manage Your Content and Devices
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Mobile App
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Amazon Assistant
+              </a>
+            </li>
+            <li>
+              <a href="#" className="footer__mid-link">
+                Customer Service
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className="footer-bottom"></div>
     </footer>
