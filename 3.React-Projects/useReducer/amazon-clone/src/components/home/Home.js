@@ -12,6 +12,9 @@ import RecommendedProducts from "./recommended-products/recommended-products";
 import subItem1 from "../../images/sub-items/sub-item1.jpg";
 
 import "./card.css";
+
+import "./sub-cards.css";
+
 function Home() {
   return (
     <div className="home">
@@ -107,23 +110,24 @@ function Home() {
         <RecommendedProducts />
 
         <div>
-          <div className="card">
-            <div className="sub-cards">
-              <div className="sub-card">
-                <img src={subItem1} alt="sub-card" />
-                <p>ffsfsdfsd</p>
+          <div className="sub__cards-container">
+            <h2 className="sub__cards-title">Garden & Outdoors</h2>
+            <div className="sub__cards-items">
+              <div className="sub__card">
+                <img src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
               </div>
-              <div className="sub-card">
-                <img src={subItem1} alt="sub-card" />
-                <p>ffsfsdfsd</p>
+              <div className="sub__card">
+                <img src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
               </div>
-              <div className="sub-card">
-                <img src={subItem1} alt="sub-card" />
-                <p>ffsfsdfsd</p>
+              <div className="sub__card">
+                <img src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
               </div>
-              <div className="sub-card">
-                <img src={subItem1} alt="sub-card" />
-                <p>ffsfsdfsd</p>
+              <div className="sub__card">
+                <img src={subItem1} alt="sub__card" />
+                <p className="sub__card-title">ffsfsdfsd</p>
               </div>
             </div>
           </div>
