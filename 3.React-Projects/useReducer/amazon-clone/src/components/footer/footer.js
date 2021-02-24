@@ -209,7 +209,26 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom"></div>
+      <div className="footer__bottom">
+        <ul>
+          <li>
+            <a href="#">Conditions of Use & Sale</a>
+          </li>
+          <li>
+            <a href="#">Privacy Notice</a>
+          </li>
+          <li>
+            <a href="#">Cookies Notice</a>
+          </li>
+          <li>
+            <a href="#">Interest-Based Ads Notice</a>
+          </li>
+          <li className="footer__bottom-last">
+            {" "}
+            © 1996-2021, Amazon.com, Inc. or its affiliates
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }
