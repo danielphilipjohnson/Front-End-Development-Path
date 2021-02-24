@@ -1,10 +1,14 @@
 import React from "react";
 import "./Home.css";
 import Bg from "../../images/bg.jpg";
+// spilt out later
 import Product from "../../Product";
 import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
+
+import RecommendedProducts from "./recommended-products/recommended-products";
+
 import "./card.css";
 function Home() {
   return (
@@ -97,6 +101,12 @@ function Home() {
             image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
             rating={5}
           /> */}
+
+      
+</div>
+        <RecommendedProducts />
+
+
         </div>
       </div>
     </div>
