@@ -106,6 +106,7 @@ function Home() {
         </div>
         <RecommendedProducts />
         <SubCards />
+        <RecommendedProducts />
       </div>
     </div>
   );
