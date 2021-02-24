@@ -1,20 +1,13 @@
 import React from "react";
 import "./Home.css";
 import Bg from "../../images/bg.jpg";
+// spilt out later
 import Product from "../../Product";
 import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
 import RecommendedProducts from "./recommended-products/recommended-products";
-
-import item1 from "../../images/items/item1.jpg";
-import item2 from "../../images/items/item2.jpg";
-import item3 from "../../images/items/item3.jpg";
-import item4 from "../../images/items/item4.jpg";
-import item5 from "../../images/items/item5.jpg";
-import item6 from "../../images/items/item6.jpg";
-import item7 from "../../images/items/item7.jpg";
 
 import "./card.css";
 
