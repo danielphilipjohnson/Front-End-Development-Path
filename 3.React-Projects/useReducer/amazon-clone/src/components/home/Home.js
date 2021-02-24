@@ -6,6 +6,8 @@ import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
+import RecommendedProducts from "./recommended-products/recommended-products";
+
 import item1 from "../../images/items/item1.jpg";
 import item2 from "../../images/items/item2.jpg";
 import item3 from "../../images/items/item3.jpg";
@@ -109,23 +111,8 @@ function Home() {
           /> */}
         </div>
 
-        <div className="recommended__items__container">
-          <div className="recommended__items__row">
-            <div className="">
-              <h2 className="recommended__items-title">
-                Recommended items other customers often buy again
-              </h2>
-            </div>
-            <div className="recommended__items-cards">
-              <img className="recommended__items-product" src={item1} alt="" />
-              <img className="recommended__items-product" src={item2} alt="" />
-              <img className="recommended__items-product" src={item3} alt="" />
-              <img className="recommended__items-product" src={item4} alt="" />
-              <img className="recommended__items-product" src={item5} alt="" />
-              <img className="recommended__items-product" src={item6} alt="" />
-            </div>
-          </div>
-        </div>
+        <RecommendedProducts />
+
         <div className="home__row">
           {/* <Product
             id="6"
