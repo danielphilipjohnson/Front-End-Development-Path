@@ -3,7 +3,7 @@ import "./App.css";
 import Header from "./components/home/header/Header";
 import Subheader from "./Subheader";
 import CheckoutSubNav from "./components/checkout/CheckoutSubNav";
-
+import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 /* Routes */
 import Orders from "./routes/orders/index";
@@ -72,6 +72,7 @@ function App() {
             <Header />
             <Subheader />
             <Home />
+            <Footer />
           </Route>
         </Switch>
       </div>
