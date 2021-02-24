@@ -5,7 +5,17 @@ import Product from "../../Product";
 import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
+
+import item1 from "../../images/items/item1.jpg";
+import item2 from "../../images/items/item2.jpg";
+import item3 from "../../images/items/item3.jpg";
+import item4 from "../../images/items/item4.jpg";
+import item5 from "../../images/items/item5.jpg";
+import item6 from "../../images/items/item6.jpg";
+import item7 from "../../images/items/item7.jpg";
+
 import "./card.css";
+
 function Home() {
   return (
     <div className="home">
@@ -88,6 +98,33 @@ function Home() {
             image={process.env.PUBLIC_URL + "/images/lego.jpg"}
             rating={5}
           /> */}
+        </div>
+        <div className="home__row">
+          {/* <Product
+            id="6"
+            title="Mastering React Test-Driven Development: Build rock-solid, well-tested web apps with React, Redux and GraphQL Paperback – 3 May 2019"
+            price={30.99}
+            image={process.env.PUBLIC_URL + "/images/reactbook.jpg"}
+            rating={5}
+          /> */}
+        </div>
+
+        <div className="recommended__items__container">
+          <div className="recommended__items__row">
+            <div className="">
+              <h2 className="recommended__items-title">
+                Recommended items other customers often buy again
+              </h2>
+            </div>
+            <div className="recommended__items-cards">
+              <img className="recommended__items-product" src={item1} alt="" />
+              <img className="recommended__items-product" src={item2} alt="" />
+              <img className="recommended__items-product" src={item3} alt="" />
+              <img className="recommended__items-product" src={item4} alt="" />
+              <img className="recommended__items-product" src={item5} alt="" />
+              <img className="recommended__items-product" src={item6} alt="" />
+            </div>
+          </div>
         </div>
         <div className="home__row">
           {/* <Product
