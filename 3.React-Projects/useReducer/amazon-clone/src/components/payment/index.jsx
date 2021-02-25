@@ -5,7 +5,7 @@ import CheckoutProduct from "../checkout/product";
 import { Link, useHistory } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import CurrencyFormat from "react-currency-format";
-import { getBasketTotal } from "../../reducer";
+import { getBasketTotal } from "../../reducer/reducer";
 
 import axios from "../../axios";
 import { db } from "../../adapters/firebase";
