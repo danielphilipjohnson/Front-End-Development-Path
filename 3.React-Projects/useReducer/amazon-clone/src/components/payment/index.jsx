@@ -85,7 +85,7 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
-        console.log(paymentIntent);
+
         db.collection("users")
           .doc(user?.uid)
           .collection("orders")
@@ -114,7 +114,6 @@ function Payment() {
         <h1>
           Checkout (<Link to="/checkout">{basket?.length} items</Link>)
         </h1>
-
         {/* Payment section - delivery address */}
         <div className="payment__section">
           <div className="payment__title">
@@ -126,7 +125,7 @@ function Payment() {
             <p>Los Angeles, CA</p>
           </div>
         </div>
-
+        dispatch
         {/* Payment section - Review Items */}
         <div className="payment__section">
           <div className="payment__title">
@@ -144,7 +143,6 @@ function Payment() {
             ))}
           </div>
         </div>
-
         {/* Payment section - Payment method */}
         <div className="payment__section">
           <div className="payment__title">

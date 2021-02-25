@@ -17,19 +17,19 @@ function Home() {
   return (
     <div className="home" id="home-top">
       <div className="home__container">
-        <img className="home__image" src={Bg} />
+        <img className="home__image" src={Bg} alt="background" />
         <div className="card-grid">
           <div className="card">
             <h2 className="card__title">Free delivery on your first order</h2>
             <img className="card__image" src={shippingImg} alt="shipping" />
-            <a className="card__link" href="#">
+            <a className="card__link" href="/">
               Find out more
             </a>
           </div>
           <div className="card">
             <h2 className="card__title">Customers' most loved for him</h2>
             <img className="card__image" src={popitemsImg} alt="shipping" />
-            <a className="card__link" href="#">
+            <a className="card__link" href="/">
               See more
             </a>
           </div>
@@ -44,15 +44,14 @@ function Home() {
             <p className="card__description">
               £4.79- £17.99 Command Hanging Strips and Bathroom Products
             </p>
-            <a className="card__link" href="#">
+            <a className="card__link" href="/">
               Shop more deals
             </a>
           </div>
           <div className="card">
             <h2 className="card__title">Free delivery on your first order</h2>
             <img className="card__image" src={shippingImg} alt="shipping" />
-            <a className="card__link" href="#">
-              {" "}
+            <a className="card__link" href="/">
               Shop more deals
             </a>
           </div>
