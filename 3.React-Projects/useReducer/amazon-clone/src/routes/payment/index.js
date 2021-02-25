@@ -1,3 +1,3 @@
-import Payment from "../../components/payment/Payment";
+import Payment from "../../components/payment";
 
 export default Payment;

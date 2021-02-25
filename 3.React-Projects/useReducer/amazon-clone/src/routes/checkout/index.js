@@ -1,3 +1,3 @@
-import Checkout from "../../components/checkout/Checkout";
+import Checkout from "../../components/checkout";
 
 export default Checkout;

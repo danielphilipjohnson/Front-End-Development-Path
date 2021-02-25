@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+
 import Bg from "../../images/bg.jpg";
 // spilt out later
 import Product from "../../Product";
@@ -7,10 +7,10 @@ import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
-import RecommendedProducts from "./recommended-products/recommended-products";
+import RecommendedProducts from "./recommended-products";
 
-import SubCards from "./sub-cards/sub-card";
-
+import SubCards from "./sub-cards";
+import "./home.css";
 import "./card.css";
 
 function Home() {
@@ -79,7 +79,7 @@ function Home() {
             price={49.99}
             image={process.env.PUBLIC_URL + "/images/echodot.jpg"}
             rating={5}
-          />
+          />firebase
           <Product
             id="4"
             title="Shark HZ400UKT, Vacuum Cleaner, Blue & Grey"
