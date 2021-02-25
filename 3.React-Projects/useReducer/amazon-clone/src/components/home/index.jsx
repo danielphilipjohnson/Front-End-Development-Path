@@ -2,7 +2,7 @@ import React from "react";
 
 import Bg from "../../images/bg.jpg";
 // spilt out later
-import Product from "../../Product";
+import Product from "../product";
 import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
@@ -29,7 +29,7 @@ function Home() {
           <div className="card">
             <h2 className="card__title">Customers' most loved for him</h2>
             <img className="card__image" src={popitemsImg} alt="shipping" />
-            <a className="card__link" href="/">
+            <a className="c./src/index.jsard__link" href="/">
               See more
             </a>
           </div>
