@@ -16,7 +16,7 @@ import Checkout from "./routes/checkout";
 import Payment from "./routes/payment";
 import Home from "./routes/home";
 
-import { auth } from "./firebase";
+import { auth } from "./adapters/firebase";
 
 import { useStateValue } from "./StateProvider";
 import { loadStripe } from "@stripe/stripe-js";

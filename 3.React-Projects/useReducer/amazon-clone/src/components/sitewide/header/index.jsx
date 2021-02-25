@@ -7,7 +7,7 @@ import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../../StateProvider";
 
-import { auth } from "../../../firebase";
+import { auth } from "../../../adapters/firebase";
 
 import AmazonLogo from "../../../images/amazon-logo.png";
 
