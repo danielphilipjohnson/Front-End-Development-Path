@@ -41,11 +41,9 @@ function Header() {
         <div className="select-box">
           <select
             aria-describedby="search Dropdown"
-            class="header__search-dropdown hide-mobile show-desktop"
+            className="header__search-dropdown hide-mobile show-desktop"
           >
-            <option selected="selected" value="amazon-devices">
-              Amazon Devices
-            </option>
+            <option defaultValue="amazon-devices">Amazon Devices</option>
             <option value="all">All Departments</option>
             <option value="alexa-skills">Alexa Skills</option>
             <option value="amazon-global-store">Amazon Global Store</option>
@@ -99,7 +97,7 @@ function Header() {
 
       <div className="nav-right header__nav">
         <div className="header__option hide-mobile show-desktop">
-          <span class="flag-icon flag-icon-gb"></span>
+          <span className="flag-icon flag-icon-gb"></span>
         </div>
         <Link to={!user && "/login"}>
           <div className="header__option">
