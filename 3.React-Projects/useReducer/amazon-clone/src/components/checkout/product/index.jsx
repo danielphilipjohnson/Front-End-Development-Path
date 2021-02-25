@@ -1,5 +1,5 @@
 import React from "react";
-import "./checkout-product.css";
+import "./product.css";
 import { useStateValue } from "../../../StateProvider";
 import FadeIn from "react-fade-in";
 

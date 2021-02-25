@@ -1,5 +1,52 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Project structure
+
+### Adapters
+adapters
+|---xhr
+|---page1Adapter
+|---page2Adapter
+
+for example 
+export function getData(){
+  return get(someUrl);
+}
+
+### React Components
+
+
+
+
+Prefer
+
+import Total from '../cart/total'
+// vs
+import CartTotal from '../cart/cart-total
+
+Prefer the jsx Extension over Capital Letters
+
+
+section-nav.jsx
+// vs
+SectionNav.js
+
+TBI
+-----------------
+“Smart” And “Dumb” React Components
+
+
+
+Avoid Large render Methods, lots of props
+- no more than 150 lines of code
+
+Always Use prop-type
+
+TBI
+--------------------
+Redux
+
 ## Available Scripts
 
 In the project directory, you can run:

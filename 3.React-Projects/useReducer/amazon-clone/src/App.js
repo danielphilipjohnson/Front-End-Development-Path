@@ -7,7 +7,7 @@ import Subheader from "./components/sitewide/subheader";
 import BrowseringHistory from "./components/sitewide/browsering-history";
 import Footer from "./components/sitewide/footer";
 
-import CheckoutSubNav from "./components/checkout/CheckoutSubNav";
+import CheckoutSubNav from "./components/checkout/section-nav/";
 
 /* Routes */
 import Orders from "./routes/orders";
