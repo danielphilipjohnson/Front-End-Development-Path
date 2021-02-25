@@ -57,7 +57,7 @@ function Home() {
             </a>
           </div>
           {/* <Product
-            id="1"
+            id="1"axios
             title="The lean startup"
             price={29.99}
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSB1dS4HWYeftUtMYTKlSJhxKK_dtk-J7kJVljnW-zl01X62b7cuyZGn-11S7YHKIYr203-ZriO&usqp=CAc"

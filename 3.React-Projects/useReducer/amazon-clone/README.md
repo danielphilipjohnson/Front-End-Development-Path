@@ -16,6 +16,46 @@ export function getData(){
 
 ### React Components
 
+|---page2Component
+        |--Component1
+               |---index.tsx
+               |---bl.tsx
+
+They will hold the UI for your application, and can sometimes hold the Business Logic and also any State which has to be maintained.
+
+
+Business Logic
+
+
+// components/page1Components/Component1/index.tsx
+
+import businessLogic from "./bl.tsx";
+
+export default function Component2() {
+  
+  const { state and functions } = businessLogic();
+
+  return {
+    // JSX
+  }
+}
+
+
+While the BL file only imports data and returns it:
+
+// components/page1Components/Component1/bl.tsx
+
+import React, {useState, useEffect} from "react";
+import { adapters } from "adapters/path_to_adapter";
+
+export default function Component1Bl(){
+  const [state, setState] = useState(initialState);
+
+  useEffect(() => {
+    fetchDataFromAdapter().then(updateState);
+  }, [])
+}
+
 
 
 
