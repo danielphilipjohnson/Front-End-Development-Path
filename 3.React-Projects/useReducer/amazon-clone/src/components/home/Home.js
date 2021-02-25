@@ -8,7 +8,6 @@ import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
 import RecommendedProducts from "./recommended-products/recommended-products";
-import BrowseringHistory from "./browsering-history/browsering-history";
 
 import SubCards from "./sub-cards/sub-card";
 
@@ -109,7 +108,6 @@ function Home() {
         <RecommendedProducts />
         <SubCards />
         <RecommendedProducts />
-        <BrowseringHistory />
       </div>
     </div>
   );

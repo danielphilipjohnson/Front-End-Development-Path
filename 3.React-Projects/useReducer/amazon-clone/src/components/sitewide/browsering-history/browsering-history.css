@@ -1,13 +1,11 @@
-.recommended__items__container {
+.browsering__items__container {
   width: 100%;
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
-.recommended__items__row {
-  padding: 1rem 1rem;
+.browsering__items__row {
+  padding: 1rem 1rem 2rem 1rem;
   background-color: #fff;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .browsering__items-title {
