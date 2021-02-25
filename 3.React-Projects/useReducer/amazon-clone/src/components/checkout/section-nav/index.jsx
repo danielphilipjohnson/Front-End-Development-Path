@@ -1,5 +1,5 @@
 import React from "react";
-import "./CheckoutSubNav.css";
+import "./checkoutSubNav.css";
 function CheckoutSubNav() {
   return (
     <div className="checkoutSubNav">

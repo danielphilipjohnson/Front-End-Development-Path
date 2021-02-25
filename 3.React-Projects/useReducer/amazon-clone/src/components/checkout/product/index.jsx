@@ -1,6 +1,6 @@
 import React from "react";
-import "./CheckoutProduct.css";
-import { useStateValue } from "../../StateProvider";
+import "./product.css";
+import { useStateValue } from "../../../StateProvider";
 import FadeIn from "react-fade-in";
 
 function CheckoutProduct({ id, image, title, price, rating, hideButton }, ref) {

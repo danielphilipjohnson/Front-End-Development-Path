@@ -1,7 +1,7 @@
 import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
-import subNavImage from "./images/sub-nav.jpg";
-import "./Subheader.css";
+import subNavImage from "../../../images/sub-nav.jpg";
+import "./subheader.css";
 
 function Subheader() {
   return (

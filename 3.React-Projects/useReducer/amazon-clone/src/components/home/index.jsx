@@ -1,35 +1,35 @@
 import React from "react";
-import "./Home.css";
+
 import Bg from "../../images/bg.jpg";
 // spilt out later
-import Product from "../../Product";
+import Product from "../product";
 import shippingImg from "../../images/shipping.jpg";
 import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
-import RecommendedProducts from "./recommended-products/recommended-products";
+import RecommendedProducts from "./recommended-products";
 
-import SubCards from "./sub-cards/sub-card";
-
+import SubCards from "./sub-cards";
+import "./home.css";
 import "./card.css";
 
 function Home() {
   return (
     <div className="home" id="home-top">
       <div className="home__container">
-        <img className="home__image" src={Bg} />
+        <img className="home__image" src={Bg} alt="background" />
         <div className="card-grid">
           <div className="card">
             <h2 className="card__title">Free delivery on your first order</h2>
             <img className="card__image" src={shippingImg} alt="shipping" />
-            <a className="card__link" href="#">
+            <a className="card__link" href="/">
               Find out more
             </a>
           </div>
           <div className="card">
             <h2 className="card__title">Customers' most loved for him</h2>
             <img className="card__image" src={popitemsImg} alt="shipping" />
-            <a className="card__link" href="#">
+            <a className="c./src/index.jsard__link" href="/">
               See more
             </a>
           </div>
@@ -44,20 +44,19 @@ function Home() {
             <p className="card__description">
               £4.79- £17.99 Command Hanging Strips and Bathroom Products
             </p>
-            <a className="card__link" href="#">
+            <a className="card__link" href="/">
               Shop more deals
             </a>
           </div>
           <div className="card">
             <h2 className="card__title">Free delivery on your first order</h2>
             <img className="card__image" src={shippingImg} alt="shipping" />
-            <a className="card__link" href="#">
-              {" "}
+            <a className="card__link" href="/">
               Shop more deals
             </a>
           </div>
           {/* <Product
-            id="1"
+            id="1"axios
             title="The lean startup"
             price={29.99}
             image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSB1dS4HWYeftUtMYTKlSJhxKK_dtk-J7kJVljnW-zl01X62b7cuyZGn-11S7YHKIYr203-ZriO&usqp=CAc"
@@ -79,7 +78,7 @@ function Home() {
             price={49.99}
             image={process.env.PUBLIC_URL + "/images/echodot.jpg"}
             rating={5}
-          />
+          />firebase
           <Product
             id="4"
             title="Shark HZ400UKT, Vacuum Cleaner, Blue & Grey"

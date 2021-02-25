@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 
 import * as serviceWorker from "./serviceWorker";
-import reducer, {initialState} from "./reducer";
+import reducer, { initialState } from "./reducer/reducer";
 import { StateProvider } from "./StateProvider";
 
 ReactDOM.render(
