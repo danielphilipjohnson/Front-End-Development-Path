@@ -24,6 +24,7 @@ function RecommendedProducts() {
             src={item1}
             alt="product description"
           />
+
           <img
             className="recommended__items-product"
             src={item2}
