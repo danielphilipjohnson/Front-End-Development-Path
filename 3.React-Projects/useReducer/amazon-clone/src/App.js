@@ -3,6 +3,10 @@ import "./App.css";
 import Header from "./components/home/header/Header";
 import Subheader from "./Subheader";
 import CheckoutSubNav from "./components/checkout/CheckoutSubNav";
+
+// move to a layout component
+import BrowseringHistory from "./components/sitewide/browsering-history/browsering-history";
+
 import Footer from "./components/footer/footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 /* Routes */
@@ -72,6 +76,7 @@ function App() {
             <Header />
             <Subheader />
             <Home />
+            <BrowseringHistory />
             <Footer />
           </Route>
         </Switch>

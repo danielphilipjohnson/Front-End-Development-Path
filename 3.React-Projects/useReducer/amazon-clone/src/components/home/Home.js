@@ -8,6 +8,7 @@ import popitemsImg from "../../images/popitems.jpg";
 import topdealitemImg from "../../images/topdealitem.jpg";
 
 import RecommendedProducts from "./recommended-products/recommended-products";
+
 import SubCards from "./sub-cards/sub-card";
 
 import "./card.css";
