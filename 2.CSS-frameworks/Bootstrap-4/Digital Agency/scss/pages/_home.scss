@@ -1,0 +1,39 @@
+.cta {
+  height: 95vh;
+  color: #fff;
+
+  &-content {
+    background: url(../img/intro-bg.jpg) bottom center no-repeat #333;
+    background-size: cover;
+    @extend .jumbotron;
+    &-inner {
+      height: 80vh;
+      @extend .row;
+      @extend .justify-content-center;
+    }
+  }
+}
+
+.opaque-panel {
+  @extend .col-md-8;
+  @extend .align-self-center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  .brand-heading {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  .intro-text {
+    font-size: 2.85rem;
+  }
+}
+
+.who-section {
+  background: url(../img/downloads-bg.jpg) center center no-repeat #333;
+  background-size: cover;
+  color: white;
+  padding: 7.5rem;
+  margin: 2.5rem 0;
+}

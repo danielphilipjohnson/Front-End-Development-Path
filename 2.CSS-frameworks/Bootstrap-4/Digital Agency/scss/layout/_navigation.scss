@@ -1,0 +1,44 @@
+.navbar-custom {
+  @extend .nav;
+  @extend .fixed-top;
+
+  .navbar-toggler {
+    position: fixed;
+    border-radius: 50%;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: grey;
+    color: #fff;
+  }
+  .navbar-collapse {
+    background-color: rgb(51, 51, 51);
+    height: 100vh;
+    padding: 3rem;
+    // transition: opacity 0.2s;
+    .navbar-nav {
+      align-content: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      .nav-item {
+        font-size: 3rem;
+      }
+      .navbar-brand {
+        color: white;
+        font-size: 4rem;
+        font-weight: 700;
+        height: 50px;
+        letter-spacing: 1px;
+        line-height: 20px;
+        padding: 1.5rem;
+      }
+    }
+  }
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active {
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
