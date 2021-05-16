@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Twitter Quote Generator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Daniel Philip Johnson React Developer
+            Freecodecamp: Random Quote Generator"
+    />
+    <meta
+      name="keywords"
+      content="Random Quote Generator, Freecodecamp
+            React
+            Developer, Web Development,
+            Web Applications, Mobile Apps"
+    />
+    <meta name="author" content="Daniel Philip Johnson" />
+
+    <!-- Facebook tags -->
+    <meta
+      property="og:title"
+      content="Freecodecamp: Random Quote
+            Generator"
+    />
+    <meta
+      property="og:description"
+      content="Freecodecamp: Random Quote
+            Generator"
+    />
+    <meta
+      property="og:image"
+      content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://danielphilipjohnson.github.io/ffc/"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--  Non-Essential, But Recommended -->
+    <meta
+      property="og:site_name"
+      content="Freecodecamp: Random Quote
+            Generator"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Profile of React Developer
+            Daniel
+            Philip Johnson"
+    />
+
+    <!-- Twitter Tags -->
+    <meta
+      name="twitter:title"
+      content="Freecodecamp: Random Quote
+            Generator"
+    />
+    <meta
+      name="twitter:description"
+      content="Freecodecamp: Random Quote
+            Generator"
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg"
+    />
+    <meta name="twitter:card" content="Twitter Profile" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="nav" id="bg-change">
+      <i class="fab fa-twitter icon"></i>
+      <h1 class="center">Twitter Quote Generator</h1>
+    </nav>
+
+    <div class="quote-box">
+      <div class="author-details p-md">
+        <div class="author-details__image">
+          <div class="banner-left">
+            <img
+              class="profile-image"
+              src="https://pbs.twimg.com/profile_images/1339602638111830020/k0dGL2Ye_400x400.png"
+              alt="profile image"
+            />
+          </div>
+          <div class="main-button">
+            <a href="#" class="btn-twitter btn-round">
+              <i class="fas fa-ellipsis-h"></i>
+            </a>
+            <a
+              href="https://twitter.com/messages"
+              class="btn-twitter btn-round"
+            >
+              <i class="far fa-envelope"></i>
+            </a>
+
+            <a
+              href="#"
+              class="btn-twitter btn-twitter-follow button"
+              id="twitter-follow-button"
+            >
+              <span>Follow</span>
+            </a>
+          </div>
+        </div>
+        <div class="author-details__content">
+          <h2>Daniel Philip Johnson</h2>
+          <p class="text-grey pb-sm">@danielp_johnson</p>
+          <p class="pb-sm">
+            Former psychologist turned React Developer. Currently, I am learning
+            Advanced CSS and studying project management. I use Linux and KDE
+          </p>
+          <p class="text-grey pb-sm">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="pr-md">South West, England </span>
+            <i class="far fa-calendar-alt"></i>
+            <span>Joined June 2020</span>
+          </p>
+        </div>
+
+        <div class="author-details__stats">
+          <p>
+            <strong>106</strong>
+            <span class="sub-text">Following</span>
+          </p>
+
+          <p>
+            <strong>92</strong>
+            <span class="sub-text">Followers</span>
+          </p>
+        </div>
+      </div>
+
+      <nav class="tabs">
+        <ul class="nav__links" id="quote-type">
+          <li id="famous-quote" class="active">Famous Quotes</li>
+          <li id="movie-quote">Movie Quotes</li>
+        </ul>
+      </nav>
+
+      <div class="author-post pt-sm">
+        <div class="author-post__image pl-sm">
+          <img
+            src="https://pbs.twimg.com/profile_images/1339602638111830020/k0dGL2Ye_400x400.png"
+            alt="profile image"
+          />
+        </div>
+
+        <div class="author-post__details pr-sm">
+          <div class="author-post__details__user">
+            <h3 class="">
+              Daniel Philip Johnson
+              <span class="text-grey pb-sm username">@danielp_johnson · </span>
+              <span id="timestamp" class="time"> 17</span>
+            </h3>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+
+          <div class="author-post__details__post pb-sm">
+            <i class="fa fa-quote-left"></i>
+            <span id="text"> Your Quote will appear here </span>
+          </div>
+          <div class="quote-author pb-md">
+            -
+            <span id="author">Author</span>
+          </div>
+
+          <ul class="retweets pb-sm">
+            <li>
+              <i class="far fa-comment"></i>
+              <span id="comments">160</span>
+            </li>
+            <li>
+              <i class="fas fa-retweet"></i>
+              <span id="retweets">160</span>
+            </li>
+            <li>
+              <i class="far fa-heart"></i>
+              <span id="likes">437</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="social-buttons p-md">
+        <button class="btn-share" id="twitter-share-button">
+          <i class="fab fa-twitter"></i>
+          <span>Tweet</span>
+        </button>
+
+        <button class="button btn-quote" id="new-quote">
+          <span>New Quote</span>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>
+        <a href="https://codepen.io/danielphilipjohnson/">
+          By Daniel Philip Johnson</a
+        >
+      </p>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

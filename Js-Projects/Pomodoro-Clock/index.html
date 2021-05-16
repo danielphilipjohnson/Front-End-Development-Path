@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pomodoro Clock</title>
+        <meta name="description" content="Daniel Philip Johnson React Developer
+            Pomodoro">
+        <meta name="keywords" content="Javascript Calculator, Freecodecamp React
+            Developer, Web Development,
+            Web Applications, Mobile Apps">
+        <meta name="author" content="Daniel Philip Johnson">
+
+        <!-- Facebook tags -->
+        <meta property="og:title" content="Freecodecamp project: Pomodoro">
+        <meta property="og:description" content="Pomodoro">
+        <meta property="og:image"
+            content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+        <meta property="og:url"
+            content="https://danielphilipjohnson.github.io/ffc/">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <!--  Non-Essential, But Recommended -->
+
+        <meta property="og:site_name" content="Freecodecamp project: Pomodoro">
+        <meta name="twitter:image:alt" content="Profile of React Developer
+            Daniel
+            Philip Johnson">
+
+        <!-- Twitter Tags -->
+        <meta name="twitter:title" content="Freecodecamp project: Pomodoro">
+        <meta name="twitter:description" content="Freecodecamp project.
+            Pomodoro">
+        <meta name="twitter:image"
+            content="https://pbs.twimg.com/profile_images/1288051154413379591/tUGJS2vc_400x400.jpg">
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+            integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+            crossorigin="anonymous"
+            />
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+
+    <body>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li class="nav_link">
+                    <h1 class="logo">TomatoPomo</h1>
+                </li>
+                <li class="nav_link">
+                    <a href="" class="btn btn-transparent btn-round btn-nav">
+                        <i class="far fa-chart-bar"></i>
+                        <span>Report</span>
+                    </a>
+                    <a href="" class="btn btn-transparent btn-round btn-nav">
+                        <i class="fas fa-cog"></i>
+                        <span>
+                            Setting
+                        </span>
+
+                    </a>
+                    <a href="" class="btn btn-transparent btn-round btn-nav">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Login</span>
+
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="clock">
+            <div class="outer-clock">
+                <div id="display" class="clock-display">
+                    <div>
+                        <h2 class="clock-display__timer clock-timer"
+                            id="clock-timer">
+                            01:00
+                        </h2>
+
+                        <!-- <p class="clock-display__label">Task Length:</p> -->
+                        <div class="btn-group-clock">
+                            <span id="minus-session" class="btn-clock--circle">
+                                - </span>
+                            <span id="session-length" class="btn-clock--circle">
+                                1 </span>
+                            <span id="plus-session" class="btn-clock--circle">+</span>
+                        </div>
+                    </div>
+
+                    <div class="clock-break">
+                        <p class="clock-display__label">Break Length: <span
+                                class="clock-display__label__timer"
+                                id="break-timer">05:00</span></p>
+
+
+                        <p class="btn-group-clock">
+                            <span id="minus-break-session"
+                                class="btn-clock--circle"> - </span>
+                            <span id="break-length" class="btn-clock--circle"> 5
+                            </span>
+                            <span id="plus-break-session"
+                                class="btn-clock--circle">+</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bottom-buttons">
+                    <button class="btn btn-white btn-lg btn-round" id="start">
+                        Start
+                    </button>
+                    <button class="btn btn-white btn-lg btn-round" id="reset">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./js/app.js"></script>
+    </body>
+</html>
