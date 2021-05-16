@@ -1,0 +1,217 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  
+  background-color: rgb(76, 166, 169);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: .1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.nav_link .logo {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* clock */
+
+.clock {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 1rem;
+}
+
+.outer-clock {
+  margin: 2.3rem;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+
+.clock-display {
+  display: flex;
+  flex-direction: column;
+  color: white;
+ 
+}
+
+.clock-display__label {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.clock-display__label__timer {
+  font-weight: bold;
+} 
+
+.clock-display__timer {
+  margin-bottom: 2.5rem;
+  font-size: 7rem;
+  text-align: center;
+  color: #fff;
+}
+
+
+.break-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.break-controls span {
+  margin-right: 1rem;
+}
+
+.bottom-buttons {
+
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0;
+  border-bottom-left-radius: .4rem;
+  border-bottom-right-radius: .4rem;
+  
+}
+
+.bottom-buttons button {
+  margin-right: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  
+  padding: 1rem 1.5rem;
+  margin-left: 0.5rem;
+  border: 0;
+
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 1.5rem;
+}
+.btn-nav {
+  font-size: 1.3rem;
+  
+}
+
+.btn-group-clock {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.btn-clock--circle {
+  background-color: white;
+  color:rgba(17, 16, 16, 0.9);
+  padding: 1.5rem;
+  border-radius: 50%;
+  font-size: 2.1rem;
+  margin-right: 1rem;
+  min-width: 2.5rem;
+}
+
+.btn-round {
+  border-radius: .4rem;
+}
+.btn-white {
+  box-shadow: rgb(235, 235, 235) 0rem .6rem 0rem;
+  background-color: #fff;
+  color: rgb(240, 91, 86);
+  font-weight: bold;
+  font-size: 2rem;
+}
+.btn-transparent {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.btn-lg {
+  padding: 1.5rem 4rem;
+}
+
+
+
+@media screen and (min-width: 60rem) {
+  .nav__links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+}
+
+
+@media screen and (min-width: 100rem) {
+  .btn-nav {
+    min-width: 8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  .clock {
+    width: 64rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+
+  .clock-display__timer{
+    font-size: 10rem;
+
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .clock {
+    width: 72rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+  }
+  .clock-display__timer{
+    font-size: 15rem;
+
+  }
+
+  .btn-group-clock {
+    margin-bottom: 4rem;
+  }
+
+  .btn-clock--circle  {
+    padding: 2.5rem;
+    margin-right: 1.7rem;
+    min-width: 2.5rem;
+  }
+  .clock-display__label {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (min-width: 120rem) {
+  .btn-lg {
+    padding: 2.5rem 6rem;
+  }
+}
