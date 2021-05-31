@@ -1,16 +1,5 @@
-// select items
-
-const img = document.getElementById("ad-image");
-const name = document.getElementById("ad-name");
-const text = document.getElementById("ad-text");
-const url = document.getElementById("ad-url");
-
-// improve the data
-
 // move data outside so others can provide it.
 // with a promise
-
-// add a way to get next ad
 
 class Carousel {
   constructor() {
@@ -20,6 +9,9 @@ class Carousel {
     this.adName = document.getElementById("ad-name");
     this.adText = document.getElementById("ad-text");
     this.adUrl = document.getElementById("ad-url");
+
+    this.prevBtn = document.getElementById("prev-ad");
+    this.nextBtn = document.getElementById("next-ad");
 
     this.ads = [
       {
@@ -55,10 +47,26 @@ class Carousel {
         url: "https://twitter.com/freeCodeCamp",
       },
     ];
+
+    this.nextBtn.addEventListener("click", () => {
+      this.currentItem++;
+      if (this.currentItem > this.ads.length - 1) {
+        this.currentItem = 0;
+      }
+      this.showAd(this.currentItem);
+    });
+
+    this.prevBtn.addEventListener("click", () => {
+      this.currentItem--;
+      if (this.currentItem < 0) {
+        this.currentItem = this.ads.length - 1;
+      }
+      this.showAd(this.currentItem);
+    });
   }
-  run() {
+
+  showAd() {
     const ad = this.ads[this.currentItem];
-    console.log(ad);
     this.adName.textContent = ad.name;
     this.adText.textContent = ad.text;
     this.adUrl.textContent = ad.url;
@@ -69,5 +77,5 @@ class Carousel {
 // load initial item
 window.addEventListener("DOMContentLoaded", function () {
   const car = new Carousel();
-  car.run();
+  car.showAd();
 });
