@@ -6,6 +6,7 @@ class Modal {
       this.openModalBtn = document.getElementById(openModalBtn);
 
       this.closeModalBtn = document.getElementById(closeModalBtn);
+      this.cancelModal = document.getElementById("cancel-modal");
 
       this.modalToggleEvent = () => {
         this.modal.classList.toggle("hidden");
@@ -31,6 +32,9 @@ class Modal {
       throw new Error(
         "Unable to find closeModalBtn. Make sure you passed the correct ID for your closeModalBtn."
       );
+    }
+    if (this.cancelModal) {
+      this.cancelModal.addEventListener("click", this.modalToggleEvent);
     }
   }
 }

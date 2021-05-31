@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carousel ads</title>
+    <title>Basic Modal</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -13,8 +13,8 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body class="bg-red-200">
-    <!-- <nav class="bg-black text-white flex justify-between px-8 py-3">
+  <body class="">
+    <nav class="bg-black text-white flex justify-between px-8 py-3">
       <ul class="flex justify-between w-2/4">
         <li class="font-bold">Dashboard</li>
         <li>Inbox</li>
@@ -37,10 +37,11 @@
           />
         </li>
       </ul>
-    </nav> -->
+    </nav>
     <div
       id="modal"
       class="
+        hidden
         absolute
         top-0
         grid
@@ -50,8 +51,8 @@
         bg-gray-600 bg-opacity-75
       "
     >
-      <div class="container md:mx-auto relative">
-        <header class="bg-indigo-800 text-white rounded-t-lg p-4">
+      <div class="container md:mx-auto relative md:w-max">
+        <header class="bg-indigo-600 text-white rounded-t-lg p-4">
           <h1 class="text-lg font-bold mb-2">New Project</h1>
           <h2 class="text-gray-400">
             Fill out the information below to get started
@@ -60,7 +61,7 @@
             <i class="fas fa-times text-gray-100"></i>
           </button>
         </header>
-        <div class="flex flex-wrap justify-between bg-white">
+        <div class="flex justify-between bg-white">
           <div
             class="
               flex
@@ -73,7 +74,9 @@
             "
           >
             <span class="mr-2 text-sm text-gray-400">1. </span>
-            <p class="text-indigo-700 font-bold">Project Details</p>
+            <p class="text-indigo-700 text-sm md:text-md font-bold">
+              Project Details
+            </p>
           </div>
           <div
             class="
@@ -87,7 +90,9 @@
             "
           >
             <span class="mr-2 text-sm text-gray-400">2. </span>
-            <p class="text-gray-500 font-bold">Choose Template</p>
+            <p class="text-gray-500 text-sm md:text-md font-bold">
+              Choose Template
+            </p>
           </div>
           <div
             class="
@@ -101,11 +106,13 @@
             "
           >
             <span class="mr-2 text-sm text-gray-400">3. </span>
-            <p class="text-gray-500 font-bold">Privacy Options</p>
+            <p class="text-gray-500 text-sm md:text-md font-bold">
+              Privacy Options
+            </p>
           </div>
         </div>
         <div class="bg-white flex flex-col md:flex-row">
-          <form class="p-4">
+          <form class="px-4 pt-4 lg:w-1/2">
             <div class="flex flex-col mb-6">
               <label class="font-bold text-gray-800" for="project-name"
                 >Project Name</label
@@ -131,7 +138,7 @@
               ></textarea>
             </div>
 
-            <div class="flex flex-col mb-6">
+            <div class="flex flex-col">
               <label class="font-bold text-gray-800" for="project-name"
                 >Labels</label
               >
@@ -215,7 +222,7 @@
             </div>
           </form>
 
-          <div class="p-4">
+          <div class="px-4 pt-6 lg:w-1/2">
             <h3 class="font-bold">Team members</h3>
             <p class="mb-6 text-gray-400">Add members to your project</p>
             <div class="flex flex-wrap">
@@ -226,23 +233,24 @@
                   px-4
                   py-2
                   mr-3
+                  mb-4
                   max-w-max
                 "
               >
                 <i class="fas fa-plus text-sm"></i>
               </div>
               <img
-                class="rounded-full w-12 h-12 mr-2"
+                class="rounded-full w-12 h-12 mr-2 mb-4"
                 src="https://source.unsplash.com/random"
                 alt="person 1"
               />
               <img
-                class="rounded-full w-12 h-12 mr-2"
+                class="rounded-full w-12 h-12 mr-2 mb-4"
                 src="https://source.unsplash.com/random"
                 alt="person 2"
               />
               <img
-                class="rounded-full w-12 h-12 mr-2"
+                class="rounded-full w-12 h-12 mr-2 mb-4"
                 src="https://source.unsplash.com/random"
                 alt="person 3"
               />
@@ -251,7 +259,10 @@
         </div>
 
         <div class="bg-gray-100 flex justify-end p-4">
-          <button class="bg-white font-bold border-2 mr-3 rounded-md px-3 py-1">
+          <button
+            class="bg-white font-bold border-2 mr-3 rounded-md px-3 py-1"
+            id="cancel-modal"
+          >
             Cancel
           </button>
           <button
