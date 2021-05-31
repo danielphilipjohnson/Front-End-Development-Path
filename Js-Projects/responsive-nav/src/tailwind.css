@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.submenu {
+  background: #fff;
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: none;
+
+  border-radius: 0.75rem;
+}
+.submenu::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submenu a {
+  color: hsl(209, 61%, 16%);
+  text-transform: capitalize;
+}
+.submenu i {
+  color: hsl(210, 22%, 49%);
+  margin-right: 1rem;
+}
+
+.submenu.show {
+  display: block;
+}
