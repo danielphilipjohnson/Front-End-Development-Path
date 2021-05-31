@@ -10,32 +10,32 @@ const fetchAdsMock = new Promise((resolve, reject) => {
         {
           id: 1,
           name: "freeCodeCamp",
-          logo: "<i class='fa fa-free-code-camp' aria-hidden='true'></i>",
-          img: "./img/FreeCodeCampLogo.png",
+          logo: "https://res.cloudinary.com/dpj88/image/upload/v1622455564/carousel/freeCodeCampIcon_lgenkm.jpg",
+          img: "https://res.cloudinary.com/dpj88/image/upload/v1622455565/carousel/FreeCodeCampLogo_tz1m2q.png",
           text: "Learn to code — for free. Build projects. Earn certifications.",
           url: "https://www.freecodecamp.org/",
         },
         {
           id: 2,
           name: "freeCodeCamp Youtube",
-          logo: "<i class='fa fa-free-code-camp' aria-hidden='true'></i>",
-          img: "./img/freeCodeCampYt.png",
+          logo: "https://res.cloudinary.com/dpj88/image/upload/v1622455564/carousel/freeCodeCampIcon_lgenkm.jpg",
+          img: "https://res.cloudinary.com/dpj88/image/upload/v1622455567/carousel/freeCodeCampYt_x42ijv.png",
           text: "Technical courses",
           url: "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
         },
         {
           id: 3,
           name: "freeCodeCamp News",
-          logo: "<i class='fa fa-free-code-camp' aria-hidden='true'></i>",
-          img: "./img/freeCodeCampNews.png",
+          logo: "https://res.cloudinary.com/dpj88/image/upload/v1622455564/carousel/freeCodeCampIcon_lgenkm.jpg",
+          img: "https://res.cloudinary.com/dpj88/image/upload/v1622455566/carousel/freeCodeCampNews_lsspvm.png",
           text: "Keep up to date with the latest trends",
           url: "https://www.freecodecamp.org/news/",
         },
         {
           id: 4,
           name: "freeCodeCamp.org",
-          logo: "<i class='fa fa-free-code-camp' aria-hidden='true'></i>",
-          img: "./img/freeCodeCampTwitter.png",
+          logo: "https://res.cloudinary.com/dpj88/image/upload/v1622455564/carousel/freeCodeCampIcon_lgenkm.jpg",
+          img: "https://res.cloudinary.com/dpj88/image/upload/v1622455566/carousel/freeCodeCampTwitter_qsaxhh.png",
           text: "Find out when we post new content by following us on twitter.",
           url: "https://twitter.com/freeCodeCamp",
         },
@@ -53,9 +53,12 @@ class Carousel {
 
     // Elements of the carosel to update
     this.adImage = document.getElementById("ad-image");
+    this.adLogo = document.getElementById("add-logo");
+
     this.adName = document.getElementById("ad-name");
     this.adText = document.getElementById("ad-text");
     this.adUrl = document.getElementById("ad-url");
+    this.adUrlNavigation = document.getElementById("ad-url-navigation");
 
     // buttons to navigate ads
     this.prevBtn = document.getElementById("prev-ad");
@@ -88,6 +91,8 @@ class Carousel {
     this.adText.textContent = ad.text;
     this.adUrl.textContent = ad.url;
     this.adImage.src = ad.img;
+    this.adLogo.src = ad.logo;
+    this.adUrlNavigation.href = ad.url;
   }
 }
 
