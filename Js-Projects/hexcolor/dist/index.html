@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div
+      role="alert"
+      id="alert"
+      class="
+        hidden
+        fixed
+        mt-2
+        text-sm
+        md:left-2/4
+        md:transform
+        md:-translate-x-2/4
+        bg-gray-900
+        rounded-full
+        w-max
+        py-2
+        px-8
+        mx-2
+        md:mx-auto
+        mb-4
+      "
+    >
+      <p class="text-gray-50 text-center">
+        Color <span class="font-bold">#000000</span> copied to your clipboard
+      </p>
+    </div>
+
+    <!-- https://dribbble.com/shots/12026251-Color-Palette-Generator -->
+    <main class="container mx-auto mt-6">
+      <h1 class="text-xl md:text-3xl text-center mb-4 font-bold">
+        Random hex color palette generator
+      </h1>
+
+      <div
+        id="color-cards"
+        class="
+          flex flex-wrap
+          justify-center
+          md:justify-between
+          mx-auto
+          md:mx-2
+          md:mb-8
+        "
+      ></div>
+    </main>
+    <div class="container mx-auto">
+      <div class="mx-12 md:mx-0 p-4 bg-white">
+        <p>
+          <span class="font-bold">Press</span>
+          <kbd class="text-gray-800">Spacebar</kbd> to get new generated colors.
+          <span class="font-bold">Click</span> copy to select a indivdual color.
+        </p>
+      </div>
+
+      <button
+        id="generate-more-colors"
+        class="
+          text-white
+          font-bold
+          bg-purple-500
+          mx-auto
+          block
+          mt-8
+          mb-4
+          py-4
+          px-8
+          rounded
+          shadow-md
+        "
+      >
+        Generate new colors
+      </button>
+    </div>
+    <!-- add created by section https://palettegenerator.colorion.co/ -->
+    <script src="./js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
