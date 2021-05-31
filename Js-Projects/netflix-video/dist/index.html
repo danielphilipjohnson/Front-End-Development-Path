@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix video</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="w-full">
+      <video
+        id="video"
+        class="bg-black object-cover w-screen h-screen fixed top-0 left-0 px-16"
+        src="./video/main.mp4"
+        preload=""
+      ></video>
+    </main>
+    <div class="absolute bottom-0 w-full">
+      <div class="mx-4 mb-6">
+        <input type="range" min="0" max="100" value="0" class="range" />
+        <label class="text-white" id="timer" for="progress" role="timer"></label>
+      </div>
+      <div
+        class="
+          flex
+          justify-between
+          items-center
+          px-6
+          py-4
+          text-lg
+          bg-black bg-opacity-75
+          text-white
+        "
+      >
+        <i class="fas fa-pause"></i>
+        <i class="fas fa-backward"></i>
+        <i class="fas fa-fast-forward"></i>
+        <i class="fas fa-volume-up"></i>
+        <p>title <span>S1E1 Angel Attack</span></p>
+        <i class="far fa-question-circle"></i>
+        <i class="fas fa-step-forward"></i>
+
+        <i class="fas fa-layer-group"></i>
+        <i class="far fa-closed-captioning"></i>
+        <i class="fas fa-expand"></i>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
