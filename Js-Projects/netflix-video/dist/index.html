@@ -18,14 +18,19 @@
       <video
         id="video"
         class="bg-black object-cover w-screen h-screen fixed top-0 left-0 px-16"
-        src="./video/main.mp4"
+        src="./video/temp.mp4"
         preload=""
       ></video>
     </main>
-    <div class="absolute bottom-0 w-full">
+    <div class="absolute bottom-0 w-full z-10">
       <div class="mx-4 mb-6">
         <input type="range" min="0" max="100" value="0" class="range" />
-        <label class="text-white" id="timer" for="progress" role="timer"></label>
+        <label
+          class="text-white"
+          id="timer"
+          for="progress"
+          role="timer"
+        ></label>
       </div>
       <div
         class="
@@ -39,10 +44,39 @@
           text-white
         "
       >
-        <i class="fas fa-pause"></i>
-        <i class="fas fa-backward"></i>
-        <i class="fas fa-fast-forward"></i>
-        <i class="fas fa-volume-up"></i>
+        <button id="play-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="rewind-btn">
+          <i class="fas fa-backward"></i>
+        </button>
+        <button id="forward-btn">
+          <i class="fas fa-fast-forward"></i>
+        </button>
+        <button id="volume-btn" class="relative">
+          <i class="fas fa-volume-up"></i>
+          <div
+            class="
+              bg-gray-900
+              rounded-lg
+              px-2
+              pt-2
+              transform
+              -rotate-90
+              absolute
+              bottom-24
+              -left-28
+            "
+          >
+            <input
+              id="volume-range"
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+            />
+          </div>
+        </button>
         <p>title <span>S1E1 Angel Attack</span></p>
         <i class="far fa-question-circle"></i>
         <i class="fas fa-step-forward"></i>
