@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Whatsapp</title>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="./js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body
+    style="
+      background: url(./img/bg.png) repeat #cfcfe6;
+      background-attachment: fixed;
+    "
+  >
+    <main class="flex flex-row justify-between">
+      <aside
+        class="fixed bg-gray-900 text-white h-screen z-10 w-1/4"
+        style="flex: 30%"
+      >
+        <nav class="bg-gray-600 flex w-full p-4 justify-between">
+          <img
+            class="w-8 h-8 rounded-full"
+            src="https://source.unsplash.com/random"
+            alt=""
+          />
+          <ul class="flex">
+            <li class="mr-6"><i class="fas fa-circle-notch"></i></li>
+            <li class="mr-6"><i class="fas fa-inbox"></i></li>
+            <li class="mr-6"><i class="fas fa-ellipsis-v"></i></li>
+          </ul>
+        </nav>
+        <div class="bg-gray-900 py-2 px-4">
+          <div
+            class="
+              relative
+              overflow-hidden
+              flex
+              items-center
+              bg-gray-600
+              rounded-full
+              w-full
+            "
+          >
+            <div class="absolute left-3 text-gray-100">
+              <i class="fas fa-search"></i>
+            </div>
+
+            <input
+              class="p-1 px-10 bg-gray-600"
+              placeholder="search or start new chat"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="bg-gray-800 flex justify-between p-4">
+          <div>
+            <img
+              class="w-10 h-10 rounded-full"
+              src="https://source.unsplash.com/random"
+              alt=""
+            />
+          </div>
+          <div>
+            <p>Name</p>
+            <p class="text-xs text-gray-300">last message</p>
+          </div>
+          <div>16:20</div>
+        </div>
+      </aside>
+      <section class="absolute w-3/4 right-0 mb-32">
+        <nav class="border-l bg-gray-600 flex p-3 justify-between z-40">
+          <div>
+            <img
+              class="w-8 h-8 rounded-full"
+              src="https://source.unsplash.com/random"
+              alt=""
+            />
+          </div>
+          <div>
+            <p class="text-white">Name</p>
+            <p class="text-xs text-gray-300">last message</p>
+          </div>
+          <ul class="flex text-white">
+            <li class="mr-6"><i class="fas fa-search"></i></li>
+            <li class="mr-6"><i class="fas fa-ellipsis-v"></i></li>
+          </ul>
+        </nav>
+
+        <div id="message-container" class="h-full">
+          <div class="pt-4">
+            <div
+              class="
+                flex
+                submenu-left
+                justify-between
+                mx-4
+                p-2
+                w-3/4
+                bg-gray-800
+                rounded-md
+                text-white
+              "
+            >
+              <p class="mx-4 p-2 bg-gray-800 rounded-md text-white">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi voluptas inventore quo et iusto ducimus a dicta, velit
+                cumque eveniet quaerat quis cum fugiat sint itaque eius officia.
+                Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
+                dolorum aperiam rem recusandae. Non perferendis molestias at
+                voluptatum, totam id, voluptates, rem debitis autem earum illum
+                incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
+                quae, deserunt optio cumque minus beatae quia voluptates debitis
+                ipsa aliquid. At suscipit exercitationem esse fugiat
+                perspiciatis unde dicta quam aut. Labore error ducimus itaque
+                atque possimus! Deleniti, a. Quo deserunt enim facere similique
+                quod architecto corporis fugiat eveniet omnis fuga, odio ducimus
+                porro illo facilis officia explicabo ab laborum natus
+                consectetur vitae minus distinctio at.
+              </p>
+              <span class="text-sm self-end">17:31</span>
+            </div>
+          </div>
+
+          <div class="pt-4 pr-4 flex justify-end">
+            <div
+              class="
+                submenu-right
+                flex
+                justify-between
+                mx-4
+                p-2
+                w-3/4
+                bg-blue-800
+                rounded-md
+                text-white
+              "
+            >
+              <p class="mx-4 p-2 rounded-md text-white">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Eligendi voluptas inventore quo et iusto ducimus a dicta, velit
+                cumque eveniet quaerat quis cum fugiat sint itaque eius officia.
+                Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
+                dolorum aperiam rem recusandae. Non perferendis molestias at
+                voluptatum, totam id, voluptates, rem debitis autem earum illum
+                incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
+                quae, deserunt optio cumque minus beatae quia voluptates debitis
+                ipsa aliquid. At suscipit exercitationem esse fugiat
+                perspiciatis unde dicta quam aut. Labore error ducimus itaque
+                atque possimus! Deleniti, a. Quo deserunt enim facere similique
+                quod architecto corporis fugiat eveniet omnis fuga, odio ducimus
+                porro illo facilis officia explicabo ab laborum natus
+                consectetur vitae minus distinctio at.
+              </p>
+              <span class="text-sm self-end">17:31</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div id="message-container"></div> -->
+        <form
+          id="send-container"
+          class="
+            z-10
+            mt-8
+            p-4
+            fixed
+            flex
+            items-center
+            justify-between
+            bottom-0
+            right-0
+            w-3/4
+            bg-gray-700
+            text-gray-300
+          "
+        >
+          <i class="far fa-smile"></i>
+          <i class="fas fa-paperclip"></i>
+          <input
+            class="
+              bg-gray-600
+              w-3/4
+              p-2
+              px-5
+              rounded-full
+              text-gray-900
+              placeholder-gray-400
+            "
+            type="text"
+            id="message-input"
+            placeholder="Type a message"
+          />
+          <!-- <button type="submit" id="send-button">Send</button> -->
+          <i class="fas fa-microphone"></i>
+        </form>
+      </section>
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

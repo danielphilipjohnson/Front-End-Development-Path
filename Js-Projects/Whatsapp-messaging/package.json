@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "build:tailwind": "npx tailwindcss-cli@latest build ./src/tailwind.css -o ./dist/css/styles.css"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.4.1"
+    "socket.io": "^2.4.1",
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.19.0"
