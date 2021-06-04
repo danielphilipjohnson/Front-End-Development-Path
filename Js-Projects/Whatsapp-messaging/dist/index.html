@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Whatsapp</title>
     <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
-    <script defer src="./js/script.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -61,23 +60,9 @@
             />
           </div>
         </div>
-
-        <div class="bg-gray-800 flex justify-between p-4">
-          <div>
-            <img
-              class="w-10 h-10 rounded-full"
-              src="https://source.unsplash.com/random"
-              alt=""
-            />
-          </div>
-          <div>
-            <p>Name</p>
-            <p class="text-xs text-gray-300">last message</p>
-          </div>
-          <div>16:20</div>
-        </div>
+        <div id="users"></div>
       </aside>
-      <section class="absolute w-3/4 right-0 mb-32">
+      <section class="absolute w-3/4 right-0">
         <nav class="border-l bg-gray-600 flex p-3 justify-between z-40">
           <div>
             <img
@@ -96,73 +81,71 @@
           </ul>
         </nav>
 
-        <div id="message-container" class="h-full">
-          <div class="pt-4">
-            <div
-              class="
-                flex
-                submenu-left
-                justify-between
-                mx-4
-                p-2
-                w-3/4
-                bg-gray-800
-                rounded-md
-                text-white
-              "
-            >
-              <p class="mx-4 p-2 bg-gray-800 rounded-md text-white">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi voluptas inventore quo et iusto ducimus a dicta, velit
-                cumque eveniet quaerat quis cum fugiat sint itaque eius officia.
-                Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
-                dolorum aperiam rem recusandae. Non perferendis molestias at
-                voluptatum, totam id, voluptates, rem debitis autem earum illum
-                incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
-                quae, deserunt optio cumque minus beatae quia voluptates debitis
-                ipsa aliquid. At suscipit exercitationem esse fugiat
-                perspiciatis unde dicta quam aut. Labore error ducimus itaque
-                atque possimus! Deleniti, a. Quo deserunt enim facere similique
-                quod architecto corporis fugiat eveniet omnis fuga, odio ducimus
-                porro illo facilis officia explicabo ab laborum natus
-                consectetur vitae minus distinctio at.
-              </p>
-              <span class="text-sm self-end">17:31</span>
-            </div>
+        <div id="message-container" class="h-full mb-32">
+          <div
+            class="
+              flex
+              submenu
+              justify-between
+              mx-6
+              my-4
+              px-2
+              py-4
+              w-3/4
+              rounded-md
+              text-white
+            "
+          >
+            <p class="mx-4 p-2 bg-gray-800 rounded-md text-white">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              voluptas inventore quo et iusto ducimus a dicta, velit cumque
+              eveniet quaerat quis cum fugiat sint itaque eius officia.
+              Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
+              dolorum aperiam rem recusandae. Non perferendis molestias at
+              voluptatum, totam id, voluptates, rem debitis autem earum illum
+              incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
+              quae, deserunt optio cumque minus beatae quia voluptates debitis
+              ipsa aliquid. At suscipit exercitationem esse fugiat perspiciatis
+              unde dicta quam aut. Labore error ducimus itaque atque possimus!
+              Deleniti, a. Quo deserunt enim facere similique quod architecto
+              corporis fugiat eveniet omnis fuga, odio ducimus porro illo
+              facilis officia explicabo ab laborum natus consectetur vitae minus
+              distinctio at.
+            </p>
+            <span class="text-sm self-end">17:31</span>
           </div>
 
-          <div class="pt-4 pr-4 flex justify-end">
-            <div
-              class="
-                submenu-right
-                flex
-                justify-between
-                mx-4
-                p-2
-                w-3/4
-                bg-blue-800
-                rounded-md
-                text-white
-              "
-            >
-              <p class="mx-4 p-2 rounded-md text-white">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi voluptas inventore quo et iusto ducimus a dicta, velit
-                cumque eveniet quaerat quis cum fugiat sint itaque eius officia.
-                Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
-                dolorum aperiam rem recusandae. Non perferendis molestias at
-                voluptatum, totam id, voluptates, rem debitis autem earum illum
-                incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
-                quae, deserunt optio cumque minus beatae quia voluptates debitis
-                ipsa aliquid. At suscipit exercitationem esse fugiat
-                perspiciatis unde dicta quam aut. Labore error ducimus itaque
-                atque possimus! Deleniti, a. Quo deserunt enim facere similique
-                quod architecto corporis fugiat eveniet omnis fuga, odio ducimus
-                porro illo facilis officia explicabo ab laborum natus
-                consectetur vitae minus distinctio at.
-              </p>
-              <span class="text-sm self-end">17:31</span>
-            </div>
+          <div
+            class="
+              flex
+              submenu
+              justify-between
+              mx-6
+              my-4
+              px-2
+              py-4
+              w-3/4
+              rounded-md
+              text-white
+            "
+          >
+            <p class="mx-4 p-2 rounded-md text-white">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              voluptas inventore quo et iusto ducimus a dicta, velit cumque
+              eveniet quaerat quis cum fugiat sint itaque eius officia.
+              Repellat, totam? Aliquid unde assumenda eligendi, sed quisquam
+              dolorum aperiam rem recusandae. Non perferendis molestias at
+              voluptatum, totam id, voluptates, rem debitis autem earum illum
+              incidunt eius iste dolore. Neque, illo id? Libero maxime fuga
+              quae, deserunt optio cumque minus beatae quia voluptates debitis
+              ipsa aliquid. At suscipit exercitationem esse fugiat perspiciatis
+              unde dicta quam aut. Labore error ducimus itaque atque possimus!
+              Deleniti, a. Quo deserunt enim facere similique quod architecto
+              corporis fugiat eveniet omnis fuga, odio ducimus porro illo
+              facilis officia explicabo ab laborum natus consectetur vitae minus
+              distinctio at.
+            </p>
+            <span class="text-sm self-end">17:31</span>
           </div>
         </div>
 
@@ -211,5 +194,6 @@
       integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/script.js"></script>
   </body>
 </html>
