@@ -18,7 +18,7 @@ const createTimeStamp = function timeStamp() {
 const username = prompt("What is your name?");
 // const username = "Daniel";
 socket.emit("new-user", username);
-appendUsers(username, createTimeStamp());
+appendConnectedUser(username, createTimeStamp());
 
 socket.on("chat-message", ({ message, timeStamp, name }) => {
   console.log(name);
@@ -30,6 +30,16 @@ socket.on("chat-message", ({ message, timeStamp, name }) => {
   appendMessage(`${message}`, `${timeStamp}`);
 });
 
+socket.on("users connected", ({ users }) => {
+  for (const key in users) {
+    const element = users[key];
+    // shouldnt duplicate users
+    if (key != username) {
+      appendUsers(key, createTimeStamp());
+    }
+  }
+  console.log(users);
+});
 socket.on("display messages", (data) => {
   data.map((message) => {
     appendMessage(`${message.message}`);
@@ -46,6 +56,23 @@ messageInput.addEventListener("keyup", (e) => {
     messageInput.value = "";
   }
 });
+
+function appendConnectedUser(username) {
+  const userContainer = document.getElementById("connected-user");
+
+  const messageElement = document.createElement("div");
+  messageElement.className = "text-white";
+
+  messageElement.innerHTML = `        
+ 
+  <div>
+    <p>${username}</p>
+    <p class="text-xs text-gray-300">Active</p>
+  </div>
+
+`;
+  userContainer.append(messageElement);
+}
 
 function appendUsers(username, timeStamp) {
   const userContainer = document.getElementById("users");

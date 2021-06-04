@@ -7,9 +7,12 @@ const USERNAME = "daniel";
 const users = {};
 io.on("connection", (socket) => {
   socket.on("new-user", (username) => {
-    users[socket.id] = username;
+    users[username] = socket.id;
     console.log(users);
 
+    socket.broadcast.emit("users connected", {
+      users: users,
+    });
     // display active
     // socket.broadcast.emit("user-connected", username);
   });
