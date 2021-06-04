@@ -4,9 +4,6 @@ const messageForm = document.getElementById("send-container");
 
 const messageInput = document.getElementById("message-input");
 
-// const username = prompt("What is your name?");
-const username = "Daniel";
-
 const createTimeStamp = function timeStamp() {
   var d = new Date();
   var hours = d.getHours();
@@ -18,11 +15,19 @@ const createTimeStamp = function timeStamp() {
   }
   return `${hours}:${minutes}`;
 };
+const username = prompt("What is your name?");
+// const username = "Daniel";
+socket.emit("new-user", username);
+appendUsers(username, createTimeStamp());
 
-socket.on("connect", () => {
-  socket.emit("new-user", username);
-  appendUsers(username, createTimeStamp());
-  // get default messages
+socket.on("chat-message", ({ message, timeStamp, name }) => {
+  console.log(name);
+  if (name === username) {
+    console.log("its my message");
+  }
+  // split these up
+  // use name to determine which color to pick
+  appendMessage(`${message}`, `${timeStamp}`);
 });
 
 socket.on("display messages", (data) => {
@@ -34,9 +39,10 @@ socket.on("display messages", (data) => {
 messageInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter" && messageInput.value) {
     e.preventDefault();
+    const timeStamp = createTimeStamp();
     const message = messageInput.value;
     appendMessage(message, createTimeStamp());
-    socket.emit("send-chat-message", message);
+    socket.emit("send-chat-message", { message, timeStamp });
     messageInput.value = "";
   }
 });
