@@ -75,16 +75,13 @@ messageInput.addEventListener("keyup", (e) => {
 
 function showTyping({ username }) {
   const userContainer = document.getElementById("users");
-  for (const iterator of userContainer.children) {
-    const textContent = iterator.children[1];
-    console.log(textContent);
-    console.log(textContent.children[0].textContent);
-    console.log(username);
-    if (textContent.children[0].textContent === username) {
-      textContent.children[1].textContent = "typing ....";
+  for (const containerChildren of userContainer.children) {
+    const inner = containerChildren.children[1];
+    const usernameText = inner.children[0].textContent;
+    const statusText = inner.children[1];
+    if (usernameText === username) {
+      statusText.textContent = "typing ....";
     }
-    console.log(textContent.children);
-    // iterator.children[1].textContent
   }
 }
 
