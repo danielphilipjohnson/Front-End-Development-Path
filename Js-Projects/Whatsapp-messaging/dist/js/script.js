@@ -35,7 +35,6 @@ socket.on("user-disconnected", ({ users, disconnectedUser }) => {
 
   removeConnectedUser();
   for (const key in users) {
-    console.log(users[key]);
     if (users[key] != username) {
       appendUsers(users[key], createTimeStamp());
     }
