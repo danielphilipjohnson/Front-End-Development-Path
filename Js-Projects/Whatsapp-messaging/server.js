@@ -20,12 +20,16 @@ io.on("connection", (socket) => {
   });
 
   socket.on("start-to-type", (username) => {
-    console.log(username);
     socket.broadcast.emit("users typing", {
       username,
     });
   });
 
+  socket.on("stop-to-type", (username) => {
+    socket.broadcast.emit("users stop typing", {
+      username,
+    });
+  });
   socket.on("disconnect", () => {
     const disconnectedUser = users[socket.id];
     delete users[socket.id];

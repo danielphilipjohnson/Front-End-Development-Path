@@ -20,15 +20,6 @@ const createTimeStamp = function timeStamp() {
 socket.emit("new-user", username);
 appendConnectedUser(username);
 
-socket.on("chat-message", ({ message, timeStamp, name }) => {
-  if (name === username) {
-    console.log("its my message");
-  }
-  // split these up
-  // use name to determine which color to pick
-  appendMessage(`${message}`, `${timeStamp}`);
-});
-
 socket.on("users connected", ({ users }) => {
   removeConnectedUser();
 
@@ -37,11 +28,6 @@ socket.on("users connected", ({ users }) => {
       appendUsers(users[key], createTimeStamp());
     }
   }
-});
-
-socket.on("users typing", (username) => {
-  // find user in sidebar and change
-  showTyping(username);
 });
 
 socket.on("user-disconnected", ({ users, disconnectedUser }) => {
@@ -56,13 +42,27 @@ socket.on("user-disconnected", ({ users, disconnectedUser }) => {
   }
 });
 
-// make event
+socket.on("chat-message", ({ message, timeStamp, name }) => {
+  appendMessage(`${message}`, `${timeStamp}`, name);
+});
+
+socket.on("users typing", (username) => {
+  showTyping(username);
+});
+
 messageInput.addEventListener("input", (e) => {
-  console.log("chnage");
   socket.emit("start-to-type", username);
 });
 
+socket.on("users stop typing", (username) => {
+  setTimeout(function () {
+    removeTyping(username);
+  }, 4000);
+});
+
 messageInput.addEventListener("keyup", (e) => {
+  socket.emit("stop-to-type", username);
+
   if (e.key === "Enter" && messageInput.value) {
     e.preventDefault();
     const timeStamp = createTimeStamp();
@@ -81,6 +81,19 @@ function showTyping({ username }) {
     const statusText = inner.children[1];
     if (usernameText === username) {
       statusText.textContent = "typing ....";
+    }
+  }
+}
+
+function removeTyping({ username }) {
+  const userContainer = document.getElementById("users");
+  for (const containerChildren of userContainer.children) {
+    const inner = containerChildren.children[1];
+    const usernameText = inner.children[0].textContent;
+    const statusText = inner.children[1];
+    //text-xs text-gray-300
+    if (usernameText === username) {
+      statusText.textContent = "Last message";
     }
   }
 }
@@ -130,16 +143,19 @@ function appendUsers(username, timeStamp) {
   userContainer.append(messageElement);
 }
 
-function appendMessage(message, timeStamp) {
+function appendMessage(message, timeStamp, username) {
   const messageContainer = document.getElementById("message-container");
 
   const messageElement = document.createElement("div");
   messageElement.className = `flex submenu  justify-between  mx-6  my-4  px-2  py-4  w-3/4  rounded-md  text-white`;
 
-  messageElement.innerHTML = `        
-    <p class="mx-4 p-2  rounded-md text-white">
+  messageElement.innerHTML = `   
+  <div class="flex flex-col mx-4 p-2">
+  <span class="mb-2">${username}</span>     
+    <p class="  rounded-md text-white">
         ${message}
     </p>
+    </div>
     <span class="text-sm self-end">${timeStamp}</span>`;
 
   messageContainer.append(messageElement);
