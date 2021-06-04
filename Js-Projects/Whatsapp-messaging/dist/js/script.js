@@ -24,7 +24,6 @@ socket.emit("new-user", username);
 appendConnectedUser(username);
 
 socket.on("chat-message", ({ message, timeStamp, name }) => {
-  console.log(name);
   if (name === username) {
     console.log("its my message");
   }
@@ -34,8 +33,8 @@ socket.on("chat-message", ({ message, timeStamp, name }) => {
 });
 
 socket.on("users connected", ({ users }) => {
-  console.log("users connected");
-  console.log(users);
+  removeConnectedUser();
+
   for (const key in users) {
     console.log(users[key]);
     if (users[key] != username) {
@@ -50,6 +49,22 @@ socket.on("display messages", (data) => {
   });
 });
 
+socket.on("user-disconnected", ({ users, disconnectedUser }) => {
+  // say they are offline
+  // style card for disconnect
+  console.log(users, disconnectedUser);
+  appendMessage(`${disconnectedUser} disconnected`, createTimeStamp());
+
+  removeConnectedUser();
+  console.log();
+  for (const key in users) {
+    console.log(users[key]);
+    if (users[key] != username) {
+      appendUsers(users[key], createTimeStamp());
+    }
+  }
+});
+
 messageInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter" && messageInput.value) {
     e.preventDefault();
@@ -60,6 +75,11 @@ messageInput.addEventListener("keyup", (e) => {
     messageInput.value = "";
   }
 });
+
+function removeConnectedUser() {
+  const userContainer = document.getElementById("users");
+  userContainer.innerHTML = "";
+}
 
 function appendConnectedUser(username) {
   const userContainer = document.getElementById("connected-user");
