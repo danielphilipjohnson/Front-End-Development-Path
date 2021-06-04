@@ -1,6 +1,7 @@
 const socket = io("http://localhost:3000");
 const messageContainer = document.getElementById("message-container");
 const messageForm = document.getElementById("send-container");
+
 const messageInput = document.getElementById("message-input");
 
 // const username = prompt("What is your name?");
@@ -10,30 +11,34 @@ const createTimeStamp = function timeStamp() {
   var d = new Date();
   var hours = d.getHours();
   var minutes = d.getMinutes();
-  return `${hours}: ${minutes}`;
+
+  if (minutes.toString().length < 2) {
+    let temp = "0" + minutes;
+    minutes = temp;
+  }
+  return `${hours}:${minutes}`;
 };
 
-socket.emit("new-user", username);
-appendUsers(username, createTimeStamp());
-
-// socket.emit("retrieve message", "anon");
-
-// client-side
 socket.on("connect", () => {
-  appendMessage(socket.id);
-  console.log(socket.id); // ojIckSD2jqNzOqIrAGzL
-  // socket.emit("con");
-});
-
-socket.on("hello", (data) => {
-  appendMessage(data);
-  console.log(data); // ojIckSD2jqNzOqIrAGzL
+  socket.emit("new-user", username);
+  appendUsers(username, createTimeStamp());
+  // get default messages
 });
 
 socket.on("display messages", (data) => {
   data.map((message) => {
     appendMessage(`${message.message}`);
   });
+});
+
+messageInput.addEventListener("keyup", (e) => {
+  if (e.key === "Enter" && messageInput.value) {
+    e.preventDefault();
+    const message = messageInput.value;
+    appendMessage(message, createTimeStamp());
+    socket.emit("send-chat-message", message);
+    messageInput.value = "";
+  }
 });
 
 function appendUsers(username, timeStamp) {
@@ -59,10 +64,17 @@ function appendUsers(username, timeStamp) {
   userContainer.append(messageElement);
 }
 
-function appendMessage(message) {
-  console.log(message);
+function appendMessage(message, timeStamp) {
+  const messageContainer = document.getElementById("message-container");
+
   const messageElement = document.createElement("div");
-  // need to create element and add text to it
-  messageElement.innerText = message;
+  messageElement.className = `flex submenu  justify-between  mx-6  my-4  px-2  py-4  w-3/4  rounded-md  text-white`;
+
+  messageElement.innerHTML = `        
+    <p class="mx-4 p-2  rounded-md text-white">
+        ${message}
+    </p>
+    <span class="text-sm self-end">${timeStamp}</span>`;
+
   messageContainer.append(messageElement);
 }
