@@ -39,26 +39,27 @@ socket.on("users connected", ({ users }) => {
   }
 });
 
-socket.on("display messages", (data) => {
-  data.map((message) => {
-    appendMessage(`${message.message}`);
-  });
+socket.on("users typing", (username) => {
+  // find user in sidebar and change
+  showTyping(username);
 });
 
 socket.on("user-disconnected", ({ users, disconnectedUser }) => {
-  // say they are offline
-  // style card for disconnect
-  console.log(users, disconnectedUser);
   appendMessage(`${disconnectedUser} disconnected`, createTimeStamp());
 
   removeConnectedUser();
-  console.log();
   for (const key in users) {
     console.log(users[key]);
     if (users[key] != username) {
       appendUsers(users[key], createTimeStamp());
     }
   }
+});
+
+// make event
+messageInput.addEventListener("input", (e) => {
+  console.log("chnage");
+  socket.emit("start-to-type", username);
 });
 
 messageInput.addEventListener("keyup", (e) => {
@@ -71,6 +72,21 @@ messageInput.addEventListener("keyup", (e) => {
     messageInput.value = "";
   }
 });
+
+function showTyping({ username }) {
+  const userContainer = document.getElementById("users");
+  for (const iterator of userContainer.children) {
+    const textContent = iterator.children[1];
+    console.log(textContent);
+    console.log(textContent.children[0].textContent);
+    console.log(username);
+    if (textContent.children[0].textContent === username) {
+      textContent.children[1].textContent = "typing ....";
+    }
+    console.log(textContent.children);
+    // iterator.children[1].textContent
+  }
+}
 
 function removeConnectedUser() {
   const userContainer = document.getElementById("users");

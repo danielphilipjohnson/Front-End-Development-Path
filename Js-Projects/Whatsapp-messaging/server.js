@@ -1,8 +1,12 @@
 const io = require("socket.io")(3000);
 
 const users = {};
+let userCount = 0;
 io.on("connection", (socket) => {
+  console.log(socket.rooms);
   socket.on("new-user", (username) => {
+    ++userCount;
+
     users[socket.id] = username;
     io.sockets.emit("users connected", { users });
   });
@@ -15,9 +19,17 @@ io.on("connection", (socket) => {
     });
   });
 
+  socket.on("start-to-type", (username) => {
+    console.log(username);
+    socket.broadcast.emit("users typing", {
+      username,
+    });
+  });
+
   socket.on("disconnect", () => {
     const disconnectedUser = users[socket.id];
     delete users[socket.id];
+    --userCount;
     socket.broadcast.emit("user-disconnected", { users, disconnectedUser });
   });
 });
