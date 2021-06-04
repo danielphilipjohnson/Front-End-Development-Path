@@ -31853,7 +31853,7 @@ video {
   transform: rotate(180deg);
 }
 
-.submenu:nth-child(2n) {
+.submenu.my-menu {
   background: rgba(30, 64, 175, 1);
   position: relative;
   z-index: 3;
@@ -31861,7 +31861,7 @@ video {
   border-radius: 0.75rem;
 }
 
-.submenu:nth-child(2n)::before {
+.submenu.my-menu::before {
   content: "";
   display: block;
   width: 0;

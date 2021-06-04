@@ -1,10 +1,7 @@
 import generateName from "./data.js";
-
 const username = generateName();
 
 const socket = io("http://localhost:3000");
-const messageContainer = document.getElementById("message-container");
-const messageForm = document.getElementById("send-container");
 
 const messageInput = document.getElementById("message-input");
 
@@ -36,7 +33,6 @@ socket.on("users connected", ({ users }) => {
   removeConnectedUser();
 
   for (const key in users) {
-    console.log(users[key]);
     if (users[key] != username) {
       appendUsers(users[key], createTimeStamp());
     }
@@ -70,7 +66,7 @@ messageInput.addEventListener("keyup", (e) => {
     e.preventDefault();
     const timeStamp = createTimeStamp();
     const message = messageInput.value;
-    appendMessage(message, createTimeStamp());
+    appendMyMessage(message, createTimeStamp());
     socket.emit("send-chat-message", { message, timeStamp });
     messageInput.value = "";
   }
@@ -126,6 +122,20 @@ function appendMessage(message, timeStamp) {
 
   const messageElement = document.createElement("div");
   messageElement.className = `flex submenu  justify-between  mx-6  my-4  px-2  py-4  w-3/4  rounded-md  text-white`;
+
+  messageElement.innerHTML = `        
+    <p class="mx-4 p-2  rounded-md text-white">
+        ${message}
+    </p>
+    <span class="text-sm self-end">${timeStamp}</span>`;
+
+  messageContainer.append(messageElement);
+}
+function appendMyMessage(message, timeStamp) {
+  const messageContainer = document.getElementById("message-container");
+
+  const messageElement = document.createElement("div");
+  messageElement.className = `flex submenu my-menu justify-between  mx-6  my-4  px-2  py-4  w-3/4  rounded-md  text-white`;
 
   messageElement.innerHTML = `        
     <p class="mx-4 p-2  rounded-md text-white">
