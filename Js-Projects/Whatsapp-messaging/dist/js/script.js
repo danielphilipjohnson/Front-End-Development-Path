@@ -1,3 +1,7 @@
+import generateName from "./data.js";
+
+const username = generateName();
+
 const socket = io("http://localhost:3000");
 const messageContainer = document.getElementById("message-container");
 const messageForm = document.getElementById("send-container");
@@ -15,10 +19,9 @@ const createTimeStamp = function timeStamp() {
   }
   return `${hours}:${minutes}`;
 };
-const username = prompt("What is your name?");
-// const username = "Daniel";
+
 socket.emit("new-user", username);
-appendConnectedUser(username, createTimeStamp());
+appendConnectedUser(username);
 
 socket.on("chat-message", ({ message, timeStamp, name }) => {
   console.log(name);
@@ -31,15 +34,16 @@ socket.on("chat-message", ({ message, timeStamp, name }) => {
 });
 
 socket.on("users connected", ({ users }) => {
+  console.log("users connected");
+  console.log(users);
   for (const key in users) {
-    const element = users[key];
-    // shouldnt duplicate users
-    if (key != username) {
-      appendUsers(key, createTimeStamp());
+    console.log(users[key]);
+    if (users[key] != username) {
+      appendUsers(users[key], createTimeStamp());
     }
   }
-  console.log(users);
 });
+
 socket.on("display messages", (data) => {
   data.map((message) => {
     appendMessage(`${message.message}`);

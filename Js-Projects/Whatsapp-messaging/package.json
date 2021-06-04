@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "socket.io": "^2.4.1",
     "autoprefixer": "^10.2.5",
+    "faker": "^5.5.3",
     "postcss": "^8.2.15",
+    "socket.io": "^2.4.1",
     "tailwindcss": "^2.1.2"
   },
   "devDependencies": {
