@@ -3,12 +3,10 @@ const io = require("socket.io")(3000);
 const users = {};
 let userCount = 0;
 io.on("connection", (socket) => {
-  console.log(socket.rooms);
   socket.on("new-user", (username) => {
     ++userCount;
-
     users[socket.id] = username;
-    io.sockets.emit("users connected", { users });
+    io.sockets.emit("users-connected", { users });
   });
 
   socket.on("send-chat-message", (data) => {
@@ -20,13 +18,13 @@ io.on("connection", (socket) => {
   });
 
   socket.on("start-to-type", (username) => {
-    socket.broadcast.emit("users typing", {
+    socket.broadcast.emit("user-typing", {
       username,
     });
   });
 
   socket.on("stop-to-type", (username) => {
-    socket.broadcast.emit("users stop typing", {
+    socket.broadcast.emit("user-stops-typing", {
       username,
     });
   });

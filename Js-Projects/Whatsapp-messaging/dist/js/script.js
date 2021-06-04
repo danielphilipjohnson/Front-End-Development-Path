@@ -20,7 +20,7 @@ const createTimeStamp = function timeStamp() {
 socket.emit("new-user", username);
 appendConnectedUser(username);
 
-socket.on("users connected", ({ users }) => {
+socket.on("users-connected", ({ users }) => {
   removeConnectedUser();
 
   for (const key in users) {
@@ -31,7 +31,7 @@ socket.on("users connected", ({ users }) => {
 });
 
 socket.on("user-disconnected", ({ users, disconnectedUser }) => {
-  appendMessage(`${disconnectedUser} disconnected`, createTimeStamp());
+  appendMessage(`disconnected`, createTimeStamp(), disconnectedUser);
 
   removeConnectedUser();
   for (const key in users) {
@@ -46,7 +46,7 @@ socket.on("chat-message", ({ message, timeStamp, name }) => {
   appendMessage(`${message}`, `${timeStamp}`, name);
 });
 
-socket.on("users typing", (username) => {
+socket.on("user-typing", (username) => {
   showTyping(username);
 });
 
@@ -54,7 +54,7 @@ messageInput.addEventListener("input", (e) => {
   socket.emit("start-to-type", username);
 });
 
-socket.on("users stop typing", (username) => {
+socket.on("user-stops-typing", (username) => {
   setTimeout(function () {
     removeTyping(username);
   }, 4000);
