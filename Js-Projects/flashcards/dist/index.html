@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body class="">
+<body class="z-10">
+
+
   <nav class="flex justify-between bg-blue-800 px-4 py-4">
     <div class="flex items-center">
       <h1 class="text-3xl text-white font-bold mr-8">Flashcards</h1>
@@ -21,8 +23,10 @@
           <a href="/" class="text-gray-300 font-bold">Home</a>
         </li>
         <li><a href="/" class="text-gray-300 font-bold mr-4">Your library</a></li>
-        <li><button id="show" class="text-sm bg-green-100  text-blue-800 border mx-3 px-2 py-1">
+        <li>
+          <button id="add-card-form" class="z-50 text-sm bg-green-100  text-blue-800 border mx-3 px-2 py-1">
             <i class="fas fa-plus"></i>
+
           </button>
         </li>
       </ul>
@@ -74,7 +78,7 @@
       <div class="flex flex-col justify-center items-center">
         <div id="cards-container" class="mt-8 rounded-full relative h-80 z-30"
           style="perspective: 1000px; width: 500px">
-          <div class=" card active">
+          <div class="card active">
             <div class="
                 inner-card
                 shadow-2xl
@@ -160,43 +164,65 @@
 
 
   <div id="add-container" class="
-  add-container
-  opacity-0
-  bg-gray-100
-  border border-t-1
-  flex flex-col
-  items-center
-  justify-center
-  py-2
-  absolute
-  top-0
-  bottom-0
-  w-full
-  z-0
-  transition
-  duration-500
-  ease-in
+    add-container
+    opacity-0
+    bg-gray-100
+    border border-t-1
+    absolute
+    top-0
+    bottom-0
+    w-full
+    h-full
+    -z-10
+    transition
+    duration-500
+    ease-in
 ">
-    <h1>
-      Add New Card
-      <button id="hide" class="">
+    <div class=" bg-white py-8">
+      <button id="hide" class=" absolute top-0 right-0 p-6">
         <i class="fas fa-times"></i>
       </button>
-    </h1>
 
-    <div class="form-group">
-      <label for="question" class="block mx-2">Question</label>
-      <textarea class="border rounded-md text-lg p-2 max-w-full" id="question"
-        placeholder="Enter question..."></textarea>
+      <div class="container mx-auto w-full">
+        <div class="flex justify-between py-8">
+          <h1 class="text-2xl font-bold font-gray-900">Add New Card</h1>
+          <button id="add-card" class="btn bg-green-300 text-white py-3 px-6 rounded-md text-sm font-bold">
+            Create
+          </button>
+        </div>
+      </div>
+
+      <div class="container mx-auto ">
+        <div class=" mb-6">
+          <input type="text" class="text-lg py-2 max-w-full border-b-2 border-gray-800 w-full" name="question"
+            id="question" placeholder="Enter a question...">
+          <label for="question" class="block my-2 text-gray-600 uppercase font-bold text-sm">Question</label>
+        </div>
+        <div class="form-group mb-6">
+          <input type="text" class="text-lg py-2 max-w-full border-b-2 border-gray-800 w-full" name="answer" id="answer"
+            placeholder="Enter a Answer...">
+
+          <label for="answer" class="block my-2 text-gray-600 uppercase font-bold text-sm">Answer</label>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="answer" class="block mx-2">Answer</label>
-      <textarea class="border rounded-md text-lg p-2 max-w-full" id="answer" placeholder="Enter Answer..."></textarea>
+    <div class="container mx-auto my-8">
+      <div class=" flex flex-col justify-center items-center">
+        <button class="bg-white  w-full py-12  text-gray-800 font-bold text-2xl">
+          <span class="border-b-4 border-green-400 pb-3">
+            +
+            Add
+            Card
+          </span>
+
+        </button>
+
+      </div>
     </div>
 
-    <button id="add-card" class="btn">
-      <i class="fas fa-plus"></i> Add Card
+    <button id="add-card" class="btn bg-green-300 rounded-sm text-white py-6 px-24 float-right mr-8 font-bold">
+      Create
     </button>
   </div>
 
