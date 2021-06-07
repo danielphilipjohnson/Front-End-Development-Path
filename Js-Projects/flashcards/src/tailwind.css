@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .backface-vis {
+    backface-visibility: hidden;
+  }
+  .rotate-x-180 {
+    transform: rotateX(180deg);
+  }
+  .show {
+    opacity: 1 !important;
+    z-index: 100 !important;
+  }
+  .transform-3d {
+    transform-style: preserve-3d;
+  }
+
+  .swap-font::after {
+    font-family: "Font Awesome 5 Free", Lato, sans-serif;
+  }
+  .after\:content-flip::after {
+    content: "\f021  Flip";
+  }
+  /* need to clean how i potential add cards */
+  .card.show-answer .inner-card {
+    transform: rotateX(180deg);
+  }
+}
+
+@layer components {
+  .card {
+    @apply absolute opacity-0 text-2xl top-0 left-0 h-full w-full transform translate-x-1/2 -rotate-12 transition-transform transition-opacity duration-300 ease-in;
+  }
+  .card.active {
+    @apply opacity-100 z-10 transform translate-x-0 rotate-0;
+  }
+  .card.left {
+    @apply transform -translate-x-1/2  -rotate-12;
+  }
+
+  .inner-card-front,
+  .inner-card-back {
+    @apply backface-vis absolute top-0 left-0 flex items-center justify-center h-full w-full bg-white;
+  }
+  .inner-card-front {
+    @apply transform rotate-0 z-10;
+  }
+  .inner-card-back {
+    @apply transform rotate-x-180;
+  }
+}
