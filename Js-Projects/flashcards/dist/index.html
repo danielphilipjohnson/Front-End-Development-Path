@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Flashcards</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" />
@@ -13,7 +13,6 @@
 </head>
 
 <body class="z-10">
-
 
   <nav class="flex justify-between bg-blue-800 px-4 py-4">
     <div class="flex items-center">
@@ -77,8 +76,8 @@
 
       <div class="flex flex-col justify-center items-center">
         <div id="cards-container" class="mt-8 rounded-full relative h-80 z-30"
-          style="perspective: 1000px; width: 500px">
-          <div class="card active">
+          style="perspective: 1000px; width: 500px; max-width:100%">
+          <!-- <div class="card active">
             <div class="
                 inner-card
                 shadow-2xl
@@ -142,26 +141,21 @@
                 <p>Hello</p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="flex my-4 z-10 ">
-          <button id="prev" class="">
+        <div class="flex items-center my-4 z-10 mt-16 ">
+          <button id="prev" class="p-4">
             <i class="fas fa-arrow-left"></i>
           </button>
-
-          <p id="current" class="mx-4"></p>
-
-          <button id="next" class="">
+          <p id="current" class=" p-4"></p>
+          <button id="next" class="p-4">
             <i class="fas fa-arrow-right"></i>
           </button>
         </div>
-
       </div>
     </div>
   </div>
-
-
 
   <div id="add-container" class="
     add-container
@@ -176,7 +170,7 @@
     -z-10
     transition
     duration-500
-    ease-in
+    ease-out
 ">
     <div class=" bg-white py-8">
       <button id="hide" class=" absolute top-0 right-0 p-6">
@@ -206,7 +200,6 @@
         </div>
       </div>
     </div>
-
     <div class="container mx-auto my-8">
       <div class=" flex flex-col justify-center items-center">
         <button class="bg-white  w-full py-12  text-gray-800 font-bold text-2xl">
@@ -215,9 +208,7 @@
             Add
             Card
           </span>
-
         </button>
-
       </div>
     </div>
 
