@@ -13,7 +13,85 @@
 </head>
 
 <body class="">
+  <div class="relative">
+    <img id="img-bg" class="h-screen w-full object-cover fixed" src="./img/night/night.webp" alt=""
+      style="filter: brightness(.6);">
 
+    <div class="absolute top-0 text-white w-full h-full ">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col justify-between h-screen md:py-4">
+          <div class="mt-4">
+            <div class="flex">
+              <blockquote class="mb-4 mr-1 lg:text-2xl lg:w-1/2">"If you look at what you have in life, you'll always
+                have more.
+                If you look
+                at
+                what
+                you
+                don't have
+                in life, you'll never have enough."</blockquote>
+              <img class="h-10" src="./img/refresh.svg" alt="sunny" id="weather" />
+            </div>
+            <p class="font-bold lg:text-xl mb-4">Oprah Winfrey</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-end mb-12 md:mb-2">
+              <img id="weather-icon" class="h-10 mr-2 " src="./img/icon/night/clear.svg" alt="sunny" id="weather" />
+              <p class="text-5xl mr-2">16°</p>
+              <p class="lg:text-xl">
+                Good morning, Partly Cloudy
+              </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:justify-between">
+              <div class="mb-8">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-4" id="time">11:37
+                </h1>
+
+                <p>June 21st</p>
+                <p class="uppercase font-bold text-2xl">In london, Uk</p>
+              </div>
+
+              <div class="mb-4 md:mb-6 flex">
+                <button id="fetch-weather"
+                  class="bg-white px-4 py-1 border rounded-full text-gray-400 font-bold flex items-center self-end">
+                  More
+                  <span class="ml-4 z-10 bg-gray-400 rounded-full">
+                    <img class="h-5 md:h-8" src="./img/refresh.svg" alt="see more" id="down" /></span>
+                </button>
+              </div>
+
+            </div>
+
+            <div id="extra-info" class="hidden flex justify-between flex-wrap">
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md w-max">
+                <img class="h-5 md:h-10 mr-2" src="./img/icon/humidity.svg" alt="humidity" />
+                <span class="mr-2 text-sm">0.83</span>
+                <p class="text-sm">Humidity</p>
+              </div>
+
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md">
+                <img class="h-5 mr-2" src="./img/icon/windy.svg" alt="wind speed" />
+                <span class="mr-2 text-sm">6.81</span>
+                <p class="text-sm"> Wind speed</p>
+              </div>
+
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md">
+                <img class="h-5 md:h-10 mr-2" src="./img/icon/rain-probability.svg" alt="rain probability" />
+                <span class="mr-2 text-sm"> 0.08</span>
+                <p class="text-sm"> chance of rain</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
 
   <script src="./js/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
