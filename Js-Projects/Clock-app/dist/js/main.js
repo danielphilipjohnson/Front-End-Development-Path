@@ -85,7 +85,7 @@ const generatedBackground = generateBackground(backgrounds);
 
 const icons = {
   day: {
-    rain: "./img/icon/day/rain.jpg",
+    rain: "./img/icon/day/rain.svg",
     cloud: "./img/icon/day/cloud.jpg",
     sun: "./img/icon/day/sun.png",
     clear: "./img/icon/day/sun.png",
@@ -96,15 +96,9 @@ const icons = {
   },
 };
 
-const icon = Icon(icons);
+const weatherIcon = Icon(icons);
 
-function fetchWeather(lattitude, longitude) {
-  // const url =
-  //   "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
-  //   lattitude +
-  //   "," +
-  //   longitude;
-
+function Weather() {
   function typeOfWeather(weatherIcon, setFunc) {
     switch (weatherIcon) {
       case "clear-night":
@@ -126,21 +120,118 @@ function fetchWeather(lattitude, longitude) {
     }
   }
 
-  fetch("./js/weather.json")
-    .then((response) => response.json())
-    .then((data) => {
-      // console.log(data.hourly.data[10]);
-      var d = new Date(data.hourly.data[10].time * 1000);
-      // console.log(d);
-      const weatherIcon = data.hourly.data[10].icon;
+  function convertDecimalToPercent(decimalValue) {
+    return (decimalValue * 100).toString() + "%";
+  }
 
-      typeOfWeather(weatherIcon, generatedBackground.setBackground);
-      typeOfWeather(weatherIcon, icon.set);
-    });
+  function setWeatherValue(value, element) {
+    element.textContent = value;
+  }
+  function cache() {
+    function getWeather() {
+      return localStorage.getItem("weather");
+    }
+    function setWeather(weather) {
+      localStorage.setItem("weather", JSON.stringify(weather));
+    }
+    function setDateRequested(date) {
+      localStorage.setItem("date-requested", date);
+    }
+
+    return {
+      getWeather,
+      setWeather,
+      setDateRequested,
+    };
+  }
+
+  function updateWeatherUI(precipProbability, humidity, windSpeed) {
+    setWeatherValue(
+      convertDecimalToPercent(precipProbability),
+      document.getElementById("precip")
+    );
+
+    setWeatherValue(
+      convertDecimalToPercent(humidity),
+      document.getElementById("humidity")
+    );
+
+    setWeatherValue(windSpeed, document.getElementById("wind-speed"));
+  }
+
+  function updateWeatherBackground(iconName) {
+    typeOfWeather(iconName, generatedBackground.setBackground);
+  }
+  function updateWeatherIcon(iconName) {
+    typeOfWeather(iconName, weatherIcon.set);
+  }
+
+  function fetchWeather(lattitude, longitude) {
+    // const url =
+    //   "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
+    //   lattitude +
+    //   "," +
+    //   longitude;
+    const timeNow = new Date();
+    if (shouldFetch(timeNow)) {
+      console.log("yes");
+
+      fetch("./js/weather.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const hourlyWeather = data.hourly.data[2];
+
+          const { icon, humidity, windSpeed, precipProbability } =
+            hourlyWeather;
+
+          updateWeatherUI(precipProbability, humidity, windSpeed);
+          updateWeatherBackground(icon);
+          updateWeatherIcon(icon);
+
+          cache().setWeather(hourlyWeather);
+          cache().setDateRequested(timeNow);
+        });
+    }
+
+    const cachedWeather = JSON.parse(cache().getWeather());
+
+    const { icon, humidity, windSpeed, precipProbability } = cachedWeather;
+
+    updateWeatherUI(precipProbability, humidity, windSpeed);
+    updateWeatherBackground(icon);
+    updateWeatherIcon(icon);
+  }
+
+  return {
+    fetchWeather,
+  };
 }
 
-fetchWeather(1, 1);
+Weather().fetchWeather(1, 1);
 
+function shouldFetch(timeNow) {
+  // const timeNow = (TestDate = new Date("Jun 09, 2021 11:43:30"));
+  const dateWeatherSetObj = new Date(localStorage.getItem("date-requested"));
+
+  if (timeNow.getMonth() > dateWeatherSetObj.getMonth()) {
+    console.log("month higher");
+    return true;
+  }
+
+  if (timeNow.getDate() > dateWeatherSetObj.getDate()) {
+    console.log("date higher");
+    return true;
+  }
+
+  if (timeNow.getHours() > dateWeatherSetObj.getHours()) {
+    console.log("hour higher");
+    return true;
+  }
+
+  return false;
+}
+
+// Wed Jun 09 2021 10:43:52 GMT+0100 (British Summer Time)
 // function runGeo() {
 //   if ("geolocation" in navigator) {
 //     /* geolocation is available */
@@ -171,7 +262,6 @@ fetchWeather(1, 1);
 // runGeo();
 
 const extraInfo = document.getElementById("extra-info");
-console.log(extraInfo);
 
 const fetchWeatherBtn = document.getElementById("fetch-weather");
 
