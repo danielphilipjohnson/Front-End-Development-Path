@@ -65,6 +65,64 @@ function Icon(icons, weatherIconEl) {
   };
 }
 
+function Quotes() {
+  const quotesUrl =
+    "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
+  function get() {
+    fetch(quotesUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem("quotes", JSON.stringify(data));
+        return data;
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+    return {
+      quotes: [
+        {
+          quote:
+            "Life isn’t about getting and having, it’s about giving and being.",
+          author: "Kevin Kruse",
+        },
+        {
+          quote:
+            "Whatever the mind of man can conceive and believe, it can achieve.",
+          author: "Napoleon Hill",
+        },
+        {
+          quote: "Strive not to be a success, but rather to be of value.",
+          author: "Albert Einstein",
+        },
+      ],
+    };
+  }
+  function random() {
+    if (localStorage.getItem("quotes")) {
+      const { quotes } = JSON.parse(localStorage.getItem("quotes"));
+      var selectedIndex = Math.floor(Math.random() * quotes.length);
+      return quotes[selectedIndex];
+    }
+    const { quotes } = get();
+
+    var selectedIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[selectedIndex];
+  }
+
+  function updateUIQuote() {
+    const { quote, author } = random();
+    document.getElementById("quote").textContent = quote;
+    document.getElementById("author").textContent = author;
+  }
+  function refreshQuoteEvent() {
+    const refreshBtn = document.getElementById("refresh-quote");
+    refreshBtn.addEventListener("click", updateUIQuote);
+  }
+  refreshQuoteEvent();
+
+  return { updateUIQuote };
+}
+
 function Weather() {
   function typeOfWeather(weatherIcon, setFunc) {
     switch (weatherIcon) {
@@ -152,77 +210,32 @@ function Weather() {
 
   function shouldFetch(timeNow) {
     // const timeNow = (TestDate = new Date("Jun 09, 2021 11:43:30"));
-    const dateWeatherSetObj = new Date(localStorage.getItem("date-requested"));
+    if (localStorage.getItem("date-requested")) {
+      const dateWeatherSetObj = new Date(
+        localStorage.getItem("date-requested")
+      );
 
-    if (timeNow.getMonth() > dateWeatherSetObj.getMonth()) {
-      console.log("month higher");
-      return true;
+      if (timeNow.getMonth() > dateWeatherSetObj.getMonth()) {
+        console.log("month higher");
+        return true;
+      }
+
+      if (timeNow.getDate() > dateWeatherSetObj.getDate()) {
+        console.log("date higher");
+        return true;
+      }
+
+      if (timeNow.getHours() > dateWeatherSetObj.getHours()) {
+        console.log("hour higher");
+        return true;
+      }
+
+      return false;
     }
-
-    if (timeNow.getDate() > dateWeatherSetObj.getDate()) {
-      console.log("date higher");
-      return true;
-    }
-
-    if (timeNow.getHours() > dateWeatherSetObj.getHours()) {
-      console.log("hour higher");
-      return true;
-    }
-
-    return false;
+    return true;
   }
 
-  function fetchWeather() {
-    let lat, long;
-
-    if (cache().getPlace()) {
-      const place = cache().getPlace();
-      const { city, country, loc } = place;
-
-      document.getElementById("city").textContent = city;
-      document.getElementById("country").textContent = country;
-
-      [lat, long] = loc.split(",");
-    } else {
-      fetch("https://ipinfo.io?token=4eab0f44feb156")
-        .then((response) => response.json())
-        .then((data) => {
-          const { city, country, loc } = data;
-
-          document.getElementById("city").textContent = city;
-          document.getElementById("country").textContent = country;
-
-          cache().setPlace(city, country, loc);
-        });
-    }
-
-    const timeNow = new Date();
-
-    if (shouldFetch(timeNow)) {
-      const url =
-        "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
-        lat +
-        "," +
-        long;
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-          const hourlyWeather = data.hourly.data[0];
-
-          const { icon, humidity, windSpeed, precipProbability } =
-            hourlyWeather;
-
-          updateWeatherUI(precipProbability, humidity, windSpeed);
-          updateWeatherBackground(icon);
-          updateWeatherIcon(icon);
-
-          cache().setWeather(hourlyWeather);
-          cache().setDateRequested(timeNow);
-        });
-    }
-
-    const cachedWeather = JSON.parse(cache().getWeather());
-
+  function setAllWeatherUI(cachedWeather) {
     const { icon, humidity, windSpeed, precipProbability } = cachedWeather;
 
     updateWeatherUI(precipProbability, humidity, windSpeed);
@@ -230,64 +243,84 @@ function Weather() {
     updateWeatherIcon(icon);
   }
 
+  function updatePlaceUI({ city, country, loc }) {
+    document.getElementById("city").textContent = city;
+    document.getElementById("country").textContent = country;
+
+    cache().setPlace(city, country, loc);
+  }
+
+  async function fetchWeather(lat, long) {
+    const url =
+      "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
+      lat +
+      "," +
+      long;
+
+    let response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  }
+
+  async function getWeather(lat, long) {
+    const timeNow = new Date();
+
+    if (shouldFetch(timeNow)) {
+      fetchWeather(lat, long).then((data) => {
+        const hourlyWeather = data.hourly.data[0];
+
+        setAllWeatherUI(hourlyWeather);
+
+        cache().setWeather(hourlyWeather);
+        cache().setDateRequested(timeNow);
+      });
+    }
+
+    const cachedWeather = JSON.parse(cache().getWeather());
+
+    setAllWeatherUI(cachedWeather);
+  }
+
+  async function fetchPlace() {
+    let response = await fetch("https://ipinfo.io?token=4eab0f44feb156");
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  }
+
+  async function fetchData() {
+    if (cache().getPlace()) {
+      const place = cache().getPlace();
+      const { loc } = place;
+
+      updatePlaceUI(place);
+
+      [lat, long] = loc.split(",");
+      getWeather(lat, long);
+    } else {
+      fetchPlace().then((data) => {
+        const { loc } = data;
+        const [lat, long] = loc.split(",");
+        updatePlaceUI(data);
+        getWeather(lat, long);
+      });
+    }
+  }
+
+  function fetchWeather() {
+    fetchData();
+  }
+
   return {
     fetchWeather,
   };
-}
-
-function Quotes() {
-  function get() {
-    fetch(
-      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        localStorage.setItem("quotes", JSON.stringify(data));
-        return data;
-      });
-    return {
-      quotes: [
-        {
-          quote:
-            "Life isn’t about getting and having, it’s about giving and being.",
-          author: "Kevin Kruse",
-        },
-        {
-          quote:
-            "Whatever the mind of man can conceive and believe, it can achieve.",
-          author: "Napoleon Hill",
-        },
-        {
-          quote: "Strive not to be a success, but rather to be of value.",
-          author: "Albert Einstein",
-        },
-      ],
-    };
-  }
-  function random() {
-    if (localStorage.getItem("quotes")) {
-      const { quotes } = JSON.parse(localStorage.getItem("quotes"));
-      var selectedIndex = Math.floor(Math.random() * quotes.length);
-      return quotes[selectedIndex];
-    }
-    const { quotes } = get();
-
-    var selectedIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[selectedIndex];
-  }
-
-  function updateUIQuote() {
-    const { quote, author } = random();
-    document.getElementById("quote").textContent = quote;
-    document.getElementById("author").textContent = author;
-  }
-  function refreshQuoteEvent() {
-    const refreshBtn = document.getElementById("refresh-quote");
-    refreshBtn.addEventListener("click", updateUIQuote);
-  }
-  refreshQuoteEvent();
-
-  return { updateUIQuote };
 }
 
 Quotes().updateUIQuote();
