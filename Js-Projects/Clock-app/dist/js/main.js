@@ -54,31 +54,16 @@ function WeatherBackgrounds(backgroundsImgs, imageBackgroundEl) {
   };
 }
 
-function Icon(icons) {
-  const weatherIconEl = document.getElementById("weather-icon");
+function Icon(icons, weatherIconEl) {
+  const weatherIcon = weatherIconEl || document.getElementById("weather-icon");
 
-  function set(dayOrNight, weather) {
-    weatherIconEl.src = icons[dayOrNight][weather];
+  function set(dayOrNight, weatherType) {
+    weatherIcon.src = icons[dayOrNight][weatherType];
   }
   return {
     set,
   };
 }
-
-const icons = {
-  day: {
-    rain: "./img/icon/day/rain.svg",
-    cloud: "./img/icon/day/cloud.jpg",
-    sun: "./img/icon/day/sun.png",
-    clear: "./img/icon/day/sun.png",
-  },
-  night: {
-    clear: "./img/icon/night/clear.svg",
-    cloudy: "./img/icon/night/cloudy.svg",
-  },
-};
-
-const weatherIcon = Icon(icons);
 
 function Weather() {
   function typeOfWeather(weatherIcon, setFunc) {
@@ -323,6 +308,21 @@ const backgrounds = {
 };
 
 const weatherBackgrounds = WeatherBackgrounds(backgrounds);
+
+const icons = {
+  day: {
+    rain: "./img/icon/day/rain.svg",
+    cloud: "./img/icon/day/cloud.jpg",
+    sun: "./img/icon/day/sun.png",
+    clear: "./img/icon/day/sun.png",
+  },
+  night: {
+    clear: "./img/icon/night/clear.svg",
+    cloudy: "./img/icon/night/cloudy.svg",
+  },
+};
+
+const weatherIcon = Icon(icons);
 
 Weather().fetchWeather();
 
