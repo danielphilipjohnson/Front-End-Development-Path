@@ -42,13 +42,11 @@ function Timer(timeElement) {
 }
 
 function generateBackground(backgroundsImgs, imageBackgroundEl) {
-  let imageBG = imageBackgroundEl || document.getElementById("img-bg");
   let backgrounds = backgroundsImgs;
+  let imageBG = imageBackgroundEl || document.getElementById("img-bg");
 
-  function setBackground(dayOrNight, weather) {
-    console.log(dayOrNight, weather);
-    console.log(backgrounds[dayOrNight][weather]);
-    imageBG.src = backgrounds[dayOrNight][weather];
+  function setBackground(dayOrNight, weatherType) {
+    imageBG.src = backgrounds[dayOrNight][weatherType];
   }
 
   return {
