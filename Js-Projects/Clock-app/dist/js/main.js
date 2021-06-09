@@ -41,16 +41,16 @@ function Timer(timeElement) {
   };
 }
 
-function generateBackground(backgroundsImgs, imageBackgroundEl) {
+function WeatherBackgrounds(backgroundsImgs, imageBackgroundEl) {
   let backgrounds = backgroundsImgs;
   let imageBG = imageBackgroundEl || document.getElementById("img-bg");
 
-  function setBackground(dayOrNight, weatherType) {
+  function set(dayOrNight, weatherType) {
     imageBG.src = backgrounds[dayOrNight][weatherType];
   }
 
   return {
-    setBackground,
+    set,
   };
 }
 
@@ -64,21 +64,6 @@ function Icon(icons) {
     set,
   };
 }
-
-const backgrounds = {
-  day: {
-    rain: "./img/day/rain.jpg",
-    cloud: "./img/day/cloud.jpg",
-    sun: "./img/day/sun.jpg",
-    clear: "./img/day/sun.jpg",
-  },
-  night: {
-    clear: "./img/night/night.webp",
-    cloudy: "./img/night/cloudy.jpg",
-  },
-};
-
-const generatedBackground = generateBackground(backgrounds);
 
 const icons = {
   day: {
@@ -174,7 +159,7 @@ function Weather() {
   }
 
   function updateWeatherBackground(iconName) {
-    typeOfWeather(iconName, generatedBackground.setBackground);
+    typeOfWeather(iconName, weatherBackgrounds.set);
   }
   function updateWeatherIcon(iconName) {
     typeOfWeather(iconName, weatherIcon.set);
@@ -265,8 +250,6 @@ function Weather() {
   };
 }
 
-Weather().fetchWeather();
-
 function Quotes() {
   function get() {
     fetch(
@@ -325,6 +308,23 @@ function Quotes() {
 Quotes().updateUIQuote();
 
 Timer(document.getElementById("time")).start();
+
+const backgrounds = {
+  day: {
+    rain: "./img/day/rain.jpg",
+    cloud: "./img/day/cloud.jpg",
+    sun: "./img/day/sun.jpg",
+    clear: "./img/day/sun.jpg",
+  },
+  night: {
+    clear: "./img/night/night.webp",
+    cloudy: "./img/night/cloudy.jpg",
+  },
+};
+
+const weatherBackgrounds = WeatherBackgrounds(backgrounds);
+
+Weather().fetchWeather();
 
 const extraInfo = document.getElementById("extra-info");
 
