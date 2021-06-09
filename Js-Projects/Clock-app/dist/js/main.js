@@ -1,4 +1,4 @@
-function TimeGenerator(timeElement) {
+function Timer(timeElement) {
   const timeEl = timeElement || document.getElementById("time");
   let time = new Date();
   let hour = time.getHours();
@@ -6,6 +6,7 @@ function TimeGenerator(timeElement) {
   function getHour12() {
     return hour >= 13 ? hour % 12 : hour;
   }
+  // future feature allow users to change it
   function getHour24() {
     return time.getHours();
   }
@@ -29,10 +30,14 @@ function TimeGenerator(timeElement) {
 
     render(getHour12(), minutes, ampm);
   }
+  function start() {
+    // generate timer initially
+    generate();
+    setInterval(generate, 1000);
+  }
 
   return {
-    generate,
-    getHour24,
+    start,
   };
 }
 
@@ -321,10 +326,7 @@ function Quotes() {
 
 Quotes().updateUIQuote();
 
-const timeG = TimeGenerator(document.getElementById("time"));
-timeG.generate();
-
-setInterval(timeG.generate, 1000);
+Timer(document.getElementById("time")).start();
 
 const extraInfo = document.getElementById("extra-info");
 
