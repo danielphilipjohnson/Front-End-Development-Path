@@ -22,7 +22,8 @@
         <div class="flex flex-col justify-between h-screen md:py-4">
           <div class="mt-4">
             <div class="flex">
-              <blockquote class="mb-4 mr-1 lg:text-2xl lg:w-1/2">"If you look at what you have in life, you'll always
+              <blockquote id="quote" class="mb-4 mr-1 lg:text-2xl lg:w-1/2">"If you look at what you have in life,
+                you'll always
                 have more.
                 If you look
                 at
@@ -30,9 +31,10 @@
                 you
                 don't have
                 in life, you'll never have enough."</blockquote>
-              <img class="h-10" src="./img/refresh.svg" alt="sunny" id="weather" />
+              <button id="refresh-quote"><img class="h-10" src="./img/refresh.svg" alt="sunny" id="weather" /></button>
+
             </div>
-            <p class="font-bold lg:text-xl mb-4">Oprah Winfrey</p>
+            <p id="author" class="font-bold lg:text-xl mb-4">Oprah Winfrey</p>
           </div>
 
           <div class="mb-8">
@@ -50,7 +52,8 @@
                 </h1>
 
                 <p>June 21st</p>
-                <p class="uppercase font-bold text-2xl">In london, Uk</p>
+                <p class="uppercase font-bold text-2xl">In <span id="city">london</span>, <span id="country">Uk</span>
+                </p>
               </div>
 
               <div class="mb-4 md:mb-6 flex">
@@ -64,7 +67,7 @@
 
             </div>
 
-            <div id="extra-info" class=" flex justify-between flex-wrap">
+            <div id="extra-info" class="hidden flex justify-between flex-wrap">
               <div class="flex justify-between items-center py-2 md:py-4 rounded-md w-max">
                 <img class="h-5 md:h-10 mr-2" src="./img/icon/humidity.svg" alt="humidity" />
                 <span id="humidity" class="mr-2 text-sm lg:text-xl">0.83</span>

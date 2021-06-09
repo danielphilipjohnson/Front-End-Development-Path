@@ -1,5 +1,4 @@
 function TimeGenerator(timeElement) {
-  // pass this in
   const timeEl = timeElement || document.getElementById("time");
   let time = new Date();
   let hour = time.getHours();
@@ -63,11 +62,6 @@ function Icon(icons) {
   };
 }
 
-const timeG = TimeGenerator(document.getElementById("time"));
-timeG.generate();
-
-// setInterval(timeG.generate, 1000);
-
 const backgrounds = {
   day: {
     rain: "./img/day/rain.jpg",
@@ -127,6 +121,7 @@ function Weather() {
   function setWeatherValue(value, element) {
     element.textContent = value;
   }
+
   function cache() {
     function getWeather() {
       return localStorage.getItem("weather");
@@ -138,9 +133,25 @@ function Weather() {
       localStorage.setItem("date-requested", date);
     }
 
+    function getPlace() {
+      return JSON.parse(localStorage.getItem("place"));
+    }
+
+    function setPlace(city, country, loc) {
+      const place = {
+        city: city,
+        country: country,
+        loc: loc,
+      };
+
+      localStorage.setItem("place", JSON.stringify(place));
+    }
+
     return {
       getWeather,
       setWeather,
+      getPlace,
+      setPlace,
       setDateRequested,
     };
   }
@@ -166,20 +177,64 @@ function Weather() {
     typeOfWeather(iconName, weatherIcon.set);
   }
 
-  function fetchWeather(lattitude, longitude) {
-    // const url =
-    //   "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
-    //   lattitude +
-    //   "," +
-    //   longitude;
-    const timeNow = new Date();
-    if (shouldFetch(timeNow)) {
-      console.log("yes");
+  function shouldFetch(timeNow) {
+    // const timeNow = (TestDate = new Date("Jun 09, 2021 11:43:30"));
+    const dateWeatherSetObj = new Date(localStorage.getItem("date-requested"));
 
-      fetch("./js/weather.json")
+    if (timeNow.getMonth() > dateWeatherSetObj.getMonth()) {
+      console.log("month higher");
+      return true;
+    }
+
+    if (timeNow.getDate() > dateWeatherSetObj.getDate()) {
+      console.log("date higher");
+      return true;
+    }
+
+    if (timeNow.getHours() > dateWeatherSetObj.getHours()) {
+      console.log("hour higher");
+      return true;
+    }
+
+    return false;
+  }
+
+  function fetchWeather() {
+    let lat, long;
+
+    if (cache().getPlace()) {
+      const place = cache().getPlace();
+      const { city, country, loc } = place;
+
+      document.getElementById("city").textContent = city;
+      document.getElementById("country").textContent = country;
+
+      [lat, long] = loc.split(",");
+    } else {
+      fetch("https://ipinfo.io?token=4eab0f44feb156")
         .then((response) => response.json())
         .then((data) => {
-          const hourlyWeather = data.hourly.data[2];
+          const { city, country, loc } = data;
+
+          document.getElementById("city").textContent = city;
+          document.getElementById("country").textContent = country;
+
+          cache().setPlace(city, country, loc);
+        });
+    }
+
+    const timeNow = new Date();
+
+    if (shouldFetch(timeNow)) {
+      const url =
+        "https://api.darksky.net/forecast/8505eecc03a14ba6fd4681b00c1587ff/" +
+        lat +
+        "," +
+        long;
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const hourlyWeather = data.hourly.data[0];
 
           const { icon, humidity, windSpeed, precipProbability } =
             hourlyWeather;
@@ -207,59 +262,69 @@ function Weather() {
   };
 }
 
-Weather().fetchWeather(1, 1);
+Weather().fetchWeather();
 
-function shouldFetch(timeNow) {
-  // const timeNow = (TestDate = new Date("Jun 09, 2021 11:43:30"));
-  const dateWeatherSetObj = new Date(localStorage.getItem("date-requested"));
+function Quotes() {
+  function get() {
+    fetch(
+      "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem("quotes", JSON.stringify(data));
+        return data;
+      });
+    return {
+      quotes: [
+        {
+          quote:
+            "Life isn’t about getting and having, it’s about giving and being.",
+          author: "Kevin Kruse",
+        },
+        {
+          quote:
+            "Whatever the mind of man can conceive and believe, it can achieve.",
+          author: "Napoleon Hill",
+        },
+        {
+          quote: "Strive not to be a success, but rather to be of value.",
+          author: "Albert Einstein",
+        },
+      ],
+    };
+  }
+  function random() {
+    if (localStorage.getItem("quotes")) {
+      const { quotes } = JSON.parse(localStorage.getItem("quotes"));
+      var selectedIndex = Math.floor(Math.random() * quotes.length);
+      return quotes[selectedIndex];
+    }
+    const { quotes } = get();
 
-  if (timeNow.getMonth() > dateWeatherSetObj.getMonth()) {
-    console.log("month higher");
-    return true;
+    var selectedIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[selectedIndex];
   }
 
-  if (timeNow.getDate() > dateWeatherSetObj.getDate()) {
-    console.log("date higher");
-    return true;
+  function updateUIQuote() {
+    const { quote, author } = random();
+    document.getElementById("quote").textContent = quote;
+    document.getElementById("author").textContent = author;
   }
-
-  if (timeNow.getHours() > dateWeatherSetObj.getHours()) {
-    console.log("hour higher");
-    return true;
+  function refreshQuoteEvent() {
+    const refreshBtn = document.getElementById("refresh-quote");
+    refreshBtn.addEventListener("click", updateUIQuote);
   }
+  refreshQuoteEvent();
 
-  return false;
+  return { updateUIQuote };
 }
 
-// Wed Jun 09 2021 10:43:52 GMT+0100 (British Summer Time)
-// function runGeo() {
-//   if ("geolocation" in navigator) {
-//     /* geolocation is available */
-//     function success(position) {
-//       var latitude = position.coords.latitude;
-//       var longitude = position.coords.longitude;
+Quotes().updateUIQuote();
 
-//       var url = "https://ipinfo.io/json?callback=?";
+const timeG = TimeGenerator(document.getElementById("time"));
+timeG.generate();
 
-//       console.log(latitude, longitude);
-
-//       // call weather api
-//     }
-
-//     navigator.geolocation.getCurrentPosition(success, error);
-
-//     function error() {
-//       // notifyMe('Gps is not enabled please select a location from the menu');
-//     }
-//   } else {
-//     /* geolocation IS NOT available */
-//     console.log("not enabled");
-//     // edit and tell user to search for city
-//     // notifyMe("Gps is not enabled please select a location from the menu");
-//   }
-// }
-
-// runGeo();
+setInterval(timeG.generate, 1000);
 
 const extraInfo = document.getElementById("extra-info");
 
