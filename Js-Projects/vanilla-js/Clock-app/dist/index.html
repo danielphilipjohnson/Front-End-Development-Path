@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Modal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="">
+  <div class="relative">
+    <img id="img-bg" class="h-screen w-full object-cover fixed" src="./img/night/night.webp" alt=""
+      style="filter: brightness(.6);">
+
+    <div class="absolute top-0 text-white w-full h-full ">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="flex flex-col justify-between h-screen md:py-4">
+          <div class="mt-4">
+            <div class="flex ">
+              <blockquote id="quote" class="mb-4 mr-1 lg:text-2xl lg:w-1/2">"If you look at what you have in life,
+                you'll always
+                have more.
+                If you look
+                at
+                what
+                you
+                don't have
+                in life, you'll never have enough."</blockquote>
+              <button id="refresh-quote"><img class="w-20 lg:10" src="./img/refresh.svg" alt="sunny"
+                  id="weather" /></button>
+
+            </div>
+            <p id="author" class="font-bold lg:text-xl mb-4">Oprah Winfrey</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="flex items-end mb-12 md:mb-2">
+              <img id="weather-icon" class="h-10 mr-2 " src="./img/icon/night/clear.svg" alt="sunny" id="weather" />
+              <p class="text-5xl mr-2">16°</p>
+              <p class="lg:text-xl">
+                Good morning, Partly Cloudy
+              </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row md:justify-between">
+              <div class="mb-8">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-4" id="time">11:37
+                </h1>
+
+                <p>June 21st</p>
+                <p class="uppercase font-bold text-2xl">In <span id="city">london</span>, <span id="country">Uk</span>
+                </p>
+              </div>
+
+              <div class="mb-4 md:mb-6 flex">
+                <button id="fetch-extra-weather"
+                  class="bg-white px-4 py-1 border rounded-full text-gray-400 font-bold flex items-center self-end">
+                  More
+                  <span class="ml-4 z-10 bg-gray-400 rounded-full">
+                    <img class="h-5 md:h-8" src="./img/refresh.svg" alt="see more" id="down" /></span>
+                </button>
+              </div>
+
+            </div>
+
+            <div id="extra-info" class="hidden flex justify-between flex-wrap">
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md w-max">
+                <img class="h-5 md:h-10 mr-2" src="./img/icon/humidity.svg" alt="humidity" />
+                <span id="humidity" class="mr-2 text-sm lg:text-xl">0.83</span>
+                <p class="text-sm lg:text-xl">Humidity</p>
+              </div>
+
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md">
+                <img class="h-5 mr-2" src="./img/icon/windy.svg" alt="wind speed" />
+                <span id="wind-speed" class="mr-2 text-sm lg:text-xl">6.81</span>
+                <p class="text-sm lg:text-xl"> Wind speed</p>
+              </div>
+
+              <div class="flex justify-between items-center py-2 md:py-4 rounded-md">
+                <img class="h-5 md:h-10 mr-2" src="./img/icon/rain-probability.svg" alt="rain probability" />
+                <span id="precip" class="mr-2 text-sm lg:text-xl"> 0.08</span>
+                <p class="text-sm lg:text-xl"> chance of rain</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

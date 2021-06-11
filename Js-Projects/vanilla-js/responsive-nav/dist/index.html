@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive nav</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div
+      class="
+        relative
+        h-96
+        bg-gradient-to-r
+        from-yellow-400
+        via-red-500
+        to-pink-500
+      "
+      style="
+        shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        clip-path: polygon(0 0, 100% 0%, 100% 68%, 0% 100%);
+      "
+    >
+      <div class="container mx-auto relative">
+        <div
+          class="flex justify-between md:justify-start items-center p-4 mb-2"
+        >
+          <h1 class="text-2xl text-white font-bold">Stripe</h1>
+          <nav class="md:hidden">
+            <a
+              href="#"
+              id="mobile-nav-btn"
+              title="Open mobile navigation"
+              class="bg-gray-100 bg-opacity-20 py-2 px-4 rounded-full"
+            >
+              <i class="fas fa-bars text-white"></i>
+            </a>
+          </nav>
+          <nav class="hidden md:block w-full">
+            <ul class="ml-8 flex justify-around text-sm text-white font-bold">
+              <li id="product" class="link-btn">Products</li>
+              <li class="link-btn">Use Cases</li>
+              <li class="link-btn">Developers</li>
+              <li class="link-btn">Company</li>
+              <li>Pricing</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div id="hero" class="container md:mx-16 lg:mx-32">
+      <div class="absolute top-36 lg:top-28">
+        <h2 class="text-4xl md:text-5xl lg:text-7xl lg:w-6/12 font-bold px-4">
+          Payments infrastructure for the internet
+        </h2>
+      </div>
+    </div>
+
+    <nav
+      id="mobile-nav"
+      class="hidden top-0 z-10 absolute w-full md:hidden shadow-lg"
+    >
+      <div class="m-3">
+        <div class="bg-white border rounded-lg">
+          <h2
+            class="
+              text-center text-xs text-gray-600
+              font-bold
+              uppercase
+              mb-4
+              pt-4
+            "
+          >
+            Products
+          </h2>
+          <button id="mobile-close-nav" class="absolute top-0 right-2 p-4">
+            <i class="fas fa-times text-gray-400"></i>
+          </button>
+          <div class="flex justify-around px-4 pb-3">
+            <ul class="mr-8 md:mr-32">
+              <li class="mb-2">
+                <i class="fas fa-money-bill-wave-alt mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Payments</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-money-bill-alt mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Billing</span>
+              </li>
+              <li class="mb-2">
+                <i class="fab fa-connectdevelop mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Connect</span>
+              </li>
+
+              <li class="mb-2">
+                <i class="fas fa-id-card-alt mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Issuing</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-shopping-basket mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Sigma</span>
+              </li>
+
+              <li class="mb-2">
+                <i class="fas fa-file-invoice mr-4"></i
+                ><span class="font-bold text-gray-900 text-sm">Climate</span>
+              </li>
+            </ul>
+            <ul>
+              <li class="mb-2">
+                <i class="fas fa-terminal mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Terminal</span>
+              </li>
+
+              <li class="mb-2">
+                <i class="fas fa-wallet mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Invoicing</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-shopping-cart mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Payouts</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-satellite-dish mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Radar</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-atlas mr-3"></i
+                ><span class="font-bold text-gray-900 text-sm">Atlas</span>
+              </li>
+            </ul>
+          </div>
+          <div class="border-b border-dashed"></div>
+
+          <h2
+            class="
+              pt-3
+              px-4
+              text-center text-xs text-gray-600
+              font-bold
+              uppercase
+              mb-4
+            "
+          >
+            Use Cases
+          </h2>
+          <div class="flex justify-around px-4 pb-3">
+            <ul class="mr-4 md:mr-32">
+              <li class="mb-2">
+                <i class="fas fa-business-time mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">SaaS</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-layer-group mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">Platform</span>
+              </li>
+            </ul>
+            <ul>
+              <li class="mb-2">
+                <i class="fas fa-store mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm"
+                  >Marketplaces</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-b border-dashed"></div>
+
+          <div class="flex justify-around pt-4 px-4 pb-6">
+            <ul class="mr-4 md:mr-32">
+              <li class="mb-2">
+                <i class="fas fa-tag mr-3"></i>
+
+                <span class="font-bold text-gray-900 text-sm">Pricing</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-door-open mr-2"></i>
+
+                <span class="font-bold text-gray-900 text-sm">Enterprise</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-box mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">Partners</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-book-open mr-2"></i>
+                <span class="font-bold text-gray-900 text-sm"
+                  >Documentation</span
+                >
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-blog mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">Blog</span>
+              </li>
+            </ul>
+            <ul>
+              <li class="mb-2">
+                <i class="fas fa-address-card mr-1"></i>
+                <span class="font-bold text-gray-900 text-sm"
+                  >About Stripe</span
+                >
+              </li>
+
+              <li class="mb-2">
+                <i class="fas fa-briefcase mr-3"></i>
+
+                <span class="font-bold text-gray-900 text-sm">Jobs</span>
+              </li>
+
+              <li class="mb-2">
+                <i class="fas fa-newspaper mr-3"></i>
+
+                <span class="font-bold text-gray-900 text-sm">Newsroom</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-ticket-alt mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">Support</span>
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-code mr-3"></i>
+                <span class="font-bold text-gray-900 text-sm">Sessions</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-b-md bg-gray-100 text-center p-3">
+            <button
+              class="
+                rounded-full
+                py-1
+                px-3
+                bg-purple-500
+                text-white
+                font-bold
+                text-sm
+              "
+            >
+              Dashboard <i class="fas fa-chevron-right text-xs ml-3"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container mt-8">
+      <div class="md:mx-16 lg:mx-32">
+        <p class="mx-4 text-gray-800 text-lg mb-6">
+          Millions of businesses of all sizes – from startups to large
+          enterprises – use Stripe's software and APIs to accept payments, send
+          payouts, and manage their businesses online.
+        </p>
+
+        <div class="mx-4 mb-6">
+          <button
+            class="
+              bg-gray-900
+              font-bold
+              text-sm text-white
+              rounded-full
+              px-4
+              py-2
+            "
+          >
+            Start now <i class="fas fa-chevron-right text-xs ml-2"></i>
+          </button>
+          <button
+            class="text-gray-900 font-bold text-sm rounded-full px-4 py-2"
+          >
+            Contact sales <i class="fas fa-chevron-right text-xs ml-1"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <aside class="submenu absolute bg-white shadow-md w-max px-4 py-6 mt-2">
+      <section>
+        <h4 class="capitalize text-gray-800 font-bold mb-4">developers</h4>
+        <div class="submenu-center grid grid-cols-4 gap-2 w-max-content">
+          <a class="block uppercase" href="products.html">
+            <i class="fas fa-book mr-1"></i>
+            <span>plugins</span>
+          </a>
+          <a class="uppercase" href="products.html">
+            <i class="fas fa-book mr-1"></i>
+            <span>libraries</span></a
+          >
+          <a class="block uppercase" href="products.html">
+            <i class="fas fa-book mr-1"></i>
+            <span>plugins</span>
+          </a>
+          <a class="block uppercase" href="products.html">
+            <i class="fas fa-book mr-1"></i>
+            <span>billing</span>
+          </a>
+        </div>
+      </section>
+    </aside>
+
+    <script src="./js/main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

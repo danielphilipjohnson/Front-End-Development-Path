@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.range {
+  -webkit-appearance: none;
+  background: linear-gradient(
+    to right,
+    #777 0%,
+    #777 62.5%,
+    #444 62.5%,
+    #444 60%
+  );
+  cursor: pointer;
+  height: 3px;
+  margin: 0;
+  transition: 0.1s ease-in;
+  vertical-align: bottom;
+  width: 100%;
+}
