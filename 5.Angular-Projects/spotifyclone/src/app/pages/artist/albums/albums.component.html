@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="ani fadeInUp text-center">
+        <a routerLink="/artist/{{artistsAlbums[0].idArtist}}">
+      {{artistsAlbums[0].strArtist}}
+    </a>
+    </h1>
+
+    <div class="card-group">
+        <div *ngFor="let artist of artistsAlbums" class="ani slideInLeft card">
+            <img *ngIf="artist.strAlbumThumb" class="card-img-top" src={{artist.strAlbumThumb}} alt="{{artist.strArtist}}">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <a routerLink="/albums/{{artist.idAlbum}}/tracks">
+                        {{artist.strAlbum}}
+                    </a>
+                </h5>
+                <p *ngIf="artist.strDescriptionEN" class="card-text description">{{artist.strDescriptionEN | slice:0:250}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li *ngIf="artist.intYearReleased" class="list-group-item">Year Formed: {{artist.intYearReleased}}</li>
+                <li *ngIf="artist.strGenre" class="list-group-item">Genre: {{artist.strGenre}}</li>
+                <li *ngIf="artist.strLabel" class="list-group-item">Record Label: {{artist.strLabel}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

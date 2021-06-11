@@ -1,0 +1,59 @@
+<section class="grey-section">
+    <div class="container padded-container " data-spacing="300" style="transform: translateY(0px) translateX(0px); opacity: 1;">
+        <h3 class="ani fadeInUp section-header ">Search Album</h3>
+        <div class="ani fadeInDown searchform large">
+            <form role="search" method="get" class="search-form" action="">
+                <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Search for album ...." value="" name="s" type="text">
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class=" container">
+    <section *ngIf="submittable != true">
+        <h2 class="mt-3 text-center">Recent Searches</h2>
+        <div class="card-group search-result">
+            <div *ngFor="let album of albums" class="ani slideInLeft card">
+                <img *ngIf="album.strAlbumThumb" class="card-img-top" src={{album.strAlbumThumb}} alt="{{album.strAlbum}}">
+                <div class="card-body">
+                    <h5 *ngIf="album.strAlbum" class="card-title">{{album.strAlbum}}
+                        <a routerLink="/albums/{{album.idAlbum}}/tracks" class="btn btn-success float-right">View Tracks</a>
+                    </h5>
+                    <p *ngIf="album.strDescriptionEN" class="card-text description">{{album.strDescriptionEN | slice:0:250}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li *ngIf="album.intYearReleased" class="list-group-item">Year Released: {{album.intYearReleased}}</li>
+                    <li *ngIf="album.strGenre" class="list-group-item">Genre: {{album.strGenre}}</li>
+                    <li *ngIf="album.strLabel" class="list-group-item">Record Label: {{album.strLabel}}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section *ngIf="submittable">
+        <h2 class="mt-3 text-center">Search Results</h2>
+        <div class="card-group search-result">
+            <div *ngFor="let album of matchedAlbums$ | async" class="ani slideInLeft card">
+                <div *ngIf='album.noresult'>
+                    <img class="card-img-top" src="assets/img/abstract-art1.jpg" alt="No results found">
+                    <div class="card-body">
+                        <h5 class="card-title">No results found</h5>
+                    </div>
+                </div>
+                <div *ngIf='album.noresult != true'>
+                    <img *ngIf="album.strAlbumThumb" class="card-img-top" src={{album.strAlbumThumb}} alt="{{album.strAlbum}}">
+                    <div class="card-body">
+                        <h5 *ngIf="album.strAlbum" class="card-title">{{album.strAlbum}}
+                            <a routerLink="/albums/{{album.idAlbum}}/tracks" class="btn btn-primary float-right">View Tracks</a>
+                        </h5>
+                        <p *ngIf="album.strDescriptionEN" class="card-text description">{{album.strDescriptionEN | slice:0:250}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li *ngIf="album.intYearReleased" class="list-group-item">Year Released: {{album.intYearReleased}}</li>
+                        <li *ngIf="album.strGenre" class="list-group-item">Genre: {{album.strGenre}}</li>
+                        <li *ngIf="album.strLabel" class="list-group-item">Record Label: {{album.strLabel}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,25 @@
+.social-icon a {
+    background-color: #222326;
+    color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 0.35rem .65rem;
+    margin: 0.25rem;
+}
+
+.social-icon.facebook a {
+    font-size: 1.5rem;
+    padding: 0.35rem .95rem;
+}
+
+.nav-bottom {
+    float: left;
+}
+
+.nav-bottom li {
+    margin: 5px;
+}
