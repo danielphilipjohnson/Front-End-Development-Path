@@ -1,5 +1,3 @@
-// https://www.youtube.com/watch?v=M2jixfZ-FeE
-
 var ColorHexGenerator = (function () {
   var ColorHexGenerator = {},
     colorCards,

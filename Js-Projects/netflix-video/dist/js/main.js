@@ -277,41 +277,7 @@ class ProgressBar {
       callback(this.range, currentVideoPlace, buf);
   }
 
-  updateUI() {
-    // this.updateCurrentValue(this.video.currentTime);
-    // this.updateCurrentValue(this.video.currentTime);
-    // // style dupication
-    // this.updateVideoProgress(
-    //   this.range.value,
-    //   (range, currentVideoPlace, buf) => {
-    //     range.style =
-    //       "background:linear-gradient(to right, #cc181e 0%, #cc181e " +
-    //       currentVideoPlace +
-    //       "%, #777 " +
-    //       currentVideoPlace +
-    //       "%, #777 " +
-    //       buf +
-    //       "%, #444 " +
-    //       buf +
-    //       "%, #444 100%)";
-    //   }
-    // );
-    // this.updateVideoProgress(
-    //   this.range.value,
-    //   (range, currentVideoPlace, buf) => {
-    //     range.style =
-    //       "background:linear-gradient(to right, #cc181e 0%, #cc181e " +
-    //       currentVideoPlace +
-    //       "%, #777 " +
-    //       currentVideoPlace +
-    //       "%, #777 " +
-    //       buf +
-    //       "%, #444 " +
-    //       buf +
-    //       "%, #444 100%)";
-    //   }
-    // );
-  }
+  updateUI() {}
 }
 
 class PlayableVideo {
