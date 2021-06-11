@@ -124,35 +124,6 @@ function Quotes() {
 }
 
 function Weather() {
-  function typeOfWeather(weatherIcon, setFunc) {
-    switch (weatherIcon) {
-      case "clear-night":
-      case "partly-cloudy-night":
-        setFunc("night", "clear");
-        break;
-      case "cloudy":
-      case "partly-cloudy-day":
-      case "wind":
-      case "clear-day":
-        setFunc("day", "clear");
-        break;
-      case "rain":
-        setFunc("day", "rain");
-        break;
-      default:
-        setFunc("day", "sun");
-        break;
-    }
-  }
-
-  function convertDecimalToPercent(decimalValue) {
-    return (decimalValue * 100).toString() + "%";
-  }
-
-  function setWeatherValue(value, element) {
-    element.textContent = value;
-  }
-
   function cache() {
     function getWeather() {
       return localStorage.getItem("weather");
@@ -187,18 +158,47 @@ function Weather() {
     };
   }
 
-  function updateWeatherUI(precipProbability, humidity, windSpeed) {
-    setWeatherValue(
+  function typeOfWeather(weatherIcon, setFunc) {
+    switch (weatherIcon) {
+      case "clear-night":
+      case "partly-cloudy-night":
+        setFunc("night", "clear");
+        break;
+      case "cloudy":
+      case "partly-cloudy-day":
+      case "wind":
+      case "clear-day":
+        setFunc("day", "clear");
+        break;
+      case "rain":
+        setFunc("day", "rain");
+        break;
+      default:
+        setFunc("day", "sun");
+        break;
+    }
+  }
+
+  function convertDecimalToPercent(decimalValue) {
+    return (decimalValue * 100).toString() + "%";
+  }
+
+  function setWeatherUIValue(value, element) {
+    element.textContent = value;
+  }
+
+  function updateWeatherStatsUI(precipProbability, humidity, windSpeed) {
+    setWeatherUIValue(
       convertDecimalToPercent(precipProbability),
       document.getElementById("precip")
     );
 
-    setWeatherValue(
+    setWeatherUIValue(
       convertDecimalToPercent(humidity),
       document.getElementById("humidity")
     );
 
-    setWeatherValue(windSpeed, document.getElementById("wind-speed"));
+    setWeatherUIValue(windSpeed, document.getElementById("wind-speed"));
   }
 
   function updateWeatherBackground(iconName) {
@@ -238,7 +238,7 @@ function Weather() {
   function setAllWeatherUI(cachedWeather) {
     const { icon, humidity, windSpeed, precipProbability } = cachedWeather;
 
-    updateWeatherUI(precipProbability, humidity, windSpeed);
+    updateWeatherStatsUI(precipProbability, humidity, windSpeed);
     updateWeatherBackground(icon);
     updateWeatherIcon(icon);
   }
@@ -265,8 +265,17 @@ function Weather() {
 
     return await response.json();
   }
+  async function fetchPlace() {
+    let response = await fetch("https://ipinfo.io?token=4eab0f44feb156");
 
-  async function getWeather(lat, long) {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return await response.json();
+  }
+
+  function getWeather(lat, long) {
     const timeNow = new Date();
 
     if (shouldFetch(timeNow)) {
@@ -278,48 +287,34 @@ function Weather() {
         cache().setWeather(hourlyWeather);
         cache().setDateRequested(timeNow);
       });
+    } else {
+      const cachedWeather = JSON.parse(cache().getWeather());
+
+      setAllWeatherUI(cachedWeather);
     }
-
-    const cachedWeather = JSON.parse(cache().getWeather());
-
-    setAllWeatherUI(cachedWeather);
   }
 
-  async function fetchPlace() {
-    let response = await fetch("https://ipinfo.io?token=4eab0f44feb156");
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    return await response.json();
-  }
-
-  async function fetchData() {
+  function fetchData() {
     if (cache().getPlace()) {
       const place = cache().getPlace();
       const { loc } = place;
+      const [lat, long] = loc.split(",");
 
       updatePlaceUI(place);
-
-      [lat, long] = loc.split(",");
       getWeather(lat, long);
     } else {
       fetchPlace().then((data) => {
         const { loc } = data;
         const [lat, long] = loc.split(",");
+
         updatePlaceUI(data);
         getWeather(lat, long);
       });
     }
   }
 
-  function fetchWeather() {
-    fetchData();
-  }
-
   return {
-    fetchWeather,
+    fetchData,
   };
 }
 
@@ -357,12 +352,12 @@ const icons = {
 
 const weatherIcon = Icon(icons);
 
-Weather().fetchWeather();
+Weather().fetchData();
 
 const extraInfo = document.getElementById("extra-info");
 
-const fetchWeatherBtn = document.getElementById("fetch-weather");
+const fetchExtraWeather = document.getElementById("fetch-extra-weather");
 
-fetchWeatherBtn.addEventListener("click", function () {
+fetchExtraWeather.addEventListener("click", function () {
   extraInfo.classList.toggle("hidden");
 });
