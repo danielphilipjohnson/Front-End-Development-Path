@@ -1,9 +1,8 @@
 <template>
   <div>
     <h1>Hello</h1>
-    <button type="button" @click="age++">Increase age</button>
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Greeting :age="age" />
+    <Greeting :age="age" @age-change="age++" />
   </div>
 </template>
 
