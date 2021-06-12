@@ -2,7 +2,7 @@
   <div>
     <h1>Hello</h1>
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Greeting :age="age" @age-change="age++" />
+    <Greeting :age="age" @age-change="updateAge" />
   </div>
 </template>
 
@@ -19,6 +19,11 @@ export default {
     return {
       age: 19,
     };
+  },
+  methods: {
+    updateAge(num) {
+      this.age += num;
+    },
   },
 };
 </script>

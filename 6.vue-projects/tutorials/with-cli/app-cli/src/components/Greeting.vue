@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     onClickAge() {
-      this.$emit("age-change");
+      this.$emit("age-change", 3);
     },
   },
 };
