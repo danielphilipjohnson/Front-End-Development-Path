@@ -2,7 +2,7 @@
   <div>
     <h1>Hello</h1>
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Greeting :age="age" @age-change="updateAge" />
+    <Greeting :age="age" @age-change="updateAge" :ageChangeFn="updateAgeCB" />
   </div>
 </template>
 
@@ -22,6 +22,9 @@ export default {
   },
   methods: {
     updateAge(num) {
+      this.age += num;
+    },
+    updateAgeCB(num) {
       this.age += num;
     },
   },
