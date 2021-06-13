@@ -1,15 +1,11 @@
 <template>
   <div class="px-4 py-3">
     <div class="relative">
-      <img
-        id="ad-image"
-        class="w-full h-96 object-cover"
-        src="https://source.unsplash.com/random"
-        alt="ad post"
-      />
+      <img class="w-full h-96 object-cover" :src="image" alt="ad post" />
       <div class="absolute bottom-0 left-0 p-4">
         <button
           id="prev-ad"
+          @click.prevent="emitPrevAd"
           class="
                     md:w-auto
                     px-2
@@ -28,7 +24,7 @@
       </div>
       <div class="absolute bottom-0 right-0 p-4">
         <button
-          id="next-ad"
+          @click.prevent="emitNextAd"
           class="
                     md:w-auto
                     px-2
@@ -49,15 +45,15 @@
 
     <div class="flex justify-between p-2 border">
       <div class="w-2/3 md:w-auto">
-        <p id="ad-text" class="font-bold">
-          2 easy steps to get better at js
+        <p class="font-bold">
+          {{ adText }}
         </p>
-        <span id="ad-url" class="text-gray-600">js.fake.com</span>
+        <span class="text-gray-600">{{ adUrl }}</span>
       </div>
 
       <a
         id="ad-url-navigation"
-        href="/"
+        :href="adUrl"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -85,7 +81,15 @@
 <script>
 export default {
   name: "Content",
+  props: ["image", "adText", "adUrl"],
+  emits: ["nextAd", "prevAd"],
+  methods: {
+    emitNextAd() {
+      this.$emit("nextAd");
+    },
+    emitPrevAd() {
+      this.$emit("prevAd");
+    },
+  },
 };
 </script>
-
-<style></style>
