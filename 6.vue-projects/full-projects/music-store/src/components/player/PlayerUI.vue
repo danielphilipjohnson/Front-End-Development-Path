@@ -17,7 +17,7 @@
     <div class="relative">
       <!-- Play/Pause Button -->
       <div class="float-left w-7 h-7 leading-3">
-        <button type="button">
+        <button type="button" @click.prevent="newSong(song)">
           <i class="fa fa-play text-gray-500 text-xl"></i>
         </button>
       </div>
@@ -107,7 +107,12 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "PlayerUI",
+  methods: {
+    ...mapActions(["newSong"]),
+  },
 };
 </script>
