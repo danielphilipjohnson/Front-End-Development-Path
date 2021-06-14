@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from "vuex";
+import { mapMutations, mapState, mapActions } from "vuex";
 export default {
   name: "Header",
   computed: {
@@ -43,6 +43,7 @@ export default {
   },
   methods: {
     ...mapMutations(["toggleAuthModal"]),
+    ...mapActions(["signout"]),
   },
 };
 </script>
