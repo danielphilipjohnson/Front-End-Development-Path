@@ -244,20 +244,20 @@
 </template>
 
 <script>
-import store from "@/store";
+// import store from "@/store";
 import Upload from "../components/upload/Upload.vue";
 export default {
   name: "manage",
   components: {
     Upload,
   },
-  beforeRouteEnter(to, from, next) {
-    if (store.state.userLoggedIn) {
-      next();
-    } else {
-      next({ name: "home" });
-    }
-  },
+  // beforeRouteEnter(to, from, next) {
+  //   if (store.state.userLoggedIn) {
+  //     next();
+  //   } else {
+  //     next({ name: "home" });
+  //   }
+  // },
 };
 </script>
 

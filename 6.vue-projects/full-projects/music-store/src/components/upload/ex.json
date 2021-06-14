@@ -1,0 +1,118 @@
+{
+  "artist": "BigT",
+  "title": "Gang Signs",
+  "album": "Gang Signs",
+  "release_date": "2020-12-19",
+  "label": "BigT Productionz",
+  "timecode": "00:52",
+  "song_link": "https://lis.tn/GangSigns",
+  "apple_music": {
+    "previews": [
+      {
+        "url": "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview124/v4/7f/09/e3/7f09e3bc-4161-0486-9723-63d0b201c1b3/mzaf_14875201997827810955.plus.aac.p.m4a"
+      }
+    ],
+    "artwork": {
+      "width": 3000,
+      "height": 3000,
+      "url": "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/6d/08/31/6d0831e1-c0a9-7ff6-d193-d8d87afa8396/024543222422_cover.jpg/{w}x{h}bb.jpeg",
+      "bgColor": "000000",
+      "textColor1": "f33321",
+      "textColor2": "f42c08",
+      "textColor3": "c2291b",
+      "textColor4": "c32306"
+    },
+    "artistName": "BigT",
+    "url": "https://music.apple.com/us/album/gang-signs/1544918817?app=music&at=1000l33QU&i=1544918818&mt=1",
+    "discNumber": 1,
+    "genreNames": [
+      "Hip-Hop/Rap",
+      "Music"
+    ],
+    "durationInMillis": 296815,
+    "releaseDate": "2020-12-19",
+    "name": "Gang Signs",
+    "isrc": "USANG2129609",
+    "albumName": "Gang Signs - Single",
+    "playParams": {
+      "id": "1544918818",
+      "kind": "song"
+    },
+    "trackNumber": 1,
+    "composerName": ""
+  },
+  "spotify": {
+    "album": {
+      "name": "Gang Signs",
+      "artists": [
+        {
+          "name": "BigT",
+          "id": "1UWGDAfhN71jmVOqFHT0ku",
+          "uri": "spotify:artist:1UWGDAfhN71jmVOqFHT0ku",
+          "href": "https://api.spotify.com/v1/artists/1UWGDAfhN71jmVOqFHT0ku",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/1UWGDAfhN71jmVOqFHT0ku"
+          }
+        }
+      ],
+      "album_group": "",
+      "album_type": "single",
+      "id": "5fEeMUEq5iBe5YkAUyHM7d",
+      "uri": "spotify:album:5fEeMUEq5iBe5YkAUyHM7d",
+      "available_markets": null,
+      "href": "https://api.spotify.com/v1/albums/5fEeMUEq5iBe5YkAUyHM7d",
+      "images": [
+        {
+          "height": 640,
+          "width": 640,
+          "url": "https://i.scdn.co/image/ab67616d0000b2730bdf793463bea207a34b6c79"
+        },
+        {
+          "height": 300,
+          "width": 300,
+          "url": "https://i.scdn.co/image/ab67616d00001e020bdf793463bea207a34b6c79"
+        },
+        {
+          "height": 64,
+          "width": 64,
+          "url": "https://i.scdn.co/image/ab67616d000048510bdf793463bea207a34b6c79"
+        }
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5fEeMUEq5iBe5YkAUyHM7d"
+      },
+      "release_date": "2020-12-19",
+      "release_date_precision": "day"
+    },
+    "external_ids": {
+      "isrc": "USANG2129609"
+    },
+    "popularity": 0,
+    "is_playable": true,
+    "linked_from": null,
+    "artists": [
+      {
+        "name": "BigT",
+        "id": "1UWGDAfhN71jmVOqFHT0ku",
+        "uri": "spotify:artist:1UWGDAfhN71jmVOqFHT0ku",
+        "href": "https://api.spotify.com/v1/artists/1UWGDAfhN71jmVOqFHT0ku",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/1UWGDAfhN71jmVOqFHT0ku"
+        }
+      }
+    ],
+    "available_markets": null,
+    "disc_number": 1,
+    "duration_ms": 296814,
+    "explicit": false,
+    "external_urls": {
+      "spotify": "https://open.spotify.com/track/7u5yKlepPbYZSRyau1ungh"
+    },
+    "href": "https://api.spotify.com/v1/tracks/7u5yKlepPbYZSRyau1ungh",
+    "id": "7u5yKlepPbYZSRyau1ungh",
+    "name": "Gang Signs",
+    "preview_url": "https://p.scdn.co/mp3-preview/1c207b1866b051b80e63ae78d2271d693a57e0ab?cid=e44e7b8278114c7db211c00ea273ac69",
+    "track_number": 1,
+    "uri": "spotify:track:7u5yKlepPbYZSRyau1ungh"
+  }
+}

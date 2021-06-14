@@ -34,7 +34,7 @@
       >
         <h5>Drop your files here</h5>
       </div>
-
+      <input type="file" multiple @change="upload($event)" />
       <hr class="my-6" />
       <!-- Progess Bars -->
       <div class="mb-4" v-for="upload in uploads" :key="upload.name">
@@ -45,7 +45,7 @@
         <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
           <!-- Inner Progress Bar -->
           <div
-            class="transition-all progress-bar bg-blue-400"
+            class="transition-all progress-bar"
             :class="upload.variant"
             :style="{ width: upload.current_progress + '%' }"
           ></div>
@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { storage } from "@/includes/firebase";
+import { storage, auth, songsCollection } from "@/includes/firebase";
 
 export default {
   name: "Upload",
@@ -74,41 +74,112 @@ export default {
         ? [...$event.dataTransfer.files]
         : [...$event.target.files];
 
-      console.log(files);
-
       files.forEach((file) => {
         if (file.type !== "audio/mpeg") {
           return;
         }
 
-        const storageRef = storage.ref(); // music-c2596.appspot.com
-        const songsRef = storageRef.child(`songs/${file.name}`); // music-c2596.appspot.com/songs/example.mp3
-        const task = songsRef.put(file);
+        try {
+          const response = this.checkSongForCopyright(file);
+          response.then((response) => {
+            const { status, result } = response;
+            // const { result } = response;
 
-        const uploadIndex =
-          this.uploads.push({
-            task,
-            current_progress: 0,
-            name: file.name,
-            variant: "bg-blue-400",
-            icon: "fas fa-spinner fa-spin",
-            text_class: "",
-          }) - 1;
+            console.log(status);
+            console.log(result);
+            // (status !== "success")
+            if (status !== "success") {
+              const storageRef = storage.ref(); // music-c2596.appspot.com
+              const songsRef = storageRef.child(`songs/${file.name}`); // music-c2596.appspot.com/songs/example.mp3
+              const task = songsRef.put(file);
 
-        task.on(
-          "state_changed",
-          (snapshot) => {
-            const progress =
-              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            this.uploads[uploadIndex].current_progress = progress;
-          },
-          (error) => {
-            console.log(error);
-          },
-          async () => {}
-        );
+              const uploadIndex =
+                this.uploads.push({
+                  task,
+                  current_progress: 0,
+                  name: file.name,
+                  variant: "bg-blue-400",
+                  icon: "fas fa-spinner fa-spin",
+                  text_class: "",
+                }) - 1;
+
+              task.on(
+                "state_changed",
+                (snapshot) => {
+                  const progress =
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                  this.uploads[uploadIndex].current_progress = progress;
+                },
+                (error) => {
+                  this.uploads[uploadIndex].variant = "bg-red-400";
+                  this.uploads[uploadIndex].icon = "fas fa-times";
+                  this.uploads[uploadIndex].text_class = "text-red-400";
+                  console.log(error);
+                },
+                async () => {
+                  const song = {
+                    uid: auth.currentUser.uid,
+                    display_name: auth.currentUser.displayName,
+                    original_name: task.snapshot.ref.name,
+                    modified_name: task.snapshot.ref.name,
+                    genre: "",
+                    comment_count: 0,
+                  };
+
+                  song.url = await task.snapshot.ref.getDownloadURL();
+                  songsCollection.add(song);
+                  // const songRef = await songsCollection.add(song);
+                  // const songSnapshot = await songRef.get();
+
+                  // this.addSong(songSnapshot);
+
+                  this.uploads[uploadIndex].variant = "bg-green-400";
+                  this.uploads[uploadIndex].icon = "fas fa-check";
+                  this.uploads[uploadIndex].text_class = "text-green-400";
+                }
+              );
+            } else {
+              // console.log(result);
+              console.log(result.artist, result.title, result.album);
+            }
+          });
+        } catch (error) {
+          console.log(error);
+        }
       });
     },
+
+    async checkSongForCopyright(file) {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("return", "apple_music,spotify");
+      // formData.append("api_token", "ebc0c53dcb3a1645f270ebc85837488d");
+      formData.append("api_token", "test");
+
+      const settings = {
+        method: "POST",
+        body: formData,
+      };
+
+      let response = await fetch("https://api.audd.io/", settings);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const content = await response.json();
+
+      return content;
+    },
+    cancelUploads() {
+      this.uploads.forEach((upload) => {
+        upload.task.cancel();
+      });
+    },
+  },
+  beforeUnmount() {
+    this.uploads.forEach((upload) => {
+      upload.task.cancel();
+    });
   },
 };
 </script>
