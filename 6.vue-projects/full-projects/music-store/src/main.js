@@ -2,6 +2,8 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+// import { auth } from "./includes/firebase";
+
 import VeeValidatePlugin from "./includes/validation";
 import "./assets/tailwind.css";
 import "./assets/main.css";

@@ -1,5 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/firestore";
+
 var firebaseConfig = {
   apiKey: "AIzaSyAOGOugykRgedLT3A4_3Y-0LH4Rd4B46c4",
   authDomain: "musicplayer-a3429.firebaseapp.com",
@@ -8,5 +10,13 @@ var firebaseConfig = {
   messagingSenderId: "266419035875",
   appId: "1:266419035875:web:30f66c710e8dd28709efd6",
 };
+
 // Initialize Firebase
-export default firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+const userCollection = db.collection("users");
+
+export { auth, db, userCollection };
