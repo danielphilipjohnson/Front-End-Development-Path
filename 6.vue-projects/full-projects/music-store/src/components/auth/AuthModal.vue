@@ -58,12 +58,19 @@
           <!-- Tabs -->
           <ul class="flex flex-wrap mb-4">
             <li class="flex-auto text-center">
-              <a class="block rounded py-3 px-4 transition" href="#"> Login </a>
+              <a
+                class="block rounded py-3 px-4 transition"
+                href="#"
+                @click.prevent="tab = 'login'"
+              >
+                Login
+              </a>
             </li>
             <li class="flex-auto text-center">
               <a
                 class="block rounded py-3 px-4 transition hover:text-blue-600"
                 href="#"
+                @click.prevent="tab = 'register'"
                 >Register</a
               >
             </li>
