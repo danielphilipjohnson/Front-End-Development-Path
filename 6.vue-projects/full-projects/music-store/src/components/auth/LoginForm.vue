@@ -89,7 +89,7 @@ export default {
     };
   },
   methods: {
-    login(values) {
+    login() {
       this.login_in_submission = true;
       this.login_show_alert = true;
       this.login_alert_variant = "bg-blue-500";
@@ -97,7 +97,6 @@ export default {
 
       this.login_alert_variant = "bg-green-500";
       this.login_alert_msg = "Success! You are now logged in.";
-      console.log(values);
     },
   },
 };

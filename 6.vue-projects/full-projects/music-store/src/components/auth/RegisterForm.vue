@@ -206,7 +206,7 @@ export default {
     };
   },
   methods: {
-    register(values) {
+    register() {
       this.reg_show_alert = true;
       this.reg_in_submission = true;
       this.reg_alert_variant = "bg-blue-500";
