@@ -60,6 +60,7 @@ import { storage, auth, songsCollection } from "@/includes/firebase";
 
 export default {
   name: "Upload",
+  props: ["addSong"],
   data() {
     return {
       is_dragover: false,
@@ -81,13 +82,10 @@ export default {
 
         try {
           const response = this.checkSongForCopyright(file);
-          response.then((response) => {
-            const { status, result } = response;
-            // const { result } = response;
 
-            console.log(status);
-            console.log(result);
-            // (status !== "success")
+          response.then((data) => {
+            const { status, result } = data;
+
             if (status !== "success") {
               const storageRef = storage.ref(); // music-c2596.appspot.com
               const songsRef = storageRef.child(`songs/${file.name}`); // music-c2596.appspot.com/songs/example.mp3
@@ -128,10 +126,10 @@ export default {
 
                   song.url = await task.snapshot.ref.getDownloadURL();
                   songsCollection.add(song);
-                  // const songRef = await songsCollection.add(song);
-                  // const songSnapshot = await songRef.get();
+                  const songRef = await songsCollection.add(song);
+                  const songSnapshot = await songRef.get();
 
-                  // this.addSong(songSnapshot);
+                  this.addSong(songSnapshot);
 
                   this.uploads[uploadIndex].variant = "bg-green-400";
                   this.uploads[uploadIndex].icon = "fas fa-check";
@@ -139,7 +137,7 @@ export default {
                 }
               );
             } else {
-              // console.log(result);
+              // make error
               console.log(result.artist, result.title, result.album);
             }
           });
@@ -183,5 +181,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
