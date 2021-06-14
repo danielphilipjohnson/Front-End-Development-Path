@@ -280,7 +280,7 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "auth",
   data() {
@@ -290,6 +290,9 @@ export default {
   },
   computed: {
     ...mapState(["authModalShow"]),
+  },
+  methods: {
+    ...mapMutations(["toggleAuthModal"]),
   },
 };
 </script>
