@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@vee-validate/rules": "^4.1.17",
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
+    "postcss": "^7.0.36",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.4",
+    "vee-validate": "^4.1.18",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -36,7 +39,7 @@
     "eslint-plugin-vue": "^7.0.0",
     "prettier": "^2.2.1",
     "typescript": "~3.9.3",
-    "vue-cli-plugin-tailwind": "^2.0.6",
+    "vue-cli-plugin-tailwind": "^2.0.5",
     "vue-jest": "^5.0.0-0"
   }
 }
