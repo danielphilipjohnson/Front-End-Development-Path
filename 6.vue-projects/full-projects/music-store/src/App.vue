@@ -1,6 +1,13 @@
 <template>
-  <router-link to="/">Home</router-link> |
-  <!-- <router-link to="/about">About</router-link> -->
+  <app-header />
 
   <router-view />
 </template>
+<script>
+import AppHeader from "./components/layout/Header.vue";
+export default {
+  components: {
+    AppHeader,
+  },
+};
+</script>
