@@ -1,32 +1,32 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
-import Manage from "../views/Manage.vue";
-import Song from "@/views/Song.vue";
-
 import store from "@/store";
+
+const Home = () => import("@/views/Home.vue");
+const Manage = () =>
+  import(/* webpackChunkName: "groupedChunk" */ "@/views/Manage.vue");
+const Song = () =>
+  import(/* webpackChunkName: "groupedChunk" */ "@/views/Song.vue");
+const About = () => import("@/views/About.vue");
 
 const routes = [
   {
-    path: "/",
     name: "home",
+    path: "/", // example.com/
     component: Home,
   },
   {
-    path: "/about",
     name: "about",
+    path: "/about",
     component: About,
-    // component: () =>
-    //   import(/* webpackChunkName: "about" */ "../views/About.vue"),
   },
   {
     name: "manage",
-    // alias: "/manage",
+    // alias: '/manage',
     path: "/manage-music",
-    component: Manage,
     meta: {
       requiresAuth: true,
     },
+    component: Manage,
     beforeEnter: (to, from, next) => {
       console.log("Manage Route Guard");
       next();
@@ -54,13 +54,14 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  //console.log(to.matched);
+  // console.log(to.matched);
+
   if (!to.matched.some((record) => record.meta.requiresAuth)) {
     next();
     return;
   }
 
-  if (store.state.userLoggedIn) {
+  if (store.state.auth.userLoggedIn) {
     next();
   } else {
     next({ name: "home" });

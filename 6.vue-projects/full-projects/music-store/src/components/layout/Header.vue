@@ -60,7 +60,9 @@ export default {
 
   computed: {
     linkExactActiveClass: "text-yellow-500",
-    ...mapState(["userLoggedIn"]),
+    ...mapState({
+      userLoggedIn: (state) => state.auth.userLoggedIn,
+    }),
     currentLocale() {
       return this.$i18n.locale === "fr" ? "French" : "English";
     },
