@@ -6,8 +6,8 @@
     "my_songs": "Mes chansons"
   },
   "register": {
-    "TOS": "",
-    "accept": ""
+    "TOS": " conditions d'utilisation de musiques",
+    "accept": "J'accepte les {0}"
   },
   "song": {
     "comment_count": ""
