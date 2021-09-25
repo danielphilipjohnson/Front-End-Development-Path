@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav class="sticky py-6 border-b-4 border-gray-300 mb-4">
+      <ul
+        class="flex flex-wrap md:flex-nowrap w-full justify-around items-center"
+      >
+        <li class="mb-4">
+          <button
+            class="
+              border border-blue-500
+              text-blue-700
+              font-bold
+              rounded-md
+              py-2
+              px-3
+              text-xs
+            "
+          >
+            Prueba Dropbox Business
+          </button>
+        </li>
+        <li class="mb-4">
+          <a class="text-4xl font-bold" href="/">
+            <i class="fab fa-dropbox mr-2 text-5xl text-blue-700"></i>
+            Dropbox</a
+          >
+        </li>
+        <li>
+          <a class="text-sm text-blue-700" href="/">Descargar aplicación</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="mt-28 container px-4 mx-auto">
+      <div class="flex justify-center">
+        <div class="hidden w-0 lg:block lg:w-6/12">
+          <div class="lg:px-32 mb-12">
+            <img
+              src="https://source.unsplash.com/random"
+              alt=""
+              style="height: 400px"
+            />
+          </div>
+        </div>
+
+        <div class="w-full lg:w-4/12">
+          <div class="flex items-center justify-between mb-8">
+            <h2 class="text-lg text-gray-800">Iniciar sesión</h2>
+            <span class="text-sm"
+              >o
+              <a class="text-blue-600" href="/">crea una cuenta</a>
+            </span>
+          </div>
+
+          <div class="flex flex-col">
+            <button
+              class="
+                relative
+                google-button
+                bg-blue-600
+                text-white text-left
+                mb-6
+                font-bold
+                border
+                rounded-sm
+                py-2
+                text-md
+                w-full
+              "
+            >
+              <i class="fab fa-google mx-3 text-lg"></i>
+              <span class="md:ml-12 px-2">Iniciar sesión con Google</span>
+            </button>
+
+            <button
+              class="
+                relative
+                bg-black
+                text-white text-left
+                mb-6
+                font-bold
+                border
+                rounded-sm
+                py-2
+                text-md
+                w-full
+              "
+            >
+              <i class="fab fa-apple text-lg ml-4 mr-3"></i>
+              <span class="md:ml-12 px-2">Iniciar sesión con Apple</span>
+            </button>
+          </div>
+
+          <div>
+            <p class="border-t border-gray-200 relative text-center">
+              <span
+                class="
+                  px-4
+                  text-center
+                  relative
+                  top-0
+                  bg-white
+                  text-black
+                  font-bold
+                "
+                style="top: -0.825rem"
+                >o</span
+              >
+            </p>
+          </div>
+          <form action="">
+            <div class="">
+              <input
+                class="
+                  border border-gray-200
+                  block
+                  px-4
+                  py-2
+                  w-full
+                  rounded-md
+                  mt-2
+                  mb-6
+                  placeholder-gray-600
+                "
+                type="email"
+                name="email"
+                placeholder="Correo electrónico o nombre de usuario"
+                id="email"
+              />
+            </div>
+
+            <div class="">
+              <input
+                class="
+                  border border-gray-200
+                  block
+                  px-4
+                  py-2
+                  w-full
+                  rounded-md
+                  mt-2
+                  mb-6
+                  placeholder-gray-600
+                "
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                id="password"
+              />
+            </div>
+          </form>
+
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+              <input
+                class="text-gray-600 mr-2"
+                type="checkbox"
+                name="remember-me"
+                id="remember-me"
+              />
+              <span class="text-gray-600 font-bold">Recordarme</span>
+            </div>
+            <button
+              class="bg-blue-700 text-white py-2 px-4 font-bold rounded-sm"
+            >
+              <span class="px-2">Iniciar sesión</span>
+            </button>
+          </div>
+
+          <div class="mb-8">
+            <a class="text-blue-700 hover:underline" href=""
+              >¿Has olvidado tu contraseña?</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto pt-4 border-t-2 border-gray-200">
+      <div class="flex flex-wrap px-3">
+        <div class="w-6/12 mb-8 md:w-3/12">
+          <ul>
+            <li class="font-bold text-gray-900 mb-1">Dropbox</li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Instalar</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Móviles</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Precios</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Business</a></li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Enterprise</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Funciones</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-6/12 mb-8 md:w-3/12">
+          <ul>
+            <li class="font-bold text-gray-900 mb-1">Acerca de nosotros</li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Blog de Dropbox</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Acerca de</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Marcas</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Noticias</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Empleos</a></li>
+          </ul>
+        </div>
+        <div class="w-6/12 mb-8 md:w-3/12">
+          <ul>
+            <li class="font-bold text-gray-900 mb-1">Asistencia</li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Centro de ayuda</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Contacto</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Copyright</a></li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Cookies</a></li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Condiciones y privacidad</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Mapa del sitio</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-6/12 mb-8 md:w-3/12">
+          <ul>
+            <li class="font-bold text-gray-900 mb-1">Comunidad</li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Recomendaciones</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2"><a href="">Foro</a></li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="" rel="noreferrer" target="_blank">Twitter</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="" rel="noreferrer" target="_blank">Facebook</a>
+            </li>
+            <li class="text-sm text-gray-800 mb-2">
+              <a href="">Desarrolladores</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-6/12 mb-8 mt-8">
+          <span class="text-gray-800"> Español (España) </span>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
