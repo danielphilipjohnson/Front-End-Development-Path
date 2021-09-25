@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/weather-icons.min.css" />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <div class="grid md:grid-cols-2 md:h-screen">
+      <div class="relative w-screen md:w-full">
+        <img
+          class="h-screen object-cover"
+          src="./img/clouds.jpg"
+          alt="clouds"
+          style="filter: brightness(0.5)"
+        />
+        <div class="absolute top-0 text-white w-full h-full">
+          <div class="w-full h-full py-3 px-6 md:p-6">
+            <div class="flex flex-col md:justify-between">
+              <p class="text-white text-xs md:pt-4">Another weather app</p>
+              <div class="flex flex-col items-center mb-12">
+                <div class="flex flex-col-reverse md:flex-col w-full mb-4">
+                  <h2 class="text-8xl">16<span class="mr-8">°</span></h2>
+
+                  <h3 class="mt-8 mb-6 text-2xl md:text-4xl font-bold">
+                    London
+                  </h3>
+                  <p class="text-sm hidden md:block">08:24 - Sunday May 23</p>
+                </div>
+
+                <div class="flex justify-start relative w-full items-center">
+                  <svg
+                    class="w-28 md:w-36 md:mr-4"
+                    viewBox="2436.9 -843.1 275.5 274.1"
+                  >
+                    <g data-name="cloudy icon" transform="translate(84 790)">
+                      <circle
+                        cx="137"
+                        cy="137"
+                        r="137"
+                        fill="#fff"
+                        data-name="Ellipse 23"
+                        transform="translate(2354 -1633)"
+                      />
+                      <path
+                        fill="#ffde17"
+                        d="M2523.4-1361.5a37.2 37.2 0 0 0 8.4-23.4c0-22-19.8-40-44.1-40l-3.4.1h-.5a39.8 39.8 0 0 0-39.4-33.7 40.1 40.1 0 0 0-10 1.2 40 40 0 0 0-35.2-21.2 40.1 40.1 0 0 0-38.5 29 137.4 137.4 0 0 1-7.8-45.8 138.8 138.8 0 0 1 2.8-27.8 137 137 0 0 1 8-25.8 137.8 137.8 0 0 1 12.7-23.4 138.8 138.8 0 0 1 16.8-20.4 138.8 138.8 0 0 1 20.4-16.9 137.8 137.8 0 0 1 23.4-12.7 137 137 0 0 1 25.9-8 138.8 138.8 0 0 1 27.7-2.8 138.8 138.8 0 0 1 27.8 2.8 137 137 0 0 1 25.9 8 137.8 137.8 0 0 1 23.4 12.7 138.8 138.8 0 0 1 20.4 16.9 138.7 138.7 0 0 1 16.8 20.4 137.8 137.8 0 0 1 12.7 23.4 137 137 0 0 1 8 25.8 138.8 138.8 0 0 1 2.8 27.8 137.4 137.4 0 0 1-8 46.1 137.2 137.2 0 0 1-21.9 39.6 138.2 138.2 0 0 1-33.2 30.1 136.8 136.8 0 0 1-41.9 18z"
+                        data-name="Subtraction 1"
+                      />
+                    </g>
+                  </svg>
+                  <p
+                    class="
+                      w-screen
+                      transform
+                      -rotate-90
+                      -top-56
+                      left-24
+                      absolute
+                      text-xl
+                      md:text-2xl
+                      md:rotate-0
+                      md:static
+                    "
+                  >
+                    Cloudy
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex justify-between">
+                <div class="flex items-center">
+                  <i class="wi wi-windy text-xl mr-2"></i>
+                  <h4 class="">7.70<span class="ml-1 text-sm">km/h</span></h4>
+                </div>
+
+                <div class="flex items-center">
+                  <i class="wi wi-raindrop text-xl mr-2"></i>
+                  <h4 class="float-right">
+                    7<span class="ml-1 text-sm">%</span>
+                  </h4>
+                </div>
+                <div class="flex items-center">
+                  <i class="wi wi-humidity text-xl mr-2"></i>
+                  <h4 class="float-right">
+                    12<span class="ml-1 text-sm">%</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 mb-32 px-6 w-screen md:w-full">
+        <h2 class="text-black font-bold mb-4">
+          Today
+          <span class="float-right text-purple-700 uppercase font-bold text-sm"
+            >London, UK</span
+          >
+        </h2>
+
+        <div class="flex justify-between mb-4">
+          <div class="text-center">
+            <p class="font-bold mb-3 text-sm">Now</p>
+            <i class="wi wi-day-sunny text-purple-700 mb-3 text-3xl"></i>
+            <p class="font-bold text-sm">21<span>°</span></p>
+          </div>
+
+          <div class="text-center">
+            <p class="font-bold mb-3 text-sm text-gray-300">9 AM</p>
+            <i class="wi wi-day-sunny text-purple-700 mb-3 text-3xl"></i>
+            <p class="font-bold text-sm text-gray-300">22<span>°</span></p>
+          </div>
+          <div class="text-center">
+            <p class="font-bold mb-3 text-sm text-gray-300">9 AM</p>
+            <i class="wi wi-day-sunny text-purple-700 mb-3 text-3xl"></i>
+            <p class="font-bold text-sm text-gray-300">22<span>°</span></p>
+          </div>
+          <div class="text-center">
+            <p class="font-bold mb-3 text-sm text-gray-300">9 AM</p>
+            <i class="wi wi-day-sunny text-purple-700 mb-3 text-3xl"></i>
+            <p class="font-bold text-sm text-gray-300">22<span>°</span></p>
+          </div>
+          <div class="text-center">
+            <p class="font-bold mb-3 text-sm text-gray-300">9 AM</p>
+            <i class="wi wi-day-sunny text-purple-700 mb-3 text-3xl"></i>
+            <p class="font-bold text-sm text-gray-300">22<span>°</span></p>
+          </div>
+        </div>
+
+        <h2 class="text-black font-bold mb-8">Days ahead</h2>
+        <div class="grid grid-cols-3 mb-6">
+          <p>Tuesday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mb-6">
+          <p>Wednesday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mb-6">
+          <p>Thursday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mb-6">
+          <p>Friday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mb-6">
+          <p>Saturday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 mb-6">
+          <p>Sunday</p>
+          <i
+            class="wi wi-day-sunny text-purple-700 text-3xl justify-self-center"
+          ></i>
+          <div>
+            <p class="float-left">19<span>°</span></p>
+            <p class="float-right">15 <span>°</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="pr-4">
+      <ul
+        class="
+          py-5
+          px-8
+          bg-white
+          flex
+          border
+          shadow-2xl
+          fixed
+          bottom-0
+          w-full
+          rounded-t-3xl
+          justify-between
+        "
+      >
+        <li>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Iconly/Light/Home</title>
+            <g
+              id="Iconly/Light/Home"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                id="Home"
+                transform="translate(2.500000, 2.000000)"
+                stroke="#000000"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M6.65721519,18.7714023 L6.65721519,15.70467 C6.65719744,14.9246392 7.29311743,14.2908272 8.08101266,14.2855921 L10.9670886,14.2855921 C11.7587434,14.2855921 12.4005063,14.9209349 12.4005063,15.70467 L12.4005063,15.70467 L12.4005063,18.7809263 C12.4003226,19.4432001 12.9342557,19.984478 13.603038,20 L15.5270886,20 C17.4451246,20 19,18.4606794 19,16.5618312 L19,16.5618312 L19,7.8378351 C18.9897577,7.09082692 18.6354747,6.38934919 18.0379747,5.93303245 L11.4577215,0.685301154 C10.3049347,-0.228433718 8.66620456,-0.228433718 7.51341772,0.685301154 L0.962025316,5.94255646 C0.362258604,6.39702249 0.00738668938,7.09966612 0,7.84735911 L0,16.5618312 C0,18.4606794 1.55487539,20 3.47291139,20 L5.39696203,20 C6.08235439,20 6.63797468,19.4499381 6.63797468,18.7714023 L6.63797468,18.7714023"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </li>
+        <li>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Iconly/Light/Search</title>
+            <g
+              id="Iconly/Light/Search"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                id="Search"
+                transform="translate(2.000000, 2.000000)"
+                stroke="#000000"
+                stroke-width="1.5"
+              >
+                <circle
+                  id="Ellipse_739"
+                  cx="9.76659044"
+                  cy="9.76659044"
+                  r="8.9885584"
+                ></circle>
+                <line
+                  x1="16.0183067"
+                  y1="16.4851259"
+                  x2="19.5423342"
+                  y2="20.0000001"
+                  id="Line_181"
+                ></line>
+              </g>
+            </g>
+          </svg>
+        </li>
+        <li>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Iconly/Light/Setting</title>
+            <g
+              id="Iconly/Light/Setting"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                id="Setting"
+                transform="translate(2.500000, 1.500000)"
+                stroke="#000000"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M18.3066362,6.12356982 L17.6842106,5.04347829 C17.1576365,4.12955711 15.9906873,3.8142761 15.0755149,4.33867279 L15.0755149,4.33867279 C14.6398815,4.59529992 14.1200613,4.66810845 13.6306859,4.54104256 C13.1413105,4.41397667 12.7225749,4.09747295 12.4668193,3.66132725 C12.3022855,3.38410472 12.2138742,3.06835005 12.2105264,2.74599544 L12.2105264,2.74599544 C12.2253694,2.22917739 12.030389,1.72835784 11.6700024,1.3576252 C11.3096158,0.986892553 10.814514,0.777818938 10.2974829,0.778031878 L9.04347831,0.778031878 C8.53694532,0.778031878 8.05129106,0.97987004 7.69397811,1.33890085 C7.33666515,1.69793166 7.13715288,2.18454839 7.13958814,2.69107553 L7.13958814,2.69107553 C7.12457503,3.73688099 6.27245786,4.57676682 5.22654465,4.57665906 C4.90419003,4.57331126 4.58843537,4.48489995 4.31121284,4.32036615 L4.31121284,4.32036615 C3.39604054,3.79596946 2.22909131,4.11125048 1.70251717,5.02517165 L1.03432495,6.12356982 C0.508388616,7.03634945 0.819378585,8.20256183 1.72997713,8.73226549 L1.72997713,8.73226549 C2.32188101,9.07399614 2.68650982,9.70554694 2.68650982,10.3890161 C2.68650982,11.0724852 2.32188101,11.704036 1.72997713,12.0457667 L1.72997713,12.0457667 C0.820534984,12.5718952 0.509205679,13.7352837 1.03432495,14.645309 L1.03432495,14.645309 L1.6659039,15.7345539 C1.9126252,16.1797378 2.3265816,16.5082503 2.81617164,16.6473969 C3.30576167,16.7865435 3.83061824,16.7248517 4.27459956,16.4759726 L4.27459956,16.4759726 C4.71105863,16.2212969 5.23116727,16.1515203 5.71931837,16.2821523 C6.20746948,16.4127843 6.62321383,16.7330005 6.87414191,17.1716248 C7.03867571,17.4488473 7.12708702,17.764602 7.13043482,18.0869566 L7.13043482,18.0869566 C7.13043482,19.1435014 7.98693356,20.0000001 9.04347831,20.0000001 L10.2974829,20.0000001 C11.3504633,20.0000001 12.2054882,19.1490783 12.2105264,18.0961099 L12.2105264,18.0961099 C12.2080776,17.5879925 12.4088433,17.0999783 12.7681408,16.7406809 C13.1274382,16.3813834 13.6154524,16.1806176 14.1235699,16.1830664 C14.4451523,16.1916732 14.7596081,16.2797208 15.0389017,16.4393593 L15.0389017,16.4393593 C15.9516813,16.9652957 17.1178937,16.6543057 17.6475973,15.7437072 L17.6475973,15.7437072 L18.3066362,14.645309 C18.5617324,14.2074528 18.6317479,13.6859659 18.5011783,13.1963297 C18.3706086,12.7066935 18.0502282,12.2893121 17.6109841,12.0366133 L17.6109841,12.0366133 C17.17174,11.7839145 16.8513595,11.3665332 16.7207899,10.876897 C16.5902202,10.3872608 16.6602358,9.86577384 16.9153319,9.42791767 C17.0812195,9.13829096 17.3213574,8.89815312 17.6109841,8.73226549 L17.6109841,8.73226549 C18.5161253,8.20284891 18.8263873,7.04344892 18.3066362,6.13272314 L18.3066362,6.13272314 L18.3066362,6.12356982 Z"
+                  id="Path_33946"
+                ></path>
+                <circle
+                  id="Ellipse_737"
+                  cx="9.67505726"
+                  cy="10.3890161"
+                  r="2.63615562"
+                ></circle>
+              </g>
+            </g>
+          </svg>
+        </li>
+        <li>
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <title>Iconly/Light/Location</title>
+            <g
+              id="Iconly/Light/Location"
+              stroke="none"
+              stroke-width="1"
+              fill="none"
+              fill-rule="evenodd"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <g
+                id="Location"
+                transform="translate(4.500000, 3.000000)"
+                stroke="#000000"
+                stroke-width="1.5"
+              >
+                <path
+                  d="M10,7.50050782 C10,6.11923624 8.88076376,5 7.50050782,5 C6.11923624,5 5,6.11923624 5,7.50050782 C5,8.88076376 6.11923624,10 7.50050782,10 C8.88076376,10 10,8.88076376 10,7.50050782 Z"
+                  id="Stroke-1"
+                ></path>
+                <path
+                  d="M7.49951162,18 C6.30103536,18 0,12.8983747 0,7.5632901 C0,3.38663602 3.357101,0 7.49951162,0 C11.6419223,0 15,3.38663602 15,7.5632901 C15,12.8983747 8.69798789,18 7.49951162,18 Z"
+                  id="Stroke-3"
+                ></path>
+              </g>
+            </g>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
