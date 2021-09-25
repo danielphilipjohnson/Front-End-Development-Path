@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://www.theaudiodb.com/api/v1/json/",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

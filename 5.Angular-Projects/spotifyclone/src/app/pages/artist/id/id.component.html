@@ -1,0 +1,23 @@
+<h1 class="ani fadeInUp text-center">
+    {{artists[0].strArtist}}
+</h1>
+
+<div class="container">
+    <div class="card-group">
+        <div *ngFor="let artist of artists" class="ani slideInLeft card">
+            <img class="card-img-top" src={{artist.strArtistThumb}} alt="{{artist.strArtist}}">
+            <div class="card-body">
+                <h5 class="card-title">{{artist.strArtist}}</h5>
+                <p class="card-text description">{{artist.strBiographyEN | slice:0:250}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Year Formed: {{artist.intFormedYear}}</li>
+                <li class="list-group-item">Genre: {{artist.strGenre}}</li>
+                <li class="list-group-item">Record Label: {{artist.strLabel}}</li>
+            </ul>
+            <div class="card-body">
+                <a href='http://{{artist.strWebsite}}' class="card-link">Personal Link</a>
+            </div>
+        </div>
+    </div>
+</div>

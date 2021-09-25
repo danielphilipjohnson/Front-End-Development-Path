@@ -1,0 +1,70 @@
+<section class="grey-section">
+    <div class="container padded-container" data-spacing="300" style="transform: translateY(0px) translateX(0px); opacity: 1;">
+        <h3 class="ani fadeInUp section-header">Search Artists</h3>
+        <div class="ani fadeInDown searchform large">
+            <form role="search" method="get" class="search-form" action="">
+                <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="Search for Artist ...." value="" name="s" type="text">
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+
+    <section *ngIf="submittable != true">
+        <h2 class="mt-3 text-center">Recent Searches</h2>
+        <div class="card-group">
+            <div *ngFor="let artist of artists" class="ani slideInLeft card">
+                <img class="card-img-top" src={{artist.strArtistThumb}} alt="{{artist.strArtist}}">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a routerLink="{{artist.idArtist}}/albums">{{artist.strArtist}}</a>
+                    </h5>
+                    <p class="card-text description">{{artist.strBiographyEN | slice:0:250}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li *ngIf="artist.intFormedYear" class="list-group-item">Year Formed: {{artist.intFormedYear}}</li>
+                    <li *ngIf="artist.strGenre" class="list-group-item">Genre: {{artist.strGenre}}</li>
+                    <li *ngIf="artist.strLabel" class="list-group-item">Record Label: {{artist.strLabel}}</li>
+                </ul>
+                <div class="card-body">
+                    <a href='http://{{artist.strWebsite}}' class="card-link">Website</a>
+                    <a routerLink="{{artist.idArtist}}/albums" class="card-link">Albums</a>
+                    <a routerLink='{{artist.idArtist}}/videos' class="card-link">Videos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="submittable">
+        <h2 class="mt-3 text-center">Search Results</h2>
+        <div class="card-group">
+            <div *ngFor="let artist of matchedArtists$ | async" class="ani slideInLeft card">
+                <div *ngIf='artist.noresult'>
+                    <img class="card-img-top" src="assets/img/abstract-art1.jpg" alt="No results found">
+                    <div class="card-body">
+                        <h5 class="card-title">No results found</h5>
+                    </div>
+                </div>
+                <div *ngIf='artist.noresult != true'>
+                    <img class="card-img-top" src={{artist.strArtistThumb}} alt="{{artist.strArtist}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{artist.strArtist}}</h5>
+                        <p class="card-text description">{{artist.strBiographyEN | slice:0:250}}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Year Formed: {{artist.intFormedYear}}</li>
+                        <li class="list-group-item">Genre: {{artist.strGenre}}</li>
+                        <li class="list-group-item">Record Label: {{artist.strLabel}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href='http://{{artist.strWebsite}}' class="card-link">Website</a>
+                        <a routerLink="{{artist.idArtist}}/albums" class="card-link">Albums</a>
+                        <a routerLink='{{artist.idArtist}}/videos' class="card-link">Videos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

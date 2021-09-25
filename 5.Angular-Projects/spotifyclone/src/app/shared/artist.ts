@@ -1,0 +1,50 @@
+export class Artist {
+    
+    idArtist: number;
+    strArtist: string;
+    strArtistStripped: string;
+    strArtistAlternate: string;
+    strLabel: string;
+    idLabel: number;
+    intFormedYear: number;
+    intBornYear: number;
+    intDiedYear: number;
+    strDisbanded: number;
+    strStyle: string;
+    strGenre: string;
+    strMood: string;
+    strWebsite: string;
+    strFacebook: string;
+    strTwitter: string;
+    strBiographyEN: string;
+    strBiographyDE: string;
+    strBiographyFR: string;
+    strBiographyCN: string;
+    strBiographyIT: string;
+    strBiographyJP: string;
+    strBiographyRU: string;
+    strBiographyES: string;
+    strBiographyPL:string;
+    strBiographyPT: string;
+    strBiographySE: string;
+    strBiographyNL: string;
+    strBiographyHU: string;
+    strBiographyNO: string;
+    strBiographyIL: string;
+    strGender: string;
+    intMembers: number;
+    strCountry: string;
+    strCountryCode: string;
+    strArtistThumb: string;
+    strArtistLogo: string;
+    strArtistClearart: string;
+    strArtistWideThumb: string;
+    strArtistFanart: string;
+    strArtistFanart2: string;
+    strArtistFanart3: string;
+    strArtistBanner: string;
+    strMusicBrainzID: string;
+    strLastFMChart: string;
+    strLocked: string;
+
+}

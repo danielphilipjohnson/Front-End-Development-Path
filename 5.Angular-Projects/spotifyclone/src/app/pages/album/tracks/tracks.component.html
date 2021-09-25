@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row my-4">
+        <div class="ani slideInLeft col-md-3">
+            <ul class="list-group list-group-flush">
+                <li *ngFor="let album of albums" class="list-group-item text-center">
+                    <img src="{{album.strAlbumThumb}}" alt="{{album.strAlbum}}" class="img-fluid">
+                    <h3>{{album.strAlbum}}</h3>
+                    <p>
+                        <a routerLink="/artist/{{album.idArtist}}">{{album.strArtist}}</a>
+                    </p>
+                    <p>{{album.strStyle}}</p>
+                    <p>Songs: {{albumtracks.length}} </p>
+                    <div class="btn btn-success btn-lg btn-block">Play</div>
+                </li>
+            </ul>
+        </div>
+        <div class="ani slideInRight col-md-9">
+            <ul *ngFor="let track of albumtracks" class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="col-md-11">
+                            <h6> {{track.strTrack}}
+                                <span class="float-right">Track NO: {{track.intTrackNumber}} </span>
+                            </h6>
+                            <p>
+                                <a routerLink="/artist/{{track.idArtist}}">{{track.strArtist}}</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

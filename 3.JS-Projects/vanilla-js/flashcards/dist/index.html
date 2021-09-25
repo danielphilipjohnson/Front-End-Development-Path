@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="z-10">
+  <nav class="flex justify-between bg-blue-800 px-4 py-4">
+    <div class="flex items-center">
+      <h1 class="text-3xl text-white font-bold mr-8">Flashcards</h1>
+      <ul class="flex justify-between items-center text-white">
+        <li class="mr-8">
+          <a href="/" class="text-gray-300 font-bold">Home</a>
+        </li>
+        <li><a href="/" class="text-gray-300 font-bold mr-4">Your library</a></li>
+        <li>
+          <button id="add-card-form" class="z-50 text-sm bg-green-100  text-blue-800 border mx-3 px-2 py-1">
+            <i class="fas fa-plus"></i>
+
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <ul class="flex justify-between items-center text-white">
+      <li class="mr-8"><i class="fas fa-search text-xl"></i></li>
+      <li><i class="fas fa-bell text-xl"></i></li>
+    </ul>
+  </nav>
+  <div class="container mx-auto">
+    <ul class="flex mt-8">
+      <li class="mr-2 text-sm text-gray-600 font-bold">
+        Home <span class="ml-2 text-gray-300">/</span>
+      </li>
+      <li class="mr-2 text-sm text-gray-600 font-bold">
+        Languages <span class="ml-2 text-gray-300">/</span>
+      </li>
+      <li class="mr-2 text-sm text-gray-600 font-bold">
+        Spanish <span class="ml-2 text-gray-300">/</span>
+      </li>
+      <li class="mr-2 text-sm text-gray-600 font-bold">Greetings</li>
+    </ul>
+
+
+    <div class="overflow-hidden">
+      <h1 class="mt-12 text-4xl font-bold mb-2">
+        Spanish, Spanish Basic
+      </h1>
+      <div class="flex items-center mb-4">
+        <p>
+          <span class="mr-4">4.3 </span>
+        <div class="text-yellow-500 mr-4">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        </p>
+        <p class="mr-4"> 121 reviews</p>
+        <a href="/" class="font-bold text-blue-400 mr-4">Leave a rating</a>
+      </div>
+
+      <button id="clear" class="rounded-md bg-red-600 text-white px-3 py-2">
+        <i class="fas fa-trash"></i> Clear Cards
+      </button>
+
+
+      <div class="flex flex-col justify-center items-center">
+        <div id="cards-container" class="mt-8 rounded-full relative h-80 z-30"
+          style="perspective: 1000px; width: 500px; max-width:100%">
+          <!-- <div class="card active">
+            <div class="
+                inner-card
+                shadow-2xl
+                rounded-md
+                h-full
+                w-full
+                relative
+                transition-transform
+                duration-300
+                ease-in
+                transform-3d
+              ">
+              <div class="
+                  after:content-flip
+                  inner-card-front
+                  after:font-bold
+                  after:top-4
+                  after:right-4
+                  after:absolute
+                  after:text-gray-200 after:text-lg
+                  swap-font
+                ">
+                <p>Hola</p>
+              </div>
+              <div class="
+                  inner-card-back
+                  after:content-flip
+                  after:font-bold
+                  after:top-4
+                  after:right-4
+                  after:absolute
+                  after:text-gray-200 after:text-lg
+                  swap-font
+                ">
+                <p>hello</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="inner-card">
+              <div class="
+                  inner-card-front
+                  after:font-bold
+                  after:top-4
+                  after:right-4
+                  after:absolute
+                  after:text-gray-200 after:text-lg
+                  swap-font
+                ">
+                <p>Hola</p>
+              </div>
+              <div class="
+                  inner-card-back
+                  after:font-bold
+                  after:top-4
+                  after:right-4
+                  after:absolute
+                  after:text-gray-200 after:text-lg
+                  swap-font
+                ">
+                <p>Hello</p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="flex items-center my-4 z-10 mt-16 ">
+          <button id="prev" class="p-4">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <p id="current" class=" p-4"></p>
+          <button id="next" class="p-4">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="add-container" class="
+    add-container
+    opacity-0
+    bg-gray-100
+    border border-t-1
+    absolute
+    top-0
+    bottom-0
+    w-full
+    h-full
+    -z-10
+    transition
+    duration-500
+    ease-out
+">
+    <div class=" bg-white py-8">
+      <button id="hide" class=" absolute top-0 right-0 p-6">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="container mx-auto w-full">
+        <div class="flex justify-between py-8">
+          <h1 class="text-2xl font-bold font-gray-900">Add New Card</h1>
+          <button id="add-card" class="btn bg-green-300 text-white py-3 px-6 rounded-md text-sm font-bold">
+            Create
+          </button>
+        </div>
+      </div>
+
+      <div class="container mx-auto ">
+        <div class=" mb-6">
+          <input type="text" class="text-lg py-2 max-w-full border-b-2 border-gray-800 w-full" name="question"
+            id="question" placeholder="Enter a question...">
+          <label for="question" class="block my-2 text-gray-600 uppercase font-bold text-sm">Question</label>
+        </div>
+        <div class="form-group mb-6">
+          <input type="text" class="text-lg py-2 max-w-full border-b-2 border-gray-800 w-full" name="answer" id="answer"
+            placeholder="Enter a Answer...">
+
+          <label for="answer" class="block my-2 text-gray-600 uppercase font-bold text-sm">Answer</label>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto my-8">
+      <div class=" flex flex-col justify-center items-center">
+        <button class="bg-white  w-full py-12  text-gray-800 font-bold text-2xl">
+          <span class="border-b-4 border-green-400 pb-3">
+            +
+            Add
+            Card
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <button id="add-card" class="btn bg-green-300 rounded-sm text-white py-6 px-24 float-right mr-8 font-bold">
+      Create
+    </button>
+  </div>
+
+  <script src="./js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+    integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

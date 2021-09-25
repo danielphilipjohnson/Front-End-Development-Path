@@ -1,0 +1,10 @@
+<section class="grey-section">
+    <div class="container padded-container" data-spacing="300" style="transform: translateY(0px) translateX(0px); opacity: 1;">
+        <h3 class="section-header">Quick Search</h3>
+        <div class="searchform large">
+            <form role="search" method="get" class="search-form" action="">
+                <input [(ngModel)]="searchStr" (keyup)="searchMusic()" placeholder="Search for artist ...." value="" name="s" type="text">
+            </form>
+        </div>
+    </div>
+</section>
