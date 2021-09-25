@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="grid md:grid-cols-2">
+      <div class="mb-4 md:mb-0">
+        <img
+          class="brightness-150 w-full object-cover h-52 md:h-screen"
+          src="https://source.unsplash.com/random"
+          alt="background"
+          style="filter: brightness(0.3)"
+        />
+        <div
+          class="
+            absolute
+            top-0
+            w-full
+            md:w-6/12
+            md:h-3/6
+            md:flex md:flex-col-reverse
+          "
+        >
+          <h1
+            class="
+              text-red-700
+              font-bold
+              text-4xl
+              uppercase
+              text-center
+              z-10
+              mt-4
+              w-full
+            "
+          >
+            Ted
+          </h1>
+          <p class="text-white text-center text-2xl md:text-4xl">
+            To continue, sign in to TED
+          </p>
+        </div>
+      </div>
+      <div class="container md:flex md:flex-col md:justify-center">
+        <div class="mx-auto px-2 mb-12">
+          <button
+            class="
+              w-full
+              md:w-96
+              flex
+              relative
+              justify-between
+              bg-gray-200
+              text-gray-800
+              hover:bg-gray-400
+              hover:text-gray-900
+              font-bold
+              leading-loose
+              tracking-wider
+              p-2
+              mb-4
+              rounded-md
+            "
+          >
+            <i
+              class="
+                fab
+                fa-apple
+                absolute
+                top-0
+                left-0
+                rounded-l-md
+                bg-black
+                text-white
+                fa-3x
+                p-2
+              "
+              style="width: 3rem"
+            ></i>
+
+            <span class="w-full">Continuar con Apple</span>
+          </button>
+          <button
+            class="
+              w-full
+              md:w-96
+              flex
+              relative
+              justify-between
+              bg-gray-200
+              text-gray-800
+              hover:bg-gray-400
+              hover:text-gray-900
+              font-bold
+              leading-loose
+              tracking-wider
+              p-2
+              mb-4
+              rounded-md
+            "
+          >
+            <i
+              class="
+                fab
+                fa-facebook-f
+                absolute
+                top-0
+                left-0
+                rounded-l-md
+                bg-blue-800
+                text-white
+                fa-3x
+                p-2
+              "
+              style="width: 3rem"
+            ></i>
+            <span class="ml-4 w-full">Continuar con Facebook</span>
+          </button>
+
+          <button
+            class="
+              w-full
+              md:w-96
+              flex
+              relative
+              justify-between
+              bg-gray-200
+              text-gray-800
+              hover:bg-gray-400
+              hover:text-gray-900
+              font-bold
+              leading-loose
+              tracking-wider
+              p-2
+              mb-4
+              rounded-md
+            "
+          >
+            <i
+              class="
+                fab
+                fa-google
+                absolute
+                top-0
+                left-0
+                rounded-l-md
+                bg-blue-600
+                text-white
+                fa-3x
+                p-2
+              "
+              style="width: 3rem"
+            ></i>
+            <span class="w-full">Continuar con Google</span>
+          </button>
+        </div>
+
+        <p class="mt-12 border-t border-gray-200 relative text-center">
+          <span
+            class="
+              px-2
+              text-center
+              relative
+              top-0
+              bg-white
+              text-gray-300 text-lg
+            "
+            style="top: -0.905rem"
+            >or</span
+          >
+        </p>
+
+        <h3 class="text-center text-gray-900 text-xl mb-4">Enter your email</h3>
+
+        <form class="flex flex-col w-full px-8">
+          <label class="mb-2 text-gray-700 text-sm" for="email"
+            >Email address</label
+          >
+          <input
+            class="
+              border border-gray-200
+              mb-8
+              p-4
+              text-sm
+              rounded-md
+              block
+              w-full
+            "
+            type="text"
+            name="email"
+            id="email"
+          />
+          <button
+            class="mx-auto bg-gray-100 text-gray-600 font-semibold py-3 w-32"
+          >
+            Continuar
+          </button>
+        </form>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
