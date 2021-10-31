@@ -213,25 +213,26 @@ function Cards(cardContainerElement, cardsData) {
   };
 }
 
-const displayForm = DisplayForm(document.getElementById("add-container"));
+// load initial item
+window.addEventListener("DOMContentLoaded", function () {
+  const displayForm = DisplayForm(document.getElementById("add-container"));
 
-displayForm.bindShowEvent(document.getElementById("add-card-form"));
-displayForm.bindHideEvent(document.getElementById("hide"));
+  displayForm.bindShowEvent(document.getElementById("add-card-form"));
+  displayForm.bindHideEvent(document.getElementById("hide"));
 
-const cardStorage = CardStorageManagement();
+  const cardStorage = CardStorageManagement();
 
-const card = Cards(
-  document.getElementById("add-container"),
-  cardStorage.getData()
-);
+  const card = Cards(
+    document.getElementById("add-container"),
+    cardStorage.getData()
+  );
 
-const cardEvents = card.Events();
+  const cardEvents = card.Events();
 
-cardEvents.nextBtn(document.getElementById("next"));
-cardEvents.prevBtn(document.getElementById("prev"));
-cardEvents.addCardBtn(document.getElementById("add-card"));
-cardEvents.clearCardsBtn(document.getElementById("clear"));
+  cardEvents.nextBtn(document.getElementById("next"));
+  cardEvents.prevBtn(document.getElementById("prev"));
+  cardEvents.addCardBtn(document.getElementById("add-card"));
+  cardEvents.clearCardsBtn(document.getElementById("clear"));
 
-card.display();
-
-// make a higher function to make it easier
+  card.display();
+});
