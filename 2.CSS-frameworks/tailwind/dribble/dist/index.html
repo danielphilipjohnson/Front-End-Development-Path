@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        font-family: "Pattaya", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="">
+      <div class="grid md:grid-cols-2 xl:grid-cols-3">
+        <div class="mx-6 md:mx-0 xl:col-span-1 relative">
+          <img
+            class="
+              hidden
+              md:block
+              brightness-150
+              w-full
+              object-cover
+              h-52
+              md:h-screen
+            "
+            src="https://source.unsplash.com/random"
+            alt="background"
+            style="filter: brightness(0.3)"
+          />
+          <div class="md:absolute md:top-0 md:p-4 md:mx-5">
+            <h1 class="text-2xl md:block mt-8 mb-6 md:text-gray-200">
+              dribble
+            </h1>
+
+            <p
+              class="
+                hidden
+                md:block
+                font-bold
+                break-words
+                text-white text-xl
+                md:text-3xl
+              "
+            >
+              Discover the world’s top Designers & Creatives.
+            </p>
+          </div>
+        </div>
+
+        <div class="mx-6 xl:col-span-2 flex justify-center flex-col">
+          <div class="xl:mx-32">
+            <h2 class="text-2xl font-bold mb-6">Sign up to Dribbble</h2>
+            <div class="flex justify-between">
+              <div class="">
+                <button
+                  class="
+                    flex
+                    w-full
+                    border-2 border-blue-400
+                    bg-blue-500
+                    text-white
+                    rounded
+                    align-middle
+                  "
+                >
+                  <span class="bg-white">
+                    <svg
+                      version="1.1"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                      class="w-8 bg-white p-2"
+                    >
+                      <g>
+                        <path
+                          fill="#EA4335"
+                          d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"
+                        ></path>
+                        <path
+                          fill="#4285F4"
+                          d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"
+                        ></path>
+                        <path
+                          fill="#FBBC05"
+                          d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"
+                        ></path>
+                        <path
+                          fill="#34A853"
+                          d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"
+                        ></path>
+                        <path fill="none" d="M0 0h48v48H0z"></path>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="ml-4 w-full pt-1 pr-2"
+                    >Continuar con Google</span
+                  >
+                </button>
+              </div>
+
+              <button class="bg-gray-200 rounded px-4">
+                <i class="fab fa-twitter color-gray-500"></i>
+              </button>
+            </div>
+
+            <p class="mt-12 border-t border-gray-200 relative text-center">
+              <span
+                class="
+                  px-2
+                  text-center
+                  relative
+                  top-0
+                  bg-white
+                  text-gray-300 text-lg
+                "
+                style="top: -0.905rem"
+                >or</span
+              >
+            </p>
+
+            <form class="">
+              <div class="w-full md:flex">
+                <div class="md:w-3/6 flex flex-col mb-2 md:mr-4">
+                  <label class="font-bold mb-2" for="name">Name</label>
+                  <input
+                    class="rounded-md bg-gray-100 py-2"
+                    type="text"
+                    name="name"
+                  />
+                </div>
+                <div class="md:w-3/6 flex flex-col mb-2">
+                  <label class="font-bold mb-2" for="name">Username</label>
+                  <input
+                    class="rounded-md bg-gray-100 py-2"
+                    type="text"
+                    name="username"
+                  />
+                </div>
+              </div>
+
+              <label class="block font-bold mb-2" for="email">Email</label>
+              <input
+                class="block rounded-md bg-gray-100 py-2 w-full mb-2"
+                type="text"
+                name="email"
+              />
+
+              <label class="block font-bold mb-2" for="password"
+                >Password</label
+              >
+              <input
+                class="block rounded-md bg-gray-100 py-2 w-full mb-6"
+                type="text"
+                name="password"
+              />
+
+              <div class="flex items-baseline">
+                <input
+                  class="mb-2 mr-2"
+                  type="checkbox"
+                  name="terms"
+                  id="terms"
+                />
+                <p class="text-gray-600 mb-4 text-sm">
+                  Creating an account means you’re okay with our
+                  <a class="text-blue-800" href="/">Terms of Service</a>,
+                  <a class="text-blue-800" href="/">Privacy Policy</a> , and our
+                  default
+                  <a class="text-blue-800" href="/"> Notification Settings</a>.
+                </p>
+              </div>
+
+              <button
+                class="bg-pink-500 text-white px-4 py-2 mb-6 rounded w-full"
+              >
+                Create Account
+              </button>
+              <p class="text-center mb-4">
+                Already a member? <a class="text-blue-800" href="/">Sign In</a>
+              </p>
+            </form>
+
+            <p class="text-xs text-gray-400 px-4 mb-8">
+              This site is protected by reCAPTCHA and the Google
+              <a class="text-blue-800" href="/">Privacy Policy</a> and
+              <a class="text-blue-800" href="/">Terms of Service</a> apply.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+      integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
